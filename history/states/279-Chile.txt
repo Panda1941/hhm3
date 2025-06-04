@@ -1,0 +1,38 @@
+state = {
+	id = 279
+	name = "STATE_279" # Santiago
+	manpower = 1 # Was 3935146
+	
+	state_category = wasteland
+	
+	resources = {
+		steel = 14 # was: 24, then 16
+		tungsten = 8 # In replacement of nitrate
+		chromium = 4 # in replacement of nitrate
+	}
+
+	history = {
+
+		owner = WST
+		add_core_of = WST
+
+		
+		
+		
+
+		
+
+		
+
+		
+
+		
+
+	}
+
+	provinces = {
+		650 5191 8194 8222 8229 8251 12984 
+	}
+
+	local_supplies=0.0 
+}
