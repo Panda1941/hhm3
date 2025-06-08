@@ -53,8 +53,8 @@ buildings = {
 
 	arms_factory = {
 		show_on_map = 6
-		base_cost = 7200
-		base_cost_conversion = 4000
+		base_cost = 8000
+		base_cost_conversion = 5000
 		military_production = 1
 		disabled_in_dmz = yes
 		icon_frame = 2
@@ -62,21 +62,21 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 40
 		}
 	}
 
 	industrial_complex = {
 		show_on_map = 6
-		base_cost = 10800
-		base_cost_conversion = 9000
+		base_cost = 12000
+		base_cost_conversion = 10000
 		general_production = 1
 		icon_frame = 1
 		value = 5
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 40
 		}
 	}
 
@@ -96,7 +96,7 @@ buildings = {
 
 	supply_node = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 12000
 		disabled_in_dmz = yes
 		icon_frame = 15
 		centered = yes
@@ -124,7 +124,7 @@ buildings = {
 	
 	naval_facility = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 12000
 		per_controlled_building_extra_cost = 7500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 18
@@ -200,7 +200,7 @@ buildings = {
 		dlc_allowed = { has_dlc = Gotterdammerung }
 		show_on_map = 1
 		has_destroyed_mesh = yes
-		base_cost = 20000
+		base_cost = 12000
 		disabled_in_dmz = yes
 		icon_frame = 23
 		value = 1
@@ -224,7 +224,7 @@ buildings = {
 	dockyard = {
 		show_on_map = 1
 		show_on_map_meshes = 3
-		base_cost = 6400
+		base_cost = 7000
 		only_costal = yes
 		naval_production = 1
 		icon_frame = 4
@@ -233,14 +233,14 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 40
 		}
 	}
 
 	
 	anti_air_building = {
 		show_on_map = 3
-		base_cost = 2500
+		base_cost = 3000
 		icon_frame = 9
 		anti_air = yes
 		disabled_in_dmz = yes
@@ -255,7 +255,7 @@ buildings = {
 
 	radar_station = {
 		show_on_map = 1
-		base_cost = 3375
+		base_cost = 3500
 		icon_frame = 11
 		radar = yes
 		damage_factor = 0.5
@@ -271,6 +271,7 @@ buildings = {
 	fuel_silo = {
 		show_on_map = 1
 		base_cost = 4500
+		per_level_extra_cost = -1000
 		icon_frame = 14
 		value = 5
 		infrastructure_construction_effect = yes
@@ -289,7 +290,7 @@ buildings = {
 
 	coal_liquifaction_refinery = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 10000
 		icon_frame = 10
 		refinery = yes
 		value = 5
@@ -310,7 +311,7 @@ buildings = {
 
 	synthetic_refinery = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 10000
 		icon_frame = 28
 		damage_factor = 0
 		local_resources_rubber = 1 # May use local_resources_ + any resource name
@@ -327,7 +328,7 @@ buildings = {
 
 	steel_refinery = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 10000
 		icon_frame = 29
 		local_resources_steel = 5 # May use local_resources_ + any resource name
 		refinery = yes
@@ -343,7 +344,7 @@ buildings = {
 
 	aluminium_refinery = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 10000
 		icon_frame = 30
 		local_resources_aluminium = 5 # May use local_resources_ + any resource name
 		refinery = yes
@@ -359,7 +360,7 @@ buildings = {
 
 	tungsten_refinery = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 10000
 		icon_frame = 31
 		local_resources_tungsten = 4 # May use local_resources_ + any resource name
 		refinery = yes
@@ -375,7 +376,7 @@ buildings = {
 
 	chromium_refinery = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 10000
 		icon_frame = 32
 		local_resources_chromium = 4 # May use local_resources_ + any resource name
 		refinery = yes
@@ -391,7 +392,7 @@ buildings = {
 	
 	state_administration = {
 		show_on_map = 1
-		base_cost = 5750
+		base_cost = 6000
 		icon_frame = 33
 		value = 5
 		infrastructure_construction_effect = yes
@@ -409,7 +410,7 @@ buildings = {
 
 	conscription_center = {
 		show_on_map = 1
-		base_cost = 4500
+		base_cost = 5000
 		icon_frame = 34
 		value = 5
 		infrastructure_construction_effect = yes
@@ -431,7 +432,7 @@ buildings = {
 		dlc_allowed = { has_dlc = Gotterdammerung }
 		#hide_if_missing_tech = yes # always show all buildings
 		show_on_map = 1
-		base_cost = 20000
+		base_cost = 12000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 24
 		value = 1
@@ -450,7 +451,7 @@ buildings = {
 
 	rocket_site = {
 		show_on_map = 1
-		base_cost = 6400
+		base_cost = 6500
 		icon_frame = 12
 		rocket_production = 0
 		rocket_launch_capacity = 1
@@ -474,7 +475,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 30000
+		base_cost = 24000
 		icon_frame = 13
 		nuclear_reactor = yes
 		value = 10
@@ -505,7 +506,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 25000
+		base_cost = 18000
 		icon_frame = 13
 		nuclear_reactor = yes
 		value = 10
@@ -536,7 +537,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 35000
+		base_cost = 30000
 		icon_frame = 27
 		#nuclear_reactor = yes
 		value = 10
@@ -565,7 +566,7 @@ buildings = {
 
 	nuclear_facility = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 12000
 		per_controlled_building_extra_cost = 7500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 20
@@ -598,7 +599,7 @@ buildings = {
 
 	air_facility = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 12000
 		per_controlled_building_extra_cost = 7500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 17
@@ -622,7 +623,7 @@ buildings = {
 
 	land_facility = {
 		show_on_map = 1
-		base_cost = 10800
+		base_cost = 12000
 		per_controlled_building_extra_cost = 7500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 19
@@ -646,7 +647,7 @@ buildings = {
 
 	dam = {
 		show_on_map = 1
-		base_cost = 20000
+		base_cost = 24000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 26
 		value = 5
@@ -716,6 +717,8 @@ buildings = {
 		show_modifier = yes
 		state_modifiers = {
 			state_production_speed_buildings_factor = 0.05
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
 		}
 	}
 
@@ -739,6 +742,8 @@ buildings = {
 		show_modifier = yes
 		state_modifiers = {
 			state_production_speed_buildings_factor = 0.05
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
 		}
 	}
 }
