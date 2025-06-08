@@ -230,7 +230,7 @@ NDefines.NMilitary.UNIT_DIGIN_CAP = 3
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 6	-- was 5
 
 -- Reduced slowest speed to make garrison battalions slower
--- NDefines.NMilitary.SLOWEST_SPEED = 3
+NDefines.NMilitary.SLOWEST_SPEED = 3
 
 -- Cheaper Designs
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0				    -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
@@ -340,14 +340,14 @@ NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always r
 
 -- SPECIAL FORCES
 
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.01					-- Max ammount of special forces battalions is total number of non-special forces battalions multiplied by this and modified by a country modifier
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 112					-- You can have a minimum of this many special forces battalions, regardless of the number of non-special forces battalions you have, this can also be modified by a country modifier
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.02					-- Max ammount of special forces battalions is total number of non-special forces battalions multiplied by this and modified by a country modifier
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 128					-- You can have a minimum of this many special forces battalions, regardless of the number of non-special forces battalions you have, this can also be modified by a country modifier
 
 -- Adding equipment capture
 
 NDefines.NMilitary.BASE_CAPTURE_EQUIPMENT_RATIO = 0.05		-- 0.0 after a successful land combat, ratio of the equipments that are being captured/salvaged from enemy's lost equipment
 -- speed
-NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.020                   -- basic speed control
+NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.040                   -- basic speed control
 
 
 
@@ -498,15 +498,14 @@ NDefines.NAir.DISRUPTION_FACTOR_CARRIER = 75.0						-- multiplier on disruption 
 --                                                                                   
 
 -- Air QoL
-
 NDefines.NAir.MAX_QUICK_WING_SELECTION = 4 -- 3
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 3 | Makes AC player much more responsive
 
--- Airbase capacity change
+-- Airbase capacity change (air combat is mostly vanilla)
 -- NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100		-- 200 how many planes u can have per level of airbase
 
--- XP + Training + Air Resupply + Paradrops
+-- XP + Training + Air Resupply + Paradrops (AIR EXERCISE IS VERY GOOD)
 NDefines.NAir.AIR_WING_XP_LEVELS = { 0, 300, 700, 900 }
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 3 -- 7.0
@@ -533,9 +532,9 @@ NDefines.NAir.DETECT_CHANCE_FROM_RADARS = 1 -- 0.5
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.85 -- 0.8 Anti Air Gun Damage factor
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.25 -- 0.1 Anti Air Gun hit chance
 
--- CAS DAMAGE
-NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.03   -- 0.032
-NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.03   -- 0.032
+-- CAS DAMAGE (air combat is mostly vanilla)
+-- NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.03   -- 0.032
+-- NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.03   -- 0.032
 
 -- Flicker Bombing
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER = 0.192    -- How much efficiency to regain per day. Gain applied hourly.
@@ -556,9 +555,9 @@ NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0.0009 -- 
 -- CAS should enter combat earlier
 NDefines.NAir.ESCORT_FACTOR = 4  		-- cas enters battle earlier, fucks a lot of shit up
 
--- Less losses
-NDefines.NAir.COMBAT_MULTIPLANE_CAP = 1.5                  -- VANILLA 3
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.33							-- Higher value = more shot down planes
+-- Less losses (air combat is mostly vanilla)
+-- NDefines.NAir.COMBAT_MULTIPLANE_CAP = 1.5                  -- VANILLA 3
+-- NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.33							-- Higher value = more shot down planes
 
 
 
