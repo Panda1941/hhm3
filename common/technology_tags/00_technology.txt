@@ -23,6 +23,7 @@ technology_categories = {
 	industry
 	industry_late
 	electronics
+	cat_fortification
 	land_doctrine
 	air_doctrine
 	naval_doctrine
@@ -112,6 +113,13 @@ technology_categories = {
 	cat_mountaineers_doctrine
 	cat_marines_doctrine
 	cat_paratroopers_doctrine
+	naval_armor
+	naval_artillery
+	helicopter_tech
+	pykrete_tech
+	transport_planes_cat
+
+	mio_cat_tech_all_armor_and_modules #Includes modules and chassis (DOES NOT INCLUDE ARMORED CARS)
 	cat_shock_troop_doctrine
 	cat_jaeger_doctrine
 	
@@ -131,6 +139,8 @@ technology_categories = {
 	mio_cat_tech_all_carrier_and_modules #Includes CV and all related modules
 	mio_cat_tech_all_cruiser_and_modules #Includes all CA (+ Coastal etc.), CL (Torpedo Cruiser) and all related modules
 	mio_cat_tech_all_destroyer_and_modules #Includes all DD and all related modules
+	mio_cat_tech_all_motorized_mechanized #Includes all Motorized (incl. Motorized Rocket Artillery) and Mechanized Equipment. (DOES NOT INCLUDE ARMORED CARS)
+	mio_cat_artillery #Includes Artillery only (no AT, AA or Rocketry)
 }
 
 technology_folders = {
@@ -158,9 +168,7 @@ technology_folders = {
 		ledger = army
 	}
 	air_techs_folder = {
-		available = { 
-			NOT = { has_dlc = "By Blood Alone" }
-		}
+		available = { NOT = { has_dlc = "By Blood Alone" } }
 		ledger = air
 	}
 	bba_air_techs_folder = {

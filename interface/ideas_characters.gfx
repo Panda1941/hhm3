@@ -50,6 +50,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_AUS_kurt_schuschnigg.dds"
 	}
 
+	spriteType = { #Easter Egg - Unused
+		name = "GFX_portrait_AUS_johann_hiedler_small"
+		texturefile = "gfx/leaders/AUS/portrait_AUS_johann_hiedler_small.dds"
+	}
+
 	### BEL
 
 	spriteType = {
@@ -1078,11 +1083,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_GER_heinrich_himmler"
-		texturefile = "gfx/interface/ideas/idea_GER_heinrich_himmler.dds"
-	}
-
-	spriteType = {
 		name = "GFX_idea_GER_heinz_guderian"
 		texturefile = "gfx/interface/ideas/idea_GER_heinz_guderian.dds"
 	}
@@ -1090,11 +1090,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GER_hermann_boehm"
 		texturefile = "gfx/interface/ideas/idea_GER_hermann_boehm.dds"
-	}
-
-	spriteType = {
-		name = "GFX_idea_GER_hermann_goring"
-		texturefile = "gfx/interface/ideas/idea_GER_hermann_goring.dds"
 	}
 
 	spriteType = {
@@ -1192,6 +1187,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_GER_wolfram_freiherr_von_richthofen.dds"
 	}
 
+	### MOVED HERE FROM NSB ###
+
+	spriteType = {
+		name = "GFX_idea_SOV_pyotr_krasnov"
+		texturefile = "gfx/interface/ideas/idea_SOV_pyotr_krasnov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SOV_andrey_shkuro"
+		texturefile = "gfx/interface/ideas/idea_SOV_andrey_shkuro.dds"
+	}
+
+	
+
 	### GRE
 
 	spriteType = {
@@ -1208,6 +1217,55 @@ spriteTypes = {
 		name = "GFX_idea_GRE_markos_vafiadis"
 		texturefile = "gfx/interface/ideas/idea_gre_markos_vafiadis.dds"
 	}
+
+
+	### GER WUNDERWAFFE
+
+	spriteType = {
+		name = "GFX_portrait_GER_alfred_becker_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_alfred_becker_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_alfred_rosenberg_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_alfred_rosenberg_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_hans_luther_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_hans_luther_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_helmuth_wilberg_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_helmuth_wilberg_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_john_rabe_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_john_rabe_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_josef_kammhuber_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_josef_kammhuber_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_ludwig_erhard_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_ludwig_erhard_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_qian_xiuling_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_qian_xiuling_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_reinhard_heydrich_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_reinhard_heydrich_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_robert_knauss_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_robert_knauss_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_walter_dornberger_small"
+		texturefile = "gfx/interface/ideas/portrait_GER_walter_dornberger_small.dds"
+	}
+
 
 	### GUA
 
@@ -1259,6 +1317,33 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_HUN_miklos_horthy"
 		texturefile = "gfx/interface/ideas/idea_HUN_miklos_horthy.dds"
+	}
+
+	### GEO 
+
+	spriteType = {
+		name = "GFX_portrait_GEO_giorgi_kvinitadze_small"
+		texturefile = "gfx/interface/ideas/portrait_GEO_giorgi_kvinitadze_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GEO_shalva_maglakelidze_small"
+		texturefile = "gfx/interface/ideas/portrait_GEO_shalva_maglakelidze_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GEO_george_bagration_mukhrani_civilian_small"
+		texturefile = "gfx/interface/ideas/portrait_GEO_george_bagration_mukhrani_civilian_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GEO_george_bagration_mukhrani_military_small"
+		texturefile = "gfx/interface/ideas/portrait_GEO_george_bagration_mukhrani_military_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_GEO_noe_zhordania_small"
+		texturefile = "gfx/interface/ideas/portrait_GEO_noe_zhordania_small.dds"
 	}
 
 	### ICE
@@ -1864,6 +1949,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_POL_tadeusz_bielecki.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_POL_rudiger_von_der_goltz"
+		texturefile = "gfx/interface/ideas/idea_POL_rudiger_von_der_goltz.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_POL_pavel_bermondt_avlov"
+		texturefile = "gfx/interface/ideas/idea_POL_pavel_bermondt_avlov.dds"
+	}
+
 	### POR
 
 	spriteType = {
@@ -2175,6 +2270,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_SWE_per_albin_hansson.dds"
 	}
 
+	### SWI 
+
+	spriteType = {
+		name = "GFX_portrait_SWI_robert_tobler_small"
+		texturefile = "gfx/interface/ideas/portrait_SWI_robert_tobler_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_SWI_georg_von_trapp_small"
+		texturefile = "gfx/interface/ideas/portrait_SWI_georg_von_trapp_small.dds"
+	}
+
+	### UKR 
+
+	spriteType = {
+		name = "GFX_portrait_UKR_mykhailo_omelianovych_pavlenko_small"
+		texturefile = "gfx/interface/ideas/portrait_UKR_mykhailo_omelianovych_pavlenko_small.dds"
+	}
+
 	### TAN
 
 	spriteType = {
@@ -2430,6 +2544,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_USA_william_hood_simpson.dds"
 	}
 
+	spriteType = { #Easter Egg - Unused
+		name = "GFX_portrait_USA_mr_hilt_small"
+		texturefile = "gfx/leaders/USA/portrait_USA_mr_hilt_small.dds"
+	}
+
 	### VEN
 
 	spriteType = {
@@ -2461,11 +2580,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_YUG_josip_broz_tito"
 		texturefile = "gfx/interface/ideas/idea_yug_josip_broz_tito.dds"
-	}
-
-	spriteType = {
-		name = "GFX_idea_YUG_borivoje_mirkovic"
-		texturefile = "gfx/interface/ideas/idea_generic_air_europe_2.dds"
 	}
 
 	spriteType = {
@@ -2937,6 +3051,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GER_generic_navy_3"
 		texturefile = "gfx/interface/ideas/idea_GER_generic_navy_3.dds"
+	}
+
+	spriteType = { # EASTER EGG operative portrait - small
+		name = "GFX_idea_GER_hilter_f"
+		texturefile = "gfx/interface/ideas/idea_GER_hilter_f.dds"
+	}
+	
+	spriteType = { # EASTER EGG operative portrait - small
+		name = "GFX_idea_GER_hilter_m"
+		texturefile = "gfx/interface/ideas/idea_GER_hilter_m.dds"
 	}
 
 	### ITA
@@ -3446,7 +3570,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_south_america_generic_land_5.dds"
 	}
 
-	spriteType = {
+	spriteType = { #EASTER EGG
 		name = "GFX_idea_south_america_generic_leader_1"
 		texturefile = "gfx/interface/ideas/idea_south_america_generic_leader_1.dds"
 	}
@@ -3625,6 +3749,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_USA_generic_navy_3"
 		texturefile = "gfx/interface/ideas/idea_USA_generic_navy_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_PLACEHOLDER_small"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
 }

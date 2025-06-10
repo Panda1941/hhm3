@@ -1079,6 +1079,15 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_SM_submarine_anechoic_tiles"
+		textureFile = "gfx/interface/equipmentdesigner/naval/topviews/submarine/submarine_anechoic_tiles.dds"
+	}
+	spriteType = {
+		name = "GFX_SM_submarine_anechoic_tiles@highlight"
+		textureFile = "gfx/interface/equipmentdesigner/naval/topviews/submarine/submarine_anechoic_tiles@highlight.dds"
+	}
+
+	spriteType = {
 		name = "GFX_SM_submarine_hull_armor"
 		textureFile = "gfx/interface/equipmentdesigner/naval/topviews/module_blueprint_armor.dds"
 	}
