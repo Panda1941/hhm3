@@ -16,10 +16,10 @@ state={
 			arms_factory = 1
 		}
 		victory_points = {
-			6338 10
+			6338 20
 		}
 		add_core_of = SOV
-		add_core_of = WST
+		add_core_of = SOV
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 2

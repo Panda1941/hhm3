@@ -8,12 +8,11 @@ state={
 	
 	
 	history=
-	{
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = CHI
-		
-		add_core_of = MAN
+{ 1936.1.1.13 = { owner = WST add_core_of = WST }
+		owner = WST
+		add_core_of = WST
+		add_core_of = SHX
+		add_core_of = SHX
 		
 		buildings = {
 			infrastructure = 1
@@ -26,11 +25,11 @@ state={
 		1939.1.1 = {
 			
 			owner = PRC
-			controller = MAN
+			controller = MEN
 
 		}
 	}
-	manpower=500000
+	manpower=1
 	buildings_max_level_factor=1.000
 
 	local_supplies=0.0 

@@ -1,0 +1,242 @@
+ideas = {
+	hidden_ideas = {
+	
+		heavy_industry = {
+			name = "Heavy Industry 1"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    armor = { build_cost_ic = -0.02 instant = yes }
+			    motorized_equipment = { build_cost_ic = -0.02 instant = yes }
+			    mechanized_chassis = { build_cost_ic = -0.02 instant = yes }
+
+
+				small_plane_airframe = { build_cost_ic = -0.02 instant = yes }
+				cv_small_plane_airframe = { build_cost_ic = -0.02 instant = yes }
+				small_plane_cas_airframe = { build_cost_ic = -0.02 instant = yes }
+				cv_small_plane_cas_airframe = { build_cost_ic = -0.02 instant = yes }
+				small_plane_naval_bomber_airframe = { build_cost_ic = -0.02 instant = yes }
+				cv_small_plane_naval_bomber_airframe = { build_cost_ic = -0.02 instant = yes }
+				medium_plane_airframe = { build_cost_ic = -0.02 instant = yes }
+				medium_plane_fighter_airframe = { build_cost_ic = -0.02 instant = yes }
+				medium_plane_scout_plane_airframe = { build_cost_ic = -0.02 instant = yes }
+				large_plane_airframe = { build_cost_ic = -0.02 instant = yes }
+				large_plane_maritime_patrol_plane_airframe = { build_cost_ic = -0.02 instant = yes }
+				transport_plane_equipment = { build_cost_ic = -0.02 instant = yes }				
+			}		
+		}
+		
+		heavy_industry_1 = {
+			name = "Heavy Industry 2"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = { build_cost_ic = -0.03 instant = yes }
+			    motorized_equipment = { build_cost_ic = -0.03 instant = yes }
+			    mechanized_chassis = { build_cost_ic = -0.03 instant = yes }
+
+
+				small_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				small_plane_cas_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_cas_airframe = { build_cost_ic = -0.03 instant = yes }
+				small_plane_naval_bomber_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_naval_bomber_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_fighter_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_scout_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				large_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				large_plane_maritime_patrol_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				transport_plane_equipment = { build_cost_ic = -0.03 instant = yes }
+			}		
+		}
+		
+		heavy_industry_2 = {
+			name = "Heavy Industry 3"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = { build_cost_ic = -0.03 instant = yes }
+			    motorized_equipment = { build_cost_ic = -0.03 instant = yes }
+			    mechanized_chassis = { build_cost_ic = -0.03 instant = yes }
+
+				small_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				small_plane_cas_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_cas_airframe = { build_cost_ic = -0.03 instant = yes }
+				small_plane_naval_bomber_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_naval_bomber_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_fighter_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_scout_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				large_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				large_plane_maritime_patrol_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				transport_plane_equipment = { build_cost_ic = -0.03 instant = yes }
+			}		
+		}
+		
+		heavy_industry_3 = {
+			name = "Heavy Industry 4"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = { build_cost_ic = -0.03 instant = yes }
+			    motorized_equipment = { build_cost_ic = -0.03 instant = yes }
+			    mechanized_chassis = { build_cost_ic = -0.03 instant = yes }
+
+				small_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				small_plane_cas_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_cas_airframe = { build_cost_ic = -0.03 instant = yes }
+				small_plane_naval_bomber_airframe = { build_cost_ic = -0.03 instant = yes }
+				cv_small_plane_naval_bomber_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_fighter_airframe = { build_cost_ic = -0.03 instant = yes }
+				medium_plane_scout_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				large_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				large_plane_maritime_patrol_plane_airframe = { build_cost_ic = -0.03 instant = yes }
+				transport_plane_equipment = { build_cost_ic = -0.03 instant = yes }
+			}		
+		}
+		
+		small_arms_industry = {
+			name = "Light Industry 1"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    infantry_equipment = { build_cost_ic = -0.02 instant = yes }
+			    support_equipment = { build_cost_ic = -0.02 instant = yes }
+			    special_forces_equipment = { build_cost_ic = -0.02 instant = yes }
+
+			    artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    pack_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    rocket_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_air_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			}		
+		}
+		
+		small_arms_industry_1 = {
+			name = "Light Industry 2"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    infantry_equipment = { build_cost_ic = -0.02 instant = yes }
+			    support_equipment = { build_cost_ic = -0.02 instant = yes }
+			    special_forces_equipment = { build_cost_ic = -0.02 instant = yes }
+
+			    artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    pack_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    rocket_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_air_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			}		
+		}
+		
+		small_arms_industry_2 = {
+			name = "Light Industry 3"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    infantry_equipment = { build_cost_ic = -0.02 instant = yes }
+			    support_equipment = { build_cost_ic = -0.02 instant = yes }
+			    special_forces_equipment = { build_cost_ic = -0.02 instant = yes }
+
+			    artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    pack_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    rocket_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_air_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			}		
+		}
+		
+		small_arms_industry_3 = {
+			name = "Light Industry 4"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    infantry_equipment = { build_cost_ic = -0.02 instant = yes }
+			    support_equipment = { build_cost_ic = -0.02 instant = yes }
+			    special_forces_equipment = { build_cost_ic = -0.02 instant = yes }
+
+			    artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    pack_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    rocket_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			    anti_air_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_artillery_equipment = { build_cost_ic = -0.02 instant = yes }
+			    heavy_anti_tank_equipment = { build_cost_ic = -0.02 instant = yes }
+			}		
+		}
+	}
+}

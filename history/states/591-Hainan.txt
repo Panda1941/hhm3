@@ -4,11 +4,9 @@ state={
 	manpower = 4350000
 	state_category = town
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
-		
 		
 		victory_points = {
 			1070 1 
@@ -28,7 +26,6 @@ state={
 				limit = {
 					NOT = { has_dlc = "Waking the Tiger" }
 				}
-				remove_core_of = CHI
 				CHI = { transfer_state = PREV }
 			}
 			controller = JAP

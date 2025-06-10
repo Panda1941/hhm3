@@ -4,16 +4,14 @@ state= {
 	manpower = 12700000
 	state_category = town
 	resources={
-		tungsten=15 # was: 20
-		steel= 15 # was: 20
+		tungsten=20 # was: 20
+		steel= 44 # was: 20
 		chromium = 3 # was: 4
 	}
 
-	history= {
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
-		
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -25,7 +23,6 @@ state= {
 		}
 
 		1938.10.25 = {		
-			remove_core_of = CHI
 			owner = CHI
 			JAP = {
 				set_province_controller = 1202

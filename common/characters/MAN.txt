@@ -28,12 +28,13 @@ characters={
 			}
 		}
 		corps_commander={
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=-1
+			traits={ brilliant_strategist politically_connected trickster trait_engineer organizer infantry_leader panzer_leader trickster }
+			skill=6
+			attack_skill=5
+			defense_skill=6
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=1
 		}
 	}
 	MAN_zhang_jinghui={
@@ -348,28 +349,6 @@ characters={
 		}
 	}
 
-	MAN_megata_toshiro = {
-		name=MAN_megata_toshiro
-		portraits={
-			civilian={
-				small="GFX_idea_generic_political_advisor_asia_2"
-			}
-		}	
-
-		advisor = {
-			slot = political_advisor
-			idea_token = MAN_megata_toshiro
-			allowed = {
-				original_tag = MAN
-			}
-			cost = 150
-			traits = { armaments_organizer }
-			ai_will_do = {
-				factor = 0.250
-			}
-		}
-	}
-
 	MAN_songgotu_zhanshan = {
 		name=MAN_songgotu_zhanshan
 		portraits={
@@ -394,6 +373,7 @@ characters={
 			}
 		}
 	}
+
 	### POLITICAL ADVISORS ###
 
 	# Girgory Semyonov in Soviet file

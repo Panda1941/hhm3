@@ -6,9 +6,9 @@ state={
 	
 	state_category = small_island
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = JAP
-		add_core_of = WST
+		add_core_of = SWE
 		buildings = {
 			infrastructure = 2
 			air_base = 2

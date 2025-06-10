@@ -7,11 +7,10 @@ state={
 	state_category = city
 	
 	resources={
-		steel=21 # was: 36
 	}
 
 	history={
-		add_core_of = WST
+		add_core_of = ENG
 		owner = ENG
 		victory_points = {
 			3273 15

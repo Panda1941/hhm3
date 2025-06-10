@@ -2,7 +2,7 @@ state={
 	id=816
 	name="STATE_816"
 	state_category = town
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = USA
 		add_core_of = USA
 		buildings = {

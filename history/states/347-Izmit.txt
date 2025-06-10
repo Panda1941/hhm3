@@ -2,20 +2,30 @@
 state={
 	id=347
 	name="STATE_347"
-	manpower = 1
-	resources={
-		chromium=19 # was: 26
-		steel = 9
-	}
+    manpower = 1
+	#resources={
+	#	chromium=19 # was: 26
+	#	steel = 9
+	#}
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
-		owner =CHO
-		
-		
-		
-		add_core_of =CHO
+        owner = WST
+
+
+
+
+
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			904 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = TUR
 	}
 
 	provinces={

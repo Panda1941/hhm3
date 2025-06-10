@@ -80,6 +80,25 @@ GRE_basileiades_organization = {
 		has_dlc = "Battle for the Bosporus"
 	}
 }
+GRE_astilleros_onassis_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_gre_astilleros_onassis
+	allowed = {	
+		tag = GRE
+		has_dlc = "Battle for the Bosporus"
+	}
+	available = {
+		owner = {
+			OR = {
+				has_country_leader = {
+					character = GRE_aristotle_onassis
+					ruling_only = yes
+				}
+				has_idea = GRE_aristotle_onassis
+			}
+		}
+	}
+}
 
 
 ###########################

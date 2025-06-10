@@ -2,29 +2,41 @@
 state={
 	id=450
 	name="STATE_450"
-	manpower = 82535
-	
-	state_category = wasteland
+	resources={
+		oil=20.000
+	}
 
 	history={
+	set_state_flag = ITA_controls
+	set_state_flag = NOT_AFRICA_COMMONWEALTH_controls
 		owner = ITA
-		
 		victory_points = {
-			11954 3 
+			13297 10 
+		}
+		victory_points = {
+			1127 3 
+		}
+		victory_points = {
+			12094 2 
 		}
 		buildings = {
 			infrastructure = 2
 			air_base = 1
-			11954 = {
+			13297 = {
 				naval_base = 1
+
 			}
+
 		}
-		add_core_of = WST
+		add_core_of = SWE
+
 	}
 
 	provinces={
-		1127 4120 10123 11954 
+		1062 1127 1198 4063 4120 4151 4200 7063 7139 10123 11954 12079 12094 13297 13304 13306 13307 13309 13314 
 	}
-
-	local_supplies=0.0 
+	manpower=82535
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

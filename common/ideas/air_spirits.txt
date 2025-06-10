@@ -1,0 +1,315 @@
+ideas = {
+	air_force_spirit = {
+		independent_air_force_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			modifier = {
+				air_advisor_cost_factor = -0.25
+				max_command_power = 25
+			}
+			cost = 30
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		industrial_destruction_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			research_bonus = {
+				heavy_air = 0.15
+				tactical_bomber = 0.15
+			}
+			modifier = {
+				
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		dive_bombing_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			research_bonus = {
+				
+			}
+			modifier = {
+				air_bombing_targetting = 0.05
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		material_destruction_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			research_bonus = {
+			}
+			visible = { always = no }
+			modifier = {
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		industry_liasons_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		
+		effective_training_programs_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			modifier = {
+				air_fuel_consumption_factor = -0.075
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		branch_independence_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			modifier = {
+				experience_gain_air = 0.15
+				air_doctrine_cost_factor = -0.075
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		air_crew_surveys_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			modifier = {
+				air_doctrine_cost_factor = -0.1
+				command_power_gain_mult = 0.05
+			}
+			cost = 30
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		
+		special_air_forces_training = {
+			ledger = air
+			available = { has_air_academy = yes }
+			modifier = {
+				experience_gain_special_forces = 0.08
+				experience_gain_air = -0.08
+			}
+			cost = 10
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+	}
+
+	air_force_command_spirit = {
+		battlefield_air_interdiction_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				ground_attack_factor = 0.12
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		cag_night_fighting_spirit = {
+			ledger = air
+			visible = { always = no }
+			modifier = {
+				air_carrier_night_penalty_reduction_factor = 0.33
+				carrier_night_traffic = 0.5
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		veteran_air_instructors_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				air_range_factor = 0.15
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		centralized_control_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				air_mission_efficiency = 0.06
+			}
+			cost = 30
+			visible = {  }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		steel_wings_steel_hearts_spirit = {
+			ledger = air
+			visible = {  }
+			available = { has_air_force_command = yes tag = SOV date > 1942.01.01 }
+			modifier = {
+				air_defence_factor = 0.1
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		home_defence_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				ace_effectiveness_factor = 0.5
+			}
+			cost = 30
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		air_power_projection_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			visible = { always = no }
+			modifier = {
+				air_power_projection_factor = 0.1
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		massed_strike_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				army_bonus_air_superiority_factor = 0.10
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		continuous_strike_spirit = {
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				air_cas_efficiency = 0.15
+				air_escort_efficiency = 0.15
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		strategic_strike_spirit = { 
+			ledger = air
+			available = { has_air_force_command = yes }
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.06
+			}
+			cost = 30
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+	}
+}

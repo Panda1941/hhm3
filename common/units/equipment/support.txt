@@ -1,0 +1,85 @@
+equipments = {
+
+	support_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+			motorized
+		}
+		group_by = archetype
+		
+		upgrades = {
+			
+		}
+		interface_category = interface_category_land
+		
+		reliability = 0.8
+
+		#Shovels to dig a hole
+		defense = 2
+		breakthrough = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+
+		build_cost_ic = 2.75
+		resources = {
+			aluminium = 1
+			steel = 2
+		}
+	}
+
+	support_equipment_1 = {
+		year = 1918
+
+		archetype = support_equipment
+		priority = 20	
+	}
+	###################################SPECIAL#############################################
+	special_forces_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+			motorized
+		}
+		group_by = archetype
+		
+		upgrades = {
+			
+		}
+		interface_category = interface_category_land
+		
+		reliability = 0.8
+
+		#Shovels to dig a hole
+		defense = 3
+		breakthrough = 3
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+
+		build_cost_ic = 3.5
+		resources = {
+			aluminium = 1
+			steel = 2
+		}
+	}
+
+	special_forces_equipment_1 = {
+		year = 1918
+
+		archetype = special_forces_equipment
+		priority = 20	
+	}
+	
+	
+
+}

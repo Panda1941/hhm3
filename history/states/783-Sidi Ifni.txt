@@ -12,12 +12,9 @@ state={
 		}
 
 		owner = SPR
-		add_core_of = WST
+		add_core_of = SWE
 		buildings = {
 			infrastructure = 1
-			12857 = {
-				naval_base = 1
-			}
 		}
 	}
 

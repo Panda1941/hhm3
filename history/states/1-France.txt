@@ -4,7 +4,7 @@ state={
 	name="STATE_1" # Corsica
 	manpower = 322900
 	
-	state_category = town
+	state_category = megalopolis
 
 	history={
 		owner = FRA
@@ -17,8 +17,8 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = WST
 		add_core_of = FRA
+		add_core_of = VIC
 	}
 
 	provinces={

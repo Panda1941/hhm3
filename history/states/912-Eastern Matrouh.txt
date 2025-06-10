@@ -1,0 +1,33 @@
+
+state={
+	id=912
+	name="STATE_912"
+	resources={
+		oil=8.000
+	}
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			13264 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			13264 2 
+		}
+		add_core_of = SWE
+
+	}
+
+	provinces={
+		7148 10061 11910 11967 13259 13261 13264 13275 13276 13279 
+	}
+	manpower=32556
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=9.000
+}

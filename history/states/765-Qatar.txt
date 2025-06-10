@@ -1,18 +1,16 @@
-state = {
-	id = 765
-	name = "STATE_765"
+
+state={
+	id=765
+	name="STATE_765"
 	manpower = 51600
 	state_category = pastoral
 
-	history = {
-		
+	history={
+		add_core_of = SWE
 		owner = ENG
-		add_core_of = QAT
-
 		victory_points = {
-			8051 1 # Doha
+			8051 1
 		}
-
 		buildings = {
 			infrastructure = 1
 			8051 = {
@@ -21,9 +19,9 @@ state = {
 		}
 	}
 
-	provinces = {
+	provinces={
 		8051
 	}
 
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }

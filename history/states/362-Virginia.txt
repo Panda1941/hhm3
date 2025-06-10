@@ -3,7 +3,7 @@ state={
 	id=362
 	name="STATE_362"
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = USA
 		buildings = {
 			infrastructure = 3 #was: 6
@@ -26,7 +26,7 @@ state={
 		}
 		1939.1.1 = {
 			buildings = {
-				industrial_complex = 2
+				industrial_complex = 7
 				dockyard = 5
 
 			}
@@ -42,5 +42,5 @@ state={
 	local_supplies=11.0
 	manpower=2249080
 	buildings_max_level_factor=1.000
-	state_category=large_city
+	state_category=metropolis
 }

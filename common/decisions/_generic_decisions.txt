@@ -27,7 +27,7 @@ political_actions = {
 			#Target is FROM
 			FROM = {
         		NOT = { is_in_faction_with = ROOT }
-				is_special_project_completed = sp:sp_nuclear_reactor
+				has_tech = nuclear_reactor
 				any_owned_state = {
 					nuclear_reactor > 0
 				}
@@ -41,7 +41,7 @@ political_actions = {
             NOT = { has_idea = race_for_the_bomb }
             FROM = {
         		NOT = { is_in_faction_with = ROOT }
-				is_special_project_completed = sp:sp_nuclear_reactor
+				has_tech = nuclear_reactor
 				any_owned_state = {
 					nuclear_reactor > 0
 				}
@@ -57,7 +57,7 @@ political_actions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				any_other_country = { is_special_project_completed = sp:sp_nuclear_bomb }
+				any_other_country = { has_tech = nukes }
 			}
 		}
 	}
@@ -85,19 +85,18 @@ political_actions = {
 		fire_only_once = no
 
 		modifier = {
-			stability_weekly = 0.005
+			stability_weekly = 0.0075
 			consumer_goods_factor = 0.10
 			industrial_capacity_factory = -0.1
-			
 		}
 
-		days_remove = 180
-		days_re_enable = 540
+		days_remove = 140
+		days_re_enable = 420
 
 		cost = 100
 
 		complete_effect = {
-
+			custom_effect_tooltip = "Will give a total of 15% stability"
 		}
 
 		ai_will_do = {
@@ -118,17 +117,7 @@ political_actions = {
 				has_completed_focus = ICE_not_our_king
 				NOT = { has_completed_focus = ICE_break_with_the_crown }
 			}
-			modifier = {
-				factor = 0 
-				tag = GER
-				has_completed_focus = GER_oppose_hitler_ww
-				NOT = { 
-					OR = {
-						has_completed_focus = GER_the_peoples_victory 
-						has_completed_focus = GER_monarchist_sentiment 
-					}
-				}
-			}
+
 			modifier = {
 				add = 1000
 				has_stability < 0.76
@@ -227,19 +216,34 @@ economy_decisions = {
 
 		icon = GFX_decision_generic_construction
 
-		visible = { 
-			OR = {
+		visible = {
+			OR = {	# Making this one available one time for EVERYONE not just like germany italy and minors (uk buff)
 				is_major = no
-				tag = JAP
-				AND = {
-					is_faction_leader = yes
-					num_of_factories < 51 #would be a minor if it wasn't for faction leader status
-				}
+				is_major = yes
+				#AND = {
+				#	is_faction_leader = yes
+				#	num_of_factories < 51					#would be a minor if it wasn't for faction leader status
+				#}
+				#AND = {
+				#	tag = JAP
+				#	OR = {
+				#		SIA = {
+				#			is_ai = yes
+				#		}
+				#		NOT = {
+				#			country_exists = SIA
+				#		}
+				#	}
+				#}
+				#tag = ITA
+				#tag = GER
 			}
 		}
 		fire_only_once = yes
 
 		days_remove = 120
+
+		cost = 50	# Since its available for everyone it now has a cost
 
 		ai_will_do = {
 			factor = 1
@@ -268,7 +272,7 @@ economy_decisions = {
 		icon = GFX_decision_hol_draw_up_staff_plans	
 
 		visible = { 
-			num_of_factories < 60
+			num_of_factories < 80
 		}
 		
 		available = {
@@ -295,7 +299,7 @@ economy_decisions = {
 				type = train_equipment
 				amount = 15
 			}
-			add_stability = -0.05
+			add_stability = -0.025
 		}
 	}			
 }
@@ -307,7 +311,7 @@ propaganda_efforts = {
 
 		available = {
 			NOT = { has_country_flag = war_propaganda_campaign_running }
-			has_war_support < 0.5
+			has_war_support < 0.6
 			
 			if = {
 				limit = {
@@ -342,13 +346,14 @@ propaganda_efforts = {
 
 		fire_only_once = no
 
-		days_remove = 90
-		days_re_enable = 180
+		# These are now all 140 days so its clear how much it adds (if its 180 then it adds 25 times, now it adds 20 times, cost scaled down)
+		days_remove = 35
+		days_re_enable = 120
 
-		cost = 150
+		cost = 75
 
 		modifier = {
-			war_support_weekly = 0.005
+			war_support_weekly = 0.01
 		}
 
 		complete_effect = {
@@ -378,19 +383,18 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			# has_war = yes
 			has_war_with_non_exiled_country = yes
 		}
 
 		fire_only_once = no
 
-		days_remove = 180
+		days_remove = 140
 		
 		remove_trigger = {
 			has_war = no
         }
 		
-		cost = 100
+		cost = 75
 
 		modifier = {
 			weekly_casualties_war_support = 0.006
@@ -448,19 +452,18 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			# has_war = yes
 			has_war_with_non_exiled_country = yes
 		}
 
 		fire_only_once = no
 
-		days_remove = 180
+		days_remove = 140
 		
 		remove_trigger = {
 			has_war = no
         }
 		
-		cost = 100
+		cost = 75
 
 		modifier = {
 			weekly_convoys_war_support = 0.006
@@ -503,19 +506,18 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			# has_war = yes
 			has_war_with_non_exiled_country = yes
 		}
 
 		fire_only_once = no
 
-		days_remove = 180
+		days_remove = 140
 		
 		remove_trigger = {
 			has_war = no
         }
 		
-		cost = 100
+		cost = 75
 
 		modifier = {
 			weekly_bombing_war_support = 0.006
@@ -568,32 +570,8 @@ propaganda_efforts = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			IF = {
-				limit = {
-					tag = BRA
-				}
-				threat > 0.25
-				#has_tech = radio
-				has_completed_focus = BRA_radio_nacional
-			}
-			ELSE = {
-				threat > 0.25
-				has_tech = radio
-			}
-		
-
-			IF = {
-				limit = {
-					tag = AFG
-				}
-				threat > 0.25
-				#has_tech = radio
-				has_completed_focus = AFG_establish_radio_networks
-			}
-			ELSE = {
-				threat > 0.25
-				has_tech = radio
-			}
+			threat > 0.25
+			has_tech = radio
 		}
 
 		visible = {
@@ -617,7 +595,7 @@ propaganda_efforts = {
 
 		fire_only_once = yes
 
-		cost = 75
+		cost = 50
 
 		complete_effect = {
 			add_war_support = 0.05
@@ -676,15 +654,10 @@ propaganda_efforts = {
 
 		fire_only_once = yes
 
-		cost = 100 
+		cost = 75 
 
 		complete_effect = {
-			effect_tooltip = {
-				add_war_support = 0.10
-			}
-			hidden_effect = {
-				country_event = political.33
-			}
+			add_war_support = 0.10
 		}
 
 		ai_will_do = {
@@ -1641,7 +1614,6 @@ war_measures = {
 		complete_effect = {
 			replace_civ_with_arms_factories = yes
 			add_war_support = -0.05
-			add_stability = -0.03
 		}
 		ai_will_do = {
 			factor = 0
@@ -1672,10 +1644,6 @@ war_measures = {
 				surrender_progress > 0.6
 				factor = 10
 			}
-			modifier = {
-				has_capitulated = yes
-				factor = 0
-			}
 		}
 
 		modifier = {
@@ -1698,22 +1666,7 @@ war_measures = {
 
         available = {
             has_war = yes
-            if = {
-				limit = {
-					NOT = { original_tag = GER }
-				}
-        		has_idea = tot_economic_mobilisation
-			}
-			else_if = {
-				limit = {
-					original_tag = GER
-				}
-				OR = {
-        			has_idea = tot_economic_mobilisation
-					has_idea = totaler_krieg_economy
-				}
-				NOT = { has_completed_focus = GER_womens_rights_and_equality }
-			}
+            has_idea = tot_economic_mobilisation
             OR = {
                 AND = {
                     has_government = democratic
@@ -1739,38 +1692,17 @@ war_measures = {
         }
         visible = {
             has_war = yes
-            if = {
-            	limit = {
-            		original_tag = GER
-            	}
-            	NOT = { has_completed_focus = GER_womens_rights_and_equality }
-            }
         }
-        cost = 100
+        cost = 125
         days_remove = -1
         remove_trigger = {
-            if = {
-            	limit = {
-            		original_tag = GER
-            	}
-        		OR = {
-        			has_war = no
-        			AND = {
-        				NOT = { has_idea = tot_economic_mobilisation }
-        				NOT = { has_idea = totaler_krieg_economy }
-        			}
-        			has_completed_focus = GER_womens_rights_and_equality
-        		}
+        	OR = {
+            	has_war = no
+            	not = { has_idea = tot_economic_mobilisation }
             }
-        	else = {
-	        	OR = {
-	            	has_war = no
-	            	NOT = { has_idea = tot_economic_mobilisation }
-	            }
-        	}
         }
         modifier = {
-            conscription = 0.03
+			industrial_capacity_factory = 0.05
             stability_factor = -0.05
         }
         ai_will_do = {
@@ -1833,10 +1765,10 @@ war_measures = {
 
 		days_remove = 180
 
-		cost = GER_war_bonds_var?50
+		cost = GER_war_bonds_var?75
 
 		modifier = {
-			consumer_goods_factor = -0.20
+			consumer_goods_factor = -0.2
 		}
 
 		ai_will_do = {
@@ -1862,13 +1794,13 @@ war_measures = {
 				limit = {
 					check_variable = {
 						var = GER_war_bonds_var
-						value = 50
+						value = 75
 						compare = less_than
 					}
 				}
 				set_variable = {
 					var = GER_war_bonds_var
-					value = 50
+					value = 75
 				}
 			}
 			add_to_variable = {
@@ -1879,7 +1811,7 @@ war_measures = {
 				limit = {
 					check_variable = {
 						var = GER_war_bonds_var
-						value = 100
+						value = 150
 						compare = greater_than_or_equals
 					}
 					check_variable = {
@@ -1909,73 +1841,6 @@ war_measures = {
 			}
 		}
     }
-	
-	diversify_special_forces = {
-
-		icon = GFX_decision_generic_military
-
-		available = {
-			date > 1940.1.1
-		}
-
-		visible = {
-			AND = {
-				is_major = yes
-				has_dlc = "Arms Against Tyranny"
-				NOT = {
-					OR = {
-						tag = ENG #has a focus
-						tag = USA #has a focus
-						tag = SOV #has a focus
-						tag = JAP #has a focus
-						tag = CHL #has a focus
-						tag = BRA #has a focus
-						tag = ARG #has a focus
-						tag = AST #has a focus
-						tag = FRA #has a focus
-						tag = GER #has a focus
-					}
-				} 
-				AND = {
-					has_dlc = "Trial of Allegiance"
-					NOT = {
-						OR = {
-							tag = CHL #has a focus
-							tag = BRA #has a focus
-							tag = ARG #has a focus
-							tag = URG #has a focus
-							tag = PAR #has a focus
-						}
-					}
-				}
-				AND = {
-					has_dlc = "Gotterdammerung"
-					NOT = {
-						OR = {
-							tag = BEL #has a focus
-							tag = COG #has a focus
-						}
-					}
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 50
-
-		complete_effect = {
-			add_potential_special_forces_tree = yes
-		}
-		ai_will_do = {
-			factor = 201
-			modifier = {
-				factor = 0
-				is_major = no
-			}
-		}
-	}
-	
 }
 
 foreign_politics = {
@@ -1985,13 +1850,13 @@ foreign_politics = {
             has_dlc = "Waking the Tiger"
         }
 
-        cost = 50
+        cost = 150
         fire_only_once = no
 
         days_re_enable = 30
 
         available = {
-			always = no
+			is_ai = no
         }
 
         visible = {
@@ -2040,7 +1905,6 @@ foreign_politics = {
 }
 
 economy_decisions = {
-
 	infrastructure_building_slot = {
 
 		icon = generic_construction
@@ -2054,27 +1918,27 @@ economy_decisions = {
 
         days_re_enable = 30
 
-		available = {
-			any_owned_state = {
-				NOT = { has_state_flag = infrastructure_building_slot_flag }
-				is_fully_controlled_by = ROOT
-				free_building_slots = {
-					building = infrastructure
-					size < 1
-				}
+	available = {
+		any_owned_state = {
+			NOT = { has_state_flag = infrastructure_building_slot_flag }
+			is_fully_controlled_by = ROOT
+			free_building_slots = {
+				building = infrastructure
+				size < 1
 			}
 		}
-	
-		visible = {
-			any_owned_state = {
-				NOT = { has_state_flag = infrastructure_building_slot_flag }
-				is_fully_controlled_by = ROOT
-				free_building_slots = {
-					building = infrastructure
-					size < 1
-				}
+	}
+
+	visible = {
+		any_owned_state = {
+			NOT = { has_state_flag = infrastructure_building_slot_flag }
+			is_fully_controlled_by = ROOT
+			free_building_slots = {
+				building = infrastructure
+				size < 1
 			}
 		}
+	}
 
         complete_effect = {
 			random_owned_state = {
@@ -2096,10 +1960,10 @@ economy_decisions = {
 			}
 		}
 		ai_will_do = {
-			base = 1
+			factor = 1
 			modifier = {
-				factor = 1.5
-				all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+				factor = 10
+				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
 			}
 		}
     }
@@ -2219,10 +2083,17 @@ economy_decisions = {
 			}
 		}
 		ai_will_do = {
-			base = 0
+			factor = 1
 			modifier = {
-				add = 1
+				factor = 10
 				all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+			}
+			modifier = {
+				any_owned_state = {
+					infrastructure > 3
+					free_building_slots = { building = industrial_complex size > 0 include_locked = no }
+				}
+				factor = 0
 			}
 		}
     }
@@ -2282,12 +2153,6 @@ foreign_support = {
 
 		visible = {
 			is_subject = no
-			NOT = {
-				OR = {
-					has_subject = CHI
-					has_war_with = CHI
-				}
-			}
 			OR = {
 				AND = {
 					288 = { #Burma
@@ -2332,7 +2197,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 1
 			modifier = {
 				factor = 0
 				any_country = {
@@ -2444,12 +2309,6 @@ foreign_support = {
 
 		visible = {
 			is_subject = no
-			NOT = {
-				OR = {
-					has_subject = CHI
-					has_war_with = CHI
-				}
-			}
 			OR = {
 				AND = {
 					288 = { #Burma
@@ -2509,7 +2368,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 1
 			modifier = {
 				factor = 200
 				any_country = {
@@ -2641,12 +2500,6 @@ foreign_support = {
 
 		visible = {
 			is_subject = no
-			NOT = {
-				OR = {
-					has_subject = CHI
-					has_war_with = CHI
-				}
-			}
 			OR = {
 				AND = {
 					432 = { #Assam
@@ -2691,7 +2544,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 1
 			modifier = {
 				factor = 0
 				any_country = {
@@ -2803,12 +2656,6 @@ foreign_support = {
 
 		visible = {
 			is_subject = no
-			NOT = {
-				OR = {
-					has_subject = CHI
-					has_war_with = CHI
-				}
-			}
 			OR = {
 				AND = {
 					432 = { #Assam
@@ -2880,7 +2727,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 1
 			modifier = {
 				factor = 200
 				any_country = {
@@ -3001,12 +2848,6 @@ foreign_support = {
 
  		visible = {
  			is_subject = no
- 			NOT = {
- 				OR = {
- 					has_subject = CHI
- 					has_war_with = CHI
- 				}
- 			}
 			OR = {
 				AND = {
 					434 = { #Arunachal Pradesh
@@ -3042,7 +2883,7 @@ foreign_support = {
  		}
 
  		ai_will_do = {
- 			base = 1
+ 			factor = 1
 			modifier = {
 				factor = 0
 				any_country = {
@@ -3139,12 +2980,6 @@ foreign_support = {
 
  		visible = {
  			is_subject = no
- 			NOT = {
- 				OR = {
- 					has_subject = CHI
- 					has_war_with = CHI
- 				}
- 			}
 			OR = {
 				AND = {
 					434 = { #Arunachal Pradesh
@@ -3190,7 +3025,7 @@ foreign_support = {
  		}
 
  		ai_will_do = {
- 			base = 1
+ 			factor = 1
 			modifier = {
 				factor = 200
 				any_country = {
@@ -3313,12 +3148,6 @@ foreign_support = {
 
 		visible = {
 			is_subject = no
-			NOT = {
-				OR = {
-					has_subject = CHI
-					has_war_with = CHI
-				}
-			}
 			OR = {
 				AND = {
 					671 = { #Tonkin
@@ -3354,7 +3183,7 @@ foreign_support = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 1
 			modifier = {
 				factor = 0
 				any_country = {

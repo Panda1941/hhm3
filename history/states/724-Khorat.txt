@@ -10,7 +10,7 @@ state={
 	}
 
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = SIA
 		buildings = {
 			infrastructure = 2

@@ -1,27 +1,20 @@
 state = {
 	id = 889
 	name = "STATE_889"
-	manpower = 708190
+	manpower = 1
 	state_category = pastoral
 
-	resources = {
-		tungsten = 2.000
+	resources={
+		tungsten=2.000
 	}
 
 	history = {
-
-		owner = COG
-
-
+		owner = WST
 		buildings = {
 			infrastructure = 1
-		}
 
-		add_core_of = COG
-
-		victory_points = {
-			191 2 # Elizabehville
 		}
+		add_core_of = SWE
 
 	}
 	

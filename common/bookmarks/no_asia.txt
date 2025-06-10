@@ -1,0 +1,249 @@
+bookmarks = {
+	bookmark = {
+		name = "NO_ASIA_NAME"
+		desc = "NO_ASIA_DESC"
+		date = 1936.1.1.13
+		picture = "GFX_select_date_1939"
+		default_country = "GER"
+		default = yes
+
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_form_the_popular_front
+				FRA_appeal_to_the_french_nation
+				FRA_colonial_industry
+			}
+		}
+		
+
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				stiff_upper_lip
+				ENG_the_war_to_end_all_wars
+				george_v
+			}
+			focuses = {
+				ENG_torch
+				ENG_market_garden
+				ENG_USA_combined_bomber_offensive
+			}
+		}
+
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+
+			ideas = {
+				sour_loser
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_atlantikwall_a
+				GER_army_innovation_2
+				GER_pz2
+			}
+		}
+		
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+            available = { NOT = { has_dlc = "Man the Guns" } }
+			ideas = {
+				sour_loser
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_atlantikwall_a
+				GER_army_innovation_2
+				GER_pz2
+			}
+		}
+		
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				vittorio_emanuele
+				ITA_iri_fake_ns
+				ITA_re_fake_ns
+			}	
+			focuses = {
+				ITA_by_blood_alone
+				ITA_culto_del_duce
+				ITA_carica_di_isbuscenskij
+			}
+		}
+		
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+
+			ideas = {
+				home_of_revolution
+			}
+			focuses = {
+				SOV_great_patriotic_war_focus
+				SOV_bagration
+				SOV_uranus
+			}	
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+			}
+			focuses = {
+				CAN_a_parliamentary_declaration_of_war
+				CAN_a_canadian_cruiser
+				CAN_war_bonds
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SAF_ossewabrandwag
+				SAF_history_of_segregation
+			}
+			focuses = {
+				SAF_secure_interests_in_africa
+				SAF_infantry_support
+				SAF_expand_the_mining_industry
+			}
+		}
+
+
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				HUN_treaty_of_triannon
+			}
+			focuses = {
+				HUN_proclaim_greater_hungary
+				HUN_gyorshadtest
+				HUN_form_shock_troops_battalions
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				neutrality_idea
+			}
+			focuses = {
+				ROM_eastern_refugees
+				ROM_force_the_king_to_abdicate
+				ROM_trade_treaty_with_ger
+			}
+		}
+
+
+		"SPR"={
+			minor = yes
+			history = "SPAIN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SPR_military_disloyalty
+				SPA_carlism_1
+				SPR_political_violence
+			}
+			focuses = {
+				SPA_caudillo_of_spain
+				SPA_unify_the_nationalist_front
+				SPA_fuse_the_parties
+			}
+		}
+
+		"BUL"={
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_army_restrictions
+				BUL_imro_01
+			}
+			focuses = {
+				BUL_power_to_the_tsar
+				BUL_the_third_bulgarian_empire
+				BUL_found_the_brannik
+			}
+		}
+
+		"BRA"={
+			minor = yes
+			history = "BRAZIL AAAAAAAAAAAAAAA"
+			ideology = democratic
+			ideas = {
+				BRA_separatism_idea
+				USA_monroe_doctrine_idea
+			}
+			focuses = {
+				BRA_end_the_state_of_emergency
+				BRA_estado_novo
+				BRA_estado_moderno
+			}
+		}
+		#"ETH"={
+		#	minor = yes
+		#	history = "ETH_GATHERING_STORM_DESC"
+		#	ideology = neutrality
+		#	ideas = {
+		#		ETH_conservative_high_command_idea
+		#		ETH_the_heroes_of_adwa_idea
+		#		ETH_on_our_own_idea
+		#	}
+		#	focuses = {
+		#		ETH_reach_out_to_the_italians
+		#	}
+		#}
+
+		#"VIC"={
+		#	minor = yes
+		#	history = "NEEDS THE GAMERULE TO BE ON Starts with Algeria, has normal French tree plus Vichy tree, you get the French navy, starts with same spirits as France"
+		#	ideology = neutrality
+		#	ideas = {
+		#		FRA_up_with_jean_darc
+		#		FRA_venerate_the_craftsman
+		#		VIC_aircraft_parts
+		#	}
+		#	focuses = {
+		#		VIC_down_with_marianne
+		#		VIC_concessions_to_the_germans
+		#		VIC_end_the_occupation
+		#	}
+		#}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

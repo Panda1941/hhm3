@@ -151,16 +151,9 @@ JAP_intervene_in_china = {
 }
 
 JAP_interservice_rivalry = {
-
 	JAP_steel_for_guns = {
 
 		icon = generic_tank
-
-		visible = {
-			NOT = {
-				has_country_flag = JAP_steel_for_ships
-			}
-		}
 
 		available = {
 			NOT = {
@@ -170,17 +163,17 @@ JAP_interservice_rivalry = {
 				has_country_flag = JAP_steel_for_ships
 			}
 		}
-
-		cost = 30
-
-		fire_only_once = yes
-
-		days_remove = -1
-
-		ai_will_do = {
-			base = 15
+		visible = {
+			NOT = {
+				has_country_flag = JAP_steel_for_ships
+			}
 		}
-
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 4
+		}
 		complete_effect = {
 			random_owned_state = {
 				limit = {
@@ -221,16 +214,9 @@ JAP_interservice_rivalry = {
 			set_country_flag = JAP_steel_for_guns
 		}
 	}
-
 	JAP_steel_for_ships = {
 
 		icon = generic_naval
-
-		visible = {
-			NOT = {
-				has_country_flag = JAP_steel_for_guns
-			}
-		}
 
 		available = {
 			NOT = {
@@ -240,17 +226,17 @@ JAP_interservice_rivalry = {
 				has_country_flag = JAP_steel_for_guns
 			}
 		}
-		
-		cost = 30
-
-		fire_only_once = yes
-
-		days_remove = -1
-
-		ai_will_do = {
-			base = 1
+		visible = {
+			NOT = {
+				has_country_flag = JAP_steel_for_guns
+			}
 		}
-
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
 		complete_effect = {
 			random_owned_state = {
 				limit = {
@@ -291,7 +277,6 @@ JAP_interservice_rivalry = {
 			set_country_flag = JAP_steel_for_ships
 		}
 	}
-
 	JAP_prioritize_army_aircraft_construction = {
 
 		icon = generic_tank
@@ -389,6 +374,7 @@ JAP_interservice_rivalry = {
 		}
 		modifier = {
 			conscription = 0.02
+			industrial_capacity_factory = 0.025
 		}
 		complete_effect = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
@@ -425,7 +411,7 @@ JAP_interservice_rivalry = {
 		}
 		modifier = {
 			industrial_capacity_factory = 0.05
-			industrial_capacity_dockyard = 0.05
+			industrial_capacity_dockyard = 0.075
 		}
 		complete_effect = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
@@ -461,7 +447,7 @@ JAP_interservice_rivalry = {
 			}
 		}
 		modifier = {
-			special_forces_cap = 0.02
+			special_forces_cap = 0.04
 		}
 		complete_effect = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
@@ -627,8 +613,6 @@ JAP_interservice_rivalry = {
 }
 
 foreign_politics = {
-
-	# Offer Surrender Terms to China
 	JAP_sue_for_peace_CHI = {
 
 		allowed = {
@@ -642,9 +626,7 @@ foreign_politics = {
 			custom_trigger_tooltip = {
 				tooltip = JAP_sue_for_peace_TT
 				NOT = {
-					# South Korea
 					controls_state = 525
-					# North Korea
 					controls_state = 527
 				}
 				NOT = {
@@ -712,10 +694,7 @@ foreign_politics = {
 
 		complete_effect = {
 			event_target:WTT_current_china_leader = {
-				country_event = { 
-					id = wtt_japan.126 
-					days = 1 
-				}
+				country_event = { id = wtt_japan.126 days = 1 }
 			}
 		}
 	}
@@ -781,7 +760,7 @@ foreign_politics = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			base = 400
+			base = 10
 			modifier = {
 				factor = 0
 				casualties_inflicted_by = {
@@ -886,7 +865,7 @@ foreign_politics = {
 		fire_only_once = yes
 
 		activation = {
-			is_special_project_completed = sp:sp_nuclear_bomb
+			has_tech = nukes
 			has_war_with = JAP
 		}
 
@@ -997,57 +976,47 @@ JAP_southern_expansion = {
 
 		fire_only_once = yes
 
+
 		modifier = {
+
 		}
 
-		cost = 50
+		cost = 75
 
 		ai_will_do = {
-			base = 5
+			factor = 5
 			modifier = {
 				factor = 0
 				FRA = { has_war = no }
 			}			
 			modifier = {
-				factor = 5
+				factor = 3
 				FRA = { has_war = yes } 
 				strength_ratio = {
 					tag = FRA
 					ratio > 0.9
 				}
 			}
+			
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					FRA = {
-						OR = {
-							controls_state = 671
-							671 = { CONTROLLER = { is_subject_of = FRA } }
-							controls_state = 670
-							670 = { CONTROLLER = { is_subject_of = FRA } }
-							controls_state = 286
-							286 = { CONTROLLER = { is_subject_of = FRA } }
-						}
-					}
-				}
-				FRA = { country_event = { id = france.1 } }
+			add_named_threat = { threat = 3 name = france.1.t }
+			USA = { set_country_flag = { flag = USA_indochina_window days = 60 value = 14 } }
+			hidden_effect = {
+				news_event = { days = 5 id = news.5 }
 			}
-			else_if = {
-				limit = {
-					VIC = {
-						OR = {
-							controls_state = 671
-							controls_state = 670
-							controls_state = 286
-							671 = { CONTROLLER = { is_subject_of = VIC } }
-							670 = { CONTROLLER = { is_subject_of = VIC } }
-							286 = { CONTROLLER = { is_subject_of = VIC } }
-						}
-					}
-				}
-				VIC = { country_event = { id = france.1 } }
+			JAP = {
+				transfer_state = 286
+				286 = { set_compliance = 100 }
+				transfer_state = 670
+				670 = { set_compliance = 100 }
+				transfer_state = 671
+				671 = { set_compliance = 100 }
+				transfer_state = 728
+				728 = { set_compliance = 100 }
+				transfer_state = 741
+				741 = { set_compliance = 100 }
 			}
 		}
 
@@ -1093,7 +1062,6 @@ JAP_pacific_guardian = {
 		available = {
 			HOL = {
 				#has_capitulated = yes
-				NOT =  { has_war_with = ROOT}
 			}
 			"INS" = {
 				is_puppet_of = HOL
@@ -1128,7 +1096,6 @@ JAP_pacific_guardian = {
 		available = {
 			ENG = {
 				#has_capitulated = yes
-				NOT =  { has_war_with = ROOT}
 			}
 			MAL = {
 				is_puppet_of = ENG
@@ -1163,7 +1130,6 @@ JAP_pacific_guardian = {
 		available = {
 			FRA = {
 				#has_capitulated = yes
-				NOT =  { has_war_with = ROOT}
 				OR = {
 					has_full_control_of_state = 670
 					has_full_control_of_state = 671
@@ -2111,7 +2077,7 @@ operations = {
 
 		visible = {
 			is_in_faction_with = GER
-			GER = { has_completed_focus = GER_molotov_ribbentrop_pact }
+			GER = { has_completed_focus = GER_mol_rib_pact }
 			GER = { NOT = { has_war_with = SOV } }
 			NOT = { has_war_with = SOV }
 			has_completed_focus = JAP_preemptive_war
@@ -2149,12 +2115,12 @@ prospect_for_resources = {
 #  #  ##  #  #  #  #  # ### #  # #  #     #  # ### ##   ##   ##  #  #  ##  ###     #  # #  # ### #  # 
 
 	#Below is visible when JAP_establish_the_northern_resource_area is completed
-	JAP_develop_south_sakhalin_oil_deposits = { #655
+	JAP_develop_north_sakhalin_oil_deposits = { #655
 		icon = oil
 
 		highlight_states = {
  highlight_state_targets = {
-			state = 537
+			state = 655
 		} 
 }
 
@@ -2163,11 +2129,13 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_full_control_of_state = 537
+			has_full_control_of_state = 655
 			has_tech = excavation2
 		}
 
-
+		visible = {
+			has_completed_focus = JAP_establish_the_northern_resource_area
+		}
 
 		fire_only_once = yes
 
@@ -2175,17 +2143,18 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 20		}
+			civilian_factory_use = 3
+		}
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		complete_effect = {
-			537 = {
+			655 = {
 				add_resource = {
 					type = oil
-					amount = 48
+					amount = 8
 				}
 			}
 		}
@@ -2511,7 +2480,7 @@ prospect_for_resources = {
 		icon = aluminium
 
 		highlight_states = {
- highlight_state_targets = {
+ 		highlight_state_targets = {
 			state = 597
 		} 
 }
@@ -2527,11 +2496,6 @@ prospect_for_resources = {
 
 		visible = {
 			has_completed_focus = JAP_develop_chinese_resources
-			597 = {
-				NOT = {
-					has_state_flag = shandong_aluminium_developed
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -2547,13 +2511,12 @@ prospect_for_resources = {
 			factor = 1
 		}
 
-		complete_effect = {
+		remove_effect = {
 			597 = {
 				add_resource = {
 					type = aluminium
 					amount = 12
 				}
-				set_state_flag = shandong_aluminium_developed
 			}
 		}
 	}
@@ -2579,11 +2542,6 @@ prospect_for_resources = {
 
 		visible = {
 			has_completed_focus = JAP_develop_chinese_resources
-			621 = {
-				NOT = {
-					has_state_flag = suiyuan_steel_developed
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -2599,13 +2557,12 @@ prospect_for_resources = {
 			factor = 10
 		}
 
-		complete_effect = {
+		remove_effect = {
 			621 = {
 				add_resource = {
 					type = steel
 					amount = 8
 				}
-				set_state_flag = suiyuan_steel_developed
 			}
 		}	
 	}
@@ -2625,11 +2582,6 @@ prospect_for_resources = {
 
 		visible = {
 			has_completed_focus = JAP_develop_chinese_resources
-			325 = {
-				NOT = {
-					has_state_flag = yunnan_aluminium_developed
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -2645,13 +2597,12 @@ prospect_for_resources = {
 			factor = 1
 		}
 
-		complete_effect = {
+		remove_effect = {
 			325 = {
 				add_resource = {
 					type = aluminium
 					amount = 12
 				}
-				set_state_flag = yunnan_aluminium_developed
 			}
 		}	
 	}
@@ -2670,11 +2621,6 @@ prospect_for_resources = {
 
 		visible = {
 			has_completed_focus = JAP_develop_chinese_resources
-			605 = {
-				NOT = {
-					has_state_flag = sichuan_aluminium_developed
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -2690,13 +2636,12 @@ prospect_for_resources = {
 			factor = 1
 		}
 
-		complete_effect = {
+		remove_effect = {
 			605 = {
 				add_resource = {
 					type = aluminium
 					amount = 12
 				}
-				set_state_flag = sichuan_aluminium_developed
 			}
 		}	
 	}

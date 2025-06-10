@@ -2,20 +2,29 @@
 state={
 	id=343
 	name="STATE_343" # Afyon
-	manpower = 1
-	resources={
-		chromium=25 # was: 32
-	}
+    manpower = 1
+	#resources={
+	#	chromium=25 # was: 32
+	#}
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
-		owner =CHO
-		
-		
-		
-		
-		add_core_of =CHO
+        owner = WST
+
+
+
+
+
+
+
+
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = TUR
 	}
 
 	provinces={

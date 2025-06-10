@@ -2,25 +2,12 @@ state={
 	id=621
 	name="STATE_621"
 
-	history={
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = CHI
-		
-		add_core_of = MAN
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+		owner = WST
+		add_core_of = WST
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-
-		}
-		1939.1.1 = {
-			remove_building = {
-				type = industrial_complex
-				level = 1
-
-			}
-			owner = PRC
-			controller = MAN
 
 		}
 
@@ -29,7 +16,7 @@ state={
 	provinces={
 		2087 4525 7048 7158 7631 10424 10629 12331 12403 12609 12880 
 	}
-	manpower=1583700
+	manpower=1
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 

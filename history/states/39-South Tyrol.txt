@@ -6,9 +6,9 @@ state = {
 	
 	state_category = town
 	
-	resources = {
-		aluminium = 14 # was: 22
-	}
+	#resources = {
+	#	aluminium = 14 # was: 22
+	#}
 
 	history = {
 		victory_points = { #Bolzano
@@ -17,10 +17,10 @@ state = {
 		owner = ITA
 		buildings = {
 			infrastructure = 2 # was 3 before split
-			industrial_complex = 1 #Bolzano's industrial zone started in 1934-35 (Steel meels, Lancia...)
+			industrial_complex = 4 #Bolzano's industrial zone started in 1934-35 (Steel meels, Lancia...)
 		}
 		add_core_of = ITA
-		add_core_of = WST
+		add_core_of = ITA
 		add_claim_by = AUS
 	}
 

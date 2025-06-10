@@ -10,10 +10,10 @@ state={
 
 	history={
 		owner = SOV
-		add_core_of = WST
+		add_core_of = SOV
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 3
+			industrial_complex = 6
 
 		}
 		victory_points = {

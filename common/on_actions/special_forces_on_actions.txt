@@ -1,0 +1,49 @@
+on_actions = {
+	on_startup={
+		effect={
+			every_country={
+				limit = { exists = yes }			#Automatically set to no, need to do yes and no. I mean, it shouldn't be too much of an issue if you don't, but best to avoid that kinda thing.
+				set_variable = { special_forces_xp = 60.00 }
+				set_variable = { special_forces_xp_cap = 2000.00 }
+				set_variable = { special_forces_xp_daily_to_add = 0 }	
+				set_variable = { special_forces_doctrine_xp_cost = 60.00 }	
+			}
+			every_country={
+				limit = { exists = no }
+				set_variable = { special_forces_xp = 60.00 }
+				set_variable = { special_forces_xp_cap = 2000.00 }
+				set_variable = { special_forces_xp_daily_to_add = 0 }	
+				set_variable = { special_forces_doctrine_xp_cost = 60.00 }	
+			}
+		}
+	}
+	on_daily = {			#Kinda laggy, but what can you do?
+		effect = {
+			#Automatically scopes for every country
+			
+			#if={			#You shouldn't need these, but they're good failsafes incase something goes wrong. KEEP THESE AT THE TOP
+			#	limit = { NOT = { has_variable = special_forces_xp } }
+			#	set_variable = { special_forces_xp = 0.00 }
+			#}
+			#if={
+			#	limit = { NOT = { has_variable = special_forces_xp_cap } }
+			#	set_variable = { special_forces_xp_cap = 500.00 }
+			#}
+			#if={
+			#	limit = { NOT = { has_variable = special_forces_xp_daily_to_add } }
+			#	set_variable = { special_forces_xp_daily_to_add = 0 }
+			#}
+
+			#Removed these, no new nations get added or removed
+			
+			
+			
+			
+			get_special_forces_xp_daily_to_add = yes
+			add_to_variable = { special_forces_xp = special_forces_xp_daily_to_add }
+			clamp_variable = { var = special_forces_xp min = 0 max = special_forces_xp_cap }
+			
+			get_special_forces_doctrine_cost = yes
+		}
+	}
+}

@@ -5,9 +5,10 @@ state=
 	state_category = small_island
 	manpower = 12100
 	history=
-	{
+{ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = JAP
-		add_core_of = WST
+		set_state_flag = JAP_controls
+		add_core_of = SWE
 		buildings = {
 			infrastructure = 2
 			air_base = 1

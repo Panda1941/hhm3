@@ -1,0 +1,1545 @@
+templates_retards_ai = {
+    
+	FIX_convoys = {
+		icon = SWE_set_navy_budget
+		fire_only_once = no
+		cost = 0
+		days_remove = 1
+		available = { ROOT = { has_country_flag = host } }
+		visible = { ROOT = { has_country_flag = host } }
+		complete_effect = { every_country = { add_equipment_to_stockpile = { type = convoy amount = 1 } add_manpower = 1 } }
+		remove_effect = { every_country = { add_equipment_to_stockpile = { type = convoy amount = -1 } add_manpower = -1 } }
+	}
+	
+	guide_decision = {
+	
+		available = { 
+			
+		}
+		
+		fire_only_once = no
+		
+		complete_effect = {
+			country_event = hhm_event.1
+		}
+	}
+	
+	inf_templates = {
+	
+		available = { 
+			
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			custom_effect_tooltip = "Will add a 9/6 Infantry template"
+			division_template = {
+				name = "30w infantry + arty"
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 }
+					infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 } 
+					infantry = { x = 0 y = 2 } 	infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 } artillery_brigade = { x = 4 y = 0 } 
+					artillery_brigade = { x = 3 y = 1 }	artillery_brigade = { x = 4 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }	artillery_brigade = { x = 4 y = 2 }
+				}
+				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } artillery = { x = 0 y = 2 } }
+			}
+			custom_effect_tooltip = "Will add a 15/0 Infantry template"
+			division_template = {
+				name = "30w pure infantry"
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 3 y = 0 }
+					infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 } infantry = { x = 3 y = 1 } 
+					infantry = { x = 0 y = 2 } infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } infantry = { x = 3 y = 2 }
+					infantry = { x = 0 y = 3 } infantry = { x = 1 y = 3 } infantry = { x = 2 y = 3 }
+				}
+				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } artillery = { x = 0 y = 2 } }
+			}
+			
+			if = {
+			limit = { has_tech = tech_military_police }
+				custom_effect_tooltip = "Will add a mp template"
+				division_template = {
+					name = "mp"
+					regiments = {
+						cavalry = { x = 0 y = 0 } cavalry = { x = 1 y = 0 } cavalry = { x = 2 y = 0 } cavalry = { x = 3 y = 0 } cavalry = { x = 4 y = 0 }
+						cavalry = { x = 0 y = 1 } cavalry = { x = 1 y = 1 } cavalry = { x = 2 y = 1 } cavalry = { x = 3 y = 1 } cavalry = { x = 4 y = 1 }
+						cavalry = { x = 0 y = 2 } cavalry = { x = 1 y = 2 } cavalry = { x = 2 y = 2 } cavalry = { x = 3 y = 2 } cavalry = { x = 4 y = 2 }
+						cavalry = { x = 0 y = 3 } cavalry = { x = 1 y = 3 } cavalry = { x = 2 y = 3 } cavalry = { x = 3 y = 3 } cavalry = { x = 4 y = 3 }
+						cavalry = { x = 0 y = 4 } cavalry = { x = 1 y = 4 } cavalry = { x = 2 y = 4 } cavalry = { x = 3 y = 4 } cavalry = { x = 4 y = 4 }
+					}
+					support = { military_police = {x = 0 y = 0 } }
+				}
+			}
+			else = {
+				custom_effect_tooltip = "Will add a mp template"
+				division_template = {
+					name = "mp"
+					regiments = {
+						cavalry = { x = 0 y = 0 } cavalry = { x = 1 y = 0 } cavalry = { x = 2 y = 0 } cavalry = { x = 3 y = 0 } cavalry = { x = 4 y = 0 }
+						cavalry = { x = 0 y = 1 } cavalry = { x = 1 y = 1 } cavalry = { x = 2 y = 1 } cavalry = { x = 3 y = 1 } cavalry = { x = 4 y = 1 }
+						cavalry = { x = 0 y = 2 } cavalry = { x = 1 y = 2 } cavalry = { x = 2 y = 2 } cavalry = { x = 3 y = 2 } cavalry = { x = 4 y = 2 }
+						cavalry = { x = 0 y = 3 } cavalry = { x = 1 y = 3 } cavalry = { x = 2 y = 3 } cavalry = { x = 3 y = 3 } cavalry = { x = 4 y = 3 }
+						cavalry = { x = 0 y = 4 } cavalry = { x = 1 y = 4 } cavalry = { x = 2 y = 4 } cavalry = { x = 3 y = 4 } cavalry = { x = 4 y = 4 }
+					}
+					support = { }
+				}
+			}
+		}
+	}
+		
+	sf_templates_30w = {
+		available = { 
+			OR = {
+				has_tech = marines
+				has_tech = tech_mountaineers
+				has_tech = paratroopers
+				has_tech = jaegers
+				has_tech = shock_troops
+			}
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {	
+			if = {
+			limit = { has_tech = tech_mountaineers }
+				custom_effect_tooltip = "Will add a Mountaineer template"
+				division_template = {
+					name = "30w mountaineers"
+					regiments = {
+						mountaineers = { x = 0 y = 0 } mountaineers = { x = 1 y = 0 } mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 0 y = 1 } mountaineers = { x = 1 y = 1 } mountaineers = { x = 2 y = 1 } 
+						mountaineers = { x = 0 y = 2 } mountaineers = { x = 1 y = 2 } mountaineers = { x = 2 y = 2 }
+						rocket_artillery_brigade = { x = 3 y = 0 } rocket_artillery_brigade = { x = 4 y = 0 }
+						rocket_artillery_brigade = { x = 3 y = 1 } rocket_artillery_brigade = { x = 4 y = 1 }
+						rocket_artillery_brigade = { x = 3 y = 2 }	rocket_artillery_brigade = { x = 4 y = 2 }
+					}
+					support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } rocket_artillery = { x = 0 y = 2 } }
+				}
+			}
+			if = {
+			limit = { has_tech = marines }
+				custom_effect_tooltip = "Will add a Marine template"
+				division_template = {
+					name = "30w marines"
+					regiments = {
+						marine = { x = 0 y = 0 } marine = { x = 1 y = 0 } marine = { x = 2 y = 0 }
+						marine = { x = 0 y = 1 } marine = { x = 1 y = 1 } marine = { x = 2 y = 1 } 
+						marine = { x = 0 y = 2 } marine = { x = 1 y = 2 } marine = { x = 2 y = 2 }
+						rocket_artillery_brigade = { x = 3 y = 0 } rocket_artillery_brigade = { x = 4 y = 0 }
+						rocket_artillery_brigade = { x = 3 y = 1 } rocket_artillery_brigade = { x = 4 y = 1 }
+						rocket_artillery_brigade = { x = 3 y = 2 }	rocket_artillery_brigade = { x = 4 y = 2 }
+					}
+					support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } rocket_artillery = { x = 0 y = 2 } }
+				}
+			}
+			if = {
+			limit = { has_tech = paratroopers }
+				custom_effect_tooltip = "Will add a Paratrooper template"
+				division_template = {
+					name = "30w paratroopers"	# Arty can't be paradropped so there is no point adding it in
+					regiments = {
+						paratrooper = { x = 0 y = 0 } paratrooper = { x = 1 y = 0 } paratrooper = { x = 2 y = 0 }
+						paratrooper = { x = 0 y = 1 } paratrooper = { x = 1 y = 1 } paratrooper = { x = 2 y = 1 } 
+						paratrooper = { x = 0 y = 2 } paratrooper = { x = 1 y = 2 } paratrooper = { x = 2 y = 2 }
+						paratrooper = { x = 0 y = 3 } paratrooper = { x = 1 y = 3 } paratrooper = { x = 2 y = 3 }
+						paratrooper = { x = 0 y = 4 } paratrooper = { x = 1 y = 4 } paratrooper = { x = 2 y = 4 } 
+					}
+					support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } rocket_artillery = { x = 0 y = 2 } }
+				}	
+			}
+			if = {
+			limit = { has_tech = jaegers }
+				custom_effect_tooltip = "Will add a Jaeger template"
+				division_template = {
+					name = "30w jaegers"	# Arty can't be paradropped so there is no point adding it in
+					regiments = {
+						jaeger = { x = 0 y = 0 } jaeger = { x = 1 y = 0 } jaeger = { x = 2 y = 0 }
+						jaeger = { x = 0 y = 1 } jaeger = { x = 1 y = 1 } jaeger = { x = 2 y = 1 } 
+						jaeger = { x = 0 y = 2 } jaeger = { x = 1 y = 2 } jaeger = { x = 2 y = 2 }
+						rocket_artillery_brigade = { x = 3 y = 0 } rocket_artillery_brigade = { x = 4 y = 0 }
+						rocket_artillery_brigade = { x = 3 y = 1 } rocket_artillery_brigade = { x = 4 y = 1 }
+						rocket_artillery_brigade = { x = 3 y = 2 }	rocket_artillery_brigade = { x = 4 y = 2 }
+					}
+					support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } rocket_artillery = { x = 0 y = 2 } }
+				}	
+			}
+			if = {
+			limit = { has_tech = shock_troops }
+				custom_effect_tooltip = "Will add a Shock Troop template"
+				division_template = {
+					name = "30w shock troops"	# Arty can't be paradropped so there is no point adding it in
+					regiments = {
+						shock_troops = { x = 0 y = 0 } shock_troops = { x = 1 y = 0 } shock_troops = { x = 2 y = 0 }
+						shock_troops = { x = 0 y = 1 } shock_troops = { x = 1 y = 1 } shock_troops = { x = 2 y = 1 } 
+						shock_troops = { x = 0 y = 2 } shock_troops = { x = 1 y = 2 } shock_troops = { x = 2 y = 2 }
+						rocket_artillery_brigade = { x = 3 y = 0 } rocket_artillery_brigade = { x = 4 y = 0 }
+						rocket_artillery_brigade = { x = 3 y = 1 } rocket_artillery_brigade = { x = 4 y = 1 }
+						rocket_artillery_brigade = { x = 3 y = 2 }	rocket_artillery_brigade = { x = 4 y = 2 }
+					}
+					support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } rocket_artillery = { x = 0 y = 2 } }
+				}	
+			}				
+		}
+	}
+
+	tank_templates_30w = {
+		allowed = {  }
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			custom_effect_tooltip = "Will add a Motorized Light tank Template template"
+			division_template = {
+				name = "light tanks"
+				regiments = {
+					light_armor = { x = 0 y = 0 } light_armor = { x = 1 y = 0 } light_armor = { x = 2 y = 0 } motorized = { x = 3 y = 0 }	motorized = { x = 4 y = 0 }
+					light_armor = { x = 0 y = 1 } light_armor = { x = 1 y = 1 } light_armor = { x = 2 y = 1 } motorized = { x = 3 y = 1 }	motorized = { x = 4 y = 1 }
+					light_armor = { x = 0 y = 2 } light_armor = { x = 1 y = 2 } light_armor = { x = 2 y = 2 } motorized = { x = 3 y = 2 }	motorized = { x = 4 y = 2 }
+					}											
+				support = { engineer = { x = 0 y = 0 } mot_recon = { x = 0 y = 1 } signal_company = { x = 0 y = 2 }  }
+			}
+			if = {
+			limit = { has_tech = mechanised_infantry }
+				custom_effect_tooltip = "Will add a Mechanized Medium tank Template template"
+				division_template = {
+					name = "medium tanks"
+					regiments = {
+						medium_armor = { x = 0 y = 0 } medium_armor = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 }	mechanized = { x = 4 y = 0 }
+						medium_armor = { x = 0 y = 1 } medium_armor = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 }	mechanized = { x = 4 y = 1 }
+						medium_armor = { x = 0 y = 2 } medium_armor = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 }	mechanized = { x = 4 y = 2 }
+						}											
+					support = { engineer = { x = 0 y = 0 } mot_recon = { x = 0 y = 1 } signal_company = { x = 0 y = 2 }  }
+				}
+			}
+			else = {
+				custom_effect_tooltip = "Will add a Motorized Medium tank Template template"
+				division_template = {
+					name = "medium tanks"
+					regiments = {
+						medium_armor = { x = 0 y = 0 } medium_armor = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } motorized = { x = 3 y = 0 }	motorized = { x = 4 y = 0 }
+						medium_armor = { x = 0 y = 1 } medium_armor = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } motorized = { x = 3 y = 1 }	motorized = { x = 4 y = 1 }
+						medium_armor = { x = 0 y = 2 } medium_armor = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } motorized = { x = 3 y = 2 }	motorized = { x = 4 y = 2 }
+						}											
+					support = { engineer = { x = 0 y = 0 } mot_recon = { x = 0 y = 1 } signal_company = { x = 0 y = 2 }  }
+				}
+			}
+			if = {
+			limit = { has_tech = mechanised_infantry }
+				custom_effect_tooltip = "Will add a Mechanized Heavy tank Template template"
+				division_template = {
+					name = "heavy tanks"
+					regiments = {
+						heavy_armor = { x = 0 y = 0 } heavy_armor = { x = 1 y = 0 } heavy_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 }	mechanized = { x = 4 y = 0 }
+						heavy_armor = { x = 0 y = 1 } heavy_armor = { x = 1 y = 1 } heavy_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 }	mechanized = { x = 4 y = 1 }
+						heavy_armor = { x = 0 y = 2 } heavy_armor = { x = 1 y = 2 } heavy_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 }	mechanized = { x = 4 y = 2 }
+						}											
+					support = { engineer = { x = 0 y = 0 } mot_recon = { x = 0 y = 1 } signal_company = { x = 0 y = 2 }  }
+				}
+			}
+			else = {
+				custom_effect_tooltip = "Will add a Motorized Heavy tank Template template"
+				division_template = {
+					name = "heavy tanks"
+					regiments = {
+						heavy_armor = { x = 0 y = 0 } heavy_armor = { x = 1 y = 0 } heavy_armor = { x = 2 y = 0 } motorized = { x = 3 y = 0 }	motorized = { x = 4 y = 0 }
+						heavy_armor = { x = 0 y = 1 } heavy_armor = { x = 1 y = 1 } heavy_armor = { x = 2 y = 1 } motorized = { x = 3 y = 1 }	motorized = { x = 4 y = 1 }
+						heavy_armor = { x = 0 y = 2 } heavy_armor = { x = 1 y = 2 } heavy_armor = { x = 2 y = 2 } motorized = { x = 3 y = 2 }	motorized = { x = 4 y = 2 }
+						}											
+					support = { engineer = { x = 0 y = 0 } mot_recon = { x = 0 y = 1 } signal_company = { x = 0 y = 2 }  }
+				}
+			}
+		}
+	}
+}
+
+political_actions = {
+
+	move_capital_to_cascablanca = {
+		fire_only_once = yes
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			tag = FRA
+			NOT = {
+				controls_state = 16
+			}
+		}
+		complete_effect = {
+			set_capital = {
+				state = 461
+			}
+		}
+	}
+
+	move_capital_to_gabon = {
+		fire_only_once = yes
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			tag = FRA
+			NOT = {
+				controls_state = 16
+			}
+		}
+		complete_effect = {
+			set_capital = {
+				state = 539
+			}
+		}
+	}
+}
+
+operations = {
+	japanese_invasion_of_china = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			JAP = {
+				exists = no
+			}
+			date > 1937.08.01
+		}
+		complete_effect = {
+			add_named_threat = {
+			    threat = 15
+			    name = "Japaneese Invasion of China"
+			}
+			country_event = { days = 5 id = news.1 }
+			every_country = {
+				army_experience = 20
+			}
+		}
+	}
+	japanese_invasion_of_china2 = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			JAP = {
+				exists = no
+			}
+			date > 1938.08.01
+		}
+		complete_effect = {
+			add_named_threat = { threat = 15 name = JAP_secure_china }	
+			every_country = {
+				army_experience = 20
+			}
+		}
+	}
+	japanese_invasion_of_china3 = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			JAP = {
+				exists = no
+			}
+			date > 1939.08.01
+		}
+		complete_effect = {
+			add_named_threat = { threat = 15 name = JAP_develop_chinese_resources }		
+			every_country = {
+				army_experience = 20
+			}
+		}
+	}
+	ITA_joins_war = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1940.01.01 
+			}
+			
+		
+		complete_effect = {
+			WST = { 
+				transfer_state = 513
+				transfer_state = 460
+				transfer_state = 459
+				transfer_state = 461
+				transfer_state = 462
+			}
+			ITA = {
+				declare_war_on = {
+					target = ENG 
+					type = annex_everything
+				}
+				ENG = {
+				declare_war_on_enemy_faction = yes
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				declare_war_on = {
+					target = NZL
+					type = annex_everything
+				}
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SAF
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			#declare_war_on = {
+			#	target = USA
+			#	type = annex_everything
+			#}
+			}
+	
+			if = { limit = { country_exists = ENG }	ITA = { add_to_war = { targeted_alliance = GER enemy = ENG } } }
+		}
+	}
+	invade_IRAQ = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = WST
+		}
+		
+		available = {
+			tag = WST
+			ITA = { has_war_with = ENG }
+			
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			ENG = {
+				annex_country = {
+						target = IRQ
+						transfer_troops = no
+					}
+				every_state = {
+					limit = {
+						is_core_of = IRQ
+						is_controlled_by = ENG
+					}
+					add_compliance = 40
+				}
+			}
+		}
+	}
+	conquer_and_divide = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			FRA = {has_completed_focus = FRA_appeal_to_the_french_nation} 
+		}
+			
+		
+		complete_effect = {
+		ITA = { 
+				transfer_state = 32
+				transfer_state = 735
+				transfer_state = 851
+				transfer_state = 21
+				transfer_state = 458
+				transfer_state = 665
+			}
+		}
+	}
+	spain_joins_war = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			SPR = {has_war_with = ENG} 
+		}
+			
+		
+		complete_effect = {
+		WST = { 
+				transfer_state = 290
+			}
+		}
+	}
+	african_bonus_for_all = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+				ITA = { has_war_with = ENG }
+			
+		}
+		complete_effect = {
+			ENG = {
+				add_ideas = { africa_bonus }
+			}
+			FRA = {
+				add_ideas = { africa_bonus }
+			}
+			CAN = {
+				add_ideas = { africa_bonus }
+			}
+			SAF = {
+				add_ideas = { africa_bonus }
+			}
+			RAJ = {
+				add_ideas = { africa_bonus }
+			}
+			AST = {
+				add_ideas = { africa_bonus }
+			}
+			NZL = {
+				add_ideas = { africa_bonus }
+			}
+
+			GER = {
+				add_ideas = { africa_bonus }
+			}
+			ITA = {
+				add_ideas = { africa_bonus }
+			}
+			ROM = {
+				add_ideas = { africa_bonus }
+			}
+			HUN = {
+				add_ideas = { africa_bonus }
+			}
+			SPR = {
+				add_ideas = { africa_bonus }
+			}
+			BUL = {
+				add_ideas = { africa_bonus }
+			}
+		}
+	}
+	#BUL_joins_war = {
+	#	# icon = generic_operation
+	#	allowed = {
+	#		tag = WST
+	#	}
+	#	fire_only_once = yes
+	#	cost = 0
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	available = {
+	#		ITA = { has_war_with = YUG } 
+	#		}
+	#		
+	#	
+	#	complete_effect = {
+	#		BUL = {
+	#			declare_war_on = {
+	#				target = YUG 
+	#				type = annex_everything
+	#			}
+	#		}
+	#
+	#		if = { limit = { country_exists = YUG }	BUL = { add_to_war = { targeted_alliance = ITA enemy = YUG } } }
+	#	}
+	#}
+	
+	BUL_slow = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+					BUL = { 
+						has_completed_focus = BUL_negotiate_bulgarian_rearmament_2
+						num_of_military_factories > 15	
+					} 
+	
+			}
+			
+		
+		complete_effect = {
+		BUL = { 
+			add_ideas = slow
+			}	
+		}
+	}
+	BUL_slow_2 = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+					BUL = { 
+						has_completed_focus = BUL_negotiate_bulgarian_rearmament_2
+		                num_of_military_factories > 30
+					} 
+	
+			}
+			
+		
+		complete_effect = {
+		BUL = { 
+			swap_ideas = {
+					remove_idea = slow
+					add_idea = slow_2
+				}
+			}	
+		}
+	}
+	BUL_slow_3 = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+					BUL = { 
+						has_completed_focus = BUL_negotiate_bulgarian_rearmament_2
+		                num_of_military_factories > 40
+					} 
+	
+			}
+			
+		
+		complete_effect = {
+		BUL = { 
+			swap_ideas = {
+					remove_idea = slow_2
+					add_idea = slow_3
+				}
+			}	
+		}
+	}
+	BUL_fast = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+					BUL = { 
+						has_completed_focus = BUL_negotiate_bulgarian_rearmament
+		                date > 1937.01.01
+					} 
+	
+			}
+			
+		
+		complete_effect = {
+		BUL = { 
+			add_ideas = fast
+			}	
+		}
+	}
+	BUL_fast_2 = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+					BUL = { 
+						has_completed_focus = BUL_negotiate_bulgarian_rearmament
+		                date > 1938.01.01
+					} 
+	
+			}
+			
+		
+		complete_effect = {
+		BUL = { 
+			swap_ideas = {
+					remove_idea = fast
+					add_idea = fast_2
+				}
+			}	
+		}
+	}
+	BUL_fast_3 = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+					BUL = { 
+						has_completed_focus = BUL_negotiate_bulgarian_rearmament
+		                date > 1939.01.01
+					} 
+	
+			}
+			
+		
+		complete_effect = {
+		BUL = { 
+			swap_ideas = {
+					remove_idea = fast_2
+					add_idea = fast_3
+				}
+			}	
+		}
+	}
+	
+
+
+
+
+
+	FRA_take_north_africa = {
+		visible = {
+			has_completed_focus = FRA_intervention_in_north_africa
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		remove_effect = {
+			#transfer_state = 513
+			#transfer_state = 461
+			#transfer_state = 462
+			#transfer_state = 514
+			#transfer_state = 459
+			#transfer_state = 460
+			#transfer_state = 665
+			#transfer_state = 458
+			GER = {
+				add_to_faction = VIC
+				#country_event = LaR_france_vichy_notification_events.11
+			}
+			VIC = {
+				declare_war_on = { target = FRA type = annex_everything }
+				declare_war_on = { target = ENG type = topple_government }
+				#country_event = LaR_france_vichy_notification_events.11
+			}
+		}
+	}
+	annex_ethiopia = {
+		# icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		available = {
+			ETH = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = ITA
+		}
+		targets = {
+			ETH
+		}
+		complete_effect = {
+			IF = {
+				limit = { date < 1936.01.07 }
+
+				army_experience = 60
+			}
+			ETH = {
+				transfer_units_fraction = {
+					target = ITA
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 0
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 7100
+				}
+				annex_country = {
+					target = ETH
+					transfer_troops = no
+				}
+			}
+			hidden_effect = {
+				ITA_end_the_italo_ethiopian_war = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Chitet Sefari"
+				disband = yes				# if yes, equipment will be returned to country equipment. default is no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Kebur Zabagna"
+				disband = yes				# if yes, equipment will be returned to country equipment. default is no
+			}
+		}
+	}
+	annex_siam = {
+		# icon = generic_operation
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			SIA = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = JAP
+		}
+		targets = {
+			SIA
+		}
+		complete_effect = {
+			SIA = {
+				transfer_units_fraction = {
+					target = JAP
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			JAP = {
+				annex_country = {
+					target = SIA
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	two_emperors_of_asia = {
+		# icon = generic_operation
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			MAN = {
+				is_ai = no
+			}
+			609 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			608 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			date > 1938.06.01
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = JAP
+		}
+		targets = {
+			MAN
+		}
+		complete_effect = {
+			MAN = {
+				transfer_state = 609
+				transfer_state = 608
+			}
+		}
+	}
+	annex_manchukuo = {
+		# icon = generic_operation
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			MAN = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = JAP
+		}
+		targets = {
+			MAN
+		}
+		complete_effect = {
+			MAN = {
+				transfer_units_fraction = {
+					target = JAP
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			JAP = {
+				annex_country = {
+					target = MAN
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_bulgaria = {
+		# icon = generic_operation
+		allowed = {
+			tag = ROM
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			BUL = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			BUL
+		}
+		complete_effect = {
+			BUL = {
+				transfer_units_fraction = {
+					target = ROM
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ROM = {
+				annex_country = {
+					target = BUL
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_new_zealand = {
+		# icon = generic_operation
+		allowed = {
+			tag = AST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			NZL = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			NZL
+		}
+		complete_effect = {
+			NZL = {
+				transfer_units_fraction = {
+					target = AST
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			AST = {
+				annex_country = {
+					target = NZL
+					transfer_troops = yes
+				}
+			}
+			# Australia gets new zealand as cores, UK doesn't
+			every_state = {
+				limit = {
+					is_core_of = NZL
+					is_controlled_by = AST
+				}
+				add_core_of = AST
+			}
+		}
+	}
+	annex_saf_can = {
+		# icon = generic_operation
+		allowed = {
+			tag = CAN
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			SAF = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			SAF
+		}
+		complete_effect = {
+			SAF = {
+				transfer_units_fraction = {
+					target = CAN
+					size = 1
+					stockpile_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			CAN = {
+				annex_country = {
+					target = SAF
+				}
+			}
+		}
+	}
+	annex_can_saf = {
+		# icon = generic_operation
+		allowed = {
+			tag = SAF
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			CAN = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			CAN
+		}
+		complete_effect = {
+			SAF = {
+				transfer_units_fraction = {
+					target = CAN
+					size = 1
+					stockpile_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			SAF = {
+				annex_country = {
+					target = CAN
+				}
+			}
+		}
+	}
+	annex_brazil = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			BRA = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			BRA
+		}
+		complete_effect = {
+			BRA = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+				add_ideas = { artificial_intelligence }
+				add_ideas = { ai_limiter }
+			}
+			123 = {
+				add_building_construction = {
+					type = industrial_complex 
+					level = 4 
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 4 
+					instant_build = yes
+				}
+			}
+			131 = {
+				add_building_construction = {
+					type = industrial_complex 
+					level = 3 
+					instant_build = yes
+				}
+			}
+			WST = {
+				annex_country = {
+					target = BRA
+				}
+			}
+		}
+	}
+	annex_canada = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			CAN = {
+				is_ai = yes
+			}
+			SAF = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			CAN
+		}
+		complete_effect = {
+			CAN = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = CAN
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_ireland = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			IRE = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			IRE
+		}
+		complete_effect = {
+			IRE = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = IRE
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_south_africa = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			SAF = {
+				is_ai = yes
+			}
+			CAN = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			SAF
+		}
+		complete_effect = {
+			SAF = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = SAF
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_british_raj = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			RAJ = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			RAJ
+		}
+		complete_effect = {
+			RAJ = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = RAJ
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_australia = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			AST = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			AST
+		}
+		complete_effect = {
+			AST = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = AST
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_new_zealand_eng = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			NZL = { is_ai = yes }
+			AST = { is_ai = yes }
+		}
+		targets = {
+			NZL
+		}
+		complete_effect = {
+			NZL = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = NZL
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_philippines= {
+		# icon = generic_operation
+		allowed = {
+			tag = USA
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			PHI = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			PHI	
+		}
+		complete_effect = {
+			PHI = {
+				transfer_units_fraction = {
+					target = USA
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			USA = {
+				annex_country = {
+					target = PHI
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	
+}
+
+SOV_spain = {
+	SOV_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			SOV = {
+				army_experience = 300
+			}
+		}
+	}
+}
+
+AXIS_spain = {
+	AXIS_assist_nationalist_spain = {
+		icon = GFX_decision_category_spr_reassert_american_dominance
+		fire_only_once = yes
+		cost = 0
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			ROOT = {
+				army_experience = 200
+			}
+			IF = {
+				limit = { NOT = { original_tag = SPR }}
+				SPR = { army_experience = 20 }	#In total spain gets 100 army XP from these decisions + 200 from their own decision, AI will do them as well.
+			}
+		}
+	}
+}

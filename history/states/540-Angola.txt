@@ -2,22 +2,31 @@
 state={
 	id=540
 	name="STATE_540"
-	manpower = 1
-	state_category = wasteland
+    manpower = 1
+	state_category=rural
 
 	history={
-		owner =TUM
-		
-		
-		add_core_of = TUM
+        owner = WST
+		buildings = {
+			infrastructure = 1
+			8248 = {
+				naval_base = 1
+
+			}
+
+		}
+
+
+
+		add_core_of = ANG
 
 	}
 
 	provinces={
-		5158 7548 8219 8248 12981 13371 13373
+		5158 7548 8219 8248 12981 
 	}
 
 	buildings_max_level_factor=1.000
 	
-	local_supplies=0.0
+	local_supplies=0.000
 }

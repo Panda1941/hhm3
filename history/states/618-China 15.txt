@@ -4,15 +4,18 @@ state={
 	name="STATE_618" # Dzungaria
 	manpower = 1
 
-	state_category = wasteland
+	state_category = pastoral
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = WST
 		add_core_of = WST
-		add_core_of = CHI
-		
-		
-		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			4823 2
+		}
 	}
 
 	provinces={

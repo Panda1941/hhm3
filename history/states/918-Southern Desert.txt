@@ -1,0 +1,23 @@
+
+state={
+	id=918
+	name="STATE_918"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SWE
+
+	}
+
+	provinces={
+		4068 4910 5069 7156 12889 
+	}
+	manpower=1560
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

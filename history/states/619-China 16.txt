@@ -4,20 +4,21 @@ state={
 	name="STATE_619" # Yarkand
 	manpower = 1
 	
-	state_category = wasteland
+	state_category = pastoral
 	
 	resources={
-		aluminium=2 # was: 2
-		chromium=2 # was: 3
 	}
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = WST
 		add_core_of = WST
-		add_core_of = CHI
-		
-		
-		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			2015 2
+		}
 	}
 
 

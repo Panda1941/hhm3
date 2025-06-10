@@ -30,7 +30,7 @@ characters={
 				original_tag = SAF
 			}
 			traits = {
-				backroom_backstabber 
+				war_industrialist 
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -95,7 +95,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ desert_fox }
+			traits={ desert_fox armor_officer hill_fighter }
 			skill=4
 			attack_skill=4
 			defense_skill=4
@@ -121,6 +121,78 @@ characters={
 			maneuvering_skill=2
 			coordination_skill=2
 			legacy_id=-1
+		}
+	}
+
+	SAF_generic_general_1 = {
+		name="Bast Young"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_1"
+				small="GFX_Portrait_Europe_Generic_land_1_small"
+			}
+		}
+		corps_commander={
+			traits={ panzer_leader panzer_expert trait_engineer organizer }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+		}
+	}
+
+	SAF_generic_general_2 = {
+		name="Bash Blaauw"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+				small="GFX_Portrait_Europe_Generic_land_2_small"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_leader offensive_doctrine organizer }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
+		}
+	}
+
+	SAF_generic_general_3 = {
+		name="Eon Rogers"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_5"
+				small="GFX_Portrait_Europe_Generic_land_5_small"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader hill_fighter }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+		}
+	}
+
+	SAF_generic_general_4 = {
+		name="Helouise Strydom"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_4"
+				small="GFX_Portrait_Europe_Generic_land_4_small"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer infantry_leader defensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
 		}
 	}
 
@@ -157,23 +229,9 @@ characters={
 				original_tag = SAF
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = SAF_support_the_afrikaner_broederbond 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
 			}
 			traits = {
-				fascist_demagogue 
+				technocrat 
 			}
 			do_effect = {
 				NOT = {
@@ -420,7 +478,7 @@ characters={
 				original_tag = SAF
 			}
 			traits = {
-				air_naval_strike_2
+				army_CombinedArms_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -444,7 +502,7 @@ characters={
 				original_tag = SAF
 			}
 			traits = {
-				navy_screen_2
+				army_logistics_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -509,41 +567,7 @@ characters={
 			army={
 				small="GFX_idea_SAF_abram_fischer" #small="GFX_idea_generic_communist_revolutionary_western_european_2d"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SAF_abram_fischer
-			allowed = {
-				original_tag = SAF
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = SAF_empower_the_workers 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				communist_revolutionary 
-			}
-			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
-		}		
+		}	
 	}
 
 	SAF_nicolaas_havenga={

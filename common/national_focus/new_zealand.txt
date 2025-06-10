@@ -133,10 +133,6 @@
 
 		completion_reward = {
 			navy_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_naval
-				value = 0.25
-			}
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzn
 				cost_reduction = 0.5
@@ -452,7 +448,7 @@
 	focus = {
 		id = NZL_expand_the_nzpaf
 		icon = GFX_goal_generic_air_doctrine
-		x = 13
+		x = 18
 		y = 0
 
 		cost = 10
@@ -521,16 +517,6 @@
 					}
 				}
 			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 1000
-					equipment_type = medium_plane_airframe
-					seller_tags = { ENG }
-				}
-			}
 		}
 	}
 
@@ -563,10 +549,6 @@
 
 		complete_tooltip = {
 			air_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.25
-			}
 			random_state = {				
 				limit = {
 					has_state_flag = NZL_expand_the_nzpaf_AB
@@ -587,10 +569,6 @@
 
 		completion_reward = {
 			air_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.25
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -761,7 +739,10 @@
 				name = NZL_modern_fighters
 				bonus = 1.0
 				uses = 1
-				category = light_fighter
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
 				category = cat_heavy_fighter
 			}
 		}
@@ -813,7 +794,7 @@
 	focus = {
 		id = NZL_national_roads_board
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 18
+		x = 12
 		y = 0
 
 		cost = 10
@@ -1273,7 +1254,7 @@
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = NZL_heavy_bombers focus = NZL_modern_fighters }
 		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
-		x = -2
+		x = 0
 		y = 4
 		relative_position_id = NZL_national_roads_board
 
@@ -1297,24 +1278,11 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_tech = atomic_research
-					}
-				}
-				add_tech_bonus = {
-					name = NZL_project_seal
-					bonus = 0.5
-					uses = 1
-					category = nuclear
-				}
-			}
-			else = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.75
-				}
+			add_tech_bonus = {
+				name = NZL_project_seal
+				bonus = 1.0
+				uses = 2
+				category = nuclear
 			}
 		}
 	}
@@ -1392,7 +1360,7 @@
 	focus = {
 		id = NZL_army_reforms
 		icon = GFX_goal_generic_army_doctrines
-		x = 23
+		x = 24
 		y = 0
 
 		cost = 10
@@ -1497,13 +1465,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.1
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = NZL_bob_semple_tank
-			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					NOT = { has_dlc = "No Step Back" }
@@ -1620,10 +1582,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.15
-			}
 			add_tech_bonus = {
 				name = NZL_schofield_tank
 				bonus = 1.0
@@ -1698,10 +1656,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.25
-			}
 			add_tech_bonus = {
 				name = NZL_artillery_focus
 				bonus = 1.00
@@ -1781,10 +1735,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.25
-			}
 			if = {
 				limit = {
 					NOT = { has_dlc = "No Step Back" }
@@ -2179,7 +2129,6 @@
 		}
 	}
 
-
 	############################
 	# GO COMMONWEALTH SECTION ##
 	############################
@@ -2282,23 +2231,6 @@
 			}
 		}
 	}
-
-	############################
-	### GO COMMUNIST SECTION ###
-	############################
-
-
-	############################
-	#### GO FASCIST SECTION ####
-	############################
-
-
-
-	############################
-	##### GO ALONE SECTION #####
-	############################
-
-
 
 
 }		

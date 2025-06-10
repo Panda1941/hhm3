@@ -1,22 +1,27 @@
 
 state={
 	id=449
-	name="STATE_449" # El Agheila
-	manpower = 40431
-	
-	state_category = wasteland
+	name="STATE_449"
 
 	history={
 		owner = ITA
+		set_state_flag = NOT_AFRICA_COMMONWEALTH_controls
+		victory_points = {
+			10046 1 
+		}
 		buildings = {
 			infrastructure = 2
+
 		}
-		add_core_of = WST
+		add_core_of = SWE
+
 	}
 
 	provinces={
-		1041 1198 4047 4057 10046 10117 12088 
+		1041 4047 4057 7194 10046 10117 12088 13073 13354 13356 13360 13361 13365 13366 
 	}
-
-	local_supplies=0.0 
+	manpower=40431
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

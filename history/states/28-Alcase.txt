@@ -6,14 +6,12 @@ state={
 	
 	state_category = city
 	resources={
-		steel=42 #was 100 # was: 236
+		steel=128 # was: 236
+		tungsten = 18
 	}
 
 	history={
 		owner = FRA
-		add_dynamic_modifier = {
-			modifier = FRA_maginot_line_dynamic_modifier
-		}
 		#victory_points = { 6529 1 }
 		#victory_points = { 549 1 }
 		victory_points = { 678 5 }
@@ -23,29 +21,31 @@ state={
 			infrastructure = 4
 			industrial_complex = 3
 			549 = {
-				bunker = 10
+				bunker = 5
 
 			}
 			678 = {
-				bunker = 10
+				bunker = 5
 
 			}
 			3629 = {
-				bunker = 10
+				bunker = 5
 
 			}
 			6529 = {
-				bunker = 10
+				bunker = 5
+
 			}
 			9503 = {
-				bunker = 10
+				bunker = 5
+
 			}
 			9559 = {
-				bunker = 10
+				bunker = 5
 
 			}
 			11502 = {
-				bunker = 10
+				bunker = 5
 
 			}
 			anti_air_building = 5
@@ -53,6 +53,7 @@ state={
 
 		}
 		add_core_of = FRA
+add_core_of = VIC
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

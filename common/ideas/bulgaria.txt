@@ -66,8 +66,8 @@ ideas = {
 					clr_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
 				}
 				country_lock_all_division_template = no
-				clear_rule = {
-					can_not_declare_war = yes
+				set_rule = {
+					can_not_declare_war = no
 				}
 			}
 			
@@ -77,9 +77,8 @@ ideas = {
 				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
 			}
 		}
-
-		BUL_army_restrictions_aat = {
-			name = BUL_army_restrictions
+		
+		BUL_army_restrictions_panda = {
 			picture = tfv_can_conscription_crisis
 
 			allowed = {
@@ -90,53 +89,10 @@ ideas = {
 				tag = BUL
 			}
 			removal_cost = -1
-
-			cancel = {
-				has_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
-				OR = {
-					has_non_aggression_pact_with = GRE
-					has_non_aggression_pact_with = YUG
-					has_non_aggression_pact_with = ROM
-					has_non_aggression_pact_with = TUR
-				}
-			}
-
-			on_remove = {
-				if = {
-					limit = {
-						has_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
-						NOT = { has_country_flag = BUL_refused_arms_restrictions_flag }
-						NOT = { has_country_flag = BUL_uk_gives_in_to_pressure_flag }
-					}
-					country_event = bftb_bulgaria_rearmament.4
-					ENG = { country_event = bftb_bulgaria_rearmament.5 }
-				}
-				if = {
-					limit = { has_country_flag = BUL_refused_arms_restrictions_flag }
-					clr_country_flag = BUL_refused_arms_restrictions_flag
-				}
-				if = {
-					limit = { has_country_flag = BUL_uk_gives_in_to_pressure_flag }
-					clr_country_flag = BUL_uk_gives_in_to_pressure_flag
-				}
-				if = {
-					limit = { has_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag }
-					clr_country_flag = BUL_uk_demands_nap_with_balkan_nation_flag
-				}
-				country_lock_all_division_template = no
-				clear_rule = {
-					can_not_declare_war = yes
-				}
-			}
-
-			rule = {
-				can_access_market = no
-			}
 			
 			modifier = {
 				industrial_capacity_factory = -0.25
 				industrial_capacity_dockyard = -0.25
-				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
 			}
 		}
 
@@ -157,8 +113,7 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.1
-				stability_weekly = -0.003
+				stability_factor = -0.15
 				war_support_factor = -0.1
 				custom_modifier_tooltip = BUL_second_national_catastrophe_tt
 			}
@@ -205,8 +160,6 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
-				justify_war_goal_time = -0.25 
-				generate_wargoal_tension = -0.75
 				war_support_factor = 0.05
 			}
 		}
@@ -595,9 +548,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = 0.1
+				conscription = 0.05
 				political_advisor_cost_factor = -0.25
 				war_support_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 
@@ -619,6 +573,7 @@ ideas = {
 			modifier = {
 				trade_laws_cost_factor = -0.50
 				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -638,6 +593,25 @@ ideas = {
 				stability_weekly = 0.01
 				political_power_gain = 0.5
 				compliance_gain = 0.15
+			}
+		}
+
+		BUL_foreign_industry_idea = {
+			picture = bul_fatherland_front_positive
+			name = "Foreign Industry"
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				industrial_capacity_factory = 0.1	
 			}
 		}
 
@@ -671,9 +645,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.02
-				production_factory_max_efficiency_factor = 0.02
+				production_speed_arms_factory_factor = 0.05
 				consumer_goods_factor = 0.10
 			}
 		}
@@ -692,10 +664,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
 				production_factory_max_efficiency_factor = 0.05
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.20
 			}
 		}
 
@@ -713,11 +684,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
-				global_building_slots_factor = 0.2
-				consumer_goods_factor = -0.06
+				production_speed_arms_factory_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_factor = 0.15
 			}
 		}
 
@@ -734,7 +703,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.2
 			}
 		}
 
@@ -751,7 +720,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.2
 			}
 		}
 
@@ -870,16 +839,11 @@ ideas = {
 
 			modifier = {
 				conscription_factor = 0.05
-				non_core_manpower = 0.01
-				experience_gain_navy_factor = 0.1
+				non_core_manpower = 0.05
 				experience_gain_army_factor = 0.1
-				army_leader_start_attack_level = 1
-				army_leader_start_defense_level	= 1
-				navy_leader_start_attack_level = 1
-				navy_leader_start_defense_level = 1
 				army_morale_factor = 0.1
+				army_org_factor = 0.05
 				max_command_power = 25
-				justify_war_goal_time = -0.5
 			}
 		}
 
@@ -1091,8 +1055,7 @@ ideas = {
 			}
 
 			modifier = {
-				repair_speed_factor = 0.2
-				refit_speed = 0.2
+				repair_speed_factor = 0.25
 			}
 		}
 
@@ -1151,7 +1114,6 @@ ideas = {
 			modifier = {
 				production_speed_nuclear_reactor_factor = 0.1
 				nuclear_production_factor = 0.1
-				production_speed_nuclear_facility_factor = 0.05
 			}
 			research_bonus = {
 				nuclear = 0.05
@@ -1471,6 +1433,7 @@ ideas = {
 				conscription_factor = 0.05
 				mobilization_laws_cost_factor = -0.35
 				economy_cost_factor = -0.35
+				army_attack_factor = 0.05
 			}
 		}
 
@@ -1493,12 +1456,13 @@ ideas = {
 				conscription_factor = 0.05
 				mobilization_laws_cost_factor = -0.35
 				economy_cost_factor = -0.35
+				army_attack_factor = 0.05
 			}
 
 			targeted_modifier = {
 				tag = SOV
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -1748,7 +1712,7 @@ ideas = {
 			
 			modifier = {
 				war_support_weekly = 0.001
-				conscription = 0.01
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 
@@ -1787,7 +1751,7 @@ ideas = {
 			
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
 			} 
 		}
 
@@ -1811,9 +1775,9 @@ ideas = {
 			
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.15
-				consumer_goods_factor = -0.10
-				trade_laws_cost_factor = 0.5
+				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.075
 				min_export = -0.15
 			} 
 		}
@@ -1834,10 +1798,10 @@ ideas = {
 			
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.2
-				consumer_goods_factor = -0.15
-				trade_laws_cost_factor = 0.5
-				min_export = -0.15
+				production_speed_arms_factory_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.075
+				min_export = -0.25
 				local_resources_factor = 0.15
 			} 
 		}
@@ -1989,6 +1953,133 @@ ideas = {
 				democratic_drift = 0.05
 			}
 		}
+		
+		BUL_grenadier_training_idea = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+
+				motorized_attack_factor = 0.05
+				mechanized_attack_factor = 0.05
+
+			}
+		}
+		
+		slow = {
+			picture = generic_license_production
+			name = BUL_slow
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		slow_2 = {
+			picture = generic_license_production
+			name = BUL_slow_02
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		slow_3 = {
+			picture = generic_license_production
+			name = BUL_slow_03
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				conscription = -0.015
+			}
+		}
+		
+		
+		
+		fast = {
+			picture = generic_foreign_capital
+			name = BUL_fast
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		fast_2 = {
+			picture = generic_foreign_capital
+			name = BUL_fast_02
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		fast_3 = {
+			picture = generic_foreign_capital
+			name = BUL_fast_03
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.20
+			}
+		}
 
 	}
 
@@ -2071,7 +2162,7 @@ ideas = {
 			}
 			
 			traits = { fast_tank_manufacturer }
-				
+			modifier = { tank_manufacturer_cost_factor = -1 }
 			ai_will_do = {
 				factor = 1
 			}
@@ -2142,7 +2233,7 @@ ideas = {
 			}
 			
 			traits = { medium_tank_manufacturer }
-				
+			modifier = { tank_manufacturer_cost_factor = -1 }	
 			ai_will_do = {
 				factor = 1
 			}
@@ -2213,7 +2304,7 @@ ideas = {
 			}
 			
 			traits = { heavy_tank_manufacturer }
-				
+			modifier = { tank_manufacturer_cost_factor = -1 }	
 			ai_will_do = {
 				factor = 1
 			}
@@ -2282,7 +2373,7 @@ ideas = {
 			research_bonus = {
 				armor = 0.15
 			}
-			
+			modifier = { tank_manufacturer_cost_factor = -1 }
 			traits = { infantry_tank_manufacturer }
 		}
 	}
@@ -2317,6 +2408,7 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = BUL_national_naval_designer_upgrade_tt
 				repair_speed_factor = 0.05
+				naval_manufacturer_cost_factor = -1
 			}
 		}
 
@@ -2345,8 +2437,8 @@ ideas = {
 			traits = { coastal_defence_naval_manufacturer }
 
 			modifier = {
-				repair_speed_factor = 0.1
-				refit_speed = 0.1
+				repair_speed_factor = 0.15
+				naval_manufacturer_cost_factor = -1
 			}
 		}
 
@@ -2413,7 +2505,7 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -1 }
 			traits = { convoy_escort_naval_manufacturer }							
 		}
 
@@ -2480,7 +2572,7 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -1 }
 			traits = { naval_manufacturer }
 		}
 
@@ -2547,7 +2639,7 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
+			modifier = { naval_manufacturer_cost_factor = -1 }
 			traits = { naval_manufacturer }
 		}
 	}
@@ -2580,6 +2672,7 @@ ideas = {
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
+				aircraft_manufacturer_cost_factor = -1
 			}
 			
 			ai_will_do = {
@@ -2613,8 +2706,9 @@ ideas = {
 			
 			modifier = {
 				air_accidents_factor = -0.05
-				air_superiority_efficiency = 0.05
-				air_intercept_efficiency = 0.05
+				air_interception_agility_factor = 0.02
+				air_air_superiority_agility_factor = 0.02
+				aircraft_manufacturer_cost_factor = -1
 			}
 		}
 
@@ -2643,6 +2737,7 @@ ideas = {
 
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
+				aircraft_manufacturer_cost_factor = -1
 			}
 		}
 
@@ -2674,6 +2769,7 @@ ideas = {
 				air_range_factor = 0.05
 				air_strategic_bomber_bombing_factor = 0.02
 				air_cas_present_factor = 0.02
+				aircraft_manufacturer_cost_factor = -1
 			}
 		}
 
@@ -2740,7 +2836,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+			modifier = { aircraft_manufacturer_cost_factor = -1 }
 			traits = { heavy_aircraft_manufacturer }
 			
 			ai_will_do = {
@@ -2813,7 +2909,7 @@ ideas = {
 			}
 			
 			traits = { naval_aircraft_manufacturer }
-			
+			modifier = { aircraft_manufacturer_cost_factor = -1 }
 			ai_will_do = {
 				factor = 1
 			}
@@ -2884,7 +2980,7 @@ ideas = {
 			}
 			
 			traits = { medium_aircraft_manufacturer }
-			
+			modifier = { aircraft_manufacturer_cost_factor = -1 }
 			ai_will_do = {
 				factor = 1
 			}
@@ -2907,7 +3003,7 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 			
 			# licenced Focke-Wulf Fw 44, built own trainers DAR 6 and DAR 9.
-			
+			modifier = { aircraft_manufacturer_cost_factor = -1 }
 			ai_will_do = {
 				factor = 1
 			}
@@ -3362,8 +3458,8 @@ ideas = {
 			traits = { refinery_concern }
 			
 			modifier = {
-				fuel_gain_factor_from_states = 0.1
-				production_oil_factor = 0.05
+				fuel_gain_factor_from_states = 0.15
+				production_oil_factor = 0.15
 			}
 		}
 
@@ -3421,8 +3517,8 @@ ideas = {
 
 			modifier = {
 				production_speed_radar_station_factor = 0.25
-				land_reinforce_rate = 0.05
-				production_factory_max_efficiency_factor = 0.05
+				land_reinforce_rate = 0.08
+				production_factory_max_efficiency_factor = 0.1
 			}
 		}
 
@@ -3479,7 +3575,7 @@ ideas = {
 			traits = { construction_company }
 
 			modifier = {
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.15
 			}
 		}
 
@@ -3536,8 +3632,8 @@ ideas = {
 			traits = { industrial_concern }
 
 			modifier = {
-				local_building_slots_factor = 0.05
-				local_resources_factor = 0.05
+				local_building_slots_factor = 0.1
+				local_resources_factor = 0.1
 			}
 		}
 

@@ -1,0 +1,92 @@
+focus_tree = {
+	id = zzz
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WST
+		}
+		modifier = {
+			add = 10
+			tag = YUG
+		}
+		modifier = {
+			add = 20
+			tag = VEN
+		}
+		modifier = {
+			add = 20
+			tag = YUG
+		}
+		modifier = {
+			add = 20
+			tag = GRE
+		}
+		modifier = {
+			add = 10
+			tag = GRE
+		}
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+		modifier = {
+			add = 10
+			tag = HOL
+		}
+		modifier = {
+			add = 10
+			tag = BEL
+		}
+		modifier = {
+			add = 10
+			tag = LUX
+		}
+		modifier = {
+			add = 10
+			tag = CZE
+		}
+		modifier = {
+			add = 10
+			tag = SWE
+		}
+		modifier = {
+			add = 10
+			tag = ALB
+		}
+		modifier = {
+			add = 10
+			tag = IRQ
+		}
+		modifier = {
+			add = 20
+			tag = ETH
+		}
+		modifier = {
+			add = 20
+			tag = IRE
+		}
+		modifier = {
+			add = 20
+			tag = SIA
+		}
+		modifier = {
+			add = 10
+			tag = DEN
+		}
+		#modifier = {
+		#	add = 20
+		#	tag = BEL
+		#}
+		#modifier = {
+		#	add = 20
+		#	tag = LUX
+		#}
+		#modifier = {
+		#	add = 20
+		#	tag = HOL
+		#}
+	}
+
+	default = no
+}

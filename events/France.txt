@@ -36,7 +36,19 @@ country_event = {
 			country_event = { days = 5 id = japan.6 }
 		}
 	}
-	
+	option = { # Refuse
+		name = france.1.b
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		JAP = {
+			country_event = { days = 5 id = japan.7 }
+		}
+	}
 }
 
 # Maginot Line Extension
@@ -187,7 +199,6 @@ country_event = {
 				NOT = { state = 158 }
 				NOT = { state = 114 }
 				NOT = { state = 50 }
-				NOT = { state = 978 } #BADEN
 				NOT = { state = 42 }
 				is_controlled_by = ROOT
 				OR = {
@@ -219,47 +230,13 @@ country_event = {
 				}
 			}
 		}
-		# PLEASE Don't fire if this will end the war (No other ally is a major)
-		FRA = {
-			any_allied_country = {
-				is_major = yes 
-				has_capitulated = no 
-				has_war_with = GER 
-			}
-		}
 	}
 	mean_time_to_happen = { days = 2 }
 	immediate = {
 		country_event = france.10
 	}
 }
-# The Battle is Lost
-country_event = {
-	id = france.10
-	title = france.10.t
-	desc = france.10.d
-	picture = GFX_report_event_german_parade_paris
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
 
-	immediate = {
-		set_global_flag = achievement_france_surrender
-	}
-	
-	option = { # Become Free French
-		name = france.10.b
-		ai_chance = {
-			factor = 85
-		}
-		set_global_flag = fall_of_france
-		save_global_event_target_as = free_france
-		GER = { country_event = france.14 }
-		custom_effect_tooltip = france.10.b_tt
-		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
-	}
-}
 
 # France suggests a Union (Britain)
 country_event = {
@@ -333,49 +310,7 @@ country_event = {
 	}
 }
 
-# Britain refuses Union (France)
-country_event = {
-	id = france.13
-	title = france.13.t
-	desc = france.13.d
-	picture = GFX_report_event_pierre_laval
-	
-	is_triggered_only = yes
-	
-	option = { # Become Vichy
-		name = france.13.a
-		trigger = { is_ai = no }
-		set_country_flag = become_vichy
-		set_global_flag = fall_of_france
-		save_global_event_target_as = vichy_france
-
-		GER = { country_event = france.14 }
-		custom_effect_tooltip = france.10.a_tt
-		# Switches to Vichy if GER accepts
-	}
-	option = { # Become Free France
-		name = france.13.b
-		GER = { country_event = france.14 }
-		save_global_event_target_as = free_france
-		custom_effect_tooltip = france.10.b_tt
-		set_global_flag = fall_of_france
-	}
-	option = { # decide to fight on
-		name = france.10.e
-		ai_chance = {
-			factor = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		trigger = { has_war_support > 0.7 }
-		add_stability = -0.05
-		custom_effect_tooltip = france_continue_the_fight_tt
-	}
-}
-
-# France wants Armistice (Germany)
+# France wants Armistice (Germany) Vichy
 country_event = {
 	id = france.14
 	title = france.14.t
@@ -383,22 +318,29 @@ country_event = {
 	picture = GFX_report_event_german_parade_paris
 	
 	is_triggered_only = yes
-	 
+	
+	option = {
+		name = france.14.a
+		elwolfmod_vichy_france = yes 
+		hidden_effect = { 
+			news_event = { id = news.34 hours = 6 } 
+		}
+	}
+}
+
+# France wants Armistice (Germany)
+country_event = {
+	id = france.69420
+	title = france.14.t
+	desc = france.14.d
+	picture = GFX_report_event_german_parade_paris
+	
+	is_triggered_only = yes
 
 	option = { # Conquer everything!
 		name = france.14.b
-		ai_chance = { 
-			factor = 50 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
 		FRA = {
 			country_event = { hours = 6 id = france.15 }
-		}
-		FROM = {
-			clr_country_flag = GER_dont_seize_gold_reserves_flag
 		}
 	}
 }
@@ -547,7 +489,7 @@ country_event = {
 		has_completed_focus = FRA_form_the_popular_front
 		NOT = { has_country_flag = FRA_popular_front_cooldown }
 		tag = FRA
-		date > 1936.4.1
+		date > 1936.6.1
 		date < 1938.1.1
 	}
 
@@ -560,10 +502,10 @@ country_event = {
 			base = 15
 		}
 		name = france.21.a
-		add_timed_idea = {
-			idea = FRA_factory_strikes
-			days = 360
-		}
+		#add_timed_idea = {
+		#	idea = FRA_factory_strikes
+		#	days = 360
+		#}
 	}
 }
 
@@ -581,10 +523,10 @@ country_event = {
 			base = 15
 		}
 		name = france.21.a
-		add_timed_idea = {
-			idea = FRA_factory_strikes
-			days = 60
-		}
+		#add_timed_idea = {
+		#	idea = FRA_factory_strikes
+		#	days = 60
+		#}
 		hidden_effect = {
 			country_event = { id = france.23 days = 60 }
 		}
@@ -856,7 +798,7 @@ country_event = {
 			FRA = {
 				add_ai_strategy = {
 					type = alliance
-					id = ENG
+					id = "ENG"
 					value = 200
 				}
 			}

@@ -6,14 +6,15 @@ state={
 	
 	state_category = town
 
-	history={
+history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = JAP
 		add_core_of = CHI
-		
+		add_core_of = SWE
 		buildings = {
 			infrastructure = 3 #was: 5
 			arms_factory = 1
 			industrial_complex = 1
+			air_base = 6
 			3900 = {
 				naval_base = 2
 			}

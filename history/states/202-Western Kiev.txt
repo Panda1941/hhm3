@@ -15,6 +15,12 @@ state={
 		victory_points = {
 			525 25
 		}
+		victory_points = {
+			11557 10
+		}
+		victory_points = {
+			489 3
+		}
 		buildings = {
 			infrastructure = 4 #was: 7
 			arms_factory = 2
@@ -23,7 +29,7 @@ state={
 			air_base = 8
 		}
 		add_core_of = SOV
-		add_core_of = WST
+		add_core_of = SOV
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 3

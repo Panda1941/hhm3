@@ -2,7 +2,8 @@ state={
 	id=41
 	name="STATE_41"
 	resources={
-		aluminium=1.000
+		aluminium=9
+		steel = 18
 	}
 
 	history={
@@ -15,9 +16,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			arms_factory = 2
+			arms_factory = 3
 			industrial_complex = 2
-			air_base = 6
+			#air_base = 6
 
 		}
 		add_core_of = SPR
@@ -29,7 +30,7 @@ state={
 	}
 	manpower=2064659
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=megalopolis
 
 	local_supplies=0.0 
 }

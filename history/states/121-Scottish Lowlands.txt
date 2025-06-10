@@ -7,7 +7,7 @@ state={
 	state_category = city
 
 	history={
-		add_core_of = WST
+		add_core_of = ENG
 		owner = ENG
 		victory_points = { 9392 10 }
 		victory_points = { 6300 1 }

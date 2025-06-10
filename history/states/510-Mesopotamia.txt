@@ -1,32 +1,30 @@
-state = {
-	id = 510
-	name = "STATE_510"
-	manpower = 1
 
-	resources = {
-		oil = 2
-		rubber = 3
+state={
+	id=510
+	name="STATE_510"
+    manpower = 1
+	resources={
+		oil=8 # was: 12
 	}
 	
-	state_category = wasteland
+	state_category = large_town
 
-	history = {
+	history={
+        owner = WST
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1
+		}
 
-		owner = WST
-		add_core_of = WST
 
-		
 
-		
-
-		
-
-		
-		
+		add_core_of = ARG
 	}
 
-	provinces = {
-		1449 8187 8238 10515 10943 11007 12453 12964 
+	provinces={
+		1449 2172 5163 7500 8187 8208 8238 10515 10943 10975 10985 11007 12453 12964 13000 
 	}
 
 	local_supplies=0.0 

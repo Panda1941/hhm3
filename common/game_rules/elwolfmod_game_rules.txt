@@ -1,0 +1,173 @@
+sov_boost = {
+	name = "Soviet Factory Boost"
+	group = "HHM Rules"
+	icon = "GFX_decision_SOV_socialism_in_one_country"
+	option = {
+		name = sixteen
+		text = "R16"
+		desc = "16 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+	option = {
+		name = nerd
+		text = "RNERD"
+		desc = "Small nerf to the country (Not Reccomended)"
+	}
+}
+
+sov_closed_eco = {
+	name = "Soviets Closed Eco"
+	group = "HHM Rules"
+	icon = "GFX_decision_SOV_socialism_in_one_country"
+	option = {
+		name = off
+		text = "ROff"
+		desc = "Soviets start on export focus (Not Reccomended)"
+	}
+	default = {
+		name = on
+		text = "GOn"
+		desc = "Soviets start the game on closed eco, free trade bonuses (Reccomended)"
+	}
+}
+
+ger_boost = {
+	name = "German Factory Boost"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+	option = {
+		name = nerd
+		text = "RNERD"
+		desc = "Small nerf to the country (Not Reccomended)"
+	}
+}
+
+techstealing = {
+	name = "Tech Stealing"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_research"
+	default = {
+		name = banned
+		text = "GBanned"
+		desc = "Tech stealing banned (Reccomended)"
+	}
+	option = {
+		name = onehundred
+		text = "RAllowed"
+		desc = "Tech stealing allowed (Not Reccomended)"
+	}
+}
+
+max_submarine_tech = {
+	name = "Max Submarine Tech"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_research"
+	option = {
+		name = sub2
+		text = "R1936"
+		desc = "Submarine 3 and Snorkel 1 banned (Not Reccomended)"
+	}
+	default = {
+		name = sub3
+		text = "G1940"
+		desc = "Submarine 3 and Snorkel 1 allowed (Reccomended)"
+	}
+	option = {
+		name = sub4
+		text = "R1944"
+		desc = "Submarine 4 and Snorkel 2 allowed (Not Reccomended)"
+	}
+}
+
+tradebacks = {
+	name = "Tradeback Idea"
+	group = "HHM Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	option = {
+		name = off
+		text = "ROff"
+		desc = "No tradeback idea (Not Reccomended)"
+	}
+	default = {
+		name = on
+		text = "GOn"
+		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty until September 1939 (Reccomended)"
+	}
+	option = {
+		name = not_allies
+		text = "RNot Allies"
+		desc = "Everyone has no tradeback idea except for Allies (Not Reccomended)"
+	}
+}
+
+
+force_attack_last_stand = {
+	name = "Force Attack Last Stand"
+	group = "HHM Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Normal like vanilla (Not Reccomended)"
+	}
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Banned (Reccomended)"
+	}
+}
+
+elwolf_guerrilla_tactics = {
+	name = "Guerilla Tactics"
+	group = "HHM Rules"
+	icon = "GFX_decision_hol_war_on_pacifism"
+	option = {
+		name = ALLOWED
+		text = "RAllowed"
+		desc = "Gurilla Tatics are able to be Selected"
+	}
+	default = {
+		name = BLOCKED
+		text = "GBanned"
+		desc = "Gurilla Tatics are not able to be Selected"
+	}
+}

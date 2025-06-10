@@ -2,27 +2,36 @@
 state={
 	id=352
 	name="STATE_352" # Van
-	manpower = 1
+    manpower = 1
 
-	state_category = wasteland
+	state_category = rural
 
 	history={
-		owner =CHO
-		
-		
-		
-		
+        owner = WST
+
+
+
+
+
+
+
+
+
+		buildings = {
+			infrastructure = 1
+		}
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"
 			}
-			add_core_of =CHO
+			add_core_of = KUR
 		}
 		if = {
 			limit = {
 				NOT = { has_dlc = "Battle for the Bosporus" }
 			}
-			add_core_of =CHO
+			add_core_of = TUR
+			add_core_of = KUR
 		}
 	}
 
