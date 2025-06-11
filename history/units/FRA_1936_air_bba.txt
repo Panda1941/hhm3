@@ -3,52 +3,44 @@ air_wings = {
 	29 = { 
 		# Groupement de Chasse 21 
 		# Groupement de Chasse 23
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "FRA" 
 			amount = 100
-			version_name = "D.500"
 		}
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "FRA" 
 			amount = 100
-			version_name = "D.510"
 		}
 		# Groupement de Bombardment 6
 		# Groupement de Bombardment 9
-		large_plane_airframe_0 =  {
+		strat_bomber_equipment_1 =  {
 			owner = "FRA" 
 			amount = 100
-			version_name = "F.222"
 		}
 		# Groupement de Chasse 22
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "FRA" 
 			amount = 100
-			version_name = "D.510"
 		}
 		# Groupement de Chasse d'Alps
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "FRA" 
 			amount = 100
-			version_name = "NiD 62"
 		}
 		# Groupement de Bombardment 9
-		medium_plane_airframe_0 =  {
+		tac_bomber_equipment_0 =  {
 			owner = "FRA" 
 			amount = 100
-			version_name = "Amiot 143"
 		}
 		# Groupement de Chasse du Nord-Africain
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "FRA" 
 			amount = 100
-			version_name = "NiD 62"
 		}
 		# Flotille F1
-		small_plane_naval_bomber_airframe_0 = {
+		nav_bomber_equipment_1 = {
 			owner = "FRA" 
 			amount = 100
-			version_name = "Latécoère 296"
 		}
 	}
 }

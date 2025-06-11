@@ -8,70 +8,53 @@ air_wings = {
 	### IJA Air Forces ###
 	# 1 Hikodan -- Tokyo
 	282 = { 
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
 		}
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
 		}
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
 		}
-		small_plane_cas_airframe_0 =  {
+		CAS_equipment_1 =  {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-2"
 		}
-		medium_plane_airframe_0 =  {
+		tac_bomber_equipment_0 =  {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-1"
 		}
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
 		}
-		small_plane_cas_airframe_0 =  {
+		CAS_equipment_1 =  {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-3"
 		}
-		small_plane_cas_airframe_0 =  {
+		CAS_equipment_1 =  {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-3"
 		}
-		small_plane_cas_airframe_0 =  {
+		fighter_equipment_0 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-3"
 		}
-		small_plane_airframe_0 = {
+		fighter_equipment_0 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
 		}
-		small_plane_airframe_0 = {
+		nav_bomber_equipment_1 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
 		}
-		small_plane_airframe_0 = {
+		nav_bomber_equipment_1 = {
 			owner = "JAP" 
 			amount = 100
-			version_name = "Ki-10"
-		}
-		small_plane_airframe_0 = {
-			owner = "JAP" 
-			amount = 100
-			version_name = "Ki-10"
 		}
 	}
 }
@@ -86,9 +69,8 @@ instant_effect =
 
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_airframe_0
+			type = fighter_equipment_1
 			creator = "JAP" 
-			version_name = "Ki-10"
 		}
 		requested_factories = 1
 		progress = 0.15

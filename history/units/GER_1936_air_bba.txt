@@ -4,17 +4,27 @@ air_wings = {
 	### I. Luftkreiskommando -- Konigsberg ###
 	64 = { 
 		# Jagdgeschwader 232 	
-		small_plane_airframe_0 =  {		# He 51
+		fighter_equipment_0 =  {		# He 51
 			owner = "GER" 
 			amount = 100
-			version_name = "He 51"
 		}
 		name = "Jagdgeschwader 232"
-		# Jagdgeschwader 132 'Richtofen'		
-		small_plane_airframe_0 =  {		# Ar 68
+		# Jagdgeschwader 233 	
+		fighter_equipment_0 =  {		# He 51
 			owner = "GER" 
 			amount = 100
-			version_name = "He 51"
+		}
+		name = "Jagdgeschwader 233"
+		# Jagdgeschwader 234 	
+		fighter_equipment_0 =  {		# He 51
+			owner = "GER" 
+			amount = 100
+		}
+		name = "Jagdgeschwader 234"
+		# Jagdgeschwader 132 'Richtofen'		
+		fighter_equipment_0 =  {		# Ar 68
+			owner = "GER" 
+			amount = 100
 		}
 		name = "Jagdgeschwader 132"
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
@@ -25,55 +35,47 @@ air_wings = {
 			portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
 		}
 		# Jagdgeschwader 136		
-		small_plane_airframe_0 =  {		# He 51
+		fighter_equipment_0 =  {		# He 51
 			owner = "GER" 
 			amount = 100
-			version_name = "He 51"
 		}
 		name = "Jagdgeschwader 136"
 		# Kampfgeschwader 153		
 		medium_plane_airframe_0 = {		# Do 23
 			owner = "GER" 
 			amount = 100
-			version_name = "Do 23"
 		}
 		name = "Kampfgeschwader 153"
-		# TODO: REMOVE THIS LATER ???
 		transport_plane_equipment_1 = {
 			owner = "GER" 
 			amount = 100
 		}
 		# Kampfgeschwader 253 'General Wever'		
-		medium_plane_airframe_0 = {		# He 45 or Do 23 ?
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
 			owner = "GER" 
 			amount = 100
-			version_name = "Do 23"
 		}
 		name = "Kampfgeschwader 253"
-		medium_plane_airframe_0 = {		# He 45 or Do 23 ?
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
 			owner = "GER" 
 			amount = 100
-			version_name = "Do 23"
 		}
 		# Sturzkampfgeschwader 162		
-		small_plane_cas_airframe_0 =  {			# Hs 123
+		CAS_equipment_1 =  {			# Hs 123
 			owner = "GER" 
 			amount = 100
-			version_name = "Hs 123"
 		}
 		name = "Sturzkampfgeschwader 162"
 		# Kampfgeschwader 152 'Hindenburg'	
-		medium_plane_airframe_0 = {		# Do 23
+		tac_bomber_equipment_0 = {		# Do 23
 			owner = "GER" 
 			amount = 100
-			version_name = "Do 23"
 		}
 		name = "Kampfgeschwader 152"
 		# Küstenfliegergruppe 106		
-		small_plane_naval_bomber_airframe_1 =  {		# He 59, Do 18
+		nav_bomber_equipment_1 =  {		# He 59, Do 18
 			owner = "GER" 
 			amount = 100
-			version_name = "Do 22"
 		}
 		name = "Küstenfliegergruppe 106"
 		# Küstenfliegergruppe 206
@@ -87,9 +89,8 @@ air_wings = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_airframe_1
+			type = fighter_equipment_1
 			creator = "GER" 
-			version_name = "Bf 109 D"
 		}
 		requested_factories = 1
 		progress = 0.15
@@ -99,9 +100,8 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_cas_airframe_1
-			creator = "GER" 
-			version_name = "Ju 87"
+			type = CAS_equipment_1
+			creator = "GER"
 		}
 		requested_factories = 1
 		progress = 0.2
@@ -111,9 +111,8 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = medium_plane_airframe_1
+			type = tac_bomber_equipment_1
 			creator = "GER" 
-			version_name = "He 111"
 		}
 		requested_factories = 1
 		progress = 0.1

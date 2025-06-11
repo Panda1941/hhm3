@@ -1,21 +1,10 @@
 ﻿capital = 43
 
 oob = "HUN_1936"
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "HUN_1936_air_bba"
-		set_technology = {
-			iw_small_airframe = 1
-			
-			early_bombs = 1
-		}
-	else = {
-		set_air_oob = "HUN_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			CAS1 = 1
-		}
-	}
+set_air_oob = "HUN_1936_air_bba"
+# Air techs
+set_technology = {
+	early_fighter = 1
 }
 
 set_research_slots = 3
