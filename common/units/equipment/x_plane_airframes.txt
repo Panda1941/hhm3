@@ -636,7 +636,7 @@ equipments = {
 			plane_engine_upgrade
 			plane_reliability_upgrade
 		}
-		build_cost_ic = 16
+		build_cost_ic = 65
 		resources = {
 			aluminium = 3
 			tungsten = 2
@@ -663,7 +663,7 @@ equipments = {
 		air_attack = 56
 		air_defence = 7
 		reliability = 0.5
-		build_cost_ic = 18
+		build_cost_ic = 75
 		resources = {
 			aluminium = 3
 			tungsten = 3
@@ -690,7 +690,7 @@ equipments = {
 		air_attack = 60
 		air_defence = 10
 		reliability = 0.8
-		build_cost_ic = 20
+		build_cost_ic = 85
 		resources = {
 			aluminium = 3
 			tungsten = 3
