@@ -609,19 +609,14 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_hitler_china.dds"
 	}
 
-	spriteType = { #Same as above but with Hitler cut from the pic
-		name = "GFX_report_event_generic_china"
-		texturefile = "gfx/event_pictures/report_event_generic_china.dds"
-	}
-
 	spriteType = {
 		name = "GFX_report_event_hitler_croatia_handshake"
 		texturefile = "gfx/event_pictures/report_event_hitler_croatia_handshake.dds"
 	}
 
-	spriteType = { #Same as above but with Hitler cut from the pic
-		name = "GFX_report_event_generic_croatia_handshake"
-		texturefile = "gfx/event_pictures/report_event_generic_croatia_handshake.dds"
+	spriteType = {
+		name = "GFX_report_event_hitler_handshake"
+		texturefile = "gfx/event_pictures/report_event_hitler_handshake.dds"
 	}
 
 	spriteType = {
@@ -630,8 +625,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_report_event_soldiers_parade"
-		texturefile = "gfx/event_pictures/report_event_soldiers_parade.dds"
+		name = "GFX_report_event_hitler_parade"
+		texturefile = "gfx/event_pictures/report_event_hitler_parade.dds"
 	}
 
 	spriteType = {
@@ -1075,11 +1070,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_news_event_hitler_speech2"
-		texturefile = "gfx/event_pictures/news_event_hitler_speech2.dds"
-	}
-
-	spriteType = {
 		name = "GFX_news_event_german_inspect_troops"
 		texturefile = "gfx/event_pictures/news_event_german_inspect_troops.dds"
 	}
@@ -1095,11 +1085,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_news_event_german_rally"
-		texturefile = "gfx/event_pictures/news_event_german_rally.dds"
-	}
-
-	spriteType = {
 		name = "GFX_news_event_german_officers"
 		texturefile = "gfx/event_pictures/news_event_german_officers.dds"
 	}
@@ -1112,11 +1097,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_hitler_handshake"
 		texturefile = "gfx/event_pictures/news_event_hitler_handshake.dds"
-	}
-
-	spriteType = {
-		name = "GFX_news_event_generic_handshake"
-		texturefile = "gfx/event_pictures/news_event_generic_handshake.dds"
 	}
 
 	spriteType = {
@@ -3465,421 +3445,4 @@ spriteTypes = {
 		name = "GFX_report_event_DEN_exiled_king"
 		texturefile = "gfx/event_pictures/report_event_DEN_exiled_king.dds"
 	}
-
-
-
-
-
- #######           #    
-    #     ####    # #   
-    #    #    #  #   #  
-    #    #    # #     # 
-    #    #    # ####### 
-    #    #    # #     # 
-    #     ####  #     # 
-                        
-
-
-
-	################
-	##### ARG  ##### 
-	################
-
-
-	spriteType = {
-		name = "GFX_news_event_ARG_battle_of_the_river_plate"
-		texturefile = "gfx/event_pictures/news_event_ARG_battle_of_the_river_plate.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_ARG_dominate_the_americas"
-		texturefile = "gfx/event_pictures/news_event_ARG_dominate_the_americas.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_ARG_coup_consolidating"
-		texturefile = "gfx/event_pictures/report_event_ARG_coup_consolidating.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_ARG_coup_detat"
-		texturefile = "gfx/event_pictures/report_event_ARG_coup_detat.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_ARG_osmar_hellmuth"
-		texturefile = "gfx/event_pictures/report_event_ARG_osmar_hellmuth.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_ARG_rodolfo_ghioldi"
-		texturefile = "gfx/event_pictures/report_event_ARG_rodolfo_ghioldi.dds"
-	}
-
-
-	################
-	##### BRA  ##### 
-	################
-
-
-	spriteType = {
-		name = "GFX_news_event_BRA_cangaco"
-		texturefile = "gfx/event_pictures/news_event_BRA_cangaco.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_BRA_carnival"
-		texturefile = "gfx/event_pictures/news_event_BRA_carnival.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_BRA_estado_novo"
-		texturefile = "gfx/event_pictures/news_event_BRA_estado_novo.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_BRA_vargas_and_roosevelt"
-		texturefile = "gfx/event_pictures/news_event_BRA_vargas_and_roosevelt.dds"
-	}
-
-	spriteType = {
-		name = "GFX_report_event_BRA_cangaco"
-		texturefile = "gfx/event_pictures/report_event_BRA_cangaco.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_BRA_departamento_femininio"
-		texturefile = "gfx/event_pictures/report_event_BRA_departamento_femininio.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_BRA_smoking_snakes"
-		texturefile = "gfx/event_pictures/report_event_BRA_smoking_snakes.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_BRA_us_cooperation"
-		texturefile = "gfx/event_pictures/report_event_BRA_us_cooperation.dds"
-	}
-
-
-	################
-	##### CHL  ##### 
-	################
-
-
-	spriteType = {
-		name = "GFX_news_event_CHL_chillan_earthquake"
-		texturefile = "gfx/event_pictures/news_event_CHL_chillan_earthquake.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_CHL_chillan_earthquake"
-		texturefile = "gfx/event_pictures/report_event_CHL_chillan_earthquake.dds"
-	}
-
-
-	################
-	##### MISC ##### 
-	################
-
-
-	spriteType = {
-		name = "GFX_news_event_BOL_bolivian_socialist_revolution"
-		texturefile = "gfx/event_pictures/news_event_BOL_bolivian_socialist_revolution.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_chaco_war"
-		texturefile = "gfx/event_pictures/news_event_generic_chaco_war.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_south_american_dreadnought_race"
-		texturefile = "gfx/event_pictures/news_event_generic_south_american_dreadnought_race.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_BOL_bolivian_socialist_revolution"
-		texturefile = "gfx/event_pictures/report_event_BOL_bolivian_socialist_revolution.dds"
-	}
-
-
-
-
-
- #     #     #     # 
- #  #  #     #  #  # 
- #  #  #     #  #  # 
- #  #  #     #  #  # 
- #  #  # ### #  #  # 
- #  #  # ### #  #  # 
-  ## ##  ###  ## ##  
-                     
-
-
-
-#### AUS ####
-	spriteType = {
-		name = "GFX_news_event_AUS_godwin_von_brumowski"
-		texturefile = "gfx/event_pictures/news_event_AUS_godwin_von_brumowski.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_AUS_military_march"
-		texturefile = "gfx/event_pictures/news_event_AUS_military_march.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_AUS_vaterlandische_front_rally"
-		texturefile = "gfx/event_pictures/news_event_AUS_vaterlandische_front_rally.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_AUS_military_march"
-		texturefile = "gfx/event_pictures/report_event_AUS_military_march.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_AUS_political_rally"
-		texturefile = "gfx/event_pictures/report_event_AUS_political_rally.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_AUS_vaterlandische_front_rally"
-		texturefile = "gfx/event_pictures/report_event_AUS_vaterlandische_front_rally.dds"
-	}
-
-
-#### GER ####
-	# Report Event #
-	spriteType = {
-		name = "GFX_report_event_GER_black_reichswehr_forces"
-		texturefile = "gfx/event_pictures/report_event_GER_black_reichswehr_forces.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_USA_charlie_brown"
-		texturefile = "gfx/event_pictures/report_event_USA_charlie_brown.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_generic_polish_machinegunners"
-		texturefile = "gfx/event_pictures/report_event_generic_polish_machinegunners.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_generic_communist_militia"
-		texturefile = "gfx/event_pictures/report_event_generic_communist_militia.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_grenzshutz_forces"
-		texturefile = "gfx/event_pictures/report_event_GER_grenzshutz_forces.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_bombers"
-		texturefile = "gfx/event_pictures/report_event_GER_bombers.dds"
-	}
-
-	# News Event #
-	spriteType = {
-		name = "GFX_news_event_generic_communist_militia"
-		texturefile = "gfx/event_pictures/news_event_generic_communist_militia.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_silesian_rebels"
-		texturefile = "gfx/event_pictures/news_event_generic_silesian_rebels.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_fall_of_budapest"
-		texturefile = "gfx/event_pictures/news_event_generic_fall_of_budapest.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_soviet_occupation_of_budapest"
-		texturefile = "gfx/event_pictures/news_event_generic_soviet_occupation_of_budapest.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_rotterdam_destroyed"
-		texturefile = "gfx/event_pictures/news_event_generic_rotterdam_destroyed.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_GER_bombers"
-		texturefile = "gfx/event_pictures/news_event_GER_bombers.dds"
-	}
-
-	# Report Event - Leader edition #
-	spriteType = {
-		name = "GFX_report_event_GER_hitler"
-		texturefile = "gfx/event_pictures/report_event_GER_hitler.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_todt"
-		texturefile = "gfx/event_pictures/report_event_GER_todt.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_speer"
-		texturefile = "gfx/event_pictures/report_event_GER_speer.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_goring"
-		texturefile = "gfx/event_pictures/report_event_GER_goring.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_himmler"
-		texturefile = "gfx/event_pictures/report_event_GER_himmler.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_goebbels"
-		texturefile = "gfx/event_pictures/report_event_GER_goebbels.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_hess"
-		texturefile = "gfx/event_pictures/report_event_GER_hess.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_bormann"
-		texturefile = "gfx/event_pictures/report_event_GER_bormann.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_GER_braun"
-		texturefile = "gfx/event_pictures/report_event_GER_braun.dds"
-	}
-
-
-#### HUN ####
-
-	spriteType = {
-		name = "GFX_news_event_HUN_alliance_with_germany"
-		texturefile = "gfx/event_pictures/news_event_HUN_alliance_with_germany.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_HUN_alliance_with_italy"
-		texturefile = "gfx/event_pictures/news_event_HUN_alliance_with_italy.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_HUN_bela_kun"
-		texturefile = "gfx/event_pictures/news_event_HUN_bela_kun.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_HUN_gyor_program_announcement"
-		texturefile = "gfx/event_pictures/news_event_HUN_gyor_program_announcement.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_HUN_hungary_occupies_area"
-		texturefile = "gfx/event_pictures/news_event_HUN_hungary_occupies_area.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_HUN_leninist_gathering"
-		texturefile = "gfx/event_pictures/news_event_HUN_leninist_gathering.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_HUN_charles_von_habsburg_marching"
-		texturefile = "gfx/event_pictures/report_event_HUN_charles_von_habsburg_marching.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_HUN_hungary_occupies_area"
-		texturefile = "gfx/event_pictures/report_event_HUN_hungary_occupies_area.dds"
-	}
-
-
-#### BEL ####
-	# Report Event #
-	spriteType = {
-		name = "GFX_report_event_BEL_paul_van_zeeland"
-		texturefile = "gfx/event_pictures/report_event_BEL_paul_van_zeeland.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_BEL_leopold"
-		texturefile = "gfx/event_pictures/report_event_BEL_leopold.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_COG_force_publique_marching_to_war"
-		texturefile = "gfx/event_pictures/report_event_COG_force_publique_marching_to_war.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_COG_force_publique_capturing_area"
-		texturefile = "gfx/event_pictures/report_event_COG_force_publique_capturing_area.dds"
-	}
-
-	# News Event #
-	spriteType = {
-		name = "GFX_news_event_COG_force_publique_capturing_area"
-		texturefile = "gfx/event_pictures/news_event_COG_force_publique_capturing_area.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_COG_force_publique_marching_to_war"
-		texturefile = "gfx/event_pictures/news_event_COG_force_publique_marching_to_war.dds"
-	}
-
-
-
-
-		  ####    ##   ####  
-		 #       #  #  #    
-		#   #### #  #  ###  
-		 #   ##  #  #  #  
-		  ###     ##   #### 
-
-
-#### PER ####
-	# Report Event #
-	spriteType = {
-		name = "GFX_report_event_PER_shah_inspection"
-		texturefile = "gfx/event_pictures/report_event_PER_shah_inspection.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_PER_persepolis_party"
-		texturefile = "gfx/event_pictures/report_event_PER_persepolis_party.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_PER_mohammed_reza_shah"
-		texturefile = "gfx/event_pictures/report_event_PER_mohammed_reza_shah.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_PER_iran_invasion"
-		texturefile = "gfx/event_pictures/report_event_PER_iran_invasion.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_PER_reza_shah_pahlavi"
-		texturefile = "gfx/event_pictures/report_event_PER_reza_shah_pahlavi.dds"
-	}
-
-#### IRQ ####
-		# Report Event #
-	spriteType = {
-		name = "GFX_report_event_ENG_middle_eastern_conflict"
-		texturefile = "gfx/event_pictures/report_event_ENG_middle_eastern_conflict.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_ENG_middle_eastern_conflict_2"
-		texturefile = "gfx/event_pictures/report_event_ENG_middle_eastern_conflict_2.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_generic_troops_in_iraq"
-		texturefile = "gfx/event_pictures/report_event_generic_troops_in_iraq.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_IRQ_bakr_sidqi"
-		texturefile = "gfx/event_pictures/report_event_IRQ_bakr_sidqi.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_generic_troops_at_rivier_in_iraq"
-		texturefile = "gfx/event_pictures/report_event_generic_troops_at_rivier_in_iraq.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_IRQ_ghazi_i_death"
-		texturefile = "gfx/event_pictures/report_event_IRQ_ghazi_i_death.dds"
-	}
-
-
-
-
-		# News Event #
-	spriteType = {
-		name = "GFX_news_event_generic_anglo_iraqi_war_1"
-		texturefile = "gfx/event_pictures/news_event_generic_anglo_iraqi_war_1.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_ENG_middle_eastern_conflict_2"
-		texturefile = "gfx/event_pictures/news_event_ENG_middle_eastern_conflict_2.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_anglo_iraqi_war_2"
-		texturefile = "gfx/event_pictures/news_event_generic_anglo_iraqi_war_2.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_generic_arab_revolt"
-		texturefile = "gfx/event_pictures/news_event_generic_arab_revolt.dds"
-	}
-	spriteType = {
-		name = "GFX_news_event_ENG_middle_eastern_conflict"
-		texturefile = "gfx/event_pictures/news_event_ENG_middle_eastern_conflict.dds"
-	}
-
-
-
-
-
-
-
 }
-
-
-

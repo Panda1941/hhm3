@@ -28,14 +28,14 @@ guiTypes = {
 		iconType =	{
 			name ="defender_damage_icon"
 			spriteType = "GFX_defender_damage_icon"
-			position = { x = 170 y = 33 }
+			position = { x = 210 y = 33 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "defender_damage_value"
-			position = { x = 195 y = 35 }
+			position = { x = 235 y = 35 }
 			font = "hoi_16mbs"
 			maxWidth = 280
 			maxHeight = 20
@@ -47,14 +47,14 @@ guiTypes = {
 		iconType =	{
 			name ="combat_width_change_icon"
 			spriteType = "GFX_combat_width_change_icon"
-			position = { x = 225 y = 34 }
+			position = { x = 108 y = 61 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "combat_width_change_value"
-			position = { x = 255 y = 35 }
+			position = { x = 140 y = 61 }
 			font = "hoi_16mbs"
 			maxWidth = 280
 			maxHeight = 20
@@ -73,7 +73,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "attacker_damage_value"
-			position = { x = 140 y = 35 }
+			position = { x = 140 y = 33 }
 			font = "hoi_16mbs"
 			maxWidth = 280
 			maxHeight = 20
@@ -83,23 +83,23 @@ guiTypes = {
 		}
 		
 		iconType =	{
-			name = "attacker_speed_icon"
+			name ="attacker_speed_icon"
 			spriteType = "GFX_attacker_speed_icon"
-			position = { x = 227 y = 61 }
+			position = { x = 210 y = 61 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
-		}
+		}	
 
 		instantTextboxType = {
 			name = "attacker_speed_value"
-			position = { x = 255 y = 62 }
+			position = { x = 235 y = 62 }
 			font = "hoi_16mbs"
 			maxWidth = 280
 			maxHeight = 20
 			format = left
 			alwaystransparent = yes
 			text = "TEEST"
-		}
+		}		
 		
 		instantTextboxType = {
 			name = "tactics_name"
@@ -121,7 +121,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "tactics_chance"
-			position = { x = 315 y = 30 }
+			position = { x = 275 y = 30 }
 			font = "hoi_18mbs"
 			maxWidth = 50
 			maxHeight = 20
@@ -149,45 +149,7 @@ guiTypes = {
 			maxHeight = 20
 			format = centre
 			text = ""
-		}
-
-		iconType =	{
-			name = "attacker_org_modifier_icon"
-			spriteType = "GFX_attacker_org_damage_icon"
-			position = { x = 115 y = 61}
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "attacker_org_modifier_value"
-			position = { x = 140 y = 62}
-			font = "hoi_16mbs"
-			maxWidth = 280
-			maxHeight = 20
-			format = left
-			alwaystransparent = yes
-			text = "TEEST"
-		}
-
-		iconType =	{
-			name = "defender_org_modifier_icon"
-			spriteType = "GFX_defender_org_damage_icon"
-			position = { x = 170 y = 61}
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "defender_org_modifier_value"
-			position = { x = 195 y = 62}
-			font = "hoi_16mbs"
-			maxWidth = 280
-			maxHeight = 20
-			format = left
-			alwaystransparent = yes
-			text = "TEEST"
-		}
+		}	
 	}
 	
 	containerWindowType = {

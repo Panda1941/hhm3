@@ -2,6 +2,39 @@ spriteTypes = {
 
 	# generic ####################################################################
 
+	# generic mech
+
+	spriteType = {
+		name = "GFX_TC_mech_chassis"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_mech_chassis_blueprint.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_mech_chassis_armor_type_slot"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_mech_house.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_mech_chassis_engine_type_slot"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_mech_engine.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_mech_chassis_main_armament_slot"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_mech_gun.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_mech_chassis_suspension_type_slot"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_mech_suspension.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_mech_chassis_roadwheel_type_slot"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_mech_roadwheel.dds"
+		legacy_lazy_load = no
+	}
+
 	# generic light_tank_chassis
 
 	spriteType = {
@@ -395,35 +428,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TM_heavy_tank_destroyer_chassis_turret_type_slot"
 		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_heavy_tank_destroyer_turret.dds"
-		legacy_lazy_load = no
-	}
-
-
-	# generic land cruiser chassis
-
-	spriteType = {
-		name = "GFX_TC_generic_land_cruiser_chassis"
-		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_land_cruiser_blueprint.dds"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_TM_generic_land_cruiser_chassis_chassis_main_armament_slot"
-		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_land_cruiser_main_armament.dds"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_TM_generic_land_cruiser_chassis_secondary_armament_slot"
-		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_land_cruiser_secondary_armament.dds"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_TM_generic_land_cruiser_chassis_additional_armamentt"
-		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_land_cruiser_additional_armament.dds"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_TM_generic_land_cruiser_chassis_structural_features"
-		textureFile = "gfx/interface/equipmentdesigner/tanks/generic/generic_land_cruiser_structural_features.dds"
 		legacy_lazy_load = no
 	}
 
