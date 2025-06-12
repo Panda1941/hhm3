@@ -925,6 +925,7 @@ technologies = {
 		
 		categories = {
 			industry
+			industry_late
 			dispersed_industry_category
 		}
 		
@@ -2478,6 +2479,7 @@ technologies = {
 		
 		categories = {
 			industry
+			industry_late
 			construction_tech
 		}
 		
