@@ -39,10 +39,11 @@ equipments = {
 	}
 	
 	motorized_equipment_0 = { # Introducing WW1 style trucks
-		year = 1936
+		year = 1918
 
 		archetype = motorized_equipment
-		priority = 30
+		priority = 29
+		visual_level = 0
 		maximum_speed = 6
 		reliability = 0.65
 		breakthrough = 2
@@ -66,7 +67,8 @@ equipments = {
 
 		archetype = motorized_equipment
 		parent = motorized_equipment_0
-		priority = 30			
+		priority = 30	
+		visual_level = 1		
 	}
 
 }

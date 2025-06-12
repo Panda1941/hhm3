@@ -2693,6 +2693,18 @@ guiTypes = {
 			}
 			### TODO THESE SHOULD NOT USE RELATIVE POSITIONING, BUT RATHER USE FIXED
 
+
+			containerWindowType = {
+				name = "tiled_research_bg"
+				position = { x=220 y=700 }
+				size = { width = 790 height = 400 }
+				clipping = no
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_research_bg"
+				}
+			}
+
 			containerWindowType = {
 				name = "size_filler"
 				position = { x=0 y=0 }
