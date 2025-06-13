@@ -4928,6 +4928,7 @@ equipment_modules = {
 		}
 		multiply_stats = {
 			naval_speed = -0.01
+			anti_air_attack = 0.1
 		}
 		can_convert_from = {
 			module = ship_torpedo_1
@@ -5026,6 +5027,7 @@ equipment_modules = {
 		}
 		multiply_stats = {
 			naval_speed = -0.02
+			anti_air_attack = 0.2
 		}
 		can_convert_from = {
 			module = ship_torpedo_1
