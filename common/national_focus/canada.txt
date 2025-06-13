@@ -2276,31 +2276,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-		
-		    create_equipment_variant = {
-				name = "Bishop"
-				type = medium_tank_artillery_chassis_2
-				allow_without_tech = yes
-				parent_version = 1
-				modules = {
-					main_armament_slot = tank_medium_howitzer
-					turret_type_slot = tank_medium_fixed_superstructure_turret_1
-					suspension_type_slot = tank_christie_suspension
-					roadwheels_type_slot = tank_small_roadwheels
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_gasoline_engine
-					special_type_slot_1 = ammo_he
-					special_type_slot_2 = secondary_turret_hmg
-				}
-				upgrades = {
-					#tank_nsb_engine_upgrade = 0
-					tank_nsb_armor_upgrade = 0
-				}
-				icon = "gfx/interface/technologies/eng_medium_spg_1.dds"
-				
-			}
-			custom_effect_tooltip = "Bishop"
-			add_equipment_to_stockpile = { type = medium_tank_artillery_chassis_2 amount = 100 producer = CAN }   
+			set_technology = { basic_medium_art = 1 }
+			custom_effect_tooltip = "Will also add 100 medium tank artillery"
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = 100 producer = CAN }   
 		}
 	}
 
@@ -3133,10 +3111,7 @@ CAN = {
 		}
 
 		available = {
-			OR = {	
-				ENG = { has_tech = improved_small_airframe }
-				ENG = { has_tech = advanced_small_airframe }
-			}
+			
 		}
 		
 		bypass = {
@@ -3148,29 +3123,11 @@ CAN = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_tech_bonus = {
-				name = CAN_hurricane_bonus
-				bonus = 0.7
-				uses = 1
-				technology = improved_small_airframe
-			}
 			add_tech_bonus = {
-				name = CAN_hurricane_bonus
-				bonus = 0.7
+				name = CAN_canadian_hurricane_production
+				bonus = 1.0
 				uses = 1
-				technology = advanced_small_airframe
-			}
-			add_tech_bonus = {
-				name = CAN_hurricane_bonus
-				bonus = 0.5
-				uses = 1
-				technology = improved_medium_airframe
-			}
-			add_tech_bonus = {
-				name = CAN_hurricane_bonus
-				bonus = 0.5
-				uses = 1
-				technology = improved_large_airframe
+				category = light_air
 			}
 		}
 	}

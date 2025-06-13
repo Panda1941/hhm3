@@ -403,13 +403,13 @@ shared_focus = {
 					limit = {
 						has_completed_focus = CHI_closer_ties_with_germany
 					}
-					add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 100 producer = GER  variant_name = "Panzer I Ausf. A"} 
+					add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 100 producer = GER  variant_name = "Panzer I Ausf. A"} 
 				}
 				if = {
 					limit = {
 						has_completed_focus = CHI_rapprochement_with_soviet_union
 					}
-					add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 100 producer = SOV variant_name = "T-26TU mod. 1933" }
+					add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 100 producer = SOV variant_name = "T-26TU mod. 1933" }
 				}
 			}
 		}
@@ -766,7 +766,7 @@ shared_focus = {
 					}
 					capital_scope = {
 						create_unit = {
-							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_chassis_1 = { creator = \"GER\" version_name = \"Panzer I Ausf. A\"} }" 
+							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"GER\" version_name = \"Panzer I Ausf. A\"} }" 
 							owner = ROOT
 						}
 					}
@@ -777,7 +777,7 @@ shared_focus = {
 					}
 					capital_scope = {
 						create_unit = {
-							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_chassis_1 = { creator = \"SOV\" version_name = \"T-26TU mod. 1933\"} }" 
+							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"SOV\" version_name = \"T-26TU mod. 1933\"} }" 
 							owner = ROOT
 						}
 					}
