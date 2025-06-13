@@ -251,3 +251,9 @@ set_technology = {
 
 	early_bomber = 1
 }
+
+# TANK TECHS
+set_technology = {
+	gwtank = 1
+	basic_light_tank = 1
+}
