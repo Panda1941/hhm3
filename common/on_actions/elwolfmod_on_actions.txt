@@ -686,10 +686,9 @@ on_actions = {
 					amount = 400
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
+					type = light_tank_equipment_1
 					amount = 180
 					producer = ENG
-					variant_name = "Light Tank Mk. VI"
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
@@ -718,10 +717,9 @@ on_actions = {
 					amount = 349
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_2
-					amount = 720
+					type = light_tank_equipment_2
+					amount = 1440
 					producer = GER
-					variant_name = "Panzer II Ausf. A"
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
@@ -754,22 +752,19 @@ on_actions = {
 					amount = 217
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_0
+					type = gw_tank_equipment
 					amount = 480
 					producer = FRA
-					variant_name = "FT mod. 31"
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_0
+					type = light_tank_equipment_1
 					amount = 240
 					producer = FRA
-					variant_name = "FT Char Cannon"
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
+					type = light_tank_equipment_2
 					amount = 480
 					producer = FRA
-					variant_name = "H-35"
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
@@ -803,10 +798,9 @@ on_actions = {
 					amount = 25
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
+					type = light_tank_equipment_1
 					amount = 180
 					producer = JAP
-					variant_name = "Type 95 Ha-Go"
 				}
 			}
 			USA = {
@@ -851,10 +845,9 @@ on_actions = {
 					amount = 87
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_0
+					type = light_tank_equipment_1
 					amount = 72
 					producer = ROM
-					variant_name = "FT Char Cannon"
 				}
 			}
 			ITA = {
@@ -883,10 +876,9 @@ on_actions = {
 					amount = 80
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
+					type = light_tank_equipment_1
 					amount = 180
 					producer = ITA
-					variant_name = "L3/35"
 				}
 				country_event = {
 					id = DOD_yugoslavia.20
@@ -915,16 +907,14 @@ on_actions = {
 					amount = 814
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
+					type = light_tank_equipment_1
 					amount = 1300
 					producer = SOV
-					variant_name = "T-26TU mod. 1933"
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
+					type = light_tank_equipment_2
 					amount = 1000
 					producer = SOV
-					variant_name = "BT-5"
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment

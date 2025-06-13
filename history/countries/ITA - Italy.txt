@@ -440,14 +440,9 @@ add_equipment_to_stockpile = {
 	amount = 150
 }
 add_equipment_to_stockpile = {
-	type = light_tank_chassis_0
-	amount = 150
+	type = gw_tank_equipment
+	amount = 190
 	variant_name = "Fiat 3000"
-}
-add_equipment_to_stockpile = {
-	type = light_tank_chassis_0
-	amount = 40
-	variant_name = "Fiat 3000B"
 }
 
 # DIPLOMACY / WAR 36
@@ -766,9 +761,8 @@ if = {
 	}
 
 	add_equipment_to_stockpile = {
-		type = light_tank_chassis_0
+		type = light_tank_equipment_1
 		amount = 150
-		variant_name = "Fiat 3000"
 	}
 
 	create_equipment_variant = {
@@ -793,9 +787,8 @@ if = {
 	}
 
 	add_equipment_to_stockpile = {
-		type = light_tank_chassis_0
+		type = gw_tank_equipment
 		amount = 40
-		variant_name = "Fiat 3000B"
 	}
 
 	create_equipment_variant = {
