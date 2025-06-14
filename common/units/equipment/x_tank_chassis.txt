@@ -579,7 +579,7 @@ equipments = {
 		soft_attack = 2
 		hard_attack = 1
 		ap_attack = 5
-		air_attack = 15
+		air_attack = 11
 		
 		build_cost_ic = 20
 		resources = {
@@ -613,7 +613,7 @@ equipments = {
 		soft_attack = 3
 		hard_attack = 1.5
 		ap_attack = 20
-		air_attack = 17	
+		air_attack = 15	
 		fuel_consumption = 0.6
 		build_cost_ic = 22
 		resources = {
@@ -646,7 +646,7 @@ equipments = {
 		soft_attack = 4.5
 		hard_attack = 4
 		ap_attack = 35
-		air_attack = 32
+		air_attack = 22
 		fuel_consumption = 0.6
 		build_cost_ic = 24
 		resources = {
@@ -1005,7 +1005,7 @@ equipments = {
 		soft_attack = 4.5
 		hard_attack = 3
 		ap_attack = 40
-		air_attack = 22
+		air_attack = 20
 
 		build_cost_ic = 29
 		
@@ -1041,7 +1041,7 @@ equipments = {
 		soft_attack = 6
 		hard_attack = 4.5
 		ap_attack = 60
-		air_attack = 32
+		air_attack = 24
 		
 		build_cost_ic = 33
 		fuel_consumption = 0.9
@@ -1076,7 +1076,7 @@ equipments = {
 		soft_attack = 7.5
 		hard_attack = 6
 		ap_attack = 70
-		air_attack = 43
+		air_attack = 28
 		
 		build_cost_ic = 37
 		fuel_consumption = 0.9
@@ -1432,7 +1432,7 @@ equipments = {
 		soft_attack = 4.5
 		hard_attack = 4
 		ap_attack = 25
-		air_attack = 17
+		air_attack = 15
 		
 		build_cost_ic = 42
 		resources = {
@@ -1467,7 +1467,7 @@ equipments = {
 		soft_attack = 6
 		hard_attack = 4.5
 		ap_attack = 60
-		air_attack = 33
+		air_attack = 26
 		fuel_consumption = 1.1
 		build_cost_ic = 50
 		resources = {
@@ -1503,7 +1503,7 @@ equipments = {
 		soft_attack = 7.5
 		hard_attack = 6
 		ap_attack = 88
-		air_attack = 44
+		air_attack = 32
 		fuel_consumption = 1.1
 		build_cost_ic = 58
 		resources = {
@@ -1526,14 +1526,14 @@ equipments = {
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 10
-		breakthrough = 84
+		defense = 11
+		breakthrough = 86
 		hardness = 0.98
 		armor_value = 130
 
 		#Offensive Abilities
-		soft_attack = 40
-		hard_attack = 35
+		soft_attack = 42
+		hard_attack = 37
 		ap_attack = 131
 		air_attack = 0
 
