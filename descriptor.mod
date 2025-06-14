@@ -23,7 +23,7 @@ replace_path="events"
 replace_path="gfx/loadingscreens"
 replace_path="interface/"
 replace_path="map/strategicregions"
-
 name="HHM3: Reforged"
 picture="thumbnail.png"
 supported_version="1.14.10"
+remote_file_id="3499069985"
