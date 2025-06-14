@@ -39,6 +39,11 @@ NDefines.NOperatives.AGENCY_OPERATIVE_RECRUITMENT_TIME = 0
 NDefines.NOperatives.BECOME_SPYMASTER_PP_COST = 0
 NDefines.NOperatives.BECOME_SPYMASTER_MIN_UPGRADES = 0
 
+NDefines.NOperatives.MAX_RECRUITED_OPERATIVES = 1	-- max one operative per nation
+NDefines.NOperatives.INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0
+NDefines.NOperatives.OPERATIVE_CAPTURE_DURATION_IN_DAYS = 1 -- safe guard if the above define doesnt work, an agent will be captured for 1 day max
+NDefines.NOperatives.OPERATIVE_BASE_INTEL_AGENCY_DEFENSE = 2 -- Basically operatives will be a bit better at defending (i think this does nothing tho)
+
 
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 2000                            -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 2000			                 -- WAS 500 || XP Cap
