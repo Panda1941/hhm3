@@ -3066,7 +3066,7 @@ CAN = {
 
 		prerequisite = { focus = CAN_expand_trenton_airforce_base }
 		relative_position_id = CAN_expand_trenton_airforce_base
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -3087,7 +3087,7 @@ CAN = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_we_have_the_hurricane
-				bonus = 1.0
+				bonus = 0.75
 				uses = 1
 				category = light_air
 			}
@@ -3104,14 +3104,14 @@ CAN = {
 		prerequisite = { focus = CAN_air_wireless_development }
 		prerequisite = { focus = CAN_begin_local_aircraft_production }
 		relative_position_id = CAN_expand_trenton_airforce_base
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
 		}
 
 		available = {
-			
+			ENG = { has_tech = fighter2 }
 		}
 		
 		bypass = {
@@ -3125,7 +3125,7 @@ CAN = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_canadian_hurricane_production
-				bonus = 1.0
+				bonus = 0.75
 				uses = 1
 				category = light_air
 			}
