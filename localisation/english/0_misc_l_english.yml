@@ -3,6 +3,9 @@
  mechanised_infantry2:0 "Mechanized II"
  mechanised_infantry3:0 "Mechanized III"
 
+ generic_infantry_tank_manufacturer:0 "Infantry Tank Manufacturer"
+ generic_armored_car_manufacturer:0 "Armored Car Manufacturer"
+
  USA_general_motors_trait:0 "General Motors"
  USA_political_campaign:0 "Political Campaign"
  USA_political_campaign_desc:0 "Spend your working hours and the national budget to campaign for your reelection. What could possibly go wrong. CI love democracy...!"

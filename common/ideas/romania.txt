@@ -1290,7 +1290,6 @@ ideas = {
 			cost = 50
 
 			available = {
-				has_completed_focus = ROM_mobile_tank_destroyers
 			}
 			
 			allowed = {

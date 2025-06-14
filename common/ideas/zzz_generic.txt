@@ -1278,7 +1278,10 @@ ideas = {
 			
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = heavy_tank_manufacturer limit = 1 }
+					OR = {
+						has_available_idea_with_traits = { idea = heavy_tank_manufacturer limit = 1 }
+						original_tag = GER
+					}
 				}
 			}
 			
@@ -1300,7 +1303,10 @@ ideas = {
 			
 			allowed = {
 				NOT = {
-					has_available_idea_with_traits = { idea = medium_tank_manufacturer limit = 1 }
+					OR = {
+						has_available_idea_with_traits = { idea = medium_tank_manufacturer limit = 1 }
+						original_tag = GER
+					}
 				}
 			}
 			
@@ -1314,6 +1320,49 @@ ideas = {
 			modifier = { tank_manufacturer_cost_factor = -1 }
 			
 			traits = { medium_tank_manufacturer }
+		}
+		
+		generic_infantry_tank_manufacturer = {
+
+			picture = generic_tank_manufacturer_1
+			
+			allowed = {
+				NOT = {
+					OR = {
+						has_available_idea_with_traits = { idea = infantry_tank_manufacturer limit = 1 }
+					}
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			modifier = { tank_manufacturer_cost_factor = -1 }
+			
+			traits = { infantry_tank_manufacturer }
+		}
+
+		generic_armored_car_manufacturer = {
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = armored_car_manufacturer limit = 1 }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			modifier = { tank_manufacturer_cost_factor = -1 }
+
+			traits = { armored_car_manufacturer }
 		}
 	}
 	
