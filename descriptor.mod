@@ -26,4 +26,4 @@ replace_path="map/strategicregions"
 
 name="HHM3: Reforged"
 picture="thumbnail.png"
-supported_version="1.16.8"
+supported_version="1.14.10"
