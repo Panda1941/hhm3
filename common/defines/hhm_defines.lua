@@ -48,7 +48,7 @@ NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
 -- Slots
-NDefines.NBuildings.MAX_SHARED_SLOTS = 28
+NDefines.NBuildings.MAX_SHARED_SLOTS = 99
 
 -- Market
 NDefines.NMarket.LOW_PRICE_LEVEL_FACTOR = 0.5
