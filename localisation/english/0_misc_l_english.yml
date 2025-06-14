@@ -511,7 +511,7 @@
  HUN_light_infantry_divisions_doctrine_tech_tt_2:0 "Enables §HLight Infantry Divisions Doctrine§!\n§HInfantry\n   §HForest§!\n      Attack: §G+5%§!\n      Movement: §G+5%§!\n"
  HUN_light_infantry_divisions_doctrine_tech_tt_3:0 "Enables §HHeavy Infantry Divisions Doctrine§!\n§HInfantry\n   §HUrban§!\n      Attack: §G+5%§!\n      Movement: §G+5%§!\n"
  
- spam_inf_tt:0 "Infantry and Penal battalions require §G-10 Guns.§!"
+ spam_inf_tt:0 "Infantry and Penal battalions require §G-15 Guns.§!"
  spam_inf2_tt:0 "All special forces require §G-20 Guns.§!"
  spam_aa_at_tt:0 "AT and AA battalions require §G-7 AT and AA.§!"
  spam_truck_tt:0 "Motorized and Mechanized batallions need §G-8 Motorized / Mechanized equipment.§!"
