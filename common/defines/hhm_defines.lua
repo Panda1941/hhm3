@@ -170,7 +170,6 @@ NDefines.NSupply.SUPPLY_HUB_FULL_MOTORIZATION_TRUCK_COST = 100.0     --How many 
 
 NDefines.NMilitary.PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
 		1.00,
-		0.95,
 		0.92,
 		0.85,
 		0.78,
@@ -181,7 +180,6 @@ NDefines.NMilitary.PIERCING_THRESHOLDS = {					-- Our piercing / their armor mus
 		0.47,
 		0.43,
 		0.37,
-		0.34,
 		0.31,
 		0.26,
 		0.22,
@@ -202,10 +200,8 @@ NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always r
 		0.44,
 		0.38,
 		0.34,
-		0.32,
 		0.28,
 		0.25,
-		0.24,
 		0.22,
 		0.20,
 		0.18,

@@ -571,6 +571,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.03
+				breakthrough_bonus_against = 0.06
 				#defense_bonus_against = 0.05
 			}
 	
@@ -745,6 +746,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.005
+				breakthrough_bonus_against = 0.01
 				#defense_bonus_against = 0.05
 			}
 			
@@ -769,6 +771,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.01
+				breakthrough_bonus_against = 0.02
 				#defense_bonus_against = 0.05
 			}
 			
@@ -793,6 +796,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.015
+				breakthrough_bonus_against = 0.03
 				#defense_bonus_against = 0.05
 			}
 			
@@ -817,6 +821,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.02
+				breakthrough_bonus_against = 0.04
 				#defense_bonus_against = 0.05
 			}
 			
@@ -841,6 +846,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.025
+				breakthrough_bonus_against = 0.05
 				#defense_bonus_against = 0.05
 			}
 			
@@ -865,6 +871,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.03
+				breakthrough_bonus_against = 0.06
 				#defense_bonus_against = 0.05
 			}
 			
@@ -889,6 +896,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.035
+				breakthrough_bonus_against = 0.07
 				#defense_bonus_against = 0.05
 			}
 			
@@ -913,6 +921,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.04
+				breakthrough_bonus_against = 0.08
 				#defense_bonus_against = 0.05
 			}
 			
@@ -937,6 +946,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.045
+				breakthrough_bonus_against = 0.09
 				#defense_bonus_against = 0.05
 			}
 			
@@ -961,6 +971,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.1
 				#defense_bonus_against = 0.05
 			}
 			
@@ -985,6 +996,7 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.055
+				breakthrough_bonus_against = 0.11
 				#defense_bonus_against = 0.05
 			}
 			

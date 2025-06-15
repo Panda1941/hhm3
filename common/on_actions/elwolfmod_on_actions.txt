@@ -553,7 +553,7 @@ on_actions = {
 					add_ideas = sov_no_tradebacks
 				}
 			}
-			if = {
+			if = {	# NO ASIA
 				limit = {
 					361 = {
 						is_owned_and_controlled_by = WST
@@ -706,15 +706,25 @@ on_actions = {
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 891
+					amount = 900
 				}
 				add_equipment_to_stockpile = {
 					type = motorized_equipment_1
-					amount = 607
+					amount = 1100
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 349
+				}
+				add_equipment_to_stockpile = {
+					type = gw_tank_equipment
+					amount = 880
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 960
+					producer = GER
 				}
 				add_equipment_to_stockpile = {
 					type = light_tank_equipment_2
@@ -799,7 +809,7 @@ on_actions = {
 				}
 				add_equipment_to_stockpile = {
 					type = light_tank_equipment_1
-					amount = 180
+					amount = 480
 					producer = JAP
 				}
 			}
@@ -957,26 +967,6 @@ on_actions = {
 					amount = 75
 				}
 			}
-			MEX = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 5605
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 900
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 55
-				}
-			}
-			IRE = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 276
-				}
-			}
 			CAN = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
@@ -992,17 +982,19 @@ on_actions = {
 					type = infantry_equipment_1
 					amount = 3600
 				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 156
+				}
 			}
 			AST = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 2300
+					amount = 3000
 				}
-			}
-			NZL = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 700
+					type = support_equipment_1
+					amount = 156
 				}
 			}
 			SAF = {
