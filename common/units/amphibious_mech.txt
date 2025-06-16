@@ -42,14 +42,14 @@ sub_units = {
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
 			infantry_equipment
-			mechanized_amtrac_chassis
+			amphibious_mechanized_equipment
 		}
 
 		# this is what moves us and sets speed
-		transport = mechanized_amtrac_chassis
+		transport = amphibious_mechanized_equipment
 
 		need = {
-			mechanized_amtrac_chassis = 40
+			amphibious_mechanized_equipment = 40
 			infantry_equipment = 150
 		}
 
