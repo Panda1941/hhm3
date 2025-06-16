@@ -130,6 +130,18 @@ on_actions = {
 				army_experience = 10
 				navy_experience = 10
 				air_experience = 10
+
+				add_dynamic_modifier = {
+					modifier = HHM_war_exhaustion
+				}
+
+				set_variable = { var = HHM_we_ic_factor value = 0.01 }
+				set_variable = { var = HHM_we_resource_factor value = 0 }
+				set_variable = { var = HHM_we_cg_factor value = 0 }
+				set_variable = { var = HHM_we_pp_factor value = 0 }
+				set_variable = { var = HHM_we_stability_factor value = 0 }
+				set_variable = { var = HHM_we_manpower_factor value = 0 }
+				set_variable = { var = HHM_we_morale_factor value = 0 }
 			}
 
 			# SPAIN DMZ

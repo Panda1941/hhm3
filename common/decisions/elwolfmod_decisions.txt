@@ -1,4 +1,52 @@
 templates_retards_ai = {
+
+	DEBUG_TEST_WE_MECHANIC = {
+		fire_only_once = no
+		cost = 0
+		days_remove = 1
+		available = { ROOT = { is_ai = no } }
+		visible = { ROOT = { always = yes } }
+		complete_effect = {
+			random_list = {
+				50 = {
+					set_variable = { var = ROOT.temp_we_var value = 0.01 }
+				}
+				30 = {
+					set_variable = { var = ROOT.temp_we_var value = 0.02 }
+				}
+				15 = {
+					set_variable = { var = ROOT.temp_we_var value = 0.03 }
+				}
+				5 = {
+					set_variable = { var = ROOT.temp_we_var value = 0.04 }
+				}
+			}
+			random_list = {
+				4 = {
+					subtract_from_variable  = { var = HHM_we_ic_factor value = temp_we_var }
+				}
+				3 = {
+					subtract_from_variable  = { var = HHM_we_resource_factor value = temp_we_var }
+				}
+				2 = {
+					add_to_variable  = { var = HHM_we_cg_factor value = temp_we_var }
+				}
+				2 = {
+					subtract_from_variable  = { var = HHM_we_pp_factor value = temp_we_var }
+				}
+				2 = {
+					subtract_from_variable  = { var = HHM_we_stability_factor value = temp_we_var }
+				}
+				2 = {
+					subtract_from_variable  = { var = HHM_we_manpower_factor value = temp_we_var }
+				}
+				1 = {
+					clamp_variable = { var = temp_we_var min = 0 max = 0.02 }
+					subtract_from_variable  = { var = HHM_we_morale_factor value = temp_we_var }
+				}
+			}
+		}
+	}
     
 	FIX_convoys = {
 		icon = SWE_set_navy_budget

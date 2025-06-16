@@ -1326,3 +1326,24 @@ SPR_cant_build_airports = {
 	state_production_speed_air_base_factor = -3.14159
 	state_production_speed_naval_base_factor = -3.14159
 }
+
+
+HHM_war_exhaustion = { 
+	enable = { always = yes }
+	icon = GFX_idea_eng_for_the_good_of_the_revolution
+	
+	industrial_capacity_factory = HHM_we_ic_factor
+	industrial_capacity_dockyard = HHM_we_ic_factor
+
+	local_resources_factor  = HHM_we_resource_factor
+	
+	consumer_goods_factor = HHM_we_cg_factor
+
+	political_power_factor = HHM_we_pp_factor
+
+	stability_factor = HHM_we_stability_factor
+
+	conscription_factor = HHM_we_manpower_factor
+
+	army_morale_factor = HHM_we_morale_factor
+}
