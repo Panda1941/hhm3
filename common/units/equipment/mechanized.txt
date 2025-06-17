@@ -45,7 +45,7 @@ equipments = {
 			steel = 2
 		}
 
-		fuel_consumption = 2.4
+		fuel_consumption = 3.0
 		supply_truck = no
 	}
 
@@ -80,7 +80,7 @@ equipments = {
 		hard_attack = 3
 		ap_attack = 12
 
-		build_cost_ic = 15
+		build_cost_ic = 12
 		resources = {
 			steel = 3
 		}
@@ -108,7 +108,7 @@ equipments = {
 		hard_attack = 8
 		ap_attack = 20
 
-		build_cost_ic = 16
+		build_cost_ic = 14
 		resources = {
 			steel = 4
 		}

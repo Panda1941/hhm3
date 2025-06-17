@@ -194,7 +194,7 @@ buildings = {
 		damage_factor = 0.2
 		
 		show_modifier = yes
-		fuel_gain_from_states = 4 #per hour
+		fuel_gain_from_states = 6 #per hour
 	}
 
 	steel_refinery = {

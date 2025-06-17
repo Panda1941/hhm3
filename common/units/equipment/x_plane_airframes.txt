@@ -210,7 +210,7 @@ equipments = {
 		}
 
 		manpower = 20
-		fuel_consumption = 0.21
+		fuel_consumption = 0.24
 
 	}
 
@@ -242,7 +242,7 @@ equipments = {
 		reliability = 0.8
 		lend_lease_cost = 8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.34
 	}
 
 	# Improved Fighter
@@ -273,7 +273,7 @@ equipments = {
 		reliability = 0.8
 		lend_lease_cost = 8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.39
 	}
 
 	# Advanced Fighter
@@ -305,7 +305,7 @@ equipments = {
 		reliability = 0.8
 		lend_lease_cost = 8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.44
 	}
 
 	# Basic Jet Fighter
@@ -347,7 +347,7 @@ equipments = {
 		}
 
 		manpower = 40
-		fuel_consumption = 0.49
+		fuel_consumption = 0.54
 		air_superiority = 1
 		reliability = 0.8
 	}
@@ -378,7 +378,7 @@ equipments = {
 			rubber = 1
 		}
 		manpower = 40
-		fuel_consumption = 0.49
+		fuel_consumption = 0.59
 		air_superiority = 1
 		reliability = 0.8
 	}
@@ -430,7 +430,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.34
 	}
 
 	# Improved CAS
@@ -461,7 +461,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.39
 	}
 
 	# Advanced CAS
@@ -492,7 +492,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.44
 	}
 
 	#  #  ##  #   #  ##  #       ###   ##  #   # ###  ### ###  
@@ -543,7 +543,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.34
 	}
 
 	# Improved nav_bomber
@@ -573,7 +573,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.39
 	}
 
 	# Advanced nav_bomber
@@ -603,7 +603,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0.29
+		fuel_consumption = 0.44
 	}
 
 	###   ##   ##  # # ### ###     ### #  # ### ### ###   ##  ### ###  ###  ##  ###   ## 
@@ -796,7 +796,7 @@ equipments = {
 		lend_lease_cost = 10
 		air_superiority = 1
 		reliability = 0.8
-		fuel_consumption = 0.4
+		fuel_consumption = 0.5
 	}
 
 	# Basic tac_bomber
@@ -828,7 +828,7 @@ equipments = {
 		lend_lease_cost = 10
 		air_superiority = 1
 		reliability = 0.8
-		fuel_consumption = 0.4
+		fuel_consumption = 0.55
 	}
 
 	# Improved tac_bomber
@@ -860,7 +860,7 @@ equipments = {
 		lend_lease_cost = 10
 		air_superiority = 1
 		reliability = 0.8
-		fuel_consumption = 0.4
+		fuel_consumption = 0.6
 	}
 
 	# Advanced tac_bomber
@@ -892,7 +892,7 @@ equipments = {
 		lend_lease_cost = 10
 		air_superiority = 1
 		reliability = 0.8
-		fuel_consumption = 0.4
+		fuel_consumption = 0.65
 	}
 
 	# Basic Jet tac_bomber
@@ -976,7 +976,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 80
-		fuel_consumption = 0.8
+		fuel_consumption = 0.9
 	}
 
 	#  # ###  ##  #   # #   #     ### ###  ##  #  # ### ### ###  
@@ -1022,7 +1022,7 @@ equipments = {
 		air_superiority = 1.25
 		reliability = 0.8
 		manpower = 40
-		fuel_consumption = 0.36
+		fuel_consumption = 0.5
 	}
 
 	heavy_fighter_equipment_2 = {
@@ -1051,7 +1051,7 @@ equipments = {
 		air_superiority = 1.25
 		reliability = 0.8
 		manpower = 40
-		fuel_consumption = 0.36
+		fuel_consumption = 0.55
 	}
 
 	heavy_fighter_equipment_3 = {
@@ -1080,7 +1080,7 @@ equipments = {
 		air_superiority = 1.25
 		reliability = 0.8
 		manpower = 40
-		fuel_consumption = 0.36
+		fuel_consumption = 0.6
 	}
 
 	 ##  ##   ##  #  # ###     ###  #    ##  #  # ### 
@@ -1119,7 +1119,7 @@ equipments = {
 		air_superiority = 0
 		reliability = 0.8
 		manpower = 40
-		fuel_consumption = 0.36
+		fuel_consumption = 0.4
 	}
 
 	scout_plane_equipment_2 = {
@@ -1147,7 +1147,7 @@ equipments = {
 		air_superiority = 0
 		reliability = 0.8
 		manpower = 40
-		fuel_consumption = 0.36
+		fuel_consumption = 0.5
 	}
 
 	 ## ### ###   ##  ###     ###   ##  #   # ###  ### ###  
@@ -1197,7 +1197,7 @@ equipments = {
 		air_superiority = 0.01
 		reliability = 0.8
 		manpower = 80
-		fuel_consumption = 0.9
+		fuel_consumption = 1.0
 	}
 
 	# Improved strat_bomber
@@ -1229,7 +1229,7 @@ equipments = {
 		air_superiority = 0.01
 		reliability = 0.8
 		manpower = 80
-		fuel_consumption = 0.9
+		fuel_consumption = 1.1
 	}
 
 	# Advanced strat_bomber
@@ -1261,7 +1261,7 @@ equipments = {
 		air_superiority = 0.01
 		reliability = 0.8
 		manpower = 80
-		fuel_consumption = 0.9
+		fuel_consumption = 1.2
 	}
 
 	# Basic Jet strat_bomber

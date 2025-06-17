@@ -79,7 +79,4 @@ equipments = {
 		archetype = special_forces_equipment
 		priority = 20	
 	}
-	
-	
-
 }

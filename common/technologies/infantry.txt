@@ -598,7 +598,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1936 }
+			position = { x = 0 y = @1936 }
 		}
 		
 		on_research_complete_limit = {
@@ -654,7 +654,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1939 }
+			position = { x = 0 y = @1939 }
 		}
 		
 		categories = {
@@ -696,7 +696,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1943 }
+			position = { x = 0 y = @1943 }
 		}
 		
 		categories = {
@@ -752,7 +752,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 3 y = @1936 }
+			position = { x = 1 y = @1936 }
 		}
 		
 		categories = {
@@ -795,7 +795,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 3 y = @1939 }
+			position = { x = 1 y = @1939 }
 		}
 		
 		categories = {
@@ -838,7 +838,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 3 y = @1943 }
+			position = { x = 1 y = @1943 }
 		}
 		
 		categories = {
@@ -889,7 +889,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1936 }
+			position = { x = 3 y = @1936 }
 		}
 		
 		categories = {
@@ -919,7 +919,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1939 }
+			position = { x = 3 y = @1939 }
 		}
 		
 		categories = {
@@ -945,7 +945,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1943 }
+			position = { x = 3 y = @1943 }
 		}
 		
 		categories = {
@@ -987,7 +987,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1936 }
+			position = { x = 2 y = @1936 }
 		}
 		
 		categories = {
@@ -1019,7 +1019,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1939 }
+			position = { x = 2 y = @1939 }
 		}
 		
 		categories = {
@@ -1042,7 +1042,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1943 }
+			position = { x = 2 y = @1943 }
 		}
 		
 		categories = {
@@ -1079,7 +1079,7 @@ technologies = {
 		
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1936 }
+			position = { x = 3 y = @1936 }
 		}
 		categories = {
 			jaeger_tech
@@ -1104,7 +1104,7 @@ technologies = {
 		
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1939 }
+			position = { x = 3 y = @1939 }
 		}
 		categories = {
 			jaeger_tech
@@ -1124,7 +1124,7 @@ technologies = {
 		
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1943 }
+			position = { x = 3 y = @1943 }
 		}
 		categories = {
 			jaeger_tech
@@ -1145,7 +1145,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = @1918 }
+			position = { x = -4 y = @1918 }
 		}
 		
 		categories = {
@@ -1169,100 +1169,6 @@ technologies = {
 				factor = 4
 				date > "1939.1.1"
 			}
-		}
-	}
-	
-	pack = {
-		
-		enable_equipments = {
-			pack_artillery_equipment_1
-		}
-		
-		enable_subunits = {
-			pack_artillery
-		}
-		
-		path = {
-			leads_to_tech = pack3
-			research_cost_coeff = 1
-		}	
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = infantry_folder
-			position = { x = 1 y = 1 }
-		}
-		
-		categories = {
-			infantry_tech
-			mountaineers_tech
-			para_tech
-			artillery
-			mio_cat_all_artillery_equipment
-		}
-		
-		ai_will_do = {
-			factor = 0.7
-		}
-	}
-
-	pack3 = {
-		
-		enable_equipments = {
-			pack_artillery_equipment_2
-		}
-		
-		path = {
-			leads_to_tech = pack4
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 2.0
-		start_year = 1939
-		
-		folder = {
-			name = infantry_folder
-			position = { x = 1 y = @1939 }
-		}
-		
-		categories = {
-			infantry_tech
-			mountaineers_tech
-			para_tech
-			artillery
-			mio_cat_all_artillery_equipment
-		}
-		
-		ai_will_do = {
-			factor = 0.7
-		}
-	}
-	
-	pack4 = {
-		
-		enable_equipments = {
-			pack_artillery_equipment_3
-		}
-	
-		research_cost = 2.0
-		start_year = 1942
-		
-		folder = {
-			name = infantry_folder
-			position = { x = 1 y = @1942 }
-		}
-		
-		categories = {
-			infantry_tech
-			mountaineers_tech
-			para_tech
-			artillery
-			mio_cat_all_artillery_equipment
-		}
-		
-		ai_will_do = {
-			factor = 0.7
 		}
 	}
 
