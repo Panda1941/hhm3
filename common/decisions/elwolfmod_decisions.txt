@@ -991,7 +991,7 @@ operations = {
 	annex_bulgaria = {
 		# icon = generic_operation
 		allowed = {
-			tag = ROM
+			tag = ITA
 		}
 		fire_only_once = yes
 		cost = 0
@@ -1009,7 +1009,7 @@ operations = {
 		complete_effect = {
 			BUL = {
 				transfer_units_fraction = {
-					target = ROM
+					target = ITA
 					size = 1
 					stockpile_ratio = 1
 					army_ratio = 1
@@ -1020,9 +1020,192 @@ operations = {
 					}
 				}
 			}
-			ROM = {
+			ITA = {
 				annex_country = {
 					target = BUL
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	annex_spain = {
+		# icon = generic_operation
+		allowed = {
+			tag = GER
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			SPR = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			SPR
+		}
+		complete_effect = {
+			SPR = {
+				transfer_units_fraction = {
+					target = GER
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			GER = {
+				annex_country = {
+					target = SPR
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	split_up_romania = {
+		# icon = generic_operation
+		allowed = {
+			tag = GER
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			ROM = {
+				is_ai = yes
+			}
+			HUN = {
+				is_ai = no
+			}
+			BUL = {
+				is_ai = no
+			}
+		}
+		targets = {
+			ROM
+		}
+		complete_effect = {
+			ROM = {
+				transfer_units_fraction = {
+					target = HUN
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			HUN = {
+				annex_country = {
+					target = ROM
+					transfer_troops = yes
+				}
+			}
+			BUL = {
+				transfer_state = 81
+				transfer_state = 46
+				transfer_state = 77
+				transfer_state = 913
+			}
+		}
+	}
+	split_up_hungary = {
+		# icon = generic_operation
+		allowed = {
+			tag = GER
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			HUN = {
+				is_ai = no
+			}
+			ROM = {
+				is_ai = no
+			}
+		}
+		targets = {
+			HUN
+		}
+		complete_effect = {
+			HUN = {
+				transfer_units_fraction = {
+					target = GER
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			GER = {
+				annex_country = {
+					target = HUN
+					transfer_troops = yes
+				}
+			}
+			ROM = {
+				transfer_state = 916
+				transfer_state = 154
+				transfer_state = 43
+			}
+		}
+	}
+	give_hungary_to_bulgaria = {
+		# icon = generic_operation
+		allowed = {
+			tag = GER
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			HUN = {
+				is_ai = no
+			}
+			BUL = {
+				is_ai = no
+			}
+		}
+		targets = {
+			HUN
+		}
+		complete_effect = {
+			HUN = {
+				transfer_units_fraction = {
+					target = BUL
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			BUL = {
+				annex_country = {
+					target = HUN
 					transfer_troops = yes
 				}
 			}
@@ -1187,6 +1370,7 @@ operations = {
 				add_ideas = { ai_limiter }
 			}
 			123 = {
+				add_extra_state_shared_building_slots = 8
 				add_building_construction = {
 					type = industrial_complex 
 					level = 4 
@@ -1199,6 +1383,7 @@ operations = {
 				}
 			}
 			131 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex 
 					level = 3 
@@ -1416,6 +1601,98 @@ operations = {
 					transfer_troops = yes
 				}
 			}
+		}
+	}
+	annex_anzac = {
+		# icon = generic_operation
+		allowed = {
+			tag = RAJ
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			AST = {
+				is_ai = yes
+			}
+			NZL = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			AST
+		}
+		complete_effect = {
+			AST = {
+				transfer_units_fraction = {
+					target = RAJ
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			RAJ = {
+				annex_country = {
+					target = AST
+					transfer_troops = yes
+				}
+			}
+			NZL = {
+				transfer_units_fraction = {
+					target = RAJ
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			RAJ = {
+				annex_country = {
+					target = NZL
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	assume_ownership_of_the_spice_islands = {
+		# icon = generic_operation
+		allowed = {
+			tag = RAJ
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			date > 1940.03.01
+			7 = { is_owned_and_controlled_by = GER }
+			6 = { is_owned_and_controlled_by = GER }
+			16 = { is_owned_and_controlled_by = GER }
+		}
+		targets = {
+			HOL
+		}
+		complete_effect = {
+			transfer_state = 672
+			transfer_state = 335
+			transfer_state = 334
+			transfer_state = 673
+			transfer_state = 667
+			transfer_state = 668
+			transfer_state = 669
+			transfer_state = 738
 		}
 	}
 	annex_new_zealand_eng = {
