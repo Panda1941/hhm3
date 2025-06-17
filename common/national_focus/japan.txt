@@ -1888,20 +1888,12 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = JAP_the_zero_tt_mod
+			#custom_effect_tooltip = JAP_the_zero_tt_mod
 			add_tech_bonus = {
 				name = JAP_the_zero
-				bonus = 9.99
-				ahead_reduction = 2
+				bonus = 1.0
 				uses = 1
-				technology = improved_small_airframe
-			}
-			add_tech_bonus = {
-				name = JAP_the_zero
-				bonus = 9.99
-				ahead_reduction = 2
-				uses = 1
-				technology = aa_cannon_1
+				category = light_air
 			}
 		}
 	}
