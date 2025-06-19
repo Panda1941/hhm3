@@ -31,10 +31,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.125
-				stability_factor = -0.125
-				army_core_attack_factor = -0.075
-				army_core_defence_factor = -0.075
+				#war_support_factor = -0.125
+				#stability_factor = -0.125
+				#army_core_attack_factor = -0.075
+				#army_core_defence_factor = -0.075
 			 }
 
 			picture = ita_state_med
@@ -56,10 +56,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.10
-				stability_factor = -0.10
-				army_core_attack_factor = -0.05
-				army_core_defence_factor = -0.05
+				#war_support_factor = -0.10
+				#stability_factor = -0.10
+				#army_core_attack_factor = -0.05
+				#army_core_defence_factor = -0.05
 			 }
 
 			picture = ita_state_med
@@ -81,10 +81,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.075
-				stability_factor = -0.075
-				army_core_attack_factor = -0.025
-				army_core_defence_factor = -0.025
+				#war_support_factor = -0.075
+				#stability_factor = -0.075
+				#army_core_attack_factor = -0.025
+				#army_core_defence_factor = -0.025
 			 }
 
 			picture = ita_state_med
@@ -106,10 +106,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.05
-				stability_factor = -0.05
-				army_core_attack_factor = -0.025
-				army_core_defence_factor = -0.025
+				#war_support_factor = -0.05
+				#stability_factor = -0.05
+				#army_core_attack_factor = -0.025
+				#army_core_defence_factor = -0.025
 			 }
 
 			picture = ita_state_med
@@ -130,8 +130,8 @@ ideas = {
 			}
 
 			 modifier = {
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.10
+				#army_core_attack_factor = 0.10
+				#army_core_defence_factor = 0.10
 			 }
 
 			picture = ita_state_med
@@ -155,10 +155,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.02
 				#industrial_capacity_factory = 0.02
-				war_support_factor = 0.05
-				stability_factor = 0.05
-				army_core_attack_factor = 0.025
-				army_core_defence_factor = 0.025
+				#war_support_factor = 0.05
+				#stability_factor = 0.05
+				#army_core_attack_factor = 0.025
+				#army_core_defence_factor = 0.025
 			}
 			
 
@@ -183,10 +183,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.04
 				#industrial_capacity_factory = 0.04
-				war_support_factor = 0.075
-				stability_factor = 0.075
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				#war_support_factor = 0.075
+				#stability_factor = 0.075
+				#army_core_attack_factor = 0.05
+				#army_core_defence_factor = 0.05
 			}
 			
 
@@ -211,10 +211,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.06
 				#industrial_capacity_factory = 0.06
-				war_support_factor = 0.10
-				stability_factor = 0.10
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.10
+				#war_support_factor = 0.10
+				#stability_factor = 0.10
+				#army_core_attack_factor = 0.10
+				#army_core_defence_factor = 0.10
 			}
 			
 
@@ -239,10 +239,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.08
 				#industrial_capacity_factory = 0.08
-				war_support_factor = 0.125
-				stability_factor = 0.125
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				#war_support_factor = 0.125
+				#stability_factor = 0.125
+				#army_core_attack_factor = 0.15
+				#army_core_defence_factor = 0.15
 			}
 			
 
@@ -267,10 +267,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.10
 				#industrial_capacity_factory = 0.10
-				war_support_factor = 0.15
-				stability_factor = 0.15
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				#war_support_factor = 0.15
+				#stability_factor = 0.15
+				#army_core_attack_factor = 0.15
+				#army_core_defence_factor = 0.15
 			}
 			
 
@@ -310,8 +310,8 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.125
-				stability_factor = -0.125
+				#war_support_factor = -0.125
+				#stability_factor = -0.125
 			 }
 			 
 
@@ -334,10 +334,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.10
-				stability_factor = -0.10
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.10
+				#war_support_factor = -0.10
+				#stability_factor = -0.10
+				#army_core_attack_factor = 0.10
+				#army_core_defence_factor = 0.10
 			 }
 
 			picture = ita_state_med
@@ -359,10 +359,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.075
-				stability_factor = -0.075
-				army_core_attack_factor = 0.150
-				army_core_defence_factor = 0.15
+				#war_support_factor = -0.075
+				#stability_factor = -0.075
+				#army_core_attack_factor = 0.150
+				#army_core_defence_factor = 0.15
 			 }
 
 			picture = ita_state_med
@@ -384,10 +384,10 @@ ideas = {
 			}
 
 			 modifier = {
-				war_support_factor = -0.05
-				stability_factor = -0.05
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = 0.25
+				#war_support_factor = -0.05
+				#stability_factor = -0.05
+				#army_core_attack_factor = 0.25
+				#army_core_defence_factor = 0.25
 			 }
 
 			picture = ita_state_med
@@ -408,8 +408,8 @@ ideas = {
 			}
 
 			 modifier = {
-				army_core_attack_factor = 0.50
-				army_core_defence_factor = 0.50
+				#army_core_attack_factor = 0.50
+				#army_core_defence_factor = 0.50
 			 }
 
 			picture = ita_state_med
@@ -433,10 +433,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.02
 				#industrial_capacity_factory = 0.02
-				war_support_factor = 0.05
-				stability_factor = 0.05
-				army_core_attack_factor = 0.50
-				army_core_defence_factor = 0.50
+				#war_support_factor = 0.05
+				#stability_factor = 0.05
+				#army_core_attack_factor = 0.50
+				#army_core_defence_factor = 0.50
 			}
 
 			picture = ita_state_med
@@ -460,10 +460,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.04
 				#industrial_capacity_factory = 0.04
-				war_support_factor = 0.075
-				stability_factor = 0.075
-				army_core_attack_factor = 0.50
-				army_core_defence_factor = 0.50
+				#war_support_factor = 0.075
+				#stability_factor = 0.075
+				#army_core_attack_factor = 0.50
+				#army_core_defence_factor = 0.50
 			}
 
 			picture = ita_state_med
@@ -487,10 +487,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.06
 				#industrial_capacity_factory = 0.06
-				war_support_factor = 0.10
-				stability_factor = 0.10
-				army_core_attack_factor = 0.50
-				army_core_defence_factor = 0.50
+				#war_support_factor = 0.10
+				#stability_factor = 0.10
+				#army_core_attack_factor = 0.50
+				#army_core_defence_factor = 0.50
 			}
 
 			picture = ita_state_med
@@ -514,10 +514,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.08
 				#industrial_capacity_factory = 0.08
-				war_support_factor = 0.125
-				stability_factor = 0.125
-				army_core_attack_factor = 0.50
-				army_core_defence_factor = 0.50
+				#war_support_factor = 0.125
+				#stability_factor = 0.125
+				#army_core_attack_factor = 0.50
+				#army_core_defence_factor = 0.50
 			}
 
 			picture = ita_state_med
@@ -541,10 +541,10 @@ ideas = {
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.10
 				#industrial_capacity_factory = 0.10
-				war_support_factor = 0.15
-				stability_factor = 0.15
-				army_core_attack_factor = 0.50
-				army_core_defence_factor = 0.50
+				#war_support_factor = 0.15
+				#stability_factor = 0.15
+				#army_core_attack_factor = 0.50
+				#army_core_defence_factor = 0.50
 			}
 			
 
