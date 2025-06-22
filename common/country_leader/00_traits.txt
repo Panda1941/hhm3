@@ -360,7 +360,7 @@ leader_traits = {
 	head_of_intelligence = {
 		random = no
 		sprite = 15
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.15
 	}
 
@@ -2358,7 +2358,7 @@ leader_traits = {
 		agency_upgrade_time = -0.1
 		intel_network_gain_factor = 0.1
 		resistance_growth_on_our_occupied_states = 0.1
-		operative_slot = 1
+		intelligence_agency_defense = 1
 	}
 	commander_of_the_fetno_derash_no_lar = {
 		random = no
@@ -2808,7 +2808,7 @@ leader_traits = {
 		}
 		drift_defence_factor = 0.05
 		research_speed_factor = 0.025 
-		operative_slot = 1
+		intelligence_agency_defense = 1
 	}
 
 	ITA_tomislav_of_croatia = {
@@ -2907,7 +2907,7 @@ leader_traits = {
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1
 		resistance_target_on_our_occupied_states = 0.1
 		boost_ideology_mission_factor = 0.15
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		modifier_army_sub_unit_militia_defence_factor = 0.05
 	}
 
@@ -3179,7 +3179,7 @@ leader_traits = {
 		agency_upgrade_time = -0.15
 		decryption_factor = 0.1
 		army_intel_factor = 0.3
-		operative_slot = 1
+		intelligence_agency_defense = 1
 	}
 
 	SWI_humanitarian = { #Unlocks Support Humanitarian Efforts 
@@ -4436,7 +4436,7 @@ leader_traits = {
 	special_envoy = {
 		random = no
 		sprite = 15
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.2
 		civilian_intel_factor = 0.2
 		stability_factor = 0.05
@@ -4830,7 +4830,7 @@ leader_traits = {
 		random = no
 		intel_network_gain_factor = 0.2
 		agency_upgrade_time = -0.2
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -4979,7 +4979,7 @@ leader_traits = {
 		intel_network_gain_factor = 0.2
 		communism_drift = 0.05
 		war_support_factor = 0.10
-		operative_slot = 1
+		intelligence_agency_defense = 1
 	}
 
 	BRA_emperor_trait = {
@@ -5179,7 +5179,7 @@ leader_traits = {
 		random = no
 		resistance_activity = -0.1
 		resistance_damage_to_garrison = -0.1
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		resistance_decay = 0.1
 		stability_factor = -0.05
 	}
@@ -7185,10 +7185,10 @@ leader_traits = {
 		equipment_bonus = {
 			armor = {
 				instant = yes
-				maximum_speed = 0.10
+				maximum_speed = 0.08
 			}
 		}
-		cat_mobile_warfare_cost_factor = -0.15
+		cat_mobile_warfare_cost_factor = -0.10
 
 		ai_will_do = {
 			factor = 500

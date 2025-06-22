@@ -875,7 +875,7 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 			}
 		}
 
@@ -916,7 +916,7 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 2
+				intelligence_agency_defense = 1.5
 				enemy_operative_detection_chance_factor = 0.1
 				root_out_resistance_effectiveness_factor = 0.1
 				enemy_operative_intel_extraction_rate = 0.05
@@ -939,7 +939,7 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 3
+				intelligence_agency_defense = 2
 				enemy_operative_detection_chance_factor = 0.1
 				root_out_resistance_effectiveness_factor = 0.1
 				enemy_operative_intel_extraction_rate = 0.1
@@ -1893,7 +1893,7 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				operation_make_resistance_contacts_outcome = 0.15
 				operation_boost_resistance_outcome = 0.15
 				target_sabotage_factor = 0.1
@@ -2033,7 +2033,7 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.05
 				stability_factor = 0.1
-				operative_slot = 1
+				intelligence_agency_defense = 1
 			}
 		}
 
@@ -2145,7 +2145,7 @@ ideas = {
 				political_power_factor = 0.05
 				neutrality_drift = 0.01
 				stability_factor = 0.05
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intel_network_gain_factor = 0.1
 			}
 		}
@@ -2193,7 +2193,7 @@ ideas = {
 				political_power_factor = 0.1
 				neutrality_drift = 0.02
 				stability_factor = 0.08
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intel_network_gain_factor = 0.1
 				compliance_growth = 0.05
 			}
@@ -2242,7 +2242,7 @@ ideas = {
 				political_power_factor = 0.15
 				neutrality_drift = 0.02
 				stability_factor = 0.08
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intel_network_gain_factor = 0.1
 				compliance_growth = 0.05
 				puppet_cost_factor = -0.1
@@ -2294,7 +2294,7 @@ ideas = {
 				political_power_factor = 0.15
 				neutrality_drift = 0.02
 				stability_factor = 0.08
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intel_network_gain_factor = 0.1
 				compliance_growth = 0.05
 				puppet_cost_factor = -0.1
@@ -2350,7 +2350,7 @@ ideas = {
 				political_power_factor = 0.2
 				neutrality_drift = 0.05
 				stability_factor = 0.1
-				operative_slot = 2
+				intelligence_agency_defense = 1.5
 				intel_network_gain_factor = 0.1
 				compliance_growth = 0.1
 				puppet_cost_factor = -0.1
@@ -2481,7 +2481,7 @@ ideas = {
 				weekly_manpower = 400
 				communism_drift = 0.01
 				resistance_damage_to_garrison_on_our_occupied_states = 0.1
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				#TODO_Manu: Allows generation of female generals, aces and admirals
 			}
 		}
@@ -2946,7 +2946,7 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intel_from_operatives_factor = 0.15
 			}
 		}
@@ -2965,7 +2965,7 @@ ideas = {
 			}
 	
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intel_from_operatives_factor = 0.15
 			}
 		}
@@ -2985,7 +2985,7 @@ ideas = {
 			}
 	
 			modifier = {
-				operative_slot = 2
+				intelligence_agency_defense = 1.5
 				intel_from_operatives_factor = 0.2
 			}
 		}

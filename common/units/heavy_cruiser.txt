@@ -7,7 +7,7 @@ sub_units = {
 		type = { capital_ship }
 		need = { ship_hull_cruiser = 1 }
 		
-		max_organisation = 80
+		max_organisation = 90
 
 		
 		supply_consumption = 0.04

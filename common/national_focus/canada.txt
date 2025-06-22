@@ -2263,7 +2263,7 @@
 
 		available = {
 			has_tech = advanced_machine_tools
-			has_tech = improved_medium_tank_chassis
+			has_tech = improved_medium_tank
 			date > 1940.07.01
 		}
 		

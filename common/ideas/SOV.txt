@@ -91,7 +91,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				intelligence_agency_defense = 0.5
 			}
 		}
@@ -108,7 +108,7 @@ ideas = {
 			}
 			
 			modifier = {
-				operative_slot = 2
+				intelligence_agency_defense = 2
 			}
 		}
 
@@ -1554,7 +1554,7 @@ ideas = {
 				
 			}
 
-			cost = 150
+			cost = 100
 
 			traits = { gosproyektstroy_trait }
 		}

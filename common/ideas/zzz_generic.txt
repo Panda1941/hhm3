@@ -142,7 +142,7 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				communism_acceptance = -15
 			}
 		}

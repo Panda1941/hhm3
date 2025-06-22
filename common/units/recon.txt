@@ -235,7 +235,7 @@ sub_units = {
 		}
 
 		need = {
-			armored_car_equipment = 24
+			armored_car_equipment = 28
 		}
 
 		forest = {
@@ -377,6 +377,11 @@ sub_units = {
 			category_mountaineers
 		}
 
+		battalion_mult = {
+			category = category_artillery
+			soft_attack = 0.10
+		}
+
 	
 		combat_width = 0
 	
@@ -477,6 +482,11 @@ sub_units = {
 		#	defense = 0.25
 		#	add = yes
 		#}
+
+		battalion_mult = {
+			category = category_artillery
+			soft_attack = 0.10
+		}
 
 		# Support nerfs to combat abilities
 		

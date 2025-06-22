@@ -963,6 +963,17 @@ technologies = {
 			research_cost_coeff = 0.9
 		}
 		
+		on_research_complete = {
+			add_tech_bonus = {
+				name = "Bonus for HEAVY 1"
+				bonus = 0.5
+				uses = 1
+				technology = improved_heavy_tank
+			}
+		}
+
+		show_effect_as_desc = yes
+		
 		research_cost = 2
 		start_year = 1941
 		
@@ -1185,6 +1196,17 @@ technologies = {
 			leads_to_tech = advanced_heavy_tank 
 			research_cost_coeff = 0.9
 		}
+		
+		on_research_complete = {
+			add_tech_bonus = {
+				name = "Bonus for HEAVY 2"
+				bonus = 0.5
+				uses = 1
+				technology = advanced_heavy_tank
+			}
+		}
+
+		show_effect_as_desc = yes
 		
 		research_cost = 2
 		start_year = 1943
@@ -1733,6 +1755,17 @@ technologies = {
 			research_cost_coeff = 0.9
 		}
 		
+		on_research_complete = {
+			add_tech_bonus = {
+				name = "Bonus for MEDIUM 2"
+				bonus = 0.5
+				uses = 1
+				technology = improved_medium_tank
+			}
+		}
+
+		show_effect_as_desc = yes
+		
 		path = {
 			leads_to_tech = super_heavy_tank 
 			research_cost_coeff = 1
@@ -1892,6 +1925,17 @@ technologies = {
 			leads_to_tech = advanced_medium_tank 
 			research_cost_coeff = 0.9
 		}
+		
+		on_research_complete = {
+			add_tech_bonus = {
+				name = "Bonus for MEDIUM 3"
+				bonus = 0.5
+				uses = 1
+				technology = advanced_medium_tank
+			}
+		}
+
+		show_effect_as_desc = yes
 		
 		research_cost = 2.5
 		start_year = 1943

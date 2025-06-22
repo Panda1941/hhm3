@@ -114,7 +114,7 @@ ideas = {
 			picture = generic_spy_intel
 
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 			}
 		}
 
@@ -269,7 +269,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_spy_coup
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 				encryption_factor = 0.2
 				subversive_activites_upkeep = -0.3
 				decryption_factor = 0.1
@@ -885,7 +885,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_spy_coup
 			modifier = {
-				operative_slot = 1
+				intelligence_agency_defense = 1
 			}
 		}
 

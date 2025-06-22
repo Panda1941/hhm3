@@ -53,7 +53,7 @@ ideas = {
 				
 			}
 			modifier = {
-				army_org_factor = 0.1
+				army_org_factor = 0.05
 				army_intel_to_others = -5.0
 				custom_modifier_tooltip = best_of_the_best_spirit_tt
 			}
@@ -383,7 +383,6 @@ ideas = {
 			available = { has_tech = mobile_warfare }
 			ledger = army
 			modifier = {
-				army_armor_speed_factor = 0.05 
 				army_armor_defence_factor = 0.05 
 				army_fuel_capacity_factor = 0.3
 			}
@@ -531,7 +530,7 @@ ideas = {
 			ledger = army
 			modifier = {
 				org_loss_when_moving = -0.4
-				army_speed_factor = 0.05
+				army_speed_factor = 0.03
 				land_reinforce_rate	= 0.05
 			}
 			cost = 30
@@ -567,7 +566,7 @@ ideas = {
 			modifier = {
 				training_time_army_factor = -0.5
 				experience_gain_army = 0.04
-				army_org_factor = 0.08
+				army_org_factor = 0.05
 			}
 			cost = 30
 			ai_will_do = {

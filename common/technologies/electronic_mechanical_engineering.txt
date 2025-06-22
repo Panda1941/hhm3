@@ -61,7 +61,7 @@ technologies = {
 		}
 		
 		enable_equipment_modules = { 
-			tank_radio_1
+			#tank_radio_1
 		}
 
 		folder = {
@@ -144,7 +144,7 @@ technologies = {
 		start_year = 1938
 		enable_equipment_modules = { 
 			ship_radar_1
-			tank_radio_2
+			#tank_radio_2
 		}
 		folder = {
 			name = electronics_folder
@@ -235,7 +235,7 @@ technologies = {
 		land_reinforce_rate = 0.01
 		enable_equipment_modules = { 
 			ship_radar_3
-			tank_radio_3
+			#tank_radio_3
 		}
 
 		static_anti_air_hit_chance_factor = 0.2
@@ -512,8 +512,8 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_fire_control_system_2
-			stabilizer
-			mech_stabilizer
+			#stabilizer
+			#mech_stabilizer
 		}
 		path = {
 			leads_to_tech = advanced_computing_machine 
@@ -575,7 +575,7 @@ technologies = {
 		research_speed_factor = 0.1
 		enable_equipment_modules = { 
 			ship_fire_control_system_3
-			auto_loader
+			#auto_loader
 		}
 		
 		path = {
