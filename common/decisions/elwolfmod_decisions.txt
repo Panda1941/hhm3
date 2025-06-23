@@ -595,6 +595,10 @@ operations = {
 		
 		complete_effect = {
 			set_global_flag = spanish_civil_war
+			add_named_threat = {
+				threat = 5 
+				name = spanish_civil_war_started
+			}
 		}
 	}
 	spain_civil_war_ended_annexed = {
