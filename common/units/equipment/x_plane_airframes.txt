@@ -477,7 +477,7 @@ equipments = {
 		air_agility = 50
 		air_attack = 14
 		air_defence = 20
-		air_ground_attack = 19
+		air_ground_attack = 22
 
 		build_cost_ic = 86
 		resources = {

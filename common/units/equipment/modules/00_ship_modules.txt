@@ -4338,7 +4338,7 @@ equipment_modules = {
 		
 		add_stats = {
 			torpedo_attack = 10
-			build_cost_ic = 120
+			build_cost_ic = 180
 		}
 
 		multiply_stats = {
@@ -4364,7 +4364,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 14
-			build_cost_ic = 160
+			build_cost_ic = 240
 			naval_torpedo_hit_chance_factor = 0.01
 		}
 
@@ -4391,7 +4391,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 18
-			build_cost_ic = 200
+			build_cost_ic = 300
 			naval_torpedo_hit_chance_factor = 0.02
 		}
 
@@ -4419,7 +4419,7 @@ equipment_modules = {
 
 		add_stats = {
 			torpedo_attack = 22
-			build_cost_ic = 240
+			build_cost_ic = 360
 			naval_torpedo_hit_chance_factor = 0.03
 		}
 

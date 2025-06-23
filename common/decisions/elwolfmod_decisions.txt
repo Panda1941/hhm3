@@ -477,6 +477,55 @@ operations = {
 			}
 		}
 	}
+	auto_annex_iraq_to_italy_if_no_britsh_troops_present = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = WST
+		}
+		
+		available = {
+			tag = WST
+			ITA = { has_war_with = ENG }
+			ENG = {
+				divisions_in_state = {
+					size < 1
+					state = 675
+				}
+				divisions_in_state = {
+					size < 1
+					state = 291
+				}
+				divisions_in_state = {
+					size < 1
+					state = 676
+				}
+				divisions_in_state = {
+					size < 1
+					state = 656
+				}
+			}
+			455 = {is_controlled_by = ITA}
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			ITA = {
+				transfer_state = 675
+				transfer_state = 291
+				transfer_state = 676
+				transfer_state = 656
+			}
+		}
+	}
 	conquer_and_divide = {
 		# icon = generic_operation
 		allowed = {
@@ -514,7 +563,10 @@ operations = {
 			factor = 100
 		}
 		available = {
-			SPR = {has_war_with = ENG} 
+			OR = {
+				SPR = {has_war_with = ENG} 
+				ITA = {has_war_with = ENG}
+			}
 		}
 			
 		
@@ -522,6 +574,48 @@ operations = {
 		WST = { 
 				transfer_state = 290
 			}
+		}
+	}
+	spain_civil_war_annexed = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1936.08.01	# about when spain can do their focus
+			NOT = { has_global_flag = spanish_civil_war }
+			SPR = { exists = no } 
+		}
+			
+		
+		complete_effect = {
+			set_global_flag = spanish_civil_war
+		}
+	}
+	spain_civil_war_ended_annexed = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1939.01.01	# about when spain should do their focus to finish scw
+			NOT = { has_global_flag = scw_over }
+			SPR = { exists = no } 
+		}
+			
+		
+		complete_effect = {
+			set_global_flag = scw_over
 		}
 	}
 	african_bonus_for_all = {
@@ -1059,13 +1153,38 @@ operations = {
 						always = no
 					}
 				}
+				add_ideas = { artificial_intelligence }
+				add_ideas = { ai_limiter }
 			}
-			GER = {
-				annex_country = {
-					target = SPR
-					transfer_troops = yes
+
+			67 = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex 
+					level = 4 
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 4 
+					instant_build = yes
 				}
 			}
+			66 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex 
+					level = 4
+					instant_build = yes
+				}
+			}
+			WST = {
+				annex_country = {
+					target = SPR
+				}
+			}
+
+			
 		}
 	}
 	split_up_romania = {
@@ -1132,7 +1251,7 @@ operations = {
 		}
 		available = {
 			HUN = {
-				is_ai = no
+				is_ai = yes
 			}
 			ROM = {
 				is_ai = no
@@ -1165,49 +1284,6 @@ operations = {
 				transfer_state = 916
 				transfer_state = 154
 				transfer_state = 43
-			}
-		}
-	}
-	give_hungary_to_bulgaria = {
-		# icon = generic_operation
-		allowed = {
-			tag = GER
-		}
-		fire_only_once = yes
-		cost = 0
-		ai_will_do = {
-			factor = 0
-		}
-		available = {
-			HUN = {
-				is_ai = no
-			}
-			BUL = {
-				is_ai = no
-			}
-		}
-		targets = {
-			HUN
-		}
-		complete_effect = {
-			HUN = {
-				transfer_units_fraction = {
-					target = BUL
-					size = 1
-					stockpile_ratio = 1
-					army_ratio = 1
-					navy_ratio = 1
-					air_ratio = 1
-					keep_unit_leaders_trigger = {
-						always = no
-					}
-				}
-			}
-			BUL = {
-				annex_country = {
-					target = HUN
-					transfer_troops = yes
-				}
 			}
 		}
 	}

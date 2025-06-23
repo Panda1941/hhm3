@@ -14,12 +14,12 @@ equipments = {
 
 		#Misc Abilities
 		reliability = 0.8
-		maximum_speed = 5
+		maximum_speed = 4
 
 		#Offensive Abilities
-		railway_gun_attack = 25
+		railway_gun_attack = 35
 		
-		manpower = 1000
+		manpower = 800
 	}
 
 	railway_gun_equipment_1 = {
@@ -30,7 +30,7 @@ equipments = {
 		visual_level = 0
 		active = no
 
-		build_cost_ic = 720.0
+		build_cost_ic = 680.0
 		resources = {
 			steel = 5
 			tungsten = 1
