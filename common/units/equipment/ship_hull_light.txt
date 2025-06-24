@@ -108,9 +108,9 @@ equipments = {
 		max_strength = 50
 		
 
-		fuel_consumption = 0
+		fuel_consumption = 4
 		
-		build_cost_ic = 800
+		build_cost_ic = 700
 		resources = {
 			steel = 2
 		}
@@ -168,10 +168,10 @@ equipments = {
 		}
 
 
-		reliability = 0.85
+		reliability = 0.82
 		naval_range = 1800
-		max_strength = 80
-		build_cost_ic = 1000
+		max_strength = 90
+		build_cost_ic = 950
 		resources = {
 			steel = 2
 		}
@@ -238,8 +238,8 @@ equipments = {
 		surface_detection = 20
 		surface_visibility = 10
 		reliability = 0.90
-		naval_range = 2000
-		max_strength = 100
+		naval_range = 2200
+		max_strength = 110
 		build_cost_ic = 1100
 		manpower = 400
 
@@ -306,8 +306,9 @@ equipments = {
 		surface_detection = 20
 		reliability = 0.92
 		naval_range = 2500
-		max_strength = 120
-		build_cost_ic = 1200
+		max_strength = 140
+		build_cost_ic = 1300
+		fuel_consumption = 6
 		resources = {
 			steel = 4
 			chromium = 1

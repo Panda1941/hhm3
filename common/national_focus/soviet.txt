@@ -2896,6 +2896,7 @@
 		search_filters = {  }
 		completion_reward = {
 			add_ideas = SOV_great_patriotic_war_5
+			add_ideas = tot_economic_mobilisation
 		}
 	}
 
