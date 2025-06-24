@@ -43,7 +43,7 @@ ideas = {
 				
 			}
 			modifier = {
-				air_bombing_targetting = 0.05
+				air_bombing_targetting = 0.07
 			}
 			cost = 30
 			ai_will_do = {
@@ -91,7 +91,7 @@ ideas = {
 			ledger = air
 			available = { has_air_academy = yes }
 			modifier = {
-				air_fuel_consumption_factor = -0.075
+				air_fuel_consumption_factor = -0.08
 			}
 			cost = 30
 			ai_will_do = {
@@ -106,7 +106,7 @@ ideas = {
 			ledger = air
 			available = { has_air_academy = yes }
 			modifier = {
-				experience_gain_air = 0.15
+				experience_gain_air = 0.1
 				air_doctrine_cost_factor = -0.075
 			}
 			cost = 30
@@ -190,7 +190,7 @@ ideas = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				air_range_factor = 0.15
+				air_range_factor = 0.1
 			}
 			cost = 30
 			ai_will_do = {
@@ -237,7 +237,7 @@ ideas = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				ace_effectiveness_factor = 0.5
+				ace_effectiveness_factor = 0.75
 			}
 			cost = 30
 			visible = { always = no }
@@ -300,7 +300,7 @@ ideas = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				air_strategic_bomber_bombing_factor = 0.06
+				air_strategic_bomber_bombing_factor = 0.08
 			}
 			cost = 30
 			ai_will_do = {

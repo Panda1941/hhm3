@@ -5,6 +5,8 @@ ideas = {
 			available = { has_naval_academy = yes }
 			modifier = {
 				custom_modifier_tooltip = instilled_aggression_spirit_tt
+				navy_screen_attack_factor = 0.03
+				navy_capital_ship_attack_factor = 0.03
 			}
 			ai_will_do = {
 				factor = 1
@@ -19,6 +21,8 @@ ideas = {
 			available = { has_naval_academy = yes }
 			modifier = {
 				custom_modifier_tooltip = calculated_restraint_spirit_tt
+				naval_defense_factor = 0.04
+				naval_retreat_chance = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -33,6 +37,8 @@ ideas = {
 			available = { has_naval_academy = yes }
 			modifier = {
 				custom_modifier_tooltip = signals_training_spirit_tt
+				naval_detection = 0.06
+				spotting_chance = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -189,6 +195,7 @@ ideas = {
 			ledger = navy
 			modifier = {
 				repair_speed_factor = 0.2
+				refit_speed = 0.05
 			}
 			cost = 25
 			ai_will_do = {
@@ -324,7 +331,7 @@ ideas = {
 		efficient_communications_spirit = {
 			ledger = navy
 			modifier = {
-				positioning = 0.05
+				positioning = 0.06
 			}
 			cost = 30
 			ai_will_do = {
@@ -364,7 +371,7 @@ ideas = {
 			modifier = {
 				naval_retreat_chance = -0.1
 				naval_retreat_speed = -0.1
-				naval_torpedo_hit_chance_factor = 0.1
+				naval_torpedo_hit_chance_factor = 0.07
 				naval_hit_chance = 0.1
 			}
 			cost = 30
@@ -395,6 +402,7 @@ ideas = {
 			modifier = {
 				naval_critical_score_chance_factor = 0.15
 				naval_retreat_chance = -0.05
+				naval_hit_chance = 0.03
 			}
 			cost = 30
 			ai_will_do = {

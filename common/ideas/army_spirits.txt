@@ -6,7 +6,7 @@ ideas = {
 			available = { has_military_academy = yes }
 			modifier = {
 				custom_modifier_tooltip = bold_attack_spirit_tt
-				breakthrough_factor = 0.05
+				breakthrough_factor = 0.07
 			}
 			ai_will_do = {
 				factor = 1
@@ -21,7 +21,7 @@ ideas = {
 			available = { has_military_academy = yes }
 			modifier = {
 				custom_modifier_tooltip = tenacious_defense_spirit_tt
-				army_defence_factor  = 0.03
+				army_defence_factor  = 0.04
 			}
 			ai_will_do = {
 				factor = 1
@@ -36,7 +36,7 @@ ideas = {
 			available = { has_military_academy = yes }
 			modifier = {
 				custom_modifier_tooltip = meticulous_preparation_spirit_tt
-				max_planning = 0.03
+				max_planning = 0.04
 			}
 			ai_will_do = {
 				factor = 1
@@ -133,7 +133,7 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = inventive_leadership_spirit_tt
 				max_command_power = 30
-				planning_speed = 0.10
+				planning_speed = 0.08
 			}
 			ai_will_do = {
 				factor = 1
@@ -149,7 +149,7 @@ ideas = {
 			visible = {  }
 			modifier = {
 				custom_modifier_tooltip = mobile_warfare_academy_spirit_tt
-				army_fuel_capacity_factor = 0.25
+				army_fuel_capacity_factor = 0.12
 				army_org_regain = 0.03
 			}
 			ai_will_do = {
@@ -172,7 +172,7 @@ ideas = {
 			visible = {  }
 			modifier = {
 				custom_modifier_tooltip = superior_firepower_academy_spirit_tt
-				air_cas_present_factor = 0.075
+				air_cas_present_factor = 0.8
 				initiative_factor = 0.04
 			}
 			ai_will_do = {
@@ -222,7 +222,7 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = mass_assault_academy_spirit_tt
 				trait_infantry_leader_xp_gain_factor = 0.2
-				modifier_army_sub_unit_infantry_speed_factor = 0.25  
+				modifier_army_sub_unit_infantry_speed_factor = 0.2
 			}
 			ai_will_do = {
 				base = 1
@@ -245,7 +245,6 @@ ideas = {
 			ledger = army
 			modifier = {
 				experience_gain_army = 0.05
-				experience_gain_army_factor = 0.05
 				land_doctrine_cost_factor = -0.025
 				command_power_gain = 0.2
 			}
@@ -311,7 +310,7 @@ ideas = {
 			ledger = army
 			available = { has_government = democratic }
 			modifier = {
-				experience_gain_army = 0.075
+				experience_gain_army = 0.05
 				experience_gain_army_factor = 0.1
 				army_advisor_cost_factor = -0.5
 			}
@@ -337,7 +336,7 @@ ideas = {
 			modifier = {
 				pocket_penalty = -0.25
 				supply_consumption_factor = -0.05
-				weekly_manpower = 2500
+				weekly_manpower = 2000
 			}
 			cost = 25
 			ai_will_do = {
@@ -384,7 +383,7 @@ ideas = {
 			ledger = army
 			modifier = {
 				army_armor_defence_factor = 0.05 
-				army_fuel_capacity_factor = 0.3
+				army_fuel_capacity_factor = 0.15
 			}
 			cost = 25
 			ai_will_do = {
@@ -513,7 +512,7 @@ ideas = {
 		static_warfare_spirit = {
 			ledger = army
 			modifier = {
-				max_dig_in = 4.0
+				max_dig_in = 3.0
 				dig_in_speed_factor = 0.4
 			}
 			cost = 30
@@ -531,7 +530,7 @@ ideas = {
 			modifier = {
 				org_loss_when_moving = -0.4
 				army_speed_factor = 0.03
-				land_reinforce_rate	= 0.05
+				land_reinforce_rate	= 0.03
 			}
 			cost = 30
 			ai_will_do = {
@@ -549,7 +548,7 @@ ideas = {
 			modifier = {
 				recon_factor = 0.25
 				intel_from_combat_factor = 0.5
-				decryption_power = 25
+				decryption_power = 15
 			}
 			cost = 30
 			ai_will_do = {
@@ -564,8 +563,8 @@ ideas = {
 		reserve_officers_spirit = {
 			ledger = army
 			modifier = {
-				training_time_army_factor = -0.5
-				experience_gain_army = 0.04
+				training_time_army_factor = -0.3
+				experience_gain_army = 0.02
 				army_org_factor = 0.05
 			}
 			cost = 30
@@ -628,7 +627,7 @@ ideas = {
 			modifier = {
 				breakthrough_factor = 0.03
 				army_artillery_attack_factor = 0.05
-				special_forces_attack_factor = 0.05
+				special_forces_attack_factor = 0.03
 			}
 			cost = 30
 			ai_will_do = {

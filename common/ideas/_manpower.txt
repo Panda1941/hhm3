@@ -50,7 +50,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.02
+				conscription = 0.025
 			}
 
 			default = yes
@@ -123,7 +123,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.035
 			}
 
 			ai_will_do = {
@@ -286,7 +286,7 @@ ideas = {
 				conscription = 0.06
 				industrial_capacity_factory = -0.05
 				production_speed_buildings_factor = -0.05
-				training_time_factor = 0.1
+				training_time_factor = 0.15
 			}
 
 			cancel_if_invalid = no
@@ -558,7 +558,7 @@ ideas = {
 				conscription = 0.25
 				industrial_capacity_factory = -0.3
 				industrial_capacity_dockyard = -0.3
-				production_speed_buildings_factor = -0.3
+				production_speed_buildings_factor = -0.25
 				#XP from reinforcement penalty (small)
 				training_time_factor = 0.3
 			}
