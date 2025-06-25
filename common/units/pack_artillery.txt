@@ -29,8 +29,8 @@ sub_units = {
 			pack_artillery_equipment = 28
 		}
 		
-		max_strength = 0.5
-		max_organisation = 0
+		max_strength = 1.0
+		max_organisation = 10
 		default_morale = 0.2
 		training_time = 140
 		weight = 0.5
@@ -46,7 +46,8 @@ sub_units = {
 		}
 
 		mountain = {
-			movement = -0.1
+			attack = 0.05
+			movement = 0.05
 		}
 
 		jungle = {

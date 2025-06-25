@@ -193,7 +193,7 @@ sub_units = {
 		max_strength = 1.0
 		weight = 0.5
 
-		supply_consumption = 0.25
+		supply_consumption = 0.2
 
 		defense = -0.5
 		breakthrough = -0.25

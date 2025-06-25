@@ -41,11 +41,11 @@ sub_units = {
 		supply_consumption = 0.08
 
 		# Support nerfs to combat abilities
-		defense = -0.5
-		breakthrough = -0.5
-		soft_attack = -0.5
-		#hard_attack = -0.5
-		ap_attack = -0.15
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.3
+		#hard_attack = -0.3
+		ap_attack = -0.1
 	}
 	
 	heavy_anti_tank = {
@@ -82,11 +82,11 @@ sub_units = {
 		default_morale = 0.1
 		max_strength = 0.2
 		training_time = 120
-		weight = 0.1
+		weight = 0.15
 
 		can_be_parachuted = no
 		
-		supply_consumption = 0.16
+		supply_consumption = 0.18
 
 		# Support nerfs to combat abilities
 		#defense = -0.5

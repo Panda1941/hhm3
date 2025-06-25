@@ -35,7 +35,7 @@ sub_units = {
 		can_be_parachuted = yes
 		
 		# Important Ability
-		reliability_factor = 0.075
+		reliability_factor = 0.1
 		equipment_capture_factor = 0.025
 		fuel_capacity = 50
 		

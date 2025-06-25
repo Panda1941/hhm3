@@ -28,8 +28,8 @@ sub_units = {
 		}
 		manpower = 500
 		max_organisation = 10
-		default_morale = 0.1
-		max_strength = 1
+		default_morale = 0.2
+		max_strength = 5
 		training_time = 120
 		weight = 0.5
 
@@ -113,6 +113,7 @@ sub_units = {
 		
 		hard_attack = 0.2
 		ap_attack = 0.2
+		breakthrough = 0.1
 
 		forest = {
 			attack = -0.2
@@ -188,6 +189,7 @@ sub_units = {
 		
 		hard_attack = 0.25
 		ap_attack = 0.25
+		breakthrough = 0.1
 		
 		forest = {
 			attack = -0.2
@@ -216,9 +218,11 @@ sub_units = {
 		}
 		urban = {
 			defence = -0.10 
+			attack = 0.1
 		}
 		urban_fortress = {
 			defence = -0.10 
+			attack = 0.05
 		}
 		fort = {
 			attack = 0.1
