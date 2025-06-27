@@ -164,6 +164,107 @@ ideas = {
 
 		}
 
+		SAF_railway_construction_bonus = {
+			allowed = {
+				always = no
+			}
+			name = "Railroad Expansion"
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ARG_invest_in_railways
+
+			modifier = {
+				production_speed_rail_way_factor = 0.2
+			}
+		}
+
+		SAF_domestic_steel_bonus = {
+			allowed = {
+				always = no
+			}
+			name = "Domestic Steel"
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+
+		SAF_domestic_steel_bonus_2 = {
+			allowed = {
+				always = no
+			}
+			name = "Backbone of the African Economy"
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ETH_joint_african_development_program
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+
+		SAF_guns_discount = {
+			allowed = {
+				always = no
+			}
+			name = "SAMCO"
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = POL_succesful_four_year_plan
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		SAF_reorganized_UDF = {
+			allowed = {
+				always = no
+			}
+			name = "UDF"
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ETH_peacekeeping_forces
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
 		SAF_emergency_workers = {
 			allowed = {
 				always = no
@@ -359,7 +460,7 @@ ideas = {
 			picture = saf_soviet_advisers
 
 			modifier = {
-				army_org_Factor = 0.05
+				army_org_factor = 0.05
 				planning_speed = 0.05
 			}
 		}
@@ -378,7 +479,7 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 
 			modifier = {
-				army_org_Factor = 0.05
+				army_org_factor = 0.05
 			}
 		}
 
@@ -512,7 +613,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_production_bonus
+			picture = man_five_year_plan_tank
 
 			equipment_bonus = {
 				armor = {
@@ -539,7 +640,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_production_bonus
+			picture = man_five_year_plan_industry
 
 			equipment_bonus = {
 				
@@ -565,7 +666,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_production_bonus
+			picture = man_five_year_plan_industry
 
 			equipment_bonus = {
 				infantry_equipment = {
@@ -599,7 +700,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_SAF_military_complex_expansion
+			picture = SOV_third_five_year_plan_military
 
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
@@ -621,7 +722,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_SAF_civilian_complex_expansion
+			picture = SOV_third_five_year_plan_civilian
 
 			modifier = {
 				

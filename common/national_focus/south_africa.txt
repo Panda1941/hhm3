@@ -650,6 +650,110 @@
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = "These locations are random"
+		}
+	}
+
+	focus = {
+		id = SAF_railway_to_the_north
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SAF_south_african_railways }
+		text = "Railways to the North"
+
+		relative_position_id = SAF_south_african_railways
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = SAF_railway_construction_bonus
+			275 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			719 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			681 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = "These locations are preset and are not random"
+		}
+	}
+
+	focus = {
+		id = SAF_domestic_steel
+		icon = GFX_focus_SAF_domestic_steel
+		prerequisite = { focus = SAF_railway_to_the_north }
+		text = "Domestic Steel"
+
+		relative_position_id = SAF_railway_to_the_north
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = SAF_domestic_steel_bonus
+			275 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -885,6 +989,114 @@
 			
 		}
 	}
+	
+	focus = {
+		id = SAF_south_african_munitions_corporation
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = SAF_fast_rearmament focus = SAF_focus_on_resources }
+		x = 1
+		y = 1
+		relative_position_id = SAF_focus_on_resources
+		text = "South African Munitions Corporation"
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = SAF_guns_discount
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = SAF_backbone_of_the_african_economy
+		icon = GFX_focus_generic_africa_defense
+		prerequisite = { focus = SAF_south_african_munitions_corporation }
+		prerequisite = { focus = SAF_domestic_steel }
+		prerequisite = { focus = SAF_focus_on_resources_3 focus = SAF_focus_on_resources_4 }
+		x = -2
+		y = 1
+		relative_position_id = SAF_south_african_munitions_corporation
+		text = "Backbone of the African Economy"
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SAF_domestic_steel_bonus_2
+				remove_idea = SAF_domestic_steel_bonus
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+
 
 	focus = {
 		id = SAF_heavy_engineering
@@ -1821,6 +2033,43 @@
 		completion_reward = {
 		
 			add_ideas = saf_expand_tank_production
+			
+		}
+	}
+	
+
+	focus = {
+		id = SAF_reorganize_the_union_defence_force
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = { focus = SAF_armor_effort focus = SAF_leg_infantry_max }
+		x = 3
+		y = 1
+		relative_position_id = SAF_armor_effort
+		text = "Reorganize the UDF"
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		
+			army_experience = 40
+			add_ideas = SAF_reorganized_UDF
 			
 		}
 	}
