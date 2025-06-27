@@ -2846,6 +2846,7 @@ CAN = {
 				technology = excavation3
 				technology = excavation4
 				technology = excavation5
+				technology = excavation6
 			}
 		}
 	}

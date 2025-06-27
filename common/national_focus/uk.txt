@@ -198,8 +198,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1
+				name = "1x150_mech"
+				bonus = 1.5
 				uses = 1
 				category = cat_mechanized_equipment
 			}
@@ -224,9 +224,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
-				name = armor_bonus
+				name =  "2x100_tank"
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = armor
 			}
 
@@ -690,7 +690,7 @@ focus_tree = {
 		}
 		continue_if_invalid = yes
 		icon = GFX_focus_eng_special_air_service
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = general_rearmament_focus
 		cost = 5
@@ -710,6 +710,52 @@ focus_tree = {
 			add_set_amount_of_special_forces_xp = yes
 		}
 	}
+
+	focus = {
+		id = ENG_modernize_the_infantry_arsenal
+		prerequisite = {
+			focus = general_rearmament_focus
+		}
+		available = {
+		}
+		continue_if_invalid = yes
+		icon = GFX_focus_generic_reorient_production
+		text = "Modernize the Infantry Arsenal"
+		x = -2
+		y = 1
+		relative_position_id = general_rearmament_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 category = infantry_weapons uses = 2 name = "2x75_inf" }
+		}
+	}
+	
+	focus = {
+		id = ENG_streamlined_armaments
+		prerequisite = {
+			focus = ENG_modernize_the_infantry_arsenal
+		}
+		available = {
+		}
+		continue_if_invalid = yes
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		text = "Streamlined Armaments"
+		x = 0
+		y = 1
+		relative_position_id = ENG_modernize_the_infantry_arsenal
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1.0 category = infantry_weapons uses = 1 name = "1x100_inf" }
+			add_tech_bonus = { bonus = 0.75 category = artillery uses = 2 name = "2x75_arty" }
+		}
+	}
+
 	focus = {
 		id = royal_ordinance_focus
 		available = {
@@ -952,7 +998,7 @@ focus_tree = {
 			focus = general_rearmament_focus
 		}
 		icon = GFX_goal_generic_air_doctrine
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = general_rearmament_focus
 		cost = 8
@@ -1404,7 +1450,7 @@ focus_tree = {
 			#focus = general_rearmament_focus
 		}
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 5
+		x = 6
 		y = -1
 		relative_position_id = general_rearmament_focus
 		cost = 10
@@ -4249,7 +4295,7 @@ focus_tree = {
 			has_war = yes
 		}
 		x = 9
-		y = 5
+		y = 7
 		
 		cost = 5
 		#ai_will_do = {
@@ -4280,8 +4326,8 @@ focus_tree = {
 			has_war = yes
 			date > 1941.01.01
 		}
-		x = 9
-		y = 6
+		x = 11
+		y = 7
 		
 		cost = 5
 		#ai_will_do = {

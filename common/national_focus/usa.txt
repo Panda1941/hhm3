@@ -571,13 +571,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-				name = USA_rubber_reserve_company
+				name = "3x100_rubber"
 				bonus = 1.0
-				uses = 2
+				uses = 3
 				technology = rubber_processing
 				technology = improved_rubber_processing
 				technology = advanced_rubber_processing
 				technology = modern_rubber_processing
+				technology = improved_modern_rubber_processing
 			}
 		}
 	}
