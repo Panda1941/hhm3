@@ -23,6 +23,7 @@ focus_tree = {
 	focus = {
 		id = GER_four_year_plan
 		icon = GFX_focus_GER_four_year_plan
+		mutually_exclusive = { focus = GER_priorizite_economic_growth }
 		x = 10
 		y = 0
 		cost = 10
@@ -42,11 +43,561 @@ focus_tree = {
 		}
 		
 	}
+	
+
+	focus = {
+		id = GER_priorizite_economic_growth
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		mutually_exclusive = { focus = GER_four_year_plan }
+		text = "Prioritize Economic Growth"
+		x = -4
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = civilian_economy
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			add_political_power = -40
+			
+			add_timed_idea = {
+				idea = GER_mefo_bills_ended
+				days = 60
+			} 
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_1 }
+				remove_ideas = GER_mefo_bills_1
+			}
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_2 }
+				remove_ideas = GER_mefo_bills_2
+			}
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_3 }
+				remove_ideas = GER_mefo_bills_3
+			}
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_4 }
+				remove_ideas = GER_mefo_bills_4
+			}
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_5 }
+				remove_ideas = GER_mefo_bills_5
+			}
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_6 }
+				remove_ideas = GER_mefo_bills_6
+			}
+
+			if = {
+				limit = { has_idea = GER_mefo_bills_7 }
+				remove_ideas = GER_mefo_bills_7
+			}
+
+			add_ideas = GER_recovering_economy
+		}
+	}
+
+	focus = {
+		id = GER_currency_reform
+		icon = GFX_focus_generic_german_trade
+		prerequisite = { focus = GER_priorizite_economic_growth }
+		relative_position_id = GER_priorizite_economic_growth
+		text = "Currency Reform"
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			swap_ideas = {
+				add_idea = GER_recovering_economy_2
+				remove_idea = GER_recovering_economy
+			}
+		}
+	}
+
+	focus = {
+		id = GER_lower_taxes
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = GER_currency_reform }
+		relative_position_id = GER_currency_reform
+		text = "Lower Taxes"
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			swap_ideas = {
+				add_idea = GER_recovering_economy_3
+				remove_idea = GER_recovering_economy_2
+			}
+		}
+	}
+
+	focus = {
+		id = GER_abolish_price_controls
+		icon = GFX_focus_ARG_anti_corruption_policies
+		prerequisite = { focus = GER_lower_taxes }
+		relative_position_id = GER_lower_taxes
+		text = "Abolish Price Controls"
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = { has_idea = GER_recovering_economy_3 }
+				swap_ideas = {
+					add_idea = GER_recovering_economy_4
+					remove_idea = GER_recovering_economy_3
+				}
+			}
+			if = {
+				limit = { has_idea = GER_recovering_economy_5 }
+				swap_ideas = {
+					add_idea = GER_recovering_economy_45
+					remove_idea = GER_recovering_economy_5
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = GER_recovering_economy_4
+					remove_idea = GER_recovering_economy_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_industrial_expansion
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = GER_lower_taxes }
+		prerequisite = { focus = GER_housing_development }
+		relative_position_id = GER_lower_taxes
+		text = "Industrial Expansion"
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = excavation3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	
+        	modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 1
+        	}
+			add_tech_bonus = {
+				name = GER_industrial_expansion
+				bonus = 1.0
+				uses = 1
+				category = industry_late
+			}
+
+			if = {
+				limit = { has_idea = GER_recovering_economy_3 }
+				swap_ideas = {
+					add_idea = GER_recovering_economy_5
+					remove_idea = GER_recovering_economy_3
+				}
+			}
+			if = {
+				limit = { has_idea = GER_recovering_economy_4 }
+				swap_ideas = {
+					add_idea = GER_recovering_economy_45
+					remove_idea = GER_recovering_economy_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = GER_recovering_economy_5
+					remove_idea = GER_recovering_economy_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_housing_development
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = GER_currency_reform }
+		relative_position_id = GER_currency_reform
+		text = "Housing Development"
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			if = {
+				limit = { 42 = { is_demilitarized_zone = yes } }
+				custom_effect_tooltip = GER_west_wall_tt
+				custom_effect_tooltip = GER_hgw_tt
+				
+			}
+			if = {
+			limit = { 42 = { is_demilitarized_zone = no } }
+				55 = {
+						set_state_category = megalopolis	
+					
+				}
+				50 = {
+						set_state_category = megalopolis	
+					
+				}
+				42 = {
+				add_extra_state_shared_building_slots = 4	
+					
+				}
+				51 = {
+				add_extra_state_shared_building_slots = 4	
+					
+				}
+			}	
+
+			add_ideas = GER_housing_development
+		}
+	}
+
+	focus = {
+		id = GER_workers_rights
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = GER_housing_development }
+		relative_position_id = GER_housing_development
+		text = "Workers Rights"
+		available = {
+			has_tech = improved_machine_tools
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			add_ideas = GER_worker_rights
+		}
+	}
+
+	focus = {
+		id = GER_agricultural_reform
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = GER_workers_rights }
+		prerequisite = { focus = GER_industrial_expansion }
+		relative_position_id = GER_workers_rights
+		text = "Agricultural Reform"
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = advanced_machine_tools
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+			42 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 42
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+				state = 42
+			}
+			add_resource = {
+				type = chromium
+				amount = 2
+				state = 42
+			}
+			
+			add_tech_bonus = {
+				name = GER_autarky
+				bonus = 1.0
+				uses = 1
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+				technology = excavation6
+			}
+
+			add_ideas = GER_agricultural_reform_idea
+		}
+	}
+
+	focus = {
+		id = GER_mass_production
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GER_abolish_price_controls }
+		prerequisite = { focus = GER_industrial_expansion }
+		relative_position_id = GER_industrial_expansion
+		text = "Mass Production"
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war = yes
+				threat > 0.3
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			swap_ideas = {
+				add_idea = GER_recovering_economy_6
+				remove_idea = GER_recovering_economy_45
+			}
+		}
+	}
+
+	focus = {
+		id = GER_war_production
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = GER_mass_production }
+		prerequisite = { focus = GER_agricultural_reform }
+		relative_position_id = GER_agricultural_reform
+		text = "War Production"
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				add_idea = GER_worker_rights_2
+				remove_idea = GER_worker_rights
+			}
+		}
+	}
+
+
+
+
 
 	focus = {
 		id = GER_west_wall
 		icon = GFX_focus_GER_west_wall
-		prerequisite = { focus = GER_four_year_plan }
+		prerequisite = { focus = GER_four_year_plan focus = GER_priorizite_economic_growth }
 		x = -5
 		y = 1
 		relative_position_id = GER_four_year_plan
@@ -1462,10 +2013,10 @@ focus_tree = {
 	focus = {
 		id = GER_autobahn
 		icon = GFX_focus_GER_autobahn
-		prerequisite = { focus = GER_autarky }
-		x = -2
+		prerequisite = { focus = GER_grosraumwirtschaft }
+		x = 2
 		y = 1
-		relative_position_id = GER_autarky
+		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
 		ai_will_do = {
 			factor = 12
@@ -1531,10 +2082,10 @@ focus_tree = {
 	focus = {
 		id = GER_german_war_economy
 		icon = GFX_focus_GER_german_war_economy
-		prerequisite = { focus = GER_autobahn }
-		x = 0
-		y = 1
-		relative_position_id = GER_autobahn
+		prerequisite = { focus = GER_autarky }
+		x = -2
+		y = 2
+		relative_position_id = GER_autarky
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1610,7 +2161,7 @@ focus_tree = {
 	focus = {
 		id = GER_grosraumwirtschaft
 		icon = GFX_focus_GER_grosraumwirtschaft
-		prerequisite = { focus = GER_four_year_plan }
+		prerequisite = { focus = GER_four_year_plan focus = GER_priorizite_economic_growth }
 		x = -1
 		y = 1
 		relative_position_id = GER_four_year_plan
@@ -5958,7 +6509,7 @@ add_building_construction = {
 		
 
 
- 		x = -6
+ 		x = -2
  		y = 1
  		cost = 10
  		ai_will_do = {

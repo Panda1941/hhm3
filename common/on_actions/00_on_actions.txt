@@ -544,8 +544,8 @@ on_actions = {
 					NOT = { FROM = { original_tag = GER } } # Don't remove it from Fascist Germany if they start the civil war
 				}
 				ROOT = {
-					GER_remove_mefo_bills = yes
-					set_country_flag = mefo_bills_removed_through_war
+					#GER_remove_mefo_bills = yes
+					#set_country_flag = mefo_bills_removed_through_war
 				}
 			}
 
@@ -556,8 +556,8 @@ on_actions = {
 					FROM = { GER_has_mefo_bills = yes }
 				}
 				FROM = {
-					GER_remove_mefo_bills = yes
-					set_country_flag = mefo_bills_removed_through_war
+					#GER_remove_mefo_bills = yes
+					#set_country_flag = mefo_bills_removed_through_war
 				}
 			}
 
@@ -1202,8 +1202,8 @@ on_actions = {
 					NOT = { FROM = { original_tag = GER } }
 				}
 				ROOT = {
-					GER_remove_mefo_bills = yes
-					set_country_flag = mefo_bills_removed_through_war
+					#GER_remove_mefo_bills = yes
+					#set_country_flag = mefo_bills_removed_through_war
 				}
 			}
 			if = {
@@ -1213,8 +1213,8 @@ on_actions = {
 					NOT = { ROOT = { original_tag = GER } }
 				}
 				FROM = {
-					GER_remove_mefo_bills = yes
-					set_country_flag = mefo_bills_removed_through_war
+					#GER_remove_mefo_bills = yes
+					#set_country_flag = mefo_bills_removed_through_war
 				}
 			}
 		}
