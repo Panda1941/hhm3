@@ -235,6 +235,7 @@ GER_mefo_bills_category = {
 					}
 				}
 			}
+			always = no
 		}
 
 		cost = 0
