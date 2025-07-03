@@ -172,7 +172,7 @@ ideas = {
 			visible = {  }
 			modifier = {
 				custom_modifier_tooltip = superior_firepower_academy_spirit_tt
-				air_cas_present_factor = 0.8
+				air_cas_present_factor = 0.08
 				initiative_factor = 0.04
 			}
 			ai_will_do = {
