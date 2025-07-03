@@ -368,7 +368,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GER_industrial_expansion
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = industry_late
 			}
 
@@ -2005,7 +2005,7 @@ focus_tree = {
         	modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 1
+        	   amount = 2
         	}
 		}
 	}

@@ -206,7 +206,7 @@ equipments = {
 		build_cost_ic = 58
 		resources = {
 			aluminium = 2
-			rubber = 1
+			rubber = 3
 		}
 
 		manpower = 20
@@ -231,7 +231,7 @@ equipments = {
 		build_cost_ic = 68
 		resources = {
 			aluminium = 3
-			rubber = 1
+			rubber = 3
 		}
 
 		naval_strike_attack = 1
@@ -262,7 +262,7 @@ equipments = {
 		build_cost_ic = 74
 		resources = {
 			aluminium = 4
-			rubber = 1
+			rubber = 3
 		}
 
 		naval_strike_attack = 1
@@ -294,7 +294,7 @@ equipments = {
 		resources = {
 			#oil = 2
 			aluminium = 5
-			rubber = 1
+			rubber = 3
 		}
 
 		naval_strike_attack = 1
@@ -343,7 +343,7 @@ equipments = {
 		resources = {
 			aluminium = 5
 			tungsten = 2
-			rubber = 1
+			rubber = 4
 		}
 
 		manpower = 40
@@ -375,7 +375,7 @@ equipments = {
 		resources = {
 			aluminium = 5
 			tungsten = 3
-			rubber = 1
+			rubber = 4
 		}
 		manpower = 40
 		fuel_consumption = 0.59
@@ -424,7 +424,7 @@ equipments = {
 		build_cost_ic = 74
 		resources = {
 			aluminium = 3
-			rubber = 1
+			rubber = 2
 		}
 
 		air_superiority = 1
@@ -451,7 +451,7 @@ equipments = {
 		build_cost_ic = 80
 		resources = {
 			aluminium = 4
-			rubber = 1
+			rubber = 2
 		}
 
 		naval_strike_attack = 4
@@ -482,7 +482,7 @@ equipments = {
 		build_cost_ic = 86
 		resources = {
 			aluminium = 5
-			rubber = 1
+			rubber = 2
 		}
 
 		naval_strike_attack = 5
@@ -537,7 +537,7 @@ equipments = {
 		build_cost_ic = 74
 		resources = {
 			aluminium = 3
-			rubber = 1
+			rubber = 2
 		}
 
 		air_superiority = 1
@@ -567,7 +567,7 @@ equipments = {
 		build_cost_ic = 80
 		resources = {
 			aluminium = 4
-			rubber = 1
+			rubber = 2
 		}
 
 		air_superiority = 1
@@ -597,7 +597,7 @@ equipments = {
 		build_cost_ic = 86
 		resources = {
 			aluminium = 5
-			rubber = 1
+			rubber = 2
 		}
 
 		air_superiority = 1
@@ -640,7 +640,7 @@ equipments = {
 		resources = {
 			aluminium = 3
 			tungsten = 2
-			rubber = 1
+			rubber = 2
 		}
 		fuel_consumption = 0
 		air_superiority = 1
@@ -667,7 +667,7 @@ equipments = {
 		resources = {
 			aluminium = 3
 			tungsten = 3
-			rubber = 1
+			rubber = 2
 		}
 		fuel_consumption = 0
 		air_superiority = 1
@@ -694,7 +694,7 @@ equipments = {
 		resources = {
 			aluminium = 3
 			tungsten = 3
-			rubber = 1
+			rubber = 2
 		}
 		fuel_consumption = 0
 		air_superiority = 1
@@ -738,7 +738,7 @@ equipments = {
 		resources = {
 			aluminium = 2
 			tungsten = 2
-			rubber = 1
+			rubber = 2
 		}
 
 		air_superiority = 1
@@ -786,7 +786,7 @@ equipments = {
 		build_cost_ic = 90
 		resources = {
 			aluminium = 2
-			rubber = 1
+			rubber = 3
 		}
 		# build_cost_ic = 18
 		naval_strike_attack = 4
@@ -818,7 +818,7 @@ equipments = {
 		build_cost_ic = 100
 		resources = {
 			aluminium = 3
-			rubber = 1
+			rubber = 3
 		}
 		naval_strike_attack = 6
 		naval_strike_targetting = 8
@@ -850,7 +850,7 @@ equipments = {
 		build_cost_ic = 110
 		resources = {
 			aluminium = 4
-			rubber = 1
+			rubber = 3
 		}
 		naval_strike_attack = 8
 		naval_strike_targetting = 10
@@ -882,7 +882,7 @@ equipments = {
 		build_cost_ic = 120
 		resources = {
 			aluminium = 5
-			rubber = 1
+			rubber = 3
 		}
 		naval_strike_attack = 10
 		naval_strike_targetting = 12
@@ -937,7 +937,7 @@ equipments = {
 		resources = {
 			aluminium = 5
 			tungsten = 2
-			rubber = 1
+			rubber = 4
 		}
 
 		air_superiority = 1
@@ -970,7 +970,7 @@ equipments = {
 		resources = {
 			aluminium = 5
 			tungsten = 3
-			rubber = 1
+			rubber = 4
 		}
 
 		air_superiority = 1
@@ -1016,7 +1016,7 @@ equipments = {
 		build_cost_ic = 85
 		resources = {
 			aluminium = 4
-			rubber = 1
+			rubber = 3
 		}
 
 		air_superiority = 1.25
@@ -1041,7 +1041,7 @@ equipments = {
 		build_cost_ic = 95
 		resources = {
 			aluminium = 5
-			rubber = 1
+			rubber = 3
 		}
 
 		naval_strike_attack = 1
@@ -1070,7 +1070,7 @@ equipments = {
 		build_cost_ic = 105
 		resources = {
 			aluminium = 5
-			rubber = 1
+			rubber = 3
 		}
 
 		naval_strike_attack = 1
@@ -1114,7 +1114,7 @@ equipments = {
 		sub_detection = 10 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 		resources = {
 			aluminium = 2
-			rubber = 1
+			rubber = 2
 		}
 		air_superiority = 0
 		reliability = 0.8
@@ -1138,7 +1138,7 @@ equipments = {
 		build_cost_ic = 85
 		resources = {
 			aluminium = 3
-			rubber = 1
+			rubber = 2
 		}
 		naval_strike_attack = 0
 		naval_strike_targetting = 0
@@ -1191,7 +1191,7 @@ equipments = {
 		build_cost_ic = 160
 		resources = {
 			aluminium = 4
-			rubber = 2
+			rubber = 4
 		}
 
 		air_superiority = 0.01
@@ -1218,7 +1218,7 @@ equipments = {
 		build_cost_ic = 180
 		resources = {
 			aluminium = 5
-			rubber = 2
+			rubber = 4
 		}
 		# Air vs Navy - high damage / low hit chance / hard to hurt
 		naval_strike_attack = 1
@@ -1250,7 +1250,7 @@ equipments = {
 		build_cost_ic = 200
 		resources = {
 			aluminium = 6
-			rubber = 2
+			rubber = 4
 		}
 		# Air vs Navy - high damage / low hit chance / hard to hurt
 		naval_strike_attack = 1
@@ -1303,7 +1303,7 @@ equipments = {
 		resources = {
 			aluminium = 6
 			tungsten = 2
-			rubber = 1
+			rubber = 4
 		}
 
 		manpower = 160
