@@ -89,8 +89,8 @@ set_technology = {
 	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
-	motorised_infantry = 1
 	tech_trucks = 1
+	motorised_infantry = 1
 	marines  = 1
 	gw_artillery = 1
 	interwar_antiair = 1
@@ -104,6 +104,7 @@ set_technology = {
 	air_torpedoe_1 = 1
 	
 	pack = 1
+	grand_battleplan_overall = 1
 }
 
 

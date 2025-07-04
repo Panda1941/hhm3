@@ -360,24 +360,14 @@ technologies = {
 		category_all_armor = {
 			max_strength = -3
 		}
-		motorized = {
-			max_strength = -5
-		}
-		mechanized = {
+		category_light_infantry = {
 			max_strength = -5
 		}
 		category_light_infantry = {
-			max_strength = -5
 			breakthrough = -0.15
 		}
 		category_line_artillery = {
 			max_strength = -0.25
-		}
-		
-		artillery_brigade={
-			need = {
-				artillery_equipment = -5
-			}
 		}
 		
 		on_research_complete = { 

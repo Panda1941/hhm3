@@ -1187,10 +1187,30 @@ operations = {
 					target = SPR
 				}
 			}
-
-			
 		}
 	}
+	give_spanish_resources_to_germany = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			41 = { is_owned_and_controlled_by = WST }
+		}
+		complete_effect = {
+			give_resource_rights = { receiver = GER state = 790 }
+			give_resource_rights = { receiver = GER state = 166 }
+			give_resource_rights = { receiver = GER state = 174 }
+			give_resource_rights = { receiver = GER state = 791 }
+			give_resource_rights = { receiver = GER state = 41 }
+		}
+	}
+
 	split_up_romania = {
 		# icon = generic_operation
 		allowed = {
@@ -1477,6 +1497,23 @@ operations = {
 			}
 		}
 	}
+	give_brazilian_resources_to_eng = {
+		# icon = generic_operation
+		allowed = {
+			tag = WST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			497 = { is_owned_and_controlled_by = WST }
+		}
+		complete_effect = {
+			give_resource_rights = { receiver = ENG state = 497 }
+		}
+	}
 	annex_canada = {
 		# icon = generic_operation
 		allowed = {
@@ -1757,9 +1794,10 @@ operations = {
 		}
 		available = {
 			date > 1940.03.01
-			7 = { is_owned_and_controlled_by = GER }
-			6 = { is_owned_and_controlled_by = GER }
-			16 = { is_owned_and_controlled_by = GER }
+			7 = { is_controlled_by = GER }
+			6 = { is_controlled_by = GER }
+			16 = { is_controlled_by = GER }
+			NOT = {has_war_with = JAP}
 		}
 		targets = {
 			HOL

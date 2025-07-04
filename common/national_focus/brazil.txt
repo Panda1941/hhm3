@@ -30,7 +30,6 @@ focus_tree = {
 	##### Shared Military Branch #####
 
 	shared_focus = SMB_army
-	shared_focus = SMB_air_force
 	shared_focus = SMB_navy
 
 	##################################

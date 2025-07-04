@@ -1188,7 +1188,7 @@ equipments = {
 		surface_detection = 0 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 0 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 160
+		build_cost_ic = 170
 		resources = {
 			aluminium = 4
 			rubber = 4
@@ -1215,7 +1215,7 @@ equipments = {
 		air_defence = 40
 		air_bombing = 45
 
-		build_cost_ic = 180
+		build_cost_ic = 190
 		resources = {
 			aluminium = 5
 			rubber = 4
@@ -1247,7 +1247,7 @@ equipments = {
 		air_defence = 50
 		air_bombing = 60
 
-		build_cost_ic = 200
+		build_cost_ic = 210
 		resources = {
 			aluminium = 6
 			rubber = 4
@@ -1299,7 +1299,7 @@ equipments = {
 		surface_detection = 0 # For airwing of 100 planes (Destroyer I: 20 surface detection)
 		sub_detection = 0 # For airwing of 100 planes (Destroyer I: 5 sub detection )
 
-		build_cost_ic = 220
+		build_cost_ic = 230
 		resources = {
 			aluminium = 6
 			tungsten = 2

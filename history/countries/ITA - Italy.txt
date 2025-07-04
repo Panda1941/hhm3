@@ -217,11 +217,11 @@ add_ideas = ITA_hidden_research_penalties_ns #TODO_Manu: Hidden NS to apply rese
 
 #REGIO ESERCITO
 #set_variable = { ITA_re_army_experience_loss_factor = -0.1 }
-set_variable = { ITA_re_army_max_dig_in_factor = 0.1 }
+set_variable = { ITA_re_army_max_dig_in_factor = 0.15 }
 set_variable = { ITA_re_land_doctrine_cost_factor = 0.1 }
 #set_variable = { ITA_re_land_reinforce_rate = -0.05 }
-set_variable = { ITA_re_army_speed_factor = -0.1 }
-set_variable = { ITA_re_army_army_org_factor = -0.1 }
+set_variable = { ITA_re_army_speed_factor = -0.05 }
+set_variable = { ITA_re_army_army_org_factor = -0.05 }
 set_variable = { ITA_re_org_loss_when_moving = 0.15 }
 
 set_variable = { ITA_re_army_morale_factor = 0 }
@@ -274,7 +274,7 @@ set_variable = { ITA_ra_air_mission_xp_gain_factor = 0 }
 set_variable = { ITA_ra_strategic_bomb_visibility = 0 }
 set_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0 }
 set_variable = { ITA_ra_air_range_factor = 0 }
-set_variable = { ITA_ra_air_superiority_efficiency = 0 }
+set_variable = { ITA_ra_air_superiority_efficiency = -0.1 }
 set_variable = { ITA_ra_air_intercept_efficiency = 0 }
 
 add_dynamic_modifier = { modifier = ITA_regia_aeronautica_dynamic_modifier }
@@ -339,8 +339,8 @@ set_technology = {
 	tech_engineers = 1
 	tech_mountaineers = 1
 	tech_special_forces_gear = 1
-	motorised_infantry = 1
 	tech_trucks = 1
+	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
 	trench_warfare = 1
@@ -351,6 +351,7 @@ set_technology = {
 	air_torpedoe_1 = 1
 	
 	pack = 1
+	grand_battleplan_overall = 1
 }
 if = {
 	limit = {

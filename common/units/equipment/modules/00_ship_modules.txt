@@ -1147,7 +1147,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 28
+			hg_attack = 32
 			build_cost_ic = 2000
 		}
 		build_cost_resources = {
@@ -1158,7 +1158,7 @@ equipment_modules = {
 			naval_speed = -0.08
 		}
 		add_average_stats = {
-			hg_armor_piercing = 48
+			hg_armor_piercing = 52
 			max_strength = 120
 		}
 		can_convert_from = {

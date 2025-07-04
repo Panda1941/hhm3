@@ -1935,7 +1935,7 @@ technologies = {
 	construction1 = {
 		
 		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		industry_repair_factor = 0.1
 
 		path = {
 			leads_to_tech = construction2
@@ -2030,7 +2030,7 @@ technologies = {
 	construction2 = {
 
 		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = construction3 
@@ -2127,7 +2127,7 @@ technologies = {
 	construction3 = {
 
 		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = construction4 
@@ -2241,7 +2241,7 @@ technologies = {
 	construction4 = {
 
 		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = construction5 
@@ -2343,7 +2343,7 @@ technologies = {
 	construction5 = {
 
 		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = excavation5
@@ -2449,7 +2449,7 @@ technologies = {
     construction6 = {
 
 		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = excavation6

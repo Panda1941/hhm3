@@ -293,6 +293,8 @@ ideas = {
 				army_org_factor = -0.15
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
+
+				air_mission_efficiency = -0.15
 			}
 		}
 		officers_purged_2 = {
@@ -313,6 +315,8 @@ ideas = {
 				army_org_factor = -0.10
 				army_attack_factor = -0.025
 				army_defence_factor = -0.025
+
+				air_mission_efficiency = -0.1
 			}
 		}
 		officers_purged_3 = {
@@ -331,6 +335,8 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.05
+				
+				air_mission_efficiency = -0.05
 			}
 		}
 
