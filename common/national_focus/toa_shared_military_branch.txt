@@ -2029,7 +2029,6 @@ shared_focus = {
 	icon = GFX_focus_generic_air_defense
 	relative_position_id = SMB_army
 	prerequisite = { focus = SMB_army }
-	prerequisite = { focus = SMB_air_force}
 	x = 4
 	y = 1
 
@@ -2048,7 +2047,6 @@ shared_focus = {
 			NOT = {
 				tag = ROOT
 			}
-			has_completed_focus = SMB_establish_aircraft_industry
 		}
 	}
 
@@ -3274,7 +3272,7 @@ shared_focus = {
 	icon = GFX_focus_FIN_coastal_defense
 	prerequisite = { focus = SMB_air_force }
 	prerequisite = { focus = SMB_navy }
-	relative_position_id = SMB_air_force
+	relative_position_id = SMB_navy
 	x = 4
 	y = 1
 
