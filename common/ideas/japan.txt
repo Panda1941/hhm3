@@ -1,8 +1,6 @@
 ideas = {
 
 	country = {
-	
-	
 		state_shintoism = {
 			allowed = {
 				always = no
@@ -32,47 +30,6 @@ ideas = {
 	
 	
 		# POLITICAL
-		student_mobilization_idea = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-			
-			removal_cost = -1
-
-			picture = generic_infantry_bonus
-			
-			modifier = {
-				land_doctrine_cost_factor = -0.05
-			}
-			
-		}
-		imperial_austerity_idea = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_goods_red_bonus
-			
-			modifier = {
-				consumer_goods_factor = -0.15
-			}
-		}
 		spiritual_mobilization_idea = {
 					
 			allowed = {
@@ -105,61 +62,6 @@ ideas = {
 			
 			modifier = {
 				naval_torpedo_screen_penetration_factor = 0.2
-			}
-		}
-		
-		imperial_glory_idea = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				political_power_gain = 1
-				stability_factor = 0.1
-				war_support_factor = 0.05
-			}
-		}
-		warrior_traditions_idea = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				war_support_factor = 0.15
-				army_morale_factor = 0.1
-			}			
-		}
-		
-		for_the_emperor_idea = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-			
-			removal_cost = -1
-
-			picture = generic_morale_bonus
-			
-			modifier = {
-				army_org = 5
-				army_morale_factor = 0.1
 			}
 		}
 
@@ -209,27 +111,6 @@ ideas = {
 				production_speed_aluminium_refinery_factor = 0.1
 				production_speed_advanced_steel_refinery_factor = 0.1
 				production_speed_rail_way_factor = 0.1
-			}
-		}
-
-		JAP_nationalize_the_zaibatsus = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_zaibatsu_control
-			
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
 			}
 		}
 
@@ -289,29 +170,6 @@ ideas = {
 			}
 		}
 
-		JAP_zaibatsus_challenged = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_zaibatsu_control
-			
-			modifier = {
-				stability_factor = -0.1
-				production_speed_industrial_complex_factor = 0.10
-				production_speed_arms_factory_factor = 0.10
-				production_speed_dockyard_factor = 0.10
-				consumer_goods_factor = 0.15
-			}
-		}
-
 		JAP_duplicate_research_efforts = {
 			allowed = {
 				always = no
@@ -342,62 +200,10 @@ ideas = {
 			picture = warrior_traditions_idea
 			
 			modifier = {
-				stability_factor = -0.1
 				war_support_factor = 0.2
 				mobilization_laws_cost_factor = -0.25
-				justify_war_goal_time = -0.2
 				research_speed_factor = -0.05
 				conscription = 0.02
-			}
-		}
-
-		JAP_militarism_shogunate = {
-
-			name = JAP_militarism
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_militarism_shogun
-			
-			modifier = {
-				war_support_factor = 0.3
-				mobilization_laws_cost_factor = -0.35
-				justify_war_goal_time = -0.2
-				research_speed_factor = -0.10
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = 0.05
-			}
-		}
-
-		JAP_militarism_showa = {
-
-			name = JAP_militarism
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_militarism_showa
-			
-			modifier = {
-				war_support_factor = 0.1
-				mobilization_laws_cost_factor = -0.15
-				justify_war_goal_time = -0.1
-				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 
@@ -437,100 +243,6 @@ ideas = {
 			
 			modifier = {
 				stability_factor = 0.5
-			}
-		}
-
-		JAP_the_unthinkable_option = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-
-			picture = jap_the_unthinkable_option
-			
-			modifier = {
-				stability_weekly = -0.01
-				communism_drift = 0.03
-			}
-		}
-
-		JAP_reeducation_campaign = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			available = { has_stability < 0.5 }
-			
-			removal_cost = -1
-
-			picture = socialist_science_focus
-			
-			modifier = {
-				stability_weekly = 0.05
-			}
-		}
-
-		JAP_red_brigades = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			removal_cost = -1
-
-			picture = generic_communist_army
-			
-			modifier = {
-				conscription = 0.02
-			}
-		}
-
-		JAP_communist_volunteers = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			removal_cost = -1
-
-			picture = generic_volunteer_expedition_bonus
-			
-			modifier = {
-				send_volunteer_divisions_required = -1
-				send_volunteer_size = 1
-			}
-		}
-
-		JAP_people_owned_mines = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			removal_cost = -1
-
-			picture = generic_exploit_mines
-			
-			modifier = {
-				local_resources_factor = 0.1
 			}
 		}
 
@@ -744,142 +456,6 @@ ideas = {
 			}
 		}
 
-		JAP_intervene_in_china_1 = {
-			
-			name = JAP_intervene_in_china
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_intervene_in_china
-			
-			targeted_modifier = {
-				tag = CHI
-				attack_bonus_against = -0.1
-				defense_bonus_against = -0.05
-			}
-		}
-
-		JAP_intervene_in_china_2 = {
-			
-			name = JAP_intervene_in_china
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_intervene_in_china
-			
-			targeted_modifier = {
-				tag = CHI
-				attack_bonus_against = -0.2
-				defense_bonus_against = -0.10
-			}
-		}
-
-		JAP_intervene_in_china_3 = {
-			
-			name = JAP_intervene_in_china
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_intervene_in_china
-			
-			targeted_modifier = {
-				tag = CHI
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.15
-			}
-		}
-
-		JAP_intervene_in_china_4 = {
-			
-			name = JAP_intervene_in_china
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_intervene_in_china
-			
-			targeted_modifier = {
-				tag = CHI
-				attack_bonus_against = -0.4
-				defense_bonus_against = -0.20
-			}
-		}
-
-		JAP_intervene_in_china_5 = {
-			
-			name = JAP_intervene_in_china
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_intervene_in_china
-			
-			targeted_modifier = {
-				tag = CHI
-				attack_bonus_against = -0.5
-				defense_bonus_against = -0.25
-			}
-		}
-
-		JAP_ichi_go = {		
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_ichi_go
-			
-			targeted_modifier = {
-				tag = CHI
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-		}
-
 		JAP_the_london_naval_treaty = {
 
 			allowed = {
@@ -897,44 +473,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = -0.25
-			}
-		}
-
-		JAP_military_purges = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			
-			removal_cost = -1
-
-			picture = generic_intel_bonus
-			
-			modifier = {
-				neutrality_drift = 0.3
-			}
-		}
-
-		JAP_strengthen_civilian_government = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			
-			removal_cost = -1
-
-			picture = generic_democratic_drift_bonus
-			
-			modifier = {
-				democratic_drift = 0.1
 			}
 		}
 
