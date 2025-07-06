@@ -805,12 +805,7 @@
 				name = SAF_expand_the_mining_industry
 				bonus = 1.5
 				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-				technology = excavation6
+				category = excavation_tech
 			}
 		}
 	}

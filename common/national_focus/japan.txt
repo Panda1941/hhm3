@@ -171,13 +171,79 @@
 			}
 		}
 	}
+	
+	focus = {
+		id = JAP_co_prosperity_sphere_economic_integration
+		text = "Co-Prosperity Economic Integration"
+		icon = GFX_focus_jap_cast_the_die
+		prerequisite = { focus = JAP_intervene_in_china }
+		x = -1
+		y = 1
+		relative_position_id = JAP_intervene_in_china
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_tech = excavation1
+			has_tech = excavation2
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_resource = {
+				type = aluminium
+				amount = 12
+				state = 527
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 527
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 716
+			}
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 611
+			}
+			add_resource = {
+				type = chromium
+				amount = 6
+				state = 611
+			}
+			
+			add_tech_bonus = {
+				name = JAP_co_prosperity_sphere_economic_integration
+				bonus = 2.0
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
 
 	focus = {
 		id = JAP_secure_china
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = JAP_intervene_in_china }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = JAP_intervene_in_china
 
 		cost = 10
@@ -227,8 +293,8 @@
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = JAP_secure_china }
 		x = 0
-		y = 2
-		relative_position_id = JAP_intervene_in_china
+		y = 1
+		relative_position_id = JAP_secure_china
 
 		cost = 5
 
@@ -532,8 +598,12 @@
 			JAP = {
 				add_timed_idea = { idea = JAP_banzai days = 180 }
 			}
-			MAN = {
-				add_timed_idea = { idea = JAP_banzai days = 180 }
+
+			if = {
+				limit = { MAN = { exists = yes }}
+				MAN = {
+					add_timed_idea = { idea = JAP_banzai days = 180 }
+				}
 			}
 		}
 	}
@@ -869,6 +939,79 @@
 			}
 		}
 	}
+	
+	focus = {
+		id = JAP_imperial_rule_assistance_association
+		text = "Imperial Rule Assistance Association"
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_nationalize_war_industry }
+		x = 1
+		y = 1
+		relative_position_id = JAP_nationalize_war_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = JAP_zaibatsus_mega_comglomerates
+		text = "Zaibatsus Mega Conglomerates"
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = JAP_imperial_rule_assistance_association }
+		x = 0
+		y = 1
+		relative_position_id = JAP_imperial_rule_assistance_association
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			CHI = { exists = no }
+			num_of_factories > 249
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = JAP_guide_the_zaibatsus_mega
+				remove_idea = JAP_guide_the_zaibatsus
+			}
+		}
+	}
 
 	focus = {
 		id = JAP_coal_liquification
@@ -965,8 +1108,8 @@
 		id = JAP_national_research_policy
 		icon = GFX_focus_research
 		prerequisite = { focus = JAP_national_mobilization_law }
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = JAP_national_mobilization_law
 
 		cost = 10
@@ -1092,7 +1235,7 @@
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 6
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1141,7 +1284,7 @@
 		y = 2
 		relative_position_id = JAP_expand_the_showa_steel_works
 
-		cost = 6
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1179,6 +1322,100 @@
 					amount = 24
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = JAP_manchurian_heavy_industry
+		text = "Manchurian Heavy Industry"
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = JAP_develop_aluminum_sources }
+		x = 0
+		y = 1
+		relative_position_id = JAP_develop_aluminum_sources
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			OR = {
+				328 = { is_fully_controlled_by = ROOT }
+				AND = {
+					328 = { is_fully_controlled_by = MAN }
+					MAN = { is_subject_of = ROOT }
+				}
+			}
+			OR = {
+				716 = { is_fully_controlled_by = ROOT }
+				AND = {
+					716 = { is_fully_controlled_by = MAN }
+					MAN = { is_subject_of = ROOT }
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			716 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			328 = {
+				add_building_construction = {
+					type = steel_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = aluminium_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = advanced_steel_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+
+        	modify_building_resources = {
+        	   building = steel_refinery
+        	   resource = steel
+        	   amount = 2
+        	}
+
+        	modify_building_resources = {
+        	   building = aluminium_refinery
+        	   resource = aluminium
+        	   amount = 2
+        	}
+
+
+        	modify_building_resources = {
+        	   building = advanced_steel_refinery
+        	   resource = tungsten
+        	   amount = 1
+        	}
+        	modify_building_resources = {
+        	   building = advanced_steel_refinery
+        	   resource = chromium
+        	   amount = 1
+        	}
 		}
 	}
 

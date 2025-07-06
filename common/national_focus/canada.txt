@@ -2841,12 +2841,7 @@ CAN = {
 				name = CAN_supply_the_empire
 				bonus = 1.0
 				uses = 3
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-				technology = excavation6
+				category = excavation_tech
 			}
 		}
 	}

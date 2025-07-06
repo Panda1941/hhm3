@@ -524,12 +524,7 @@ focus_tree = {
 				name = GER_autarky
 				bonus = 1.0
 				uses = 1
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-				technology = excavation6
+				category = excavation_tech
 			}
 
 			add_ideas = GER_agricultural_reform_idea
@@ -1754,12 +1749,7 @@ focus_tree = {
 				name = GER_autarky
 				bonus = 1.0
 				uses = 3
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-				technology = excavation6
+				category = excavation_tech
 			}
 			add_ideas = GER_autarky_idea
 		}
