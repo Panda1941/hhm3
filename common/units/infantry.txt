@@ -670,6 +670,10 @@ sub_units = {
 		}
 
 		combat_width = 2
+
+
+		soft_attack = 0.2
+		hard_attack = 0.8
 		
 		#Size Definitions
 		max_strength = 25
@@ -685,8 +689,6 @@ sub_units = {
 		
 		supply_consumption = 0.095 #was 0.14
 
-		hard_attack = 0.5
-		soft_attack = 0.3
 		
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
