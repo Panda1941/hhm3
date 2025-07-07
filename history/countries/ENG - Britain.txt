@@ -70,7 +70,7 @@ set_technology = {
 	fuel_refining = 1
 	pack = 1
 	interwar_antitank = 1
-	superior_firepower_overall = 1
+	grand_battleplan_overall = 1
 }
 
 

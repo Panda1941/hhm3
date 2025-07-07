@@ -123,7 +123,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
-				text = "MOBILE_WARFARE_DOCTRINE_DESC"
+				text = "MOBILE_WARFARE_DOCTRINE_DESC_MOD"
 				maxWidth = 350
 				maxHeight = 122
 				format = center
@@ -136,7 +136,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
-				text = "SUPERIOR_FIREPOWER_DOCTRINE_DESC"
+				text = "SUPERIOR_FIREPOWER_DOCTRINE_DESC_MOD"
 				maxWidth = 400
 				maxHeight = 122
 				format = center
@@ -149,7 +149,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
-				text = "GRAND_BATTLEPLAN_DOCTRINE_DESC"
+				text = "GRAND_BATTLEPLAN_DOCTRINE_DESC_MOD"
 				maxWidth = 350
 				maxHeight = 122
 				format = center
@@ -162,7 +162,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_20b"
 				borderSize = {x = 0 y = 4}
-				text = "MASS_ASSAULT_DOCTRINE_DESC"
+				text = "MASS_ASSAULT_DOCTRINE_DESC_MOD"
 				maxWidth = 300
 				maxHeight = 122
 				format = center

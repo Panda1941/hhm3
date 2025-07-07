@@ -7,15 +7,15 @@
  mobile_warfare_overall_desc:0 ""
  
  
- SUPERIOR_FIREPOWER_OVERALL_LABEL:0 "Superior Firepower USA/ENG"
- SUPERIOR_FIREPOWER_OVERALL_LABEL_TT:0 "USA/ENG bonuses granted by this doctrine"
+ SUPERIOR_FIREPOWER_OVERALL_LABEL:0 "Superior Firepower USA/FRA"
+ SUPERIOR_FIREPOWER_OVERALL_LABEL_TT:0 "USA/FRA bonuses granted by this doctrine"
  
  superior_firepower_overall:0 "Superior Firepower"
  superior_firepower_overall_desc:0 ""
  
  
- GRAND_BATTLEPLAN_OVERALL_LABEL:0 "Grand Battleplan JAP/ITA"
- GRAND_BATTLEPLAN_OVERALL_LABEL_TT:0 "JAP/ITA bonuses granted by this doctrine"
+ GRAND_BATTLEPLAN_OVERALL_LABEL:0 "Grand Battleplan JAP/ITA/ENG"
+ GRAND_BATTLEPLAN_OVERALL_LABEL_TT:0 "JAP/ITA/ENG bonuses granted by this doctrine"
  
  grand_battleplan_overall:0 "Grand Battleplan"
  grand_battleplan_overall_desc:0 ""
