@@ -92,7 +92,7 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			flamethrower
+			#flamethrower
 		}
 		
 		path = {
@@ -1675,7 +1675,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 0 }
+			position = { x = 2 y = 3 }
 		}
 		
 		categories = {
@@ -1708,9 +1708,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
-		folder = {
+		folder = {	
 			name = support_folder
-			position = { x = 1 y = 3 }
+			position = { x = 4 y = 0 }
 		}
 		
 		categories = {
@@ -1763,7 +1763,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 2 y = 0 }
+			position = { x = 0 y = 3 }
 		}
 		
 		categories = {

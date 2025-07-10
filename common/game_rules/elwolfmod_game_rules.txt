@@ -34,22 +34,6 @@ sov_boost = {
 	}
 }
 
-sov_closed_eco = {
-	name = "Soviets Closed Eco"
-	group = "HHM Rules"
-	icon = "GFX_decision_SOV_socialism_in_one_country"
-	option = {
-		name = off
-		text = "ROff"
-		desc = "Soviets start on export focus (Not Reccomended)"
-	}
-	default = {
-		name = on
-		text = "GOn"
-		desc = "Soviets start the game on closed eco, free trade bonuses (Reccomended)"
-	}
-}
-
 ger_boost = {
 	name = "German Factory Boost"
 	group = "HHM Rules"
@@ -78,6 +62,126 @@ ger_boost = {
 		name = nerd
 		text = "RNERD"
 		desc = "Small nerf to the country (Not Reccomended)"
+	}
+}
+
+jap_boost = {
+	name = "Japan Factory Boost"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+}
+
+ita_boost = {
+	name = "Italy Factory Boost"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+}
+
+eng_boost = {
+	name = "United Kingdom Factory Boost"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+}
+
+usa_boost = {
+	name = "United States Factory Boost"
+	group = "HHM Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+}
+
+sov_closed_eco = {
+	name = "Soviets Closed Eco"
+	group = "HHM Rules"
+	icon = "GFX_decision_SOV_socialism_in_one_country"
+	option = {
+		name = off
+		text = "ROff"
+		desc = "Soviets start on export focus (Not Reccomended)"
+	}
+	default = {
+		name = on
+		text = "GOn"
+		desc = "Soviets start the game on closed eco, free trade bonuses (Reccomended)"
 	}
 }
 

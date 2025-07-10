@@ -13,6 +13,31 @@ horst_host_country = {
 		desc = ""
 	}
 	option = {
+		name = JAP
+		text = "Japan"
+		desc = ""
+	}
+	option = {
+		name = ENG
+		text = "United Kingdom"
+		desc = ""
+	}
+	option = {
+		name = USA
+		text = "USA"
+		desc = ""
+	}
+	option = {
+		name = FRA
+		text = "France"
+		desc = ""
+	}
+	option = {
+		name = SOV
+		text = "Soviet Union"
+		desc = ""
+	}
+	option = {
 		name = ROM
 		text = "Romania"
 		desc = ""
@@ -30,16 +55,6 @@ horst_host_country = {
 	option = {
 		name = FIN
 		text = "Finland"
-		desc = ""
-	}
-	option = {
-		name = ENG
-		text = "United Kingdom"
-		desc = ""
-	}
-	option = {
-		name = USA
-		text = "USA"
 		desc = ""
 	}
 	option = {
@@ -68,23 +83,8 @@ horst_host_country = {
 		desc = ""
 	}
 	option = {
-		name = JAP
-		text = "Japan"
-		desc = ""
-	}
-	option = {
 		name = MAN
 		text = "Manchukuo"
-		desc = ""
-	}
-	option = {
-		name = SOV
-		text = "Soviet Union"
-		desc = ""
-	}
-	option = {
-		name = FRA
-		text = "France"
 		desc = ""
 	}
 	option = {

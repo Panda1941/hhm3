@@ -41,7 +41,7 @@ technologies = {
 			#secondary_turret_small_cannon
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 
 		folder = {
 			name = artillery_folder
@@ -80,10 +80,6 @@ technologies = {
 			defense = 0.10
 		}
 		artillery_brigade = {
-			soft_attack = 0.1
-			defense = 0.10
-		}
-		pack_artillery = {
 			soft_attack = 0.1
 			defense = 0.10
 		}
@@ -246,10 +242,6 @@ technologies = {
 			soft_attack = 0.1
 			breakthrough = 0.1
 		}
-		pack_artillery = {
-			soft_attack = 0.1
-			breakthrough = 0.1
-		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 			breakthrough = 0.1
@@ -317,10 +309,6 @@ technologies = {
 		artillery_brigade = {
 			soft_attack = 0.1
 			defense = 0.10 
-		}
-		pack_artillery = {
-			soft_attack = 0.1
-			defense = 0.10
 		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
@@ -473,10 +461,6 @@ technologies = {
 			soft_attack = 0.1
 			breakthrough = 0.1
 		}
-		pack_artillery = {
-			soft_attack = 0.1
-			breakthrough = 0.1
-		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 			breakthrough = 0.1
@@ -547,10 +531,6 @@ technologies = {
 			defense = 0.10
 		}
 		artillery_brigade = {
-			soft_attack = 0.1
-			defense = 0.10
-		}
-		pack_artillery = {
 			soft_attack = 0.1
 			defense = 0.10
 		}
@@ -675,10 +655,6 @@ technologies = {
 			soft_attack = 0.1
 			breakthrough = 0.1
 		}
-		pack_artillery = {
-			soft_attack = 0.1
-			breakthrough = 0.1
-		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 			breakthrough = 0.1
@@ -747,10 +723,6 @@ technologies = {
 			soft_attack = 0.1
 			defense = 0.10
 		}
-		pack_artillery = {
-			soft_attack = 0.1
-			defense = 0.10
-		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 			defense = 0.10
@@ -811,10 +783,6 @@ technologies = {
 			breakthrough = 0.1
 		}
 		artillery_brigade = {
-			soft_attack = 0.1
-			breakthrough = 0.1
-		}
-		pack_artillery = {
 			soft_attack = 0.1
 			breakthrough = 0.1
 		}
@@ -889,7 +857,7 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = artillery_folder
@@ -914,13 +882,18 @@ technologies = {
 		enable_equipments = {
 			pack_artillery_equipment_2
 		}
+		pack_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			defense = 0.1
+		}
 		
 		path = {
 			leads_to_tech = pack4
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2.0
+		research_cost = 1.0
 		start_year = 1939
 		
 		folder = {
@@ -946,8 +919,13 @@ technologies = {
 		enable_equipments = {
 			pack_artillery_equipment_3
 		}
+		pack_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			defense = 0.1
+		}
 	
-		research_cost = 2.0
+		research_cost = 1.0
 		start_year = 1941
 		
 		folder = {
@@ -1074,7 +1052,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.0
+		research_cost = 1.5
 		xp_research_type = army
 		xp_boost_cost = 50
 		xp_research_bonus = 0.50
@@ -1127,7 +1105,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.0
+		research_cost = 1.5
 		xp_research_type = army
 		xp_boost_cost = 50
 		xp_research_bonus = 0.50
@@ -1180,7 +1158,7 @@ technologies = {
 			leads_to_tech = rocket_artillery6
 			research_cost_coeff = 1
 		}
-		research_cost = 1.0
+		research_cost = 1.5
 
 		start_year = 1942
 
@@ -1230,7 +1208,7 @@ technologies = {
 
 		
 
-		research_cost = 1.0
+		research_cost = 1.5
 		xp_research_type = army
 		xp_boost_cost = 50
 		xp_research_bonus = 0.50
@@ -1280,7 +1258,7 @@ technologies = {
 
 		
 
-		research_cost = 1.0
+		research_cost = 1.5
 		xp_research_type = army
 		xp_boost_cost = 50
 		xp_research_bonus = 0.50
@@ -1338,7 +1316,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 
 		start_year = 1936
 
@@ -2133,7 +2111,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 
 		start_year = 1936
 
