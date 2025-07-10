@@ -185,12 +185,83 @@ leader_skills = {
 	}
 
 	2 = {
-		cost = 1000
+		cost = 200
+		type = operative
+		modifier = {
+			intel_network_gain = 0.05
+			intelligence_agency_defense = 0.05
+		}
+	}
+
+	3 = {
+		cost = 300
+		type = operative
+		modifier = {
+			intel_network_gain = 0.1
+			intelligence_agency_defense = 0.1
+		}
+	}
+
+	4 = {
+		cost = 400
+		type = operative
+		modifier = {
+			intel_network_gain = 0.15
+			intelligence_agency_defense = 0.15
+		}
+	}
+
+	5 = {
+		cost = 500
+		type = operative
+		modifier = {
+			intel_network_gain = 0.2
+			intelligence_agency_defense = 0.2
+		}
+	}
+
+	6 = {
+		cost = 600
 		type = operative
 		modifier = {
 			intel_network_gain = 0.25
 			intelligence_agency_defense = 0.25
-			operation_outcome = 0.1
+		}
+	}
+
+	7 = {
+		cost = 700
+		type = operative
+		modifier = {
+			intel_network_gain = 0.3
+			intelligence_agency_defense = 0.3
+		}
+	}
+
+	8 = {
+		cost = 800
+		type = operative
+		modifier = {
+			intel_network_gain = 0.35
+			intelligence_agency_defense = 0.35
+		}
+	}
+
+	9 = {
+		cost = 900
+		type = operative
+		modifier = {
+			intel_network_gain = 0.4
+			intelligence_agency_defense = 0.4
+		}
+	}
+
+	10 = {
+		cost = 1000
+		type = operative
+		modifier = {
+			intel_network_gain = 0.5
+			intelligence_agency_defense = 0.5
 		}
 	}
 }

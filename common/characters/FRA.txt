@@ -140,12 +140,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist cavalry_officer war_hero trickster cavalry_leader organizer }
-			skill=4
-			attack_skill=4
-			defense_skill=2
+			traits={ brilliant_strategist cavalry_officer armor_officer war_hero trickster cavalry_leader panzer_leader organizer trait_engineer ranger }
+			skill=6
+			attack_skill=6
+			defense_skill=4
 			planning_skill=4
-			logistics_skill=3
+			logistics_skill=5
 			legacy_id=0
 		}
 	}
@@ -159,12 +159,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer trait_cautious armor_officer panzer_leader }
-			skill=4
-			attack_skill=3
-			defense_skill=2
+			traits={ career_officer trait_cautious cavalry_officer armor_officer cavalry_leader panzer_leader organizer trait_engineer hill_fighter }
+			skill=6
+			attack_skill=5
+			defense_skill=5
 			planning_skill=4
-			logistics_skill=4
+			logistics_skill=6
 			legacy_id=0
 		}
 	}
@@ -199,12 +199,12 @@ characters={
 		}
 
 		field_marshal={
-			traits={ old_guard inflexible_strategist career_officer defensive_doctrine }
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
+			traits={ old_guard inflexible_strategist career_officer defensive_doctrine organizer }
+			skill=6
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
 			legacy_id=0
 		}
 	}
@@ -239,12 +239,12 @@ characters={
 		}
 		
 		field_marshal={
-			traits={ old_guard inflexible_strategist career_officer defensive_doctrine }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
+			traits={ old_guard inflexible_strategist career_officer defensive_doctrine organizer }
+			skill=5
+			attack_skill=4
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=3
 			legacy_id=0
 		}
 	}
@@ -345,8 +345,8 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ media_personality harsh_leader armor_officer infantry_leader }
-			skill=4
+			traits={ media_personality harsh_leader armor_officer infantry_leader skilled_staffer trait_engineer commando hill_fighter ranger urban_assault_specialist }
+			skill=5
 			attack_skill=4
 			defense_skill=4
 			planning_skill=3

@@ -220,7 +220,14 @@ if = {
 		}
 		cost = 3
 
-		available = {	NOT = { country_exists = AUS }	}
+		available = {	
+			OR = {
+				threat > 0.1
+				has_war = yes
+				GER = { has_completed_focus = GER_anschluss }	# Reverted from earlier
+				date > 1937.06.01	# This is here so you don't get cucked out of this focus in asia scenario
+			}	
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
