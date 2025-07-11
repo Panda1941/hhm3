@@ -1309,6 +1309,20 @@ GER_ruhr_valley = {
 	state_production_speed_buildings_factor = 0.25
 }
 
+HUN_regional_industrial_developments = {
+	enable = { always = yes }
+	icon = GFX_modifiers_ETH_state_development
+
+	state_production_speed_buildings_factor = 0.05
+}
+
+HUN_regional_industrial_developments_fail = {
+	enable = { always = yes }
+	icon = GFX_modifiers_ETH_state_development
+
+	state_production_speed_buildings_factor = -0.10
+}
+
 france_early_core = {
 	enable = { always = yes }
 
