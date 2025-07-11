@@ -896,4 +896,8 @@
  infantry_mot_desc:0"Mobile Infantry fore greater speed."
  
  ENG_industrial_expansion_effect_tt:0 "§RFor every colony developed gain 2 military factories after the conference is over!"
+ HUN_regional_industrial_developments:0 "Industrial Development"
+ HUN_regional_industrial_developments_fail:0 "Regional Development Fails"
+ HUN_industrialization_countdown_tt:0 "§RStarts a mission for industrialization!"
+ HUN_pp_tt:0 "§RHaving the treaty of trianon spirit will make it cost political power in addition!"
 

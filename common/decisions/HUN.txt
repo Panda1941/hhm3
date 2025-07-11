@@ -1,0 +1,54 @@
+HUN_industrialisation_category = {
+HUN_industrialisation = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = HUN
+		}
+		
+		#visible = {
+		#	OR = {
+		#		HUN = { has_completed_focus = HUN_Industrialize_Budapest }
+		#		HUN = { has_completed_focus = HUN_Industrialize_Miskolc }
+		#		HUN = { has_completed_focus = HUN_Industrialize_Debrecen }
+		#			}
+		#}
+
+		#Fail trigger
+		available = {
+			has_completed_focus = HUN_industrialisation_end
+		}
+
+		days_mission_timeout = 365
+
+		fire_only_once = yes
+
+		is_good = yes
+
+		activation = {
+		    OR = {
+				HUN = { has_completed_focus = HUN_Industrialize_Budapest }
+				HUN = { has_completed_focus = HUN_Industrialize_Miskolc }
+				HUN = { has_completed_focus = HUN_Industrialize_Debrecen }
+					}
+		}
+
+		#Success
+		timeout_effect = {
+		    43 = { #Northern Hungary
+				add_dynamic_modifier = { modifier = HUN_regional_industrial_developments_fail scope = HUN days = 365 }	
+			}
+			154 = { #Debrecen
+				add_dynamic_modifier = { modifier = HUN_regional_industrial_developments_fail scope = HUN days = 365 }	
+			}
+			155 = { #Transdanubia
+				add_dynamic_modifier = { modifier = HUN_regional_industrial_developments_fail scope = HUN days = 365 }	
+			}
+			add_stability = -0.10
+		}
+		#Fail
+		complete_effect = {
+		}
+}
+}
