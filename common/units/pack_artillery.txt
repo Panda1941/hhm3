@@ -29,8 +29,8 @@ sub_units = {
 			pack_artillery_equipment = 28
 		}
 		
-		max_strength = 1.0
-		max_organisation = 10
+		max_strength = 1
+		max_organisation = 25
 		default_morale = 0.2
 		training_time = 140
 		weight = 0.5
@@ -41,32 +41,39 @@ sub_units = {
 
 
 		forest = {
-			attack = -0.15
-			movement = -0.05
+			attack = -0.1
+			defence = 0.05
+		}
+
+		hills = {
+			attack = 0.1
+			defence = 0.05
+			movement = 0.05
 		}
 
 		mountain = {
-			attack = 0.05
+			attack = 0.1
+			defence = 0.05
 			movement = 0.05
 		}
 
 		jungle = {
-			attack = -0.20
-			movement = -0.15
+			attack = -0.1
+			defence = 0.05
 		}
 
 		marsh = {
-			attack = -0.15
-			movement = -0.15
+			attack = -0.05
+			defence = 0.05
 		}
 
 		river = {
-			attack = -0.2
-			movement = -0.1
+			attack = -0.05
+			defence = 0.05
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.2
 		}
 	}
 }
