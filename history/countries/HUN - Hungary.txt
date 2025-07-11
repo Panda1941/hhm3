@@ -39,7 +39,6 @@ if = {
 	add_ideas = {
 		disarmed_nation
 		HUN_treaty_of_triannon
-		HUN_societal_inequality
 		AFRICA_COMMONWEALTH_controls_axis_idea_6
 	}
 }

@@ -1,4 +1,4 @@
-### search_filters = {FOCUS_FILTER_POLITICAL}
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -60,15 +60,15 @@ focus_tree = {
 #		}
 #	}
 
-	##############################
-	##### INDUSTRYAL FOCUSES #####
-	##############################
+	############################
+	##### BALANCED BUDGET ######
+	############################
 
 	focus = {
-		id = HUN_Revitalize_Post_Depression_Economy
-		text ="Revitalize Post-Depression Economy"
-		icon = GFX_focus_HUN_economic_intervention
-		x = 18
+		id = HUN_balanced_budget
+		icon = GFX_goal_generic_consumer_goods
+		mutually_exclusive = { focus = HUN_economic_intervention }
+		x = 2
 		y = 0
 
 		cost = 5
@@ -89,243 +89,26 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		#custom_effect_tooltip = available_political_advisor
-		#show_ideas_tooltip = HUN_lajos_remenyi_schneller
-        add_ideas = HUN_lajos_remenyi_schneller		
-		}
-	}
-	
-	focus = {
-		id = HUN_agricultural_land_grants
-		text ="Agricultural Subsidy Program"
-		icon = GFX_goal_generic_farm_tractor
-		prerequisite = { focus = HUN_Revitalize_Post_Depression_Economy }
-		x = 23
-		y = 1
+			add_political_power = 120
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 155 }
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_controlled_state = {
-				prioritize = { 43 }
-				add_extra_state_shared_building_slots = 2
-			}
-			random_owned_controlled_state = {
-				prioritize = { 154 }
-				add_extra_state_shared_building_slots = 3
-			}
-			random_owned_controlled_state = {
-				prioritize = { 917 }
-				add_extra_state_shared_building_slots = 3
-			}
-			random_owned_controlled_state = {
-				prioritize = { 916 }
-				add_extra_state_shared_building_slots = 3
-			}
-		}
-	}
-	
-	focus = {
-		id = HUN_Agricultural_Subsidy_Program
-		text ="Economic Interventionism"
-		icon = GFX_goal_generic_agrarian_reform
-		prerequisite = { focus = HUN_agricultural_land_grants }
-		x = 23
-		y = 2
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-		HUN = { has_completed_focus = HUN_Industrialize_Budapest }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		add_ideas = HUN_interventionism	
-		}
-	}
-	
-	focus = {
-		id = HUN_agricultural_modernisation
-		text="Agricultural Modernisation"
-		icon = GFX_goal_generic_production2
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		available = {	
-			owns_state = 155 	#Transdanubia
-		}
-		
-		prerequisite = { focus = HUN_Agricultural_Subsidy_Program }
-		x = 0	
-		y = 1
-		relative_position_id = HUN_Agricultural_Subsidy_Program
-		
-		cost = 5 	
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-		}
-	}
-	
-	focus = {
-		id = HUN_trade_deals_with_germany
-		text="Establish German Trade"
-		icon = GFX_goal_generic_trade
-		x = -1
-		y = 1
-		relative_position_id = HUN_agricultural_modernisation
-		prerequisite = { focus = HUN_agricultural_modernisation }
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		cost = 5	
-		available = {
-			has_completed_focus = HUN_announce_the_gyor_program
-			#GER_will_support = yes
-		}
-				
-		completion_reward = {
-			#add_offsite_building = { type = arms_factory level = 1 }
-			#GER = {
-			#	add_offsite_building = { type = industrial_complex level = 1 }
-			#}
-			HUN = { add_ideas = HUN_GER_trade_treaty }
-			GER = { add_ideas = GER_HUN_trade_treaty }
+			add_ideas = HUN_balanced_budget
 		}
 	}
 
 	focus = {
-		id = HUN_trade_deals_with_italy
-		text="Establish Italian Trade"
-		icon = GFX_goal_generic_trade
-		prerequisite = { focus = HUN_agricultural_modernisation }
-		x = 1
-		y = 1
-		relative_position_id = HUN_agricultural_modernisation
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-		cost = 5
-		available = {
-			has_completed_focus = HUN_announce_the_gyor_program
-
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-		    #add_offsite_building = { type = arms_factory level = 1 }
-			#ITA = {
-			#	add_offsite_building = { type = industrial_complex level = 1 }
-			#}
-			HUN = { add_ideas = HUN_ITA_trade_treaty }
-			ITA = { add_ideas = ITA_HUN_trade_treaty }
-		}
-	}	
-	
-	focus = {
-		id = HUN_nationalize_key_industries
-		icon = GFX_focus_ROM_fascist_economics
-		text="Nationalize key industries"
-	
-		prerequisite = { focus = HUN_economic_interventionism }
-		x = 26
-		y = 2
-		
-
-		cost = 5
-		
-		available = {
-		HUN = { has_completed_focus = HUN_Agricultural_Subsidy_Program }
-		HUN = { has_completed_focus = HUN_agricultural_land_grants }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			economy_fatigue_level_up_2 = yes
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				prioritize = { 155 }
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				prioritize = { 43 }
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_stability = -0.05
-		}
-	}
-
-	focus = {
-		id = HUN_subsidise_the_lower_class
-		text="Subsidise the lower class"
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = HUN_nationalize_key_industries }
+		id = HUN_strengthen_the_monarchists
+		icon = GFX_focus_HUN_strengthen_the_monarchists
+		prerequisite = { focus = HUN_balanced_budget }
 		x = 0
 		y = 1
-		relative_position_id = HUN_nationalize_key_industries
+		relative_position_id = HUN_balanced_budget
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			remove_ideas = HUN_societal_inequality
-		}
-	}
-	
-	focus = {
-		id = HUN_Industrialize_Budapest
-		text ="Industrialize Budapest"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Revitalize_Post_Depression_Economy }
-		x = 10
-		y = 1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
+			factor = 80
 		}
 
 		available = {
@@ -338,37 +121,31 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
+		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-        
-        43 = {
-			  set_state_category = megalopolis
-			  add_dynamic_modifier = {
-					modifier = HUN_regional_industrial_developments
-				}
-			 }
-        custom_effect_tooltip = HUN_industrialization_countdown_tt			 
+			add_ideas = HUN_hungarian_monarchy
+			set_party_name = { ideology = neutrality long_name = HUN_legitimists_party_long name = HUN_legitimists_party }
 		}
 	}
-	
+
 	focus = {
-		id = HUN_Industrialize_Miskolc
-		text ="Industrialize Miskolc"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Revitalize_Post_Depression_Economy }
-		x = 12
-		y = 1
+		id = HUN_elect_a_king
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = HUN_strengthen_the_monarchists }
+		x = 0
+		y = 2
+		relative_position_id = HUN_balanced_budget
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 50
+			factor = 80
 		}
 
 		available = {
-
+			neutrality > 0.3
 		}
 
 		bypass = {
@@ -377,33 +154,104 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
+		available_if_capitulated = yes
 		
-        155 = {
-			   set_state_category = city
-               add_dynamic_modifier = {
-					modifier = HUN_regional_industrial_developments
-				}			   
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HUN_hungarian_monarchy
+				add_idea = HUN_hungarian_monarchy_2
 			}
-        custom_effect_tooltip = HUN_industrialization_countdown_tt			
 		}
 	}
-	
+
+
+	############################
+	####### FASCIST KING #######
+	############################
+
 	focus = {
-		id = HUN_Industrialize_Debrecen
-		text ="Industrialize Debrecen"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Revitalize_Post_Depression_Economy }
+		id = HUN_elect_a_fascist_king
+		icon = GFX_focus_HUN_elect_a_fascist_king
+		prerequisite = { focus = HUN_elect_a_king }
+		x = 0
+		y = 1
+		relative_position_id = HUN_elect_a_king
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality				
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HUN_hungarian_monarchy_fascism
+				remove_idea = HUN_hungarian_monarchy_2
+			}
+			set_cosmetic_tag = HUN_MONARCHY
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_country_leader_role = {
+					character = "HUN_franz_friedrich"
+					country_leader = {
+					  ideology=despotism
+					  traits = { fascist_sympathies }
+					  expire="1965.1.1"
+					}
+					promote_leader = yes
+				}				
+			}
+			else = {
+				add_country_leader_role = {
+					character = "HUN_franz_friedrich"
+					country_leader = {
+					  ideology=nazism
+					  expire="1965.1.1"
+					}
+					promote_leader = yes
+				}	
+			}
+			hidden_effect = {
+				news_event = { id = news.297 }
+			}
+		}
+	}
+
+	############################
+	## ECONOMIC INTERVENTION ###
+	############################
+
+	focus = {
+		id = HUN_economic_intervention
+		icon = GFX_focus_HUN_economic_intervention
+		mutually_exclusive = { focus = HUN_balanced_budget }
 		x = 8
-		y = 1
+		y = 0
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 		}
 
 		available = {
@@ -418,261 +266,30 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		
-        916 = {
-						set_state_category = city
-                        add_dynamic_modifier = {
-					modifier = HUN_regional_industrial_developments
-				}						
-		}
-        custom_effect_tooltip = HUN_industrialization_countdown_tt		
-		}
-	}
-	
-	focus = {
-		id = HUN_the_debrecen_industrial_concern
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = HUN_Industrialize_Debrecen }
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		available = {	
-			owns_state = 154 	#Debrecen
-		}
-		x = 0
-		y = 1
-		relative_position_id = HUN_Industrialize_Debrecen
-		cost = 5 
-	
-		completion_reward = {
-			154 = {
-				
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}		
-		}
-	}
-	
-	focus = {
-		id = HUN_transdanubian_construction_grants
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = HUN_budapest_industrial_district }
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		available = {	
-			owns_state = 155 	#Transdanubia
-		}
-		x = 0
-		y = 1
-		relative_position_id = HUN_budapest_industrial_district
-		cost = 5 
-	
-		completion_reward = {
-			155 = {
-				
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}		
-		}
-	}
-	
-	focus = {
-		id = HUN_industrialisation_end
-		icon = GFX_goal_generic_construction
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		available = {	
-			HUN = { has_completed_focus = HUN_transdanubian_construction_grants }
-			HUN = { has_completed_focus = HUN_artillery_factory_in_gyor }
-			HUN = { has_completed_focus = HUN_the_debrecen_industrial_concern }
-		}
-		x = 0
-		y = 2
-		relative_position_id = HUN_transdanubian_construction_grants
-		cost = 5 
-	
-		completion_reward = {
-		add_ideas = {HUN_balanced_budget}
-			43 = {
-			  remove_dynamic_modifier = {
-					modifier = HUN_regional_industrial_developments
-				}
-}
-        155 = {
-               remove_dynamic_modifier = {
-					modifier = HUN_regional_industrial_developments
-				}			   
-}
-        916 = {
-               remove_dynamic_modifier = {
-					modifier = HUN_regional_industrial_developments
-				}						
-}		
-		}
-	}
-	
-	focus = {
-		id = HUN_miskolc_arms_factory
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = HUN_Industrialize_Miskolc }
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		available = {	
-			owns_state = 43 	#Northern Hungary
-		}
-		
-		x = 0
-		y = 1
-		relative_position_id = HUN_Industrialize_Miskolc
-		cost = 5
-		completion_reward = {
-		IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-				add_political_power = -50
-			43 = {	#Northern Hungary
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		else = {
-				43 = {	#Northern Hungary
-				
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-custom_effect_tooltip = HUN_pp_tt		
-		}
-	}
-	
-	focus = {
-		id = HUN_artillery_factory_in_gyor
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = HUN_miskolc_arms_factory }
-		prerequisite = { focus = HUN_announce_the_gyor_program }
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		available = {	
-			owns_state = 155 	#Transdanubia
-		}
-		x = 0
-		y = 1
-		relative_position_id = HUN_miskolc_arms_factory
-		cost = 5 
-	
-		completion_reward = {
-		
-		IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-			155 = {	#Northern Hungary
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_political_power = -50
-			add_ideas = { gyor_artillery }
-		}
-		else = {
-				155 = {	#Northern Hungary
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_ideas = { gyor_artillery }
-		}
-custom_effect_tooltip = HUN_pp_tt		
-		}
-					
-	}
-	
-	focus = {
-		id = HUN_budapest_ferihegy_airport
-		text="Ferihegy Airport"
-		icon = GFX_goal_generic_air_production
 
-		prerequisite = { focus = HUN_Industrialize_Budapest }
-		search_filters = {FOCUS_FILTER_AIRFORCE FOCUS_FILTER_INDUSTRY}
-		available = {	
-			owns_state = 43 	#Pest
-		}
-		x = 0
-		y = 1
-		relative_position_id = HUN_Industrialize_Budapest
-		cost = 5 	
 		completion_reward = {
-			43 = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}	
+			add_ideas = HUN_interventionism
 		}
 	}
-	
+
+
+
+	############################
+	####### FASCIST PATH #######
+	############################
+
 	focus = {
-		id = HUN_budapest_industrial_district
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = HUN_budapest_ferihegy_airport }
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		available = {	
-			owns_state = 43 	#Budapest
-		}
+		id = HUN_strengthen_fascists
+		icon = GFX_focus_HUN_strengthen_fascists
+		prerequisite = { focus = HUN_economic_intervention }
 		x = 0
 		y = 1
-		relative_position_id = HUN_budapest_ferihegy_airport
-		cost = 5	
-		completion_reward = {
-			43 = {
-				
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}		
-		}
-	}
-	
-	focus = {
-		id = HUN_Coal_Mining_Expansion_in_Transdanubia
-		text ="Coal Mining Expansion in Nyitra"
-		icon = GFX_focus_GER_coal_liquidization
-		prerequisite = { focus = HUN_Revitalize_Post_Depression_Economy }
-		x = 30
-		y = 1
+		relative_position_id = HUN_economic_intervention
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 50
+			factor = 90
 		}
 
 		available = {
@@ -685,501 +302,89 @@ custom_effect_tooltip = HUN_pp_tt
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
+		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		43 = {
-				add_resource = {
-					type = steel 
-					amount = 24 
-				}
-			}	
+			add_timed_idea = { idea = HUN_strengthen_fascists days = 720 }
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			set_party_name = { ideology = fascism long_name = HUN_arrow_cross_party_long name = HUN_arrow_cross_party }
 		}
 	}
-	
+
 	focus = {
-		id = HUN_Steel_Contracts_with_Germany
-		text ="Steel Contracts with Germany"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Coal_Mining_Expansion_in_Transdanubia }
-		x = 30
-		y = 2
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		    random_owned_controlled_state = {
-				prioritize = { 46 }
-				add_building_construction = {
-					type = steel_refinery
-					level = 1
-					instant_build = yes 
-				}
-			}	
-		}
-	}
-	
-	focus = {
-		id = HUN_Reopen_Wartime_Factories
-		text ="Reopen Wartime Factories"
-		icon = GFX_goal_generic_consumer_goods
-		#prerequisite = { focus = HUN_Steel_Contracts_with_Germany }
-		#prerequisite = { focus = HUN_Industrialize_Budapest }
-		x = 16
-		y = 6
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-		date>1937.01.01
-		HUN = { has_completed_focus = HUN_Steel_Contracts_with_Germany }
-		HUN = { has_completed_focus = HUN_Industrialize_Budapest }
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-			random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes 
-				}
-			}
-			add_political_power = -50
-		}
-else = {
-				random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes 
-				}
-			}
-		}
-custom_effect_tooltip = HUN_pp_tt			
-		}
-	}
-	
-	focus = {
-		id = HUN_Military_Factory_Expansion
-		text ="Military Factory Expansion"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Reopen_Wartime_Factories }
-		x = 17
-		y = 7
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-			random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes 
-				}
-			}
-			add_political_power = -50
-		}
-else = {
-				random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes 
-				}
-			}
-		}
-custom_effect_tooltip = HUN_pp_tt			
-		}
-	}
-	
-	focus = {
-		id = HUN_Improve_Danube_Logistics
-		text ="Improve Danube Logistics"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Military_Factory_Expansion }
-		x = 18
-		y = 8
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		add_equipment_to_stockpile = {
-				type = convoy
-				amount = 100
-			}	
-		}
-	}
-	
-	focus = {
-		id = HUN_Csepel_Works_Modernization
-		text ="Csepel Works Modernization"
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = HUN_Reopen_Wartime_Factories}
-		x = 15
-		y = 7
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-        date>1938.01.01
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-			random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes 
-				}
-			}
-			add_political_power = -50
-		}
-else = {
-				random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes 
-				}
-			}
-		}
-custom_effect_tooltip = HUN_pp_tt			
-		}
-	}
-	
-	focus = {
-		id = HUN_Synthetic_Oil_Research_Begins
-		text ="Synthetic Oil Research Begins"
-		icon = GFX_goal_generic_consumer_goods
-		#prerequisite = { focus = HUN_Coal_Mining_Expansion_in_Transdanubia}
-		#prerequisite = { focus = HUN_Industrialize_Budapest}
-		x = 21
-		y = 6
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-        HUN = { has_completed_focus = HUN_Coal_Mining_Expansion_in_Transdanubia }
-		HUN = { has_completed_focus = HUN_Industrialize_Budapest }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		add_tech_bonus = {
-				name = HUN_synthetic_industry
-				bonus = 3.0
-				uses = 1
-				category = synth_resources
-			}	
-		}
-	}
-	
-	focus = {
-		id = HUN_prepare_oil_stockpiles
-		text="Prepare Oil Stockpiles"
-		icon = GFX_goal_generic_fuel_silo
-		prerequisite = { focus = HUN_Synthetic_Oil_Research_Begins }
+		id = HUN_renounce_the_treaty_of_trianon
+		icon = GFX_focus_HUN_renounce_the_treaty_of_trianon
+		prerequisite = { focus = HUN_strengthen_fascists focus = HUN_elect_a_fascist_king }
 		x = 0
-		y = 1
-		relative_position_id = HUN_Synthetic_Oil_Research_Begins
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+		y = 3
+		relative_position_id = HUN_strengthen_fascists
+
 		cost = 5
 
 		ai_will_do = {
-			factor = 70
+			factor = 60
 		}
 
 		available = {
-			controls_state = 70
+			OR = {
+				has_government = fascism
+				fascism > 0.4
+			}
+			is_subject = no
 		}
 
 		bypass = {
-
-		}	
-
-		completion_reward = {	
-		
-			random_owned_controlled_state = {
-				prioritize = { 890 }
-				add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = fuel_silo
-                    level = 2
-                    instant_build = yes
-                }
+			NOT = {
+				has_idea = HUN_treaty_of_triannon
+				has_idea = HUN_treaty_of_triannon_2
+				has_idea = HUN_treaty_of_triannon_3
 			}
 		}
-	}
 
-	focus = {
-		id = HUN_expand_nagykanizsa_oil_fields
-		text="Expand Oil Capacity in Nagykanizsa"
-		icon = GFX_goal_GER_ration_fuel
-		prerequisite = { focus = HUN_prepare_oil_stockpiles }
-		x = 1
-		y = 2
-		relative_position_id = HUN_Synthetic_Oil_Research_Begins
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
 
-		ai_will_do = {
-			factor = 70
-		}
-
-		available = {
-			controls_state = 43
-		43 = {
-				is_owned_and_controlled_by = HUN
-				industrial_complex > 0
-		}
-		}
-
-		bypass = {
-
-		}
-		
-		select_effect = {
-	    if = {
-				limit = {
-					has_full_control_of_state = 43
-				}
-				43 = { #Northern Hungary
-					remove_building = {
-						type = industrial_complex
-						level = 1
-					}
-				}
-			}
-		}
 
 		completion_reward = {
-		
-		custom_effect_tooltip = HUN_oil_1_TT
+			add_threat = 1
 			
-			43 = {
-				add_resource = {
-					type = oil
-					amount = 8
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = HUN_Expand_Oil_Capacity_in_Nagylengyel
-		text ="Expand Oil Capacity in Nagylengyel"
-		icon = GFX_goal_GER_ration_fuel
-		prerequisite = { focus = HUN_prepare_oil_stockpiles}
-		x = -1
-		y = 2
+			remove_ideas = HUN_treaty_of_triannon
 
-		cost = 5
-		
-		relative_position_id = HUN_Synthetic_Oil_Research_Begins
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-        ROOT = { has_full_control_of_state = 155 }
-		155 = {
-				is_owned_and_controlled_by = HUN
-				industrial_complex > 0
-			}
-		}
-
-		bypass = {
-
-		}
-		
-		select_effect = {
-	    if = {
+			if = {
 				limit = {
-					has_full_control_of_state = 155
+					NOT = { has_government = fascism }
 				}
-				155 = { #Transdanubia
-					remove_building = {
-						type = industrial_complex
-						level = 1
-					}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
 				}
 			}
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		
-		custom_effect_tooltip = HUN_oil_2_TT
-		
-		155 = {
-				add_resource = {
-					type = oil 
-					amount = 8 
-				}
-			}			
-		}
 	}
-	
+
 	focus = {
-		id = HUN_autarky
-		text ="Autarky"
-		icon = GFX_focus_GER_autarky
-		prerequisite = { focus = HUN_expand_nagykanizsa_oil_fields}
-		prerequisite = { focus = HUN_Expand_Oil_Capacity_in_Nagylengyel}
-		prerequisite = { focus = HUN_Establish_Aluminum_Imports_via_Axis_Trade}
-		prerequisite = { focus = HUN_Steel_Contracts_with_Germany}
-		x = 6
+		id = HUN_trade_deal_with_germany
+		text = "Under the German Economic Jackboot"
+		icon = GFX_focus_HUN_trade_deal_with_germany
+		prerequisite = { focus = HUN_renounce_the_treaty_of_trianon }
+		x = 0
 		y = 1
+		relative_position_id = HUN_renounce_the_treaty_of_trianon
+		available = {
+			NOT = { GER = { has_government = communism } }
+		}
 
 		cost = 5
-		
-		relative_position_id = HUN_expand_nagykanizsa_oil_fields
 
 		ai_will_do = {
-			factor = 50
+			factor = 80
 		}
 
 		available = {
-		HUN = {
-				oil > 12
-				steel > 60
-				aluminium > 400
-				rubber > 10
-				chromium > 20
-				tungsten > 20
-			}
+			date > 1940.07.01
 		}
 
 		bypass = {
@@ -1190,29 +395,34 @@ custom_effect_tooltip = HUN_pp_tt
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+
 		completion_reward = {
-		add_ideas = HUN_autarky_idea	
+			add_opinion_modifier = { target = GER modifier = HUN_trade_deal_with_germany }
+			reverse_add_opinion_modifier = { target = GER modifier = HUN_trade_deal_with_germany }
+			swap_ideas = {
+				remove_idea = HUN_hungaro_german_trade_agreement
+				add_idea = HUN_hungaro_german_trade_agreement_two
+			}
+			
 		}
 	}
-	
+
 	focus = {
-		id = HUN_Establish_Aluminum_Imports_via_Axis_Trade
-		text ="Establish Aluminum Imports via Axis Trade"
+		id = HUN_joint_aluminum_mining_company
 		icon = GFX_focus_HUN_joint_aluminum_mining_company
-		#prerequisite = { focus = HUN_Industrialize_Budapest}
-		x = 28
+		prerequisite = { focus = HUN_weiss_metal_works_expansion }
+		x = -1
 		y = 1
+		relative_position_id = HUN_weiss_metal_works_expansion
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
-			factor = 50
+			factor = 80
 		}
 
 		available = {
-        HUN = { has_completed_focus = HUN_Industrialize_Budapest }
-		ROOT = { has_full_control_of_state = 43 }
+			ROOT = { has_full_control_of_state = 43 }
 		}
 
 		bypass = {
@@ -1223,9 +433,10 @@ custom_effect_tooltip = HUN_pp_tt
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-		43 = {
+			43 = {
 				add_resource = {
 					type = aluminium
 					amount = 34
@@ -1237,20 +448,265 @@ custom_effect_tooltip = HUN_pp_tt
 				uses = 2 
 				bonus = 1
 				
-			}	
+			}
+		}
+	}
+
+	
+
+	focus = {
+		id = HUN_reaffirm_territorial_claims
+		icon = GFX_focus_HUN_reaffirm_territorial_claims
+		prerequisite = { focus = HUN_trade_deal_with_germany }
+		x = 0
+		y = 2
+		relative_position_id = HUN_renounce_the_treaty_of_trianon
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0.25
+				OR = {
+					YUG = {
+						is_in_faction = yes
+					}
+					ROM = {
+						is_in_faction = yes 
+					}					
+				}
+			}
+			modifier = {
+				factor = 4
+				is_in_faction = yes
+				NOT = {
+					OR = {
+						is_in_faction_with = GER
+						is_in_faction_with = ROM
+						is_in_faction_with = YUG
+					}
+				}
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_state_core = 76
+			add_state_core = 83
+			add_state_core = 84
+			add_state_core = 664
+			add_state_core = 45
+			add_state_core = 764
+			add_state_claim = 82
+		}
+	}
+
+	focus = {
+		id = HUN_demand_transylvania
+		text = "Secon Vienna Award"
+		icon = GFX_focus_HUN_demand_transylvania
+		prerequisite = { focus =  HUN_reaffirm_territorial_claims }
+		x = -1
+		y = 1
+		relative_position_id = HUN_reaffirm_territorial_claims
+		will_lead_to_war_with = ROM
+		cost = 0
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+			always = false
+		
+		}
+
+		bypass = {
+			OR = {
+				NOT = {
+					ROM = {
+						controls_state = 76
+						controls_state = 83
+						controls_state = 84
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {	
+			
+		}
+	}
+
+	focus = {
+		id = HUN_demand_southern_slovakia
+		text = "First Vienna Award"
+		icon = GFX_focus_HUN_demand_southern_slovakia
+		prerequisite = { focus = HUN_reaffirm_territorial_claims }
+		x = 1
+		y = 1
+		relative_position_id = HUN_reaffirm_territorial_claims
+		will_lead_to_war_with = CZE
+		will_lead_to_war_with = SLO
+		cost = 0
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+			
+			always = false
+		}
+
+		bypass = {
+			OR = {
+				owns_state = 664
+				664 = {
+					OWNER = {
+						has_war_with = ROOT
+					}
+				}
+				AND = {
+					NOT = { CZE = { owns_state = 664 } }
+					NOT = { SLO = { owns_state = 664 } }
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			
+			
 		}
 	}
 	
-	####################
-	##### RAILWAYS #####
-	####################
-	
+	focus = {
+		id = HUN_skoda_designs
+		text = "Skoda designs"
+		icon = GFX_hungarianskodaworkstankuser
+		#relative_position_id = HUN_demand_southern_slovakia
+		#prerequisite = { focus = HUN_demand_southern_slovakia }
+		
+		x = 26
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+		GER = { has_completed_focus = GER_end_of_czechoslovakia }
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			mio:CZE_skoda_armor_organization = {
+				add_mio_funds = 1000
+			}
+			mio:CZE_ckd_organization = {
+				add_mio_funds = 1000
+			}
+		
+		}
+	}
+
+
+	focus = {
+		id = HUN_proclaim_greater_hungary
+		icon = GFX_focus_HUN_proclaim_greater_hungary
+		prerequisite = { focus = HUN_demand_southern_slovakia focus = HUN_demand_transylvania }
+		
+		x = 0
+		y = 2
+		relative_position_id = HUN_reaffirm_territorial_claims
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+			OR = {
+				owns_state = 664
+				owns_state = 73
+				owns_state = 76
+				owns_state = 84
+				owns_state = 83
+				owns_state = 82
+				owns_state = 45
+			}
+			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			custom_effect_tooltip = HUN_GREATER_tt
+			set_cosmetic_tag = HUN_GREATER
+			add_stability = 0.1
+			hidden_effect = {
+				news_event = { id = news.299 }
+			}
+		}
+	}
+
+	############################
+	##### INDUSTRY BRANCH ######
+	############################
+
 	focus = {
 		id = HUN_reintegrate_the_railroads
 		icon = GFX_focus_HUN_reintegrate_the_railroads
 		prerequisite = {  }
-		x = 16
-		y = 1
+		x = 14
+		y = 0
 
 		cost = 5
 
@@ -1259,7 +715,7 @@ custom_effect_tooltip = HUN_pp_tt
 		}
 
 		available = {
-        HUN = { has_completed_focus = HUN_Revitalize_Post_Depression_Economy }
+
 		}
 
 		bypass = {
@@ -1369,14 +825,59 @@ custom_effect_tooltip = HUN_pp_tt
 		}
 	}
 	
+	
+	focus = {
+		id = HUN_drastically_increase_ammuni_production
+		text = "Ammunition plants"
+		icon = GFX_r56_goal_generic_ammunitions
+		relative_position_id = HUN_renounce_the_treaty_of_trianon
+		prerequisite = { focus = HUN_renounce_the_treaty_of_trianon }
+		prerequisite = { focus = HUN_weiss_metal_works_expansion }
+		x = 7
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				prioritize = { 46 }
+				add_building_construction = {
+					type = steel_refinery
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+
+		
+
 	focus = {
 		id = HUN_institute_for_industrial_techniques
 		icon = GFX_focus_HUN_institute_for_industrial_techniques
 		prerequisite = { focus = HUN_reintegrate_the_railroads }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = HUN_reintegrate_the_railroads
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -1399,16 +900,17 @@ custom_effect_tooltip = HUN_pp_tt
 			add_research_slot = 1
 		}
 	}
-	
+
+
 	focus = {
 		id = HUN_announce_the_gyor_program
 		icon = GFX_focus_HUN_announce_the_gyor_program
-		prerequisite = { focus = HUN_reintegrate_the_railroads }
+		prerequisite = { focus = HUN_institute_for_industrial_techniques }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = HUN_reintegrate_the_railroads
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -1452,10 +954,11 @@ custom_effect_tooltip = HUN_pp_tt
 		icon = GFX_focus_HUN_weiss_metal_works_expansion
 		relative_position_id = HUN_announce_the_gyor_program
 		prerequisite = { focus = HUN_announce_the_gyor_program }
-		x = -1
+		prerequisite = { focus = HUN_invite_foreign_investors }
+		x = -3
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 50
@@ -1476,241 +979,42 @@ custom_effect_tooltip = HUN_pp_tt
 		
 
 		completion_reward = {
+			43 = {
+				add_resource = {
+					type = steel 
+					amount = 24 
+				}
+			}
 			add_tech_bonus = {
 				category = construction_tech 
 				uses = 2 
 				bonus = 1 
 			}
 			random_owned_controlled_state = {
-			    prioritize = { 43 }
-				add_resource = {
-					type = steel
-					amount = 8
-				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes 
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = steel_refinery
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = HUN_drastically_increase_ammuni_production
-		text = "Ammunition plants"
-		icon = GFX_r56_goal_generic_ammunitions
-		relative_position_id = HUN_Improve_Danube_Logistics
-		prerequisite = { focus = HUN_Improve_Danube_Logistics }
-		x = 0
-		y = 1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-		    random_owned_controlled_state = {
-				prioritize = { 46 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes 
 				}
 			}
-			custom_effect_tooltip = HUN_pp_tt
-		}
-	}
-	
-	focus = {
-		id = HUN_invest_in_fegyver_es_gepgyar
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = HUN_drastically_increase_ammuni_production }
-		x = 0
-		y = 1
-		relative_position_id = HUN_drastically_increase_ammuni_production
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-		cost = 5
-		
-		available = {
-        HUN = { has_completed_focus = HUN_weiss_metal_works_expansion }
-		}
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		completion_reward = {
-			IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-			add_tech_bonus = {
-				name = HUN_invest_in_fegyver_es_gepgyar
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-
-			}
-			if = {
-				limit = {
-					has_tech = infantry_weapons1
-				}
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = HUN }
-			}
-			else_if = {
-				limit = {
-					has_tech = improved_infantry_weapons
-				}
-				add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 producer = HUN }
-			}
-			else = {
-				add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 5000 producer = HUN }
-			}
-			add_political_power = -50
-		}
-else = {
-			add_tech_bonus = {
-				name = HUN_invest_in_fegyver_es_gepgyar
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-
-			}
-			if = {
-				limit = {
-					has_tech = infantry_weapons1
-				}
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = HUN }
-			}
-			else_if = {
-				limit = {
-					has_tech = improved_infantry_weapons
-				}
-				add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 producer = HUN }
-			}
-			else = {
-				add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 5000 producer = HUN }
-			}
-		}
-			custom_effect_tooltip = HUN_pp_tt
 		}
 	}
 
-	focus = {
-		id = HUN_invest_in_tuzersegi_gyar
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = HUN_drastically_increase_ammuni_production }
-		x = 2
-		y = 1
-		relative_position_id = HUN_drastically_increase_ammuni_production
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-		cost = 5
-		
-		available = {
-        HUN = { has_completed_focus = HUN_weiss_metal_works_expansion }
-		}
+	############################
+	#### CIVILIAN INDUSTRY #####
+	############################
 
-		ai_will_do = {
-			factor = 60
-		}
-
-		completion_reward = {
-			IF = {
-				limit = {
-				OR = {
-					has_idea = HUN_treaty_of_triannon
-					has_idea = HUN_treaty_of_triannon_2
-					has_idea = HUN_treaty_of_triannon_3
-					}
-				}
-			add_tech_bonus = {
-				name = HUN_invest_in_tuzersegi_gyar
-				bonus = 0.5
-				uses = 2
-				category = artillery
-			}
-			if = {
-				limit = {
-					has_tech = gw_artillery
-				}
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = HUN }
-			}
-			else_if = {
-				limit = {
-					has_tech = artillery1
-				}
-				add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 500 producer = HUN }
-			}
-			else = {
-				add_equipment_to_stockpile = { type = artillery_equipment_3 amount = 500 producer = HUN }
-			}
-			add_political_power = -50
-		}
-else = {
-			add_tech_bonus = {
-				name = HUN_invest_in_tuzersegi_gyar
-				bonus = 0.5
-				uses = 2
-				category = artillery
-			}
-			if = {
-				limit = {
-					has_tech = gw_artillery
-				}
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = HUN }
-			}
-			else_if = {
-				limit = {
-					has_tech = artillery1
-				}
-				add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 500 producer = HUN }
-			}
-			else = {
-				add_equipment_to_stockpile = { type = artillery_equipment_3 amount = 500 producer = HUN }
-			}
-		}
-			custom_effect_tooltip = HUN_pp_tt
-		}
-	}
-	
 	focus = {
 		id = HUN_civilian_industry
 		icon = GFX_focus_HUN_civilian_industry
 		prerequisite = { focus = HUN_announce_the_gyor_program }
-		x = 1
+		prerequisite = { focus = HUN_invite_foreign_investors }
+		x = 0
 		y = 1
 		relative_position_id = HUN_announce_the_gyor_program
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 40
@@ -1749,16 +1053,18 @@ else = {
 			}
 		}
 	}
+
 	
+
 	focus = {
 		id = HUN_invite_foreign_investors
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = HUN_reintegrate_the_railroads }
-		x = 2
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = HUN_reintegrate_the_railroads
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 70
@@ -1781,7 +1087,7 @@ else = {
 			add_ideas = HUN_invite_foreign_investors
 		}
 	}
-	
+
 	focus = {
 		id = HUN_expand_the_technical_university_of_budapest
 		icon = GFX_focus_HUN_expand_the_technical_university_of_budapest
@@ -1791,7 +1097,7 @@ else = {
 		y = 1
 		relative_position_id = HUN_weiss_metal_works_expansion
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 100
@@ -1815,119 +1121,24 @@ else = {
 		}
 	}
 	
-	############################
-	####### FASCIST PATH #######
-	############################
-	
-	focus = {
-		id = HUN_strengthen_fascists
-		icon = GFX_focus_HUN_strengthen_fascists
-		
-		x = 0
-		y = 0
-		
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 90
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_timed_idea = { idea = HUN_strengthen_fascists days = 720 }
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			set_party_name = { ideology = fascism long_name = HUN_arrow_cross_party_long name = HUN_arrow_cross_party }
-		}
-	}
 
 	focus = {
-		id = HUN_renounce_the_treaty_of_trianon
-		icon = GFX_focus_HUN_renounce_the_treaty_of_trianon
-		#prerequisite = { focus = HUN_strengthen_fascists }
-		x = 4
-		y = 0
-		#relative_position_id = HUN_strengthen_fascists
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-			OR = {
-				has_government = fascism
-				fascism > 0.4
-			}
-			is_subject = no
-		}
-
-		bypass = {
-			NOT = {
-				has_idea = HUN_treaty_of_triannon
-				has_idea = HUN_treaty_of_triannon_2
-				has_idea = HUN_treaty_of_triannon_3
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-
-		completion_reward = {
-			add_threat = 1
-			
-			remove_ideas = HUN_treaty_of_triannon
-
-			if = {
-				limit = {
-					NOT = { has_government = fascism }
-				}
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_trade_deal_with_germany
-		text = "Under the German Economic Jackboot"
-		icon = GFX_focus_HUN_trade_deal_with_germany
-		prerequisite = { focus = HUN_strengthen_fascists }
+		id = HUN_aeronautic_technology_institute
+		icon = GFX_focus_HUN_aeronautic_technology_institute
+		prerequisite = { focus = HUN_expand_the_technical_university_of_budapest }
 		x = 0
 		y = 1
-		relative_position_id = HUN_strengthen_fascists
-		available = {
-			NOT = { GER = { has_government = communism } }
-		}
+		relative_position_id = HUN_expand_the_technical_university_of_budapest
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 80
 		}
 
 		available = {
-			#date > 1940.07.01
-			#GER = { has_completed_focus = GER_first_vienna_award }
-			
+			date >1940.01.01
+			num_of_factories > 75
 		}
 
 		bypass = {
@@ -1938,21 +1149,57 @@ else = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_opinion_modifier = { target = GER modifier = HUN_trade_deal_with_germany }
-			reverse_add_opinion_modifier = { target = GER modifier = HUN_trade_deal_with_germany }
-			#swap_ideas = {
-			#	remove_idea = HUN_hungaro_german_trade_agreement
-			#	add_idea = HUN_hungaro_german_trade_agreement_two
-			#}
-			add_ideas = {HUN_hungaro_german_trade_agreement}
-			
+			add_research_slot = 1
 		}
 	}
-	
-	
-	
+
+
+	############################
+	#### Synthetic INDUSTRY #####
+	############################
+
+	focus = {
+		id = HUN_autarky
+		icon = GFX_focus_HUN_autarky
+		prerequisite = { focus = HUN_civilian_industry }
+		prerequisite = { focus = HUN_domestic_arms_industry }
+		x = 0
+		y = 2
+		relative_position_id = HUN_announce_the_gyor_program
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_synthetic_industry
+				bonus = 3.0
+				uses = 1
+				category = synth_resources
+			}
+
+			add_ideas = HUN_autarky_idea
+		}
+	}
+
 	############################
 	##### MILITARY STUFFS ######
 	############################
@@ -1960,7 +1207,7 @@ else = {
 	focus = {
 		id = HUN_secret_rearmament
 		icon = GFX_focus_secret_rearmament
-		x = 40
+		x = 24
 		y = 0
 
 		cost = 5
@@ -1989,11 +1236,42 @@ else = {
 	}
 
 	focus = {
-		id = HUN_bled_agreement
-		icon = GFX_focus_HUN_bled_agreement
+		id = HUN_war_games
+		icon = GFX_goal_poland_goal
 		prerequisite = { focus = HUN_secret_rearmament }
 		x = 0
 		y = 1
+		relative_position_id = HUN_secret_rearmament
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 60
+		}
+	}
+
+	focus = {
+		id = HUN_bled_agreement
+		icon = GFX_focus_HUN_bled_agreement
+		prerequisite = { focus = HUN_war_games }
+		x = 0
+		y = 2
 		relative_position_id = HUN_secret_rearmament
 
 		cost = 5
@@ -2026,7 +1304,7 @@ else = {
 				limit = { has_idea = HUN_treaty_of_triannon }
 				swap_ideas = {
 					remove_idea = HUN_treaty_of_triannon
-					add_idea = HUN_treaty_of_triannon_2
+					add_idea = HUN_treaty_of_triannon_3
 				}
 			}
 			if = {
@@ -2038,32 +1316,1445 @@ else = {
 			}
 		}
 	}
-	
+
+
+	############################
+	####### ARMY STUFFS ########
+	############################
+
 	focus = {
-		id = HUN_army_effort
-		icon = GFX_goal_generic_axis_build_infantry
+		id = HUN_army_maneuvers
+		text = "Hidden Officer Schools"
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = HUN_bled_agreement }
-		search_filters = {FOCUS_FILTER_ARMY}
 		x = 0
 		y = 1
 		relative_position_id = HUN_bled_agreement
-		cost = 5
-	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 60
-			add_tech_bonus = {
+			army_experience = 10
+			add_war_support = 0.05
+			add_command_power = 20
+			add_ideas = HUN_hidden_officer_school_idea
+			
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
-			add_command_power = 5
+		}
+	}
 
+	############################
+	###### MOBILE BRANCH #######
+	############################
+
+	focus = {
+		id = HUN_mobile_focus
+		icon = GFX_focus_HUN_mobile_focus
+		prerequisite = { focus = HUN_army_maneuvers }
+		mutually_exclusive = { focus = HUN_home_defense }
+		x = -2
+		y = 1
+		relative_position_id = HUN_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+			every_army_leader = {
+				limit = {
+					has_trait = armor_officer
+				}
+				add_unit_leader_trait = panzer_leader 
+			}
+			add_doctrine_cost_reduction = {
+				name = HUN_mobile_focus
+				cost_reduction = 0.25
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_mobile_focus_mils
+		text = "Tank Plants"
+		icon = GFX_goal_advanced_industry
+		prerequisite = { focus = HUN_armored_warfare }
+		x = 0
+		y = 1
+		relative_position_id = HUN_armored_warfare
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_gyorshadtest
+		text = "Gyorshadtest"
+		icon = GFX_focus_HUN_gyorshadtest
+		relative_position_id = HUN_army_maneuvers
+		prerequisite = { focus = HUN_army_maneuvers }
+		prerequisite = { focus = HUN_form_mechanized_battalions }
+		x = 1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			
+			every_army_leader = {
+				limit = {
+					has_trait = trickster
+				}
+				add_unit_leader_trait = cavalry_leader 
+			}
+			
+		}
+	}
+
+	focus = {
+		id = HUN_the_botond
+		icon = GFX_focus_HUN_the_botond
+		prerequisite = { focus = HUN_mobile_focus }
+		x = -4
+		y = 1
+		relative_position_id = HUN_mobile_focus
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_the_botond
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = HUN_the_botond
+				bonus = 0.5
+				uses = 1
+				technology = mechanised_infantry
+			}
+			#random_owned_controlled_state = {
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = arms_factory
+			#		level = 1
+			#		instant_build = yes 
+			#	}
+			#}
+		}
+	}
+
+	focus = {
+		id = HUN_motorized_logistics
+		icon = GFX_focus_HUN_motorized_logistics
+		prerequisite = { focus = HUN_the_botond }
+		x = 1
+		y = 2
+		relative_position_id = HUN_the_botond
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_motorized_logistics
+				bonus = 1.0
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
+			#random_owned_controlled_state = {
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = arms_factory
+			#		level = 1
+			#		instant_build = yes 
+			#	}
+			#}
+		}
+	}
+
+#	focus = {
+#		id = HUN_develop_tanks
+#		icon = GFX_goal_generic_army_tanks
+#		prerequisite = { focus = HUN_mobile_focus }
+#		x = 1
+#		y = 5
+#		relative_position_id = HUN_mobile_focus
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 40
+#		}
+#
+#		available = {
+#
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = HUN_develop_tanks
+#				ahead_reduction = 2
+#				uses = 1
+#				category = armor
+#			}
+#		}
+#	}
+	
+	focus = {
+		id = HUN_stop_gap_light_tank
+		text = "Toldi"
+		icon = GFX_focus_HUN_stop_gap_light_tank
+		relative_position_id = HUN_mobile_focus
+		prerequisite = { focus = HUN_mobile_focus }
+		
+		x = -2
+		y = 1
+
+		cost = 6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_light_armor  
+				uses = 2
+				bonus = 1.0
+				name = HUN_stop_gap_light_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_zrinyl
+		text = "Zrínyi"
+		icon = GFX_focus_HUN_zrinyl
+		relative_position_id = HUN_mobile_focus
+		prerequisite = { focus = HUN_mobile_focus }
+		mutually_exclusive = { focus = HUN_turan }
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+		#GER = { has_completed_focus = GER_tiger } 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				category = cat_heavy_armor
+				uses = 2
+				bonus = 1
+				name = GER_zriny1 
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine 
+			}
+		}
+	}
+	focus = {
+		id = HUN_turan
+		text = "Turan"
+		icon = GFX_focus_HUN_turan
+		relative_position_id = HUN_mobile_focus
+		prerequisite = { focus = HUN_mobile_focus }
+		mutually_exclusive = { focus = HUN_zrinyl }
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+#GER = { has_tech = basic_medium_tank_chassis 
+#		}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				category = cat_medium_armor
+				uses = 3
+				bonus = 1.00
+				name = GER_mobile_fortresses 
+			}
+			
+		}
+	}
+
+	#focus = {
+	#	id = HUN_joint_tank_procurement
+	#	icon = GFX_goal_generic_build_tank
+	#	prerequisite = { focus = HUN_develop_tanks }
+	#	x = 1
+	#	y = 2
+	#	relative_position_id = HUN_mobile_focus
+    #
+	#	cost = 10
+#
+#		ai_will_do = {
+#			factor = 70
+#		}
+#
+#		available = {
+#			is_in_faction = yes
+#		}
+#
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		completion_reward = {
+#			add_to_tech_sharing_group = HUN_joint_tank_development_group
+#			every_other_country = {
+#				limit = {
+#					is_in_faction_with = HUN
+#				}
+#				add_to_tech_sharing_group = HUN_joint_tank_development_group
+#			}
+#			
+#		}
+#	}
+
+	focus = {
+		id = HUN_armored_warfare
+		icon = GFX_focus_HUN_armored_warfare
+		prerequisite = { focus = HUN_stop_gap_light_tank focus = HUN_turan focus = HUN_zrinyl }
+		x = 0
+		y = 2
+		relative_position_id = HUN_turan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = saf_expand_tank_production
+		}
+	}
+
+	focus = {
+		id = HUN_mobile_corps_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = HUN_the_botond }
+		x = 0
+		y = 1
+		relative_position_id = HUN_the_botond
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = HUN_mobile_corps_doctrine
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_mobile_warfare
+			}
+			#random_owned_controlled_state = {
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = arms_factory
+			#		level = 1
+			#		instant_build = yes 
+			#	}
+			#}
+		}
+	}
+
+	############################
+	##### HOME DEF BRANCH ######
+	############################
+
+	focus = {
+		id = HUN_home_defense
+		icon = GFX_focus_HUN_home_defense
+		prerequisite = { focus = HUN_army_maneuvers }
+		mutually_exclusive = { focus = HUN_mobile_focus }
+		x = 6
+		y = 1
+		relative_position_id = HUN_army_maneuvers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			
+			every_army_leader = {
+				add_planning = 1
+			}
+			every_army_leader = {
+				limit = {
+					has_trait = infantry_leader
+				}
+				add_unit_leader_trait = commando 
+			}
+			add_doctrine_cost_reduction = {
+				name = HUN_home_defense
+				cost_reduction = 0.25
+				uses = 1
+				category = cat_grand_battle_plan
+				category = cat_superior_firepower
+			}
+
+			set_variable = {
+				var = special_forces_xp_to_add
+				value = 30
+				tooltip = add_positive_amount_of_special_forces_xp_tt
+			}
+			add_set_amount_of_special_forces_xp = yes
+		}
+	}
+	
+	focus = {
+		id = HUN_kékes/pécs_radar
+		text = "Kékes and Pécs Radar"
+		icon = GFX_goal_generic_radar
+		relative_position_id = HUN_home_defense
+		prerequisite = { focus = HUN_home_defense }
+		x = 5
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+		
+		155 = {
+			add_building_construction = {
+				type = radar_station
+				level = 2
+				instant_build = yes 
+			}
+		}
+		43 = {
+			add_building_construction = {
+				type = radar_station
+				level = 2
+				instant_build = yes
+				 
+				 
+			}
+		}
+	}
+		
+	}
+	
+	focus = {
+		id = HUN_building_the_iron_shield
+		text = "Iron Shield"
+		icon = GFX_focus_generic_air_defense
+		relative_position_id = HUN_kékes/pécs_radar
+		prerequisite = { focus = HUN_kékes/pécs_radar }
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+		
+		154 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+				 
+				 
+			}
+		}
+		155 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+				 
+				 
+			}
+		}
+		43 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+				 
+				 
+			}
+		}
+		
+		
+		}
+		
+	}
+	
+	focus = {
+		id = HUN_german_anti_tank
+		text = "German Anti-Tank"
+		icon = GFX_focus_HUN_german_anti_tank
+		relative_position_id = HUN_danuvia_submachine_guns
+		prerequisite = { focus = HUN_danuvia_submachine_guns focus = HUN_danuvia_submachine_guns_2  }
+		x = -3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			is_in_faction_with = GER 
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_anti_tank 
+				uses = 2 
+				bonus = 0.5
+				name = HUN_german_anti_tank
+			}
+			
+		}
+	}
+
+	focus = {
+		id = HUN_danuvia_submachine_guns
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HUN_light_infantry_divisions_doctrine }
+		x = 0
+		y = 2
+		relative_position_id = HUN_light_infantry_divisions_doctrine
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_danuvia_submachine_guns
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = HUN_danuvia_submachine_guns }
+		x = 0
+		y = 2
+		relative_position_id = HUN_danuvia_submachine_guns
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_artillery_effort
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_rocketry
+		text = "Rocketry"
+		icon = GFX_focus_rocketry
+		relative_position_id = HUN_artillery_effort
+		prerequisite = { focus = HUN_artillery_effort focus = HUN_artillery_effort_2 }
+		x = -3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = rocketry
+				uses = 3 
+				bonus = 1 
+				name = HUN_rocketry 
+			}
+		}
+	}
+	focus = {
+		id = HUN_44m_buzo
+		text = "44M Buzo"
+		icon = GFX_focus_HUN_44m_buzo
+		relative_position_id = HUN_rocketry
+		prerequisite = { focus = HUN_rocketry }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			has_tech = rocket_artillery		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_increased_inf_at_attack 
+			hidden_effect = {
+				set_technology = { infantry_at = 1 }}
+			
 			
 		}
 	}
 	
+	focus = {
+		id = HUN_danuvia_submachine_guns_2
+		text = "Danuvia Submachine Guns"
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HUN_heavy_infantry_divisions_doctrine }
+		x = 0
+		y = 2
+		relative_position_id = HUN_heavy_infantry_divisions_doctrine
 
+		cost = 5
 
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_danuvia_submachine_guns
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_artillery_effort_2
+		text = "Artillery Effort"
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = HUN_danuvia_submachine_guns_2 }
+		x = 0
+		y = 2
+		relative_position_id = HUN_danuvia_submachine_guns_2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_artillery_effort
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_light_infantry_divisions_doctrine
+		icon = GFX_focus_HUN_light_infantry_divisions_doctrine
+		prerequisite = { focus = HUN_home_defense }
+		mutually_exclusive = { focus = HUN_heavy_infantry_divisions_doctrine }
+		x = 3
+		y = 1
+		relative_position_id = HUN_home_defense
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+		    custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt_2
+			
+			hidden_effect = {
+			set_technology = { HUN_light_infantry_tech = 1 } }
+		}
+	}
 	
+	focus = {
+		id = HUN_heavy_infantry_divisions_doctrine
+		text = "Heavy Infantry Division Doctrine"
+		icon = GFX_focus_HUN_heavy_infantry_divisions_doctrine
+		prerequisite = { focus = HUN_home_defense }
+		mutually_exclusive = { focus = HUN_light_infantry_divisions_doctrine }
+		x = -3
+		y = 1
+		relative_position_id = HUN_home_defense
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt_3
+		
+			hidden_effect = {
+			set_technology = { HUN_heavy_infantry_tech = 1 }}
+		}
+	}
+
+	focus = {
+		id = HUN_form_parachute_battalions
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = HUN_light_infantry_divisions_doctrine }
+		x = -1
+		y = 1
+		relative_position_id = HUN_light_infantry_divisions_doctrine
+
+		cost = 6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_form_parachute_battalions
+				bonus = 0.50
+				uses = 2
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_form_shock_troops_battalions
+		text = "Grenadier Training"
+		icon = GFX_focus_HUN_form_shock_troops_battalions
+		prerequisite = { focus = HUN_heavy_infantry_divisions_doctrine }
+		x = 1
+		y = 1
+		relative_position_id = HUN_heavy_infantry_divisions_doctrine
+
+		cost = 6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_form_parachute_battalions
+				bonus = 0.50
+				uses = 2
+				technology = shock_troops2
+				technology = shock_troops3
+			}
+			add_ideas = HUN_grenadier_training_idea
+		}
+	}
+	
+	focus = {
+		id = HUN_form_mechanized_battalions
+		text = "Armored Infantry"
+		icon = GFX_focus_HUN_form_mechanized_battalions
+		prerequisite = { focus = HUN_heavy_infantry_divisions_doctrine }
+		x = -1
+		y = 1
+		relative_position_id = HUN_heavy_infantry_divisions_doctrine
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_form_parachute_battalions
+				bonus = 1.00
+				uses = 2
+				technology = mechanised_infantry
+				technology = mechanised_infantry2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_form_jäger_battalions
+		text = "Form Jäger Batalions"
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = HUN_light_infantry_divisions_doctrine }
+		x = 1
+		y = 1
+		relative_position_id = HUN_light_infantry_divisions_doctrine
+
+		cost = 6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_form_parachute_battalions
+				bonus = 0.50
+				uses = 2
+				technology = jaegers2
+				technology = jaegers3
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_assault_gun_focus
+		icon = GFX_focus_HUN_assault_gun_focus
+		prerequisite = { focus = HUN_danuvia_submachine_guns_2 }
+		x = -2
+		y = 2
+		relative_position_id = HUN_form_shock_troops_battalions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = HUN_assault_gun_focus
+			
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = HUN_establish_the_air_force
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = HUN_bled_agreement }
+		x = 13
+		y = 1
+		relative_position_id = HUN_bled_agreement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = HUN_establish_the_air_force
+				cost_reduction = 0.33
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_indigenous_designs
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = HUN_establish_the_air_force }
+		prerequisite = { focus = HUN_boost_hungarian_aviation_industry }
+		x = 0
+		y = 1
+		relative_position_id = HUN_establish_the_air_force
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = HUN_indigenous_designs
+		}
+	}
+
+	focus = {
+		id = HUN_heavy_fighter_effort
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = HUN_indigenous_designs }
+		mutually_exclusive = { focus = HUN_light_fighter_effort }
+		x = -1
+		y = 1
+		relative_position_id = HUN_indigenous_designs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = HUN_heavy_fighter_effort
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 1
+				category = medium_air
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_light_fighter_effort
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = HUN_indigenous_designs }
+		mutually_exclusive = { focus = HUN_heavy_fighter_effort }
+		x = 1
+		y = 1
+		relative_position_id = HUN_indigenous_designs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = HUN_light_fighter_effort
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 1
+				category = light_air
+			}
+		}
+	}
 }
