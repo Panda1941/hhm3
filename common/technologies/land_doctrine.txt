@@ -383,8 +383,11 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_tanks = {
-			max_organisation = 5
-			breakthrough = 0.20
+			max_organisation = 7
+			breakthrough = 0.3
+		}
+		category_all_armor = {
+			default_morale = 0.03
 		}
 		
 		enable_tactic = tactic_blitz
@@ -450,7 +453,7 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.1
 		}
-		
+		coordination_bonus = 0.05
 		
 		path = {
 			leads_to_tech = blitzkrieg 
@@ -1028,6 +1031,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_infantry = {
 			defense = 0.10
+			max_organisation = 5
 		}
 		
 		enable_tactic = tactic_elastic_defense
@@ -1305,6 +1309,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_all_armor = {
+			max_organisation = 5
 			breakthrough = 0.10
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -1765,6 +1770,7 @@ technologies = {
 		category_front_line = {
 			soft_attack = 0.05
 			hard_attack = 0.02
+			breakthrough = 0.05
 		}
 		
 		category_all_infantry = { 
@@ -2363,8 +2369,8 @@ technologies = {
 			grand_mechanized_offensive
 		}
 		category_light_infantry = {
-			max_organisation = 3
-			breakthrough = 0.1
+			max_organisation = 5
+			breakthrough = 0.15
 		}
 
 		additional_brigade_column_size = 1
@@ -2487,6 +2493,9 @@ technologies = {
 				category = category_light_infantry
 				soft_attack = 0.05
 			}
+		}
+		category_light_infantry = {
+			soft_attack = 0.05
 		}
 		
 		path = {
@@ -2700,6 +2709,7 @@ technologies = {
 		}
 		category_all_infantry = {
 			max_organisation = 5
+			breakthrough = 0.05
 		}
 		
 		land_reinforce_rate = 0.02
@@ -2908,10 +2918,16 @@ technologies = {
 	
 	deep_operations = {
 		category_tanks = {
-			max_organisation = 4
+			max_organisation = 5
+			hard_attack = 0.05
+			breakthrough = 0.10
 		}
 		armored_car = {
-			max_organisation = 4
+			max_organisation = 5
+		}
+		category_all_infantry = {
+			soft_attack = 0.05
+			breakthrough = 0.10
 		}
 		coordination_bonus = 0.05
 
@@ -3262,6 +3278,7 @@ technologies = {
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1 #10% more partisan effects 
 		#Land Units take less attrition
 		attrition = -0.1 #take 10% less attrition losses
+		supply_consumption_factor = -0.05
 
 		additional_brigade_column_size = 1
 		
@@ -3283,6 +3300,7 @@ technologies = {
 
 		category_all_infantry = {
 			defense = 0.1
+			max_organisation = 5
 		}
 
 		military_police = {
@@ -3341,7 +3359,7 @@ technologies = {
 		infantry = {
 			default_morale = 0.30
 		}
-		land_reinforce_rate = 0.05		
+		land_reinforce_rate = 0.06		
 		
 		path = {
 			leads_to_tech = large_front_offensive

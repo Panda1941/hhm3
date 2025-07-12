@@ -35,19 +35,7 @@ focus_tree = {
 		}
 		modifier = {
 			add = 20
-			tag = NOR
-		}
-		modifier = {
-			add = 20
-			tag = DEN
-		}
-		modifier = {
-			add = 20
 			tag = ALB
-		}
-		modifier = {
-			add = 20
-			tag = CZE
 		}
 		modifier = {
 			add = 20
@@ -56,18 +44,6 @@ focus_tree = {
 		modifier = {
 			add = 20
 			tag = CHI
-		}
-		modifier = {
-			add = 20
-			tag = BEL
-		}
-		modifier = {
-			add = 20
-			tag = HOL
-		}
-		modifier = {
-			add = 20
-			tag = LUX
 		}
 	}
 	
