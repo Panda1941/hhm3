@@ -178,6 +178,7 @@ leader_traits = {
 		air_chief_cost_factor = 0.25
 		army_chief_cost_factor = 0.25
 		navy_chief_cost_factor = 0.25
+		political_power_gain = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -207,7 +208,8 @@ leader_traits = {
 	heels_nipper = {
 		random = no
 		sprite = 10
-		political_power_factor = -0.1
+		political_power_factor = -0.2
+		consumer_goods_factor = 0.05
 		stability_factor = -0.1
 		political_advisor_cost_factor = -0.25
 		trade_laws_cost_factor = -0.25
@@ -251,6 +253,7 @@ leader_traits = {
 	stammer = {
 		random = no
 		political_power_factor = -0.1
+		stability_factor = -0.05 
 
 		ai_will_do = {
 			factor = 1
@@ -778,6 +781,8 @@ leader_traits = {
 
 	camarilla_leader = {
 		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.05
 		political_advisor_cost_factor = -0.25
 		trade_laws_cost_factor = -0.25
 		mobilization_laws_cost_factor = -0.25
@@ -989,31 +994,36 @@ leader_traits = {
 
 	champion_of_peace_1 = {
 		random = no
-		war_support_factor = -0.3
+		war_support_factor = -0.15
+		stability_factor = 0.1
 		generate_wargoal_tension = 1
 	}
 
 	champion_of_peace_2 = {
 		random = no
-		war_support_factor = -0.24
+		war_support_factor = -0.12
+		stability_factor = 0.08
 		generate_wargoal_tension = 0.80
 	}
 
 	champion_of_peace_3 = {
 		random = no
-		war_support_factor = -0.18
+		war_support_factor = -0.09
+		stability_factor = 0.06
 		generate_wargoal_tension = 0.60
 	}
 
 	champion_of_peace_4 = {
 		random = no
-		war_support_factor = -0.12
+		war_support_factor = -0.06
+		stability_factor = 0.04
 		generate_wargoal_tension = 0.40
 	}
 
 	champion_of_peace_5 = {
 		random = no
-		war_support_factor = -0.06
+		war_support_factor = -0.03
+		stability_factor = 0.02
 		generate_wargoal_tension = 0.20
 	}
 

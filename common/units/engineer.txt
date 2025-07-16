@@ -69,11 +69,11 @@ sub_units = {
 		}
 
 		hills = {
-			defence = 0.10
+			defence = 0.05
 		}
 
 		jungle = {
-			defence = 0.10
+			defence = 0.05
 		}
 
 		marsh = {
@@ -81,8 +81,7 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.10
-			defence = 0.05
+			attack = 0.05
 		}
 
 		urban = {
@@ -94,12 +93,12 @@ sub_units = {
 		}
 
 		river = {
-			defence = 0.25
-			movement = 0.25
+			defence = 0.15
+			movement = 0.15
 		}
 
 		amphibious = {
-			attack = 0.15
+			attack = 0.1
 		}
 
 		same_support_type = engineer
@@ -172,18 +171,17 @@ sub_units = {
 
 		marsh = {
 			attack = 0.05
-			defence = 0.1
-			movement = 0.2
+			defence = 0.05
+			movement = 0.1
 		}
 
 		fort = {
-			attack = 0.1
-			defence = 0.1
+			attack = 0.05
+			defence = 0.05
 		}
 
 		river = {
-			attack = 0.1
-			defence = 0.05
+			attack = 0.05
 			movement = 0.25
 		}
 		

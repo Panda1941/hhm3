@@ -1229,12 +1229,7 @@ focus_tree = {
 		relative_position_id = ITA_superesercito
 		cost = 5
 		available = {
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = basic_medium_tank_chassis
-			}
+			has_tech = basic_medium_tank
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
@@ -1621,7 +1616,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { ITA_ra_air_mission_efficiency = 0.05 }
 			add_to_variable = { ITA_ra_air_mission_xp_gain_factor = 0.05 }
 			add_to_variable = { ITA_ra_air_doctrine_cost_factor = -0.1 }
 			custom_effect_tooltip = ITA_superaereo_ra_tt

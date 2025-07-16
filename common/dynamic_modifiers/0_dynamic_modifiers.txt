@@ -1251,7 +1251,7 @@ defence_of_moscow = {
 
 	icon = GFX_modifiers_SOV_defend_moscow
 
-	army_core_defence_factor = 0.15
+	army_core_defence_factor = 0.2
 	max_dig_in = 3
 }
 defence_of_leningrad = {
@@ -1259,16 +1259,16 @@ defence_of_leningrad = {
 
 	icon = GFX_modifiers_SOV_defend_moscow
 
-	army_core_defence_factor = 0.10
-	max_dig_in = 1
+	army_core_defence_factor = 0.2
+	max_dig_in = 3
 }
 defence_of_stalingrad = {
 	enable = { always = yes }
 
 	icon = GFX_modifiers_SOV_defend_moscow
 
-	army_core_defence_factor = 0.12
-	max_dig_in = 2
+	army_core_defence_factor = 0.2
+	max_dig_in = 3
 }
 
 
@@ -1307,6 +1307,7 @@ GER_ruhr_valley = {
 	icon = GFX_modifiers_ETH_state_development
 
 	state_production_speed_buildings_factor = 0.25
+	local_building_slots_factor = 0.1
 }
 
 france_early_core = {

@@ -4,7 +4,7 @@ state={
 	name="STATE_1" # Corsica
 	manpower = 322900
 	
-	state_category = megalopolis
+	state_category = city
 
 	history={
 		owner = FRA

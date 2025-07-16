@@ -1374,7 +1374,7 @@
  ITA_regia_aeronautica_name_default:0 "$ITA_regia_aeronautica_dynamic_modifier$"
  ITA_regia_aeronautica_name_alt:0 "$ITA_regia_aeronautica_alt_dynamic_modifier$"
  ITA_expand_rome_flying_school_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_ACE_GENERATION_CHANCE$: §G+5.00%§! \n$MODIFIER_AIR_TRAINING_XP_FACTOR$: §G+5%§! \n$MODIFIER_AIR_NIGHT_PENALTY$: §G-10.00%§! \n$MODIFIER_AIR_WEATHER_PENALTY$: §G-10.00%§! \n\n"
- ITA_superaereo_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_MISSION_EFFICIENCY$: §G+5%§! \n$MODIFIER_AIR_MISSION_XP_FACTOR$: §G+5%§! \n$MODIFIER_AIR_DOCTRINE_COST_FACTOR$: §G-10.00%§! \n\n"
+ ITA_superaereo_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_MISSION_XP_FACTOR$: §G+5%§! \n$MODIFIER_AIR_DOCTRINE_COST_FACTOR$: §G-10.00%§! \n\n"
  ITA_officers_of_the_service_role_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_ACCIDENTS$: §G-10.0%§! \n$MODIFIER_AIR_NIGHT_PENALTY$: §G-5.00%§! \n$MODIFIER_AIR_WEATHER_PENALTY$: §G-5.00%§! \n\n"
  ITA_standardization_ra_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$ITA_standardization_dynamic_modifier_tt$\n"
  ITA_specialization_ra_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_EQUIPMENT_UPGRADE_XP_COST$: §G-50%§! \n$ITA_specialization_dynamic_modifier_tt$\n"

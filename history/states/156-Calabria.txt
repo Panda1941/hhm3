@@ -11,7 +11,7 @@ state = {
 			9990 1 
 		}
 		buildings = {
-			infrastructure = 2 #was: 5
+			infrastructure = 3 #was: 5
 			dockyard = 1
 			fuel_silo = 1
 			9990 = {

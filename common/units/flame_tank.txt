@@ -64,23 +64,23 @@ sub_units = {
 			attack = 0.05
 		}
 		jungle = {
-			attack = 0.1
+			attack = 0.05
 		}
 		marsh = {
 			attack = 0.05
 		}
 		urban = {
-			attack = 0.1
+			attack = 0.05
 		}
 		fort = {
-			attack = 0.1
+			attack = 0.05
 			movement = 0.1
 		}
 		river = {
 			attack = 0.1
 		}
 		amphibious = {
-			attack = 0.1
+			attack = 0.05
 		}
 
 		same_support_type = flame
@@ -152,23 +152,23 @@ sub_units = {
 			attack = 0.05
 		}
 		jungle = {
-			attack = 0.15
+			attack = 0.1
 		}
 		marsh = {
 			attack = 0.05
 		}
 		urban = {
-			attack = 0.15
+			attack = 0.1
 		}
 		fort = {
-			attack = 0.2
+			attack = 0.1
 			movement = 0.1
 		}
 		river = {
 			attack = 0.1
 		}
 		amphibious = {
-			attack = 0.1
+			attack = 0.05
 		}
 
 		same_support_type = flame
@@ -243,16 +243,13 @@ sub_units = {
 			attack = 0.05
 		}
 		urban = {
-			attack = 0.1
+			attack = 0.05
 		}
 		fort = {
-			attack = 0.25
+			attack = 0.15
 			movement = 0.1
 		}
 		river = {
-			attack = 0.05
-		}
-		amphibious = {
 			attack = 0.05
 		}
 

@@ -8,7 +8,7 @@ technologies = {
 		# EFFECT ########
 		mountaineers = {
 			supply_consumption = -0.01
-			max_organisation = 3
+			max_organisation = 2
 		}
         special_forces_min = 36
 		###########
@@ -88,27 +88,27 @@ technologies = {
 		xor = { rangers }
 		
 		rangers_support = {
-			forest = {
-				attack = 0.06
-				defence = 0.05
-				movement = 0.05
+			snow = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
 			}
 		}
 		light_flame_tank = {
-			forest = {
-				attack = 0.08
+			snow = {
+				attack = 0.05
 				defence = 0.02
 			}
 		}
 		medium_flame_tank = {
-			forest = {
-				attack = 0.1
+			snow = {
+				attack = 0.05
 				defence = 0.02
 			}
 		}
 		heavy_flame_tank = {
-			forest = {
-				attack = 0.12
+			snow = {
+				attack = 0.05
 				defence = 0.02
 			}
 		}
@@ -159,26 +159,26 @@ technologies = {
 		
 		rangers_support = {
 			mountain = {
-				attack = 0.12
-				defence = 0.08
-				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
 			}
 		}
 		light_flame_tank = {
 			mountain = {
-				attack = 0.08
+				attack = 0.05
 				defence = 0.02
 			}
 		}
 		medium_flame_tank = {
 			mountain = {
-				attack = 0.1
+				attack = 0.05
 				defence = 0.02
 			}
 		}
 		heavy_flame_tank = {
 			mountain = {
-				attack = 0.12
+				attack = 0.05
 				defence = 0.02
 			}
 		}
@@ -407,8 +407,8 @@ technologies = {
 		
 		mountaineers = {
 			max_organisation = 3
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.03
+			hard_attack = 0.03
 		}
 		
 		force_use_small_tech_layout = yes
@@ -461,7 +461,7 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		mountaineers = {
-			soft_attack = 0.08
+			soft_attack = 0.05
 		}
 		
 		allow = {
@@ -505,7 +505,7 @@ technologies = {
 		xp_unlock_cost = 0
 		
 		mountaineers = {
-			hard_attack = 0.08
+			hard_attack = 0.05
 		}
 		#special_forces_min = 28
 		special_forces_training_time_factor = -0.20
@@ -577,17 +577,13 @@ technologies = {
 		
 		#special_forces_min = 28
 		naval_invasion_capacity = 8
-		#category_special_forces = {
-		#	max_organisation = 5
-		#	soft_attack = 0.05
-		#}
 		marine = {
-			max_organisation = 5
+			max_organisation = 4
 			max_strength = 2
 			supply_consumption = -0.01
 		}
 		marine_commando = {
-			max_organisation = 5
+			max_organisation = 4
 			max_strength = 2
 			supply_consumption = -0.01
 		}
@@ -638,8 +634,7 @@ technologies = {
 		
 		pioneer_support = {
 			jungle = {
-				attack = 0.12
-				defence = 0.02
+				attack = 0.1
 				movement = 0.05
 			}
 		}
@@ -696,8 +691,7 @@ technologies = {
 		
 		pioneer_support = {
 			amphibious = {
-				attack = 0.12
-				defence = 0.08
+				attack = 0.1
 			}
 		}
 		
@@ -975,13 +969,13 @@ technologies = {
 			battalion_mult = {
 				category = category_line_artillery
 				max_organisation = 2
-				soft_attack = 0.05
+				soft_attack = 0.03
 				breakthrough = 0.05
 				add = yes
 			}
 		}
 		
-		shore_bombardment_bonus = 0.15
+		shore_bombardment_bonus = 0.1
 		special_forces_attack_factor = 0.02
 			
 		doctrine = yes	
@@ -1115,7 +1109,7 @@ technologies = {
 		artillery = {
 			 battalion_mult = {
 				category = category_marines
-				defense = 0.05
+				defense = 0.03
 				breakthrough = 0.02
 			}
 		}
@@ -1123,7 +1117,7 @@ technologies = {
 		anti_air = {
 			 battalion_mult = {
 				category = category_marines
-				defense = 0.05
+				defense = 0.03
 				breakthrough = 0.02
 			}
 		}
@@ -1131,7 +1125,7 @@ technologies = {
 		anti_tank = {
 			 battalion_mult = {
 				category = category_marines
-				defense = 0.05
+				defense = 0.03
 				breakthrough = 0.02
 			}
 		}
@@ -1187,7 +1181,7 @@ technologies = {
 			air_defence = 0.20
 		}
 		paratrooper = {
-			max_organisation = 8
+			max_organisation = 6
 			breakthrough = 0.05
 			supply_consumption = -0.01
 		}
@@ -1355,10 +1349,10 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		paratrooper = {
-			max_organisation = 6
+			max_organisation = 4
 		}
 		airborne_light_armor = {
-			max_organisation = 6
+			max_organisation = 4
 		}
 		
 		allow = {
@@ -1611,7 +1605,7 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		category_paratroopers = {
-			soft_attack = 0.1
+			soft_attack = 0.07
 			hard_attack = 0.04
 			defense = 0.1
 		}
@@ -1655,7 +1649,7 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		category_paratroopers = {
-			soft_attack = 0.1
+			soft_attack = 0.07
 			hard_attack = 0.04
 			breakthrough = 0.08
 		}
@@ -1711,7 +1705,8 @@ technologies = {
 
 		shock_troops = {
 			max_organisation = 2
-			breakthrough = 0.02
+			breakthrough = 0.03
+			soft_attack = 0.02
 			supply_consumption = -0.01
 		}
         special_forces_min = 36
@@ -1763,7 +1758,7 @@ technologies = {
 	
 		shock_troops = {
 			urban = {
-				attack = 0.1
+				attack = 0.08
 			}
 		}
 		
@@ -1809,7 +1804,7 @@ technologies = {
 	
 		shock_troops = {
 			fort = {
-				attack = 0.1
+				attack = 0.08
 			}
 		}
 		
@@ -1855,8 +1850,8 @@ technologies = {
 	
 		shock_troops = {
 			max_organisation = 6
-			soft_attack = 0.03
-			hard_attack = 0.03
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
 		
 		
@@ -2042,6 +2037,7 @@ technologies = {
 	
 		shock_troops = {
 			max_organisation = 4
+			soft_attack = 0.03
 			breakthrough = 0.04
 		}
 		
@@ -2144,7 +2140,7 @@ technologies = {
 	
 
 		jaeger = {
-			max_organisation = 4
+			max_organisation = 3
 			supply_consumption = -0.01
 		}
         special_forces_min = 36
@@ -2191,8 +2187,8 @@ technologies = {
 
 		jaeger = {
 			max_organisation = 2
-			soft_attack = 0.04
-			hard_attack = 0.04
+			soft_attack = 0.03
+			hard_attack = 0.03
 		}
 		
 		
@@ -2242,7 +2238,7 @@ technologies = {
 
 		jaeger = {
 			forest = {
-				attack = 0.1
+				attack = 0.08
 			}
 		}
 		
@@ -2288,7 +2284,7 @@ technologies = {
 
 		jaeger = {
 			marsh = {
-				attack = 0.1
+				attack = 0.08
 			}
 		}
 		
@@ -2334,7 +2330,7 @@ technologies = {
 
 		jaeger = {
 			max_organisation = 2
-			breakthrough = 0.05
+			breakthrough = 0.03
 		}
 		
 		
@@ -2384,7 +2380,7 @@ technologies = {
 
 		jaeger = {
 			jungle = {
-				attack = 0.1
+				attack = 0.07
 			}
 		}
 		
@@ -2430,7 +2426,7 @@ technologies = {
 
 		jaeger = {
 			forest = {
-				attack = 0.05
+				attack = 0.02
 				defence = 0.05
 			}
 		}
@@ -2478,7 +2474,7 @@ technologies = {
 		jaeger = {
 			max_organisation = 2
 			max_strength = 4
-			defense = 0.05
+			defense = 0.03
 		}
 		on_research_complete = { custom_effect_tooltip = "HP added is 4" }
 

@@ -1733,8 +1733,7 @@ focus_tree = {
 		}
 
 		available = {
-#GER = { has_tech = basic_medium_tank_chassis 
-#		}
+			#GER = { has_tech = basic_medium_tank_chassis }
 		}
 
 		bypass = {

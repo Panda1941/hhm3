@@ -67,13 +67,13 @@ sub_units = {
 			movement = 0.10
 		}
 		mountain = {
-			movement = 0.10
+			movement = 0.05
 		}
 		jungle = {
-			movement = 0.10
+			movement = 0.05
 		}
 		marsh = {
-			movement = 0.10
+			movement = 0.05
 		}
 		plains = {
 			movement = 0.10
@@ -167,10 +167,10 @@ sub_units = {
 			movement = 0.1
 		}
 		plains = {
-			movement = 0.15
+			movement = 0.1
 		}
 		desert = {
-			movement = 0.20
+			movement = 0.1
 		}
 		river = {
 			movement = 0.1
@@ -254,10 +254,10 @@ sub_units = {
 		#	movement = 0.1
 		#}
 		plains = {
-			movement = 0.15
+			movement = 0.1
 		}
 		desert = {
-			movement = 0.15
+			movement = 0.1
 		}
 		river = {
 			movement = 0.1
@@ -327,28 +327,28 @@ sub_units = {
 		}
 
 		forest = {
-			movement = 0.1
+			movement = 0.05
 		}
 		hills = {
-			movement = 0.1
+			movement = 0.05
 		}
 		mountain = {
-			movement = 0.1
+			movement = 0.05
 		}
 		jungle = {
-			movement = 0.1
+			movement = 0.05
 		}
 		marsh = {
-			movement = 0.1
+			movement = 0.05
 		}
 		plains = {
-			movement = 0.1
+			movement = 0.05
 		}
 		desert = {
-			movement = 0.1
+			movement = 0.05
 		}
 		river = {
-			movement = 0.1
+			movement = 0.05
 		}
 		same_support_type = recon # blocks adding other recon types to template
 	}
@@ -429,7 +429,7 @@ sub_units = {
 			movement = 0.10
 		}
 		plains = {
-			movement = 0.1
+			movement = 0.05
 			attack = 0.02
 		}
 		
@@ -591,7 +591,6 @@ sub_units = {
 		}
 		plains = {
 			movement = 0.1
-			attack = 0.05
 		}
 
 		mountain = {

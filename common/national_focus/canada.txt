@@ -2276,9 +2276,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			set_technology = { basic_medium_art = 1 }
+			set_technology = { improved_medium_art = 1 }
 			custom_effect_tooltip = "Will also add 100 medium tank artillery"
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = 100 producer = CAN }   
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_2 amount = 160 producer = CAN }   
 		}
 	}
 
