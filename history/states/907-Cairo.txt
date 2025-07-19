@@ -1,54 +1,36 @@
-
 state={
 	id=907
 	name="STATE_907"
-	resources={
-		oil=12.000
-	}
+	manpower = 6454865
+	state_category=town
 
 	history={
-	set_state_flag = ENG_controls
-	set_state_flag = AFRICA_COMMONWEALTH_controls
 		owner = ENG
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 			air_base = 5
+			
 
 		}
 		victory_points = {
-			7011 25 
+			7011 20 
 		}
+		
 		victory_points = {
-			13323 5 
+			3996 5 
 		}
+		
 		victory_points = {
-			13321 5 
+			1068 3 
 		}
-		victory_points = {
-			13315 3 
-		}
-		victory_points = {
-			12816 1 
-		}
-		victory_points = {
-			12004 5 
-		}
-		victory_points = {
-			13327 5 
-		}
-		victory_points = {
-			13318 5 
-		}
-		add_core_of = SWE
+		add_core_of = WST
 
 	}
-
 	provinces={
-		4143 7011 12004 13315 13318 13320 13321 13323 13327 
+		992 1068 3996 4055 4143 7011 7117 7188 10005 10031 12004 
 	}
-	manpower=6454865
+	
 	buildings_max_level_factor=1.000
-	state_category=town
 	local_supplies=0.000
 }

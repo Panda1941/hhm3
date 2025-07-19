@@ -10,10 +10,8 @@ state= {
 
 	history=
 	{
-	set_state_flag = ENG_controls
-	set_state_flag = AFRICA_COMMONWEALTH_controls
 		owner = ENG
-		add_core_of = SWE
+		add_core_of = WST
 		victory_points = {
 			11984 5
 		}
@@ -31,5 +29,5 @@ state= {
 	}
 	provinces= { 7193 11984 }
 
-	local_supplies=4.0 
+	local_supplies=0.0 
 }

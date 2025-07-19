@@ -7,7 +7,7 @@ state={
 	
 	state_category = megalopolis
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 4 #was: 8
@@ -17,9 +17,13 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 			air_base = 10
 			3878 = {
 				naval_base = 6
-
+                landmark_statue_of_liberty = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
 			}
-
 		}
 		add_core_of = USA
 		victory_points = {

@@ -1,27 +1,4 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
-6756;743;impassable;-1;-1;-1;-1;-1;;spain-france1
-3737;743;impassable;-1;-1;-1;-1;-1;;spain-france2
-3931;743;impassable;-1;-1;-1;-1;-1;;spain-france3
-3931;11697;impassable;-1;-1;-1;-1;-1;;spain-france4
-11838;11697;impassable;-1;-1;-1;-1;-1;;spain-france5
-11838;9884;impassable;-1;-1;-1;-1;-1;;spain-france6
-915;9884;impassable;-1;-1;-1;-1;-1;;spain-france7
-915;9882;impassable;-1;-1;-1;-1;-1;;spain-france8
-899;9882;impassable;-1;-1;-1;-1;-1;;spain-france9
-3899;9882;impassable;-1;-1;-1;-1;-1;;spain-france10
-3899;3915;impassable;-1;-1;-1;-1;-1;;spain-france11
-3898;3915;impassable;-1;-1;-1;-1;-1;;spain-france12
-3898;6931;impassable;-1;-1;-1;-1;-1;;spain-france13
-3898;6915;impassable;-1;-1;-1;-1;-1;;spain-france14
-11779;6915;impassable;-1;-1;-1;-1;-1;;spain-france15
-11779;9853;impassable;-1;-1;-1;-1;-1;;spain-france16
-9824;9853;impassable;-1;-1;-1;-1;-1;;spain-france17
-1048;13228;impassable;-1;-1;-1;-1;-1;;Gibraltar
-10094;13228;impassable;-1;-1;-1;-1;-1;;Gibraltar
-10094;4135;impassable;-1;-1;-1;-1;-1;;Gibraltar
-10094;13299;impassable;-1;-1;-1;-1;-1;;Gibraltar
-7153;4135;impassable;-1;-1;-1;-1;-1;;Gibraltar
-7153;13299;impassable;-1;-1;-1;-1;-1;;Gibraltar
 12251;10321;sea;8313;-1;-1;-1;-1;;Andaman
 7413;1419;sea;5294;-1;-1;-1;-1;;Moluccas
 10141;1419;sea;5267;-1;-1;-1;-1;;Moluccas
@@ -31,10 +8,16 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 5388;803;sea;1155;-1;-1;-1;-1;SUEZ_CANAL;Suez
 299;211;sea;2282;-1;-1;-1;-1;;Småland-Öland
 6345;6287;sea;2382;-1;-1;-1;-1;;Skåne-Sjaelland
-3260;3325;;2408;-1;-1;-1;-1;;Sjaelland-Fyn
-3260;3374;;2408;-1;-1;2973;1625;;Sjaelland-SdFyn
-3277;3325;;2408;-1;-1;-1;-1;;Fyn-Jylland
-11251;3325;;2408;2956;1628;2960;1629;;Fyn-SdrJylland
+3260;3325;sea;2408;-1;-1;-1;-1;;Sjaelland-Fyn
+3374;13260;sea;2408;2971;1622;2973;1620;;SdFyn-Langeland
+13260;13261;sea;2408;2975;1619;2977;1618;;Langeland-Lolland
+13261;3305;sea;2408;2987;1617;2989;1619;;Lolland-Själland
+3277;3325;sea;2408;-1;-1;-1;-1;;Fyn-Jylland
+3325;13259;sea;2408;-1;-1;-1;-1;;Fyn-Samsö
+6364;13259;sea;2408;2965;1642;2968;1641;;Jylland-Samsö
+11251;13258;sea;2408;2954;1621;2956;1621;;Sönderjylland-Als
+11251;3325;sea;2408;2956;1628;2960;1629;;Fyn-SdrJylland
+9388;13257;sea;2358;3010;1608;3012;1609;;Stralsund-Rügen
 83;185;sea;1885;-1;-1;-1;-1;;Estonia-Ösel
 185;6201;sea;1885;-1;-1;-1;-1;;Ösel-Dagö
 83;6201;sea;1660;-1;-1;-1;-1;;Dagö-Estonia
@@ -94,9 +77,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11948;1177;sea;2708;-1;-1;-1;-1;;Jeju-Korea
 10124;1123;sea;8499;-1;-1;-1;-1;;Okinawa 1
 1123;7115;sea;8318;-1;-1;-1;-1;;Okinawa 2
-13370;13024;sea;2831;-1;-1;-1;-1;;Saipan-Tinian
-13374;13047;sea;7247;-1;-1;-1;-1;;Wake
-13371;13373;sea;7473;-1;-1;-1;-1;;Wake
+3995;13024;sea;2855;-1;-1;-1;-1;;Saipan-Tinian
 1135;13090;sea;6471;-1;-1;-1;-1;;Amlia-Unalaska
 13090;10694;sea;6064;-1;-1;-1;-1;;Unalaska-Unimak
 10048;7195;sea;8384;-1;-1;-1;-1;;Hawaii-Maui
@@ -148,11 +129,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 44;11050;sea;5792;-1;-1;-1;-1;;Northern-Straits
 22;3016;sea;5792;-1;-1;-1;-1;;Northern-Straits
 6062;6205;sea;3590;-1;-1;-1;-1;;West Scottish-Strait
+3178;13269;sea;3590;-1;-1;-1;-1;;Isle of Skye
+13270;11064;sea;3195;-1;-1;-1;-1;;Orkney-Thurso
 8435;6550;sea;7452;-1;-1;-1;-1;;Aegan Isle-Strait
 7304;4360;sea;8614;-1;-1;-1;-1;;New Foundland-Strait
 5407;5382;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar North
 5407;2400;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar South
-2455;2506;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
+2455;2431;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
 5412;7678;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
 2919;2943;;-1;-1;-1;-1;-1;HORMUZ_STRAIT;hormuz
 10825;1991;impassable;-1;-1;-1;-1;-1;;Himalayas
@@ -222,152 +205,53 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6691;9650;impassable;-1;-1;-1;-1;-1;;austrian alps
 9650;3684;impassable;-1;-1;-1;-1;-1;;austrian alps
 3314;6336;sea;2752;2885;1578;2890;1581;;Afsluitdijk
-10884;7154;impassable;-1;-1;-1;-1;-1;;lybia 
-10884;13331;impassable;-1;-1;-1;-1;-1;;lybia 
-10884;10037;impassable;-1;-1;-1;-1;-1;;lybia 
-10884;11940;impassable;-1;-1;-1;-1;-1;;lybia 
-4962;11940;impassable;-1;-1;-1;-1;-1;;lybia 
-4962;13350;impassable;-1;-1;-1;-1;-1;;lybia 
-4962;4117;impassable;-1;-1;-1;-1;-1;;lybia 
-4962;13342;impassable;-1;-1;-1;-1;-1;;lybia 
-12082;13342;impassable;-1;-1;-1;-1;-1;;lybia 
-7985;13342;impassable;-1;-1;-1;-1;-1;;lybia 
-7985;12866;impassable;-1;-1;-1;-1;-1;;lybia 
-7985;13341;impassable;-1;-1;-1;-1;-1;;lybia 
-7985;8069;impassable;-1;-1;-1;-1;-1;;lybia 
-10754;8069;impassable;-1;-1;-1;-1;-1;;lybia 
-10754;13343;impassable;-1;-1;-1;-1;-1;;lybia 
-10754;7076;impassable;-1;-1;-1;-1;-1;;lybia 
-10754;13345;impassable;-1;-1;-1;-1;-1;;lybia 
-1057;13345;impassable;-1;-1;-1;-1;-1;;lybia 
-10104;13345;impassable;-1;-1;-1;-1;-1;;lybia 
-10104;10785;impassable;-1;-1;-1;-1;-1;;lybia 
-10104;13352;impassable;-1;-1;-1;-1;-1;;lybia 
-10104;13357;impassable;-1;-1;-1;-1;-1;;lybia
-10104;11951;impassable;-1;-1;-1;-1;-1;;lybia  
-1140;11951;impassable;-1;-1;-1;-1;-1;;lybia 
-1140;13358;impassable;-1;-1;-1;-1;-1;;lybia 
-1140;1060;impassable;-1;-1;-1;-1;-1;;lybia
-1060;13300;impassable;-1;-1;-1;-1;-1;;lybia
-13300;13302;impassable;-1;-1;-1;-1;-1;;lybia
-13303;13301;impassable;-1;-1;-1;-1;-1;;lybia
-13302;13301;impassable;-1;-1;-1;-1;-1;;lybia
-13285;12091;impassable;-1;-1;-1;-1;-1;;lybia
-13285;13303;impassable;-1;-1;-1;-1;-1;;lybia
-12091;13284;impassable;-1;-1;-1;-1;-1;;lybia
-7148;13284;impassable;-1;-1;-1;-1;-1;;lybia
-7148;13283;impassable;-1;-1;-1;-1;-1;;lybia
-7148;13274;impassable;-1;-1;-1;-1;-1;;lybia
-13275;13271;impassable;-1;-1;-1;-1;-1;;lybia 
-13275;13272;impassable;-1;-1;-1;-1;-1;;lybia 
-13259;13272;impassable;-1;-1;-1;-1;-1;;lybia 
-13275;13274;impassable;-1;-1;-1;-1;-1;;lybia
-13258;13272;impassable;-1;-1;-1;-1;-1;;lybia 
-13322;13272;impassable;-1;-1;-1;-1;-1;;lybia 
-10127;13272;impassable;-1;-1;-1;-1;-1;;lybia 
-10127;13271;impassable;-1;-1;-1;-1;-1;;lybia 
-10127;13270;impassable;-1;-1;-1;-1;-1;;lybia  
-13269;10127;impassable;-1;-1;-1;-1;-1;;lybia
-13269;12816;impassable;-1;-1;-1;-1;-1;;lybia
-13267;12816;impassable;-1;-1;-1;-1;-1;;lybia
-13267;13268;impassable;-1;-1;-1;-1;-1;;lybia
-13266;13268;impassable;-1;-1;-1;-1;-1;;lybia
-13266;7144;impassable;-1;-1;-1;-1;-1;;lybia
-13266;10031;impassable;-1;-1;-1;-1;-1;;lybia
-12099;7144;impassable;-1;-1;-1;-1;-1;;lybia
-12099;11974;impassable;-1;-1;-1;-1;-1;;lybia
-12099;12044;impassable;-1;-1;-1;-1;-1;;lybia
-12099;10097;impassable;-1;-1;-1;-1;-1;;lybia
-2064;10097;impassable;-1;-1;-1;-1;-1;;lybia
-2064;1206;impassable;-1;-1;-1;-1;-1;;lybia
-2064;12771;impassable;-1;-1;-1;-1;-1;;lybia
-7987;4138;impassable;-1;-1;-1;-1;-1;;lybia
-7987;12836;impassable;-1;-1;-1;-1;-1;;lybia
-10900;12836;impassable;-1;-1;-1;-1;-1;;lybia
-10900;4961;impassable;-1;-1;-1;-1;-1;;lybia
-10900;8084;impassable;-1;-1;-1;-1;-1;;lybia
-10900;10739;impassable;-1;-1;-1;-1;-1;;lybia
-8103;10739;impassable;-1;-1;-1;-1;-1;;lybia
-8103;5060;impassable;-1;-1;-1;-1;-1;;lybia
-1434;2332;sea;3151;-1;-1;-1;-1;LADOGA_CANAL;Suez
-3689;11672;impassable;-1;-1;-1;-1;-1;;erdély
-711;11672;impassable;-1;-1;-1;-1;-1;;erdély
-711;3728;impassable;-1;-1;-1;-1;-1;;erdély
-9685;3728;impassable;-1;-1;-1;-1;-1;;erdély
-9685;11689;impassable;-1;-1;-1;-1;-1;;erdély
-727;11689;impassable;-1;-1;-1;-1;-1;;erdély
-727;9548;impassable;-1;-1;-1;-1;-1;;erdély
-727;3743;impassable;-1;-1;-1;-1;-1;;erdély
-9704;3743;impassable;-1;-1;-1;-1;-1;;erdély
-9704;6571;impassable;-1;-1;-1;-1;-1;;erdély
-6679;11605;impassable;-1;-1;-1;-1;-1;;erdély
-9619;6667;impassable;-1;-1;-1;-1;-1;;erdély
-11592;6667;impassable;-1;-1;-1;-1;-1;;erdély
-690;11655;impassable;-1;-1;-1;-1;-1;;erdély
-690;11619;impassable;-1;-1;-1;-1;-1;;erdély
-690;660;impassable;-1;-1;-1;-1;-1;;erdély
-3676;660;impassable;-1;-1;-1;-1;-1;;erdély
-3676;660;impassable;-1;-1;-1;-1;-1;;erdély
-3676;6695;impassable;-1;-1;-1;-1;-1;;erdély
-3484;6576;impassable;-1;-1;-1;-1;-1;;slovak
-3484;6590;impassable;-1;-1;-1;-1;-1;;slovak
-3484;9551;impassable;-1;-1;-1;-1;-1;;slovak
-11539;9551;impassable;-1;-1;-1;-1;-1;;slovak
-11554;9551;impassable;-1;-1;-1;-1;-1;;slovak
-11554;9412;impassable;-1;-1;-1;-1;-1;;slovak
-11554;11398;impassable;-1;-1;-1;-1;-1;;slovak
-11554;417;impassable;-1;-1;-1;-1;-1;;slovak
-581;417;impassable;-1;-1;-1;-1;-1;;slovak
-3550;417;impassable;-1;-1;-1;-1;-1;;slovak
-5284;6734;impassable;-1;-1;-1;-1;-1;;SPAIN
-5284;9689;impassable;-1;-1;-1;-1;-1;;SPAIN
-5284;11710;impassable;-1;-1;-1;-1;-1;;SPAIN
-8698;11710;impassable;-1;-1;-1;-1;-1;;SPAIN
-8698;758;impassable;-1;-1;-1;-1;-1;;SPAIN
-5258;758;impassable;-1;-1;-1;-1;-1;;SPAIN
-5258;3761;impassable;-1;-1;-1;-1;-1;;SPAIN
-8618;3761;impassable;-1;-1;-1;-1;-1;;SPAIN
-8618;6764;impassable;-1;-1;-1;-1;-1;;SPAIN
-8618;9719;impassable;-1;-1;-1;-1;-1;;SPAIN
-8618;13218;impassable;-1;-1;-1;-1;-1;;SPAIN
-8618;11707;impassable;-1;-1;-1;-1;-1;;SPAIN
-5233;11707;impassable;-1;-1;-1;-1;-1;;SPAIN
-5233;6749;impassable;-1;-1;-1;-1;-1;;SPAIN
-5233;9703;impassable;-1;-1;-1;-1;-1;;SPAIN
-5233;11688;impassable;-1;-1;-1;-1;-1;;SPAIN
-8592;11688;impassable;-1;-1;-1;-1;-1;;SPAIN
-8592;740;impassable;-1;-1;-1;-1;-1;;SPAIN
-8592;6756;impassable;-1;-1;-1;-1;-1;;SPAIN
-5382;12070;impassable;-1;-1;-1;-1;-1;;SPAIN
-5382;9815;impassable;-1;-1;-1;-1;-1;;SPAIN
-5382;4080;impassable;-1;-1;-1;-1;-1;;SPAIN
-5382;1048;impassable;-1;-1;-1;-1;-1;;SPAIN
-5407;7153;impassable;-1;-1;-1;-1;-1;;SPAIN
-5407;9979;impassable;-1;-1;-1;-1;-1;;SPAIN
-5407;7068;impassable;-1;-1;-1;-1;-1;;SPAIN
-5407;10063;impassable;-1;-1;-1;-1;-1;;SPAIN
-8793;10063;impassable;-1;-1;-1;-1;-1;;SPAIN
-8793;747;impassable;-1;-1;-1;-1;-1;;SPAIN
-8793;12038;impassable;-1;-1;-1;-1;-1;;SPAIN
-5431;12038;impassable;-1;-1;-1;-1;-1;;SPAIN
-5431;4065;impassable;-1;-1;-1;-1;-1;;SPAIN
-5431;10109;impassable;-1;-1;-1;-1;-1;;SPAIN
-5431;10024;impassable;-1;-1;-1;-1;-1;;SPAIN
-5431;4098;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;4098;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;962;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;6959;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;6906;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;9896;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;6817;impassable;-1;-1;-1;-1;-1;;SPAIN
-5454;3873;impassable;-1;-1;-1;-1;-1;;SPAIN
-8845;3873;impassable;-1;-1;-1;-1;-1;;SPAIN
-8845;6966;impassable;-1;-1;-1;-1;-1;;SPAIN
-8845;6812;impassable;-1;-1;-1;-1;-1;;SPAIN
-8845;9764;impassable;-1;-1;-1;-1;-1;;SPAIN
-8845;854;impassable;-1;-1;-1;-1;-1;;SPAIN
-5505;854;impassable;-1;-1;-1;-1;-1;;SPAIN 
-5505;6927;impassable;-1;-1;-1;-1;-1;;SPAIN 
-5505;9824;impassable;-1;-1;-1;-1;-1;;SPAIN 
-9767;6521;land;-1;-1;-1;-1;-1;;SPAIN_TELEPORT
--1;-1;;-1;-1;-1;-1;-1;-1
+13058;10245;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
+13058;12512;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
+13058;10636;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
+13058;13066;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
+3151;3060;impassable;-1;-1;-1;-1;-1;;Finnland Border
+3151;9150;impassable;-1;-1;-1;-1;-1;;Finnland Border
+149;9150;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6070;9176;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9078;9176;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9078;6153;impassable;-1;-1;-1;-1;-1;;Finnland Border
+40;6153;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9231;6153;impassable;-1;-1;-1;-1;-1;;Finnland Border
+2998;6153;impassable;-1;-1;-1;-1;-1;;Finnland Border
+2998;11156;impassable;-1;-1;-1;-1;-1;;Finnland Border
+2998;6210;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6210;80;impassable;-1;-1;-1;-1;-1;;Finnland Border
+3185;80;impassable;-1;-1;-1;-1;-1;;Finnland Border
+7;80;impassable;-1;-1;-1;-1;-1;;Finnland Border
+7;6175;impassable;-1;-1;-1;-1;-1;;Finnland Border
+7;6098;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6134;6175;impassable;-1;-1;-1;-1;-1;;Finnland Border
+3073;6175;impassable;-1;-1;-1;-1;-1;;Finnland Border
+3073;9074;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6045;9074;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9158;9074;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9158;9198;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9158;11181;impassable;-1;-1;-1;-1;-1;;Finnland Border
+197;11181;impassable;-1;-1;-1;-1;-1;;Finnland Border
+197;9123;impassable;-1;-1;-1;-1;-1;;Finnland Border
+11085;9123;impassable;-1;-1;-1;-1;-1;;Finnland Border
+11085;15;impassable;-1;-1;-1;-1;-1;;Finnland Border
+11085;74;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6128;74;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6183;74;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6012;74;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6012;9203;impassable;-1;-1;-1;-1;-1;;Finnland Border
+6012;142;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9140;142;impassable;-1;-1;-1;-1;-1;;Finnland Border
+9140;6117;impassable;-1;-1;-1;-1;-1;;Finnland Border
+12960;13292;sea;2580;-1;-1;-1;-1;;Falklands
+7683;13293;sea;8642;-1;-1;-1;-1;;Cote Nord
+8198;13295;sea;5473;-1;-1;-1;-1;;Aysen
+13307;13296;sea;9009;-1;-1;-1;-1;;Chubut
+12954;13297;sea;5424;-1;-1;-1;-1;;Araucania
+13312;7982;sea;2919;-1;-1;-1;-1;;South Iran
+761;13315;sea;9092;-1;-1;-1;-1;;Ontario
+13196;13314;sea;9092;-1;-1;-1;-1;;Northern Quebec
+1421;10184;sea;2899;-1;-1;-1;-1;;Sulu-Mindanao
+5864;5838;;-1;-1;-1;-1;-1;OTRANTO_STRAIT;Otranto Strait
+-1;-1;;-1;-1;-1;-1;-1;-1 

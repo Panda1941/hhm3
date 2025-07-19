@@ -43,42 +43,6 @@ country_event = {
 		}
 		set_country_flag = bessarabia_ceded
 	}
-
-	option = { # Refuse
-		name = romania.1.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				is_in_faction = yes
-				NOT = { is_in_faction_with = FROM }
-			}
-
-			modifier = {
-				add = 100
-				has_war_with = FROM
-			}
-			modifier = {
-				is_historical_focus_on = yes
-				NOT = {has_war_with = FROM}
-				factor = 0
-			}
-			modifier = {
-				factor = 0
-				is_in_faction_with = FROM
-			}
-		}
-		FROM = {
-			country_event = { days = 1 id = soviet.5 }
-			effect_tooltip = {
-				create_wargoal = {
-					type = take_state
-					target = ROM
-					generator = { 78 }
-				}
-			}
-		}
-	}
 }
 
 # Second Vienna Award - Northern Transylvania
@@ -137,7 +101,6 @@ country_event = {
 		}
 		set_country_flag = second_vienna_accepted_all
 	}
-	
 }
 
 # Second Vienna Award - No Concessions
@@ -173,7 +136,6 @@ country_event = {
 			country_event = { days = 1 id = bulgaria.1 }
 		}
 	}
-	
 }
 
 # Seek an alliance - Since everyone is out to get us
@@ -248,31 +210,5 @@ country_event = {
 			base = 0
 		}
 		
-	}
-}
-
-country_event = { #Election
-	id = romania.12
-	title = romania.12.t
-	desc = romania.12.desc
-	picture = GFX_report_event_ger_civil_war
-	
-	is_triggered_only = yes
-
-	trigger = {
-	}
-
-	option = { 
-		name = romania.12.a
-		add_stability = -0.05
-		46 = {
-			damage_building = {
-				type = infrastructure 
-				damage = 2 
-			}
-		}
-
-		ai_chance = {
-		}
 	}
 }

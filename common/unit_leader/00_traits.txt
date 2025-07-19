@@ -83,6 +83,10 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
 		}
 		
 	}
@@ -107,6 +111,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
 		}
@@ -135,7 +143,11 @@ leader_traits = {
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
-			} 
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
 		}
 	}
 	
@@ -174,6 +186,20 @@ leader_traits = {
 		planning_skill_factor = 1
 		logistics_skill_factor = 1
 	}
+
+	brave = {
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			org_loss_at_low_org_factor = -0.1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		
+		defense_skill = 1
+	}
 	
 	war_hero = { 
 		type = { land navy }
@@ -209,7 +235,11 @@ leader_traits = {
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
-			} 
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
 		}
 		
 		planning_skill_factor = 1
@@ -239,6 +269,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
 		}
@@ -272,6 +306,10 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
 		}
 		
 		attack_skill_factor = 1
@@ -301,6 +339,10 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
 		}
 	}
 
@@ -323,6 +365,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
 		}
@@ -395,6 +441,10 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
 			
 			modifier = {
 				FROM = { 
@@ -449,6 +499,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
 			
@@ -512,6 +566,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
 			
@@ -735,7 +793,9 @@ leader_traits = {
 					original_tag = ITA
 					original_tag = SWI
 					original_tag = SWE
+					original_tag = AUS
 					original_tag = BRA
+					original_tag = GER
 				}
 			}
 		}
@@ -751,7 +811,9 @@ leader_traits = {
 					original_tag = ITA
 					original_tag = SWI
 					original_tag = SWE
+					original_tag = AUS
 					original_tag = BRA
+					original_tag = GER
 				}
 				NOT = {
 					OR = {
@@ -782,10 +844,7 @@ leader_traits = {
 			modifier = { #ITALY
 				factor = 2
 				FROM = {
-					OR = {
-						has_completed_focus = ITA_strengthen_the_blackshirts
-						#TODO_Manu: Alt-hist focuses
-					}
+					has_completed_focus = ITA_strengthen_the_blackshirts
 				}
 			}
 			modifier = { #ITALY
@@ -847,7 +906,7 @@ leader_traits = {
 		cost = 1000
 		
 		field_marshal_modifier = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 		enable_ability = extra_suplies
 		ai_will_do = {
@@ -865,10 +924,10 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			org_loss_when_moving = -0.2
+			org_loss_when_moving = -0.30
 		}
 		
-		attack_skill = 2
+		attack_skill = 1
 		
 		slot = army_chief
 		specialist_advisor_trait = army_chief_offensive_1
@@ -891,7 +950,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			max_dig_in_factor = 0.15
+			max_dig_in_factor = 0.30
 		}
 		slot = army_chief
 		specialist_advisor_trait = army_chief_entrenchment_1
@@ -937,7 +996,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			max_planning = 0.08
+			max_planning = 0.1
 		}
 		
 		slot = army_chief
@@ -967,7 +1026,7 @@ leader_traits = {
 
 		cost = 1000
 		field_marshal_modifier = {
-			defence = 0.08
+			defence = 0.10
 		}
 		custom_effect_tooltip = INCREASED_COUNTERATTACK_CHANCE
 		
@@ -996,7 +1055,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			breakthrough_factor = 0.12
+			breakthrough_factor = 0.10
 		}
 		custom_effect_tooltip = INCREASED_ASSAULT_AND_SHOCK_CHANCE
 		
@@ -1021,8 +1080,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			land_reinforce_rate = 0.03
-			army_org_factor = 0.05
+			land_reinforce_rate = 0.02
 		}
 		
 		slot = army_chief
@@ -1046,7 +1104,6 @@ leader_traits = {
 		cost = 1000
 		field_marshal_modifier = {
 			army_morale_factor = 0.10
-			army_strength_factor = 0.05
 		}
 		
 		slot = army_chief
@@ -1128,10 +1185,9 @@ leader_traits = {
 		
 		cost = 1000
 		modifier = {
-			breakthrough_factor = 0.05
-			cavalry_attack_factor = 0.1
-			motorized_attack_factor = 0.1
-			mechanized_attack_factor = 0.1
+			cavalry_attack_factor = 0.12
+			motorized_attack_factor = 0.12
+			mechanized_attack_factor = 0.12
 		}
 		
 		slot = high_command
@@ -1157,8 +1213,7 @@ leader_traits = {
 		
 		cost = 1000
 		modifier = {
-			army_infantry_defence_factor = 0.1
-			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.13
 		}
 		
 		slot = high_command
@@ -1188,7 +1243,7 @@ leader_traits = {
 		cost = 2000
 		
 		corps_commander_modifier = {
-			max_commander_army_size = 20
+			max_commander_army_size = 6
 		}
 		
 		ai_will_do = {
@@ -1203,29 +1258,6 @@ leader_traits = {
 		expert_advisor_trait = army_logistics_2
 		genius_advisor_trait = army_logistics_3
 	}
-
-	skilled_staffer_sov_ger = { 
-		type = corps_commander
-		
-		cost = 2000
-		
-		corps_commander_modifier = {
-			max_commander_army_size = 950
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		logistics_skill_factor = 2
-		
-		gui_row = 16
-		
-		slot = high_command
-		specialist_advisor_trait = army_logistics_1
-		expert_advisor_trait = army_logistics_2
-		genius_advisor_trait = army_logistics_3
-	}
-	
 	trickster = { 
 		type = corps_commander
 		gain_xp = {
@@ -1239,7 +1271,6 @@ leader_traits = {
 		cost = 500
 		modifier = {
 			recon_factor = 0.25
-			initiative_factor = 0.05
 		}
 
 		ai_will_do = {
@@ -1275,13 +1306,16 @@ leader_traits = {
 		}
 		cost = 1000
 		modifier = {
-			terrain_penalty_reduction = 0.1
+			terrain_penalty_reduction = 0.30
 			acclimatization_cold_climate_gain_factor = 0.1
 			acclimatization_hot_climate_gain_factor = 0.1
 		}
 		
 		ai_will_do = {
 			factor = 1
+		}
+		allowed = {
+			always = no
 		}
 		
 		trait_type = assignable_terrain_trait
@@ -1366,7 +1400,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			army_armor_speed_factor = 0.05 
-			army_armor_attack_factor = 0.1
+			army_armor_attack_factor = 0.16 
 		}
 		ai_will_do = {
 			factor = 1
@@ -1394,7 +1428,7 @@ leader_traits = {
 		}
 		cost = 700
 		modifier = {
-			out_of_supply_factor = -0.2
+			out_of_supply_factor = -0.25
 		}
 		
 		ai_will_do = {
@@ -1655,8 +1689,8 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			cavalry_attack_factor = 0.15
-			cavalry_defence_factor = 0.15
+			#cavalry_attack_factor = 0.10
+			cavalry_defence_factor = 0.10
 		}
 		
 		ai_will_do = {
@@ -1711,9 +1745,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			urban = {
-				attack = 0.1
-			}
+			equipment_capture = 0.03
 		}
 		
 		ai_will_do = {
@@ -1755,7 +1787,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			max_dig_in = 2.5
+			max_dig_in = 5
 			recon_factor_while_entrenched = 0.25
 		}
 		
@@ -1862,7 +1894,8 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			cas_damage_reduction = 0.05
+			cas_damage_reduction = 0.5
+			air_superiority_bonus_in_combat = -0.5
 		}
 		
 		ai_will_do = {
@@ -1957,7 +1990,7 @@ leader_traits = {
 ##################################
 # Naval traits.
 ##################################
-	
+
 	blockade_runner = { 
 		type = navy
 		cost = 500
@@ -1985,7 +2018,7 @@ leader_traits = {
 		}
 		cost = 700
 		modifier = {
-			navy_submarine_attack_factor = 0.15 # +X% stronger damage for submarines
+			navy_submarine_attack_factor = 0.2 # +X% stronger damage for submarines
 		}
 		custom_gain_xp_trigger_tooltip = SEAWOLF_TRIGGER_TT
 		
@@ -2029,7 +2062,7 @@ leader_traits = {
 		custom_gain_xp_trigger_tooltip = FLEET_PROTECTOR_TRIGGER_TT
 		cost = 500
 		modifier = {
-			screening_efficiency = 0.15
+			screening_efficiency = 0.2
 		}
 		
 		slot = high_command
@@ -2051,7 +2084,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			positioning = 0.05
+			positioning = 0.25
 		}
 		custom_gain_xp_trigger_tooltip = SUPERIOR_TACTICIAN_TRIGGER_TT
 		
@@ -2077,7 +2110,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			navy_carrier_air_targetting_factor = 0.05 # Airplanes from carriers has better naval targetting
+			navy_carrier_air_targetting_factor = 0.1 # Airplanes from carriers has better naval targetting
 			sortie_efficiency = 0.1
 		}
 		
@@ -2101,7 +2134,7 @@ leader_traits = {
 		custom_gain_xp_trigger_tooltip = IRONSIDE_TRIGGER_TT
 		cost = 500
 		modifier = {
-			navy_capital_ship_defence_factor = 0.05
+			navy_capital_ship_defence_factor = 0.1
 		}
 
 		ai_will_do = {
@@ -2184,7 +2217,8 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { seawolf spotter fleet_protector superior_tactician }
+		any_parent = { seawolf spotter fleet_protector superior_tactician } 
+		mutually_exclusive = silent_hunter
 		
 		gui_row = 3
 		gui_column = 1
@@ -2210,7 +2244,12 @@ leader_traits = {
 	destroyer_leader = {
 		type = navy
 		modifier = {
-			naval_torpedo_cooldown_factor = -0.1
+			#destroyer = {
+			#	units = {
+			#		attack = 0.1
+			#		defence = 0.1
+			#	}
+			#}
 		}
 		sub_unit_modifiers = {
 			destroyer = {
@@ -2233,7 +2272,7 @@ leader_traits = {
 	cruiser_captain = { 
 		type = navy
 		modifier = {
-			navy_visibility = -0.05
+			
 		}
 		sub_unit_modifiers = {
 			light_cruiser = {
@@ -2278,7 +2317,7 @@ leader_traits = {
 	flight_deck_manager = { 
 		type = navy
 		modifier = {
-			sortie_efficiency = 0.1
+			 sortie_efficiency = 0.1
 		}
 		
 		slot = high_command
@@ -2301,7 +2340,7 @@ leader_traits = {
 	ground_pounder = { 
 		type = navy
 		modifier = {
-			shore_bombardment_bonus = 0.25
+			shore_bombardment_bonus = 0.25 
 		}
 				
 		ai_will_do = {
@@ -2318,7 +2357,7 @@ leader_traits = {
 	big_guns_expert = { 
 		type = navy
 		modifier = {
-			navy_capital_ship_attack_factor = 0.075
+			navy_capital_ship_attack_factor = 0.15
 		}
 				
 		slot = high_command
@@ -2363,7 +2402,6 @@ leader_traits = {
 		type = navy
 		modifier = {
 			naval_retreat_chance = 0.25
-			naval_retreat_speed = 0.10
 		}
 		
 		ai_will_do = {
@@ -2403,7 +2441,7 @@ leader_traits = {
 	loading_drill_master = { 
 		type = navy
 		modifier = {
-			naval_torpedo_cooldown_factor = -0.33 # every 2 hours instead of every 3 hours
+			naval_torpedo_cooldown_factor = -0.25
 		}
 				
 		ai_will_do = {
@@ -2441,7 +2479,7 @@ leader_traits = {
 	fly_swatter = {
 		type = navy
 		modifier = {
-			navy_anti_air_attack_factor = 0.125
+			navy_anti_air_attack_factor = 0.1
 		}
 
 		trait_type = assignable_trait
@@ -2462,7 +2500,7 @@ leader_traits = {
 	fighter_director = { 
 		type = navy
 		modifier = {
-			fighter_sortie_efficiency = 0.25
+			fighter_sortie_efficiency = 0.2
 		}
 				
 		ai_will_do = {
@@ -2558,7 +2596,7 @@ leader_traits = {
 	crisis_magician = { 
 		type = navy
 		modifier = {
-			naval_critical_effect_factor = -0.5
+			 naval_critical_effect_factor = -0.5
 		}
 				
 		ai_will_do = {
@@ -2694,6 +2732,10 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2704,8 +2746,8 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		modifier = {
-			naval_enemy_retreat_chance = 0.1
-			navy_org_factor = 0.05
+			naval_enemy_retreat_chance = 0.2
+			navy_org = 5
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2715,6 +2757,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2742,6 +2788,10 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2752,8 +2802,8 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		modifier = {
-			naval_damage_factor = 0.1
-			naval_defense_factor = -0.05
+			naval_damage_factor = 0.2
+			naval_defense_factor = -0.1
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2763,6 +2813,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2787,6 +2841,10 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2797,8 +2855,8 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		modifier = {
-			naval_has_potf_in_combat_attack = 0.05
-			naval_has_potf_in_combat_defense = 0.05
+			naval_has_potf_in_combat_attack = 0.1
+			naval_has_potf_in_combat_defense = 0.1
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2808,6 +2866,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2820,8 +2882,8 @@ leader_traits = {
 		trait_type = personality_trait
 	
 		modifier = { # WARNING! Changing the value of these modifiers requires changing them also in the tooltip ITA_flotta_d_evasione_admiral_traits_tt
-			naval_damage_factor = 0.025
-			naval_speed_factor = 0.05
+			naval_damage_factor = 0.05
+			naval_speed_factor = 0.1
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2831,6 +2893,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2855,6 +2921,10 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2865,8 +2935,8 @@ leader_traits = {
 		trait_type = personality_trait
 	
 		modifier = {
-			navy_capital_ship_attack_factor = 0.05
-			navy_anti_air_attack_factor = -0.1
+			navy_capital_ship_attack_factor = 0.1
+			navy_anti_air_attack_factor = -0.2	
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2876,6 +2946,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2903,6 +2977,10 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2913,7 +2991,7 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		modifier = {
-			ships_at_battle_start = -0.15
+			ships_at_battle_start = -0.25
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2923,6 +3001,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2936,7 +3018,7 @@ leader_traits = {
 	
 		modifier = {
 			naval_retreat_chance = 0.25
-			naval_damage_factor = -0.025 
+			naval_damage_factor = -0.05 
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2946,6 +3028,10 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2971,6 +3057,10 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2985,20 +3075,13 @@ leader_traits = {
 		type = all
 		trait_type = status_trait
 		
-		non_shared_modifier = {
-			skill_bonus_factor = -0.5
-			cannot_use_abilities = 1
-		}
+		
 	}
 
 	wounded = { 
 		type = all
 		trait_type = status_trait
 		
-		non_shared_modifier = {
-			skill_bonus_factor = -0.5
-			cannot_use_abilities = 1
-		}
 	}
 
 	reassigned = { 
@@ -3303,6 +3386,26 @@ leader_traits = {
 		}
 	}
 
+	trait_HUN_fascist_sympathies = {
+
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	trait_HUN_vitez = {
+
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
 ##################################
 # operative traits
 ##################################
@@ -3548,6 +3651,57 @@ leader_traits = {
 
 		new_commander_weight = {
 			factor = 0
+		}
+	}
+
+	inspirational_bagpiper = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		modifier = {
+			wounded_chance_factor = 0.65
+			experience_gain_army_unit_factor = 0.1
+			army_strength_factor = 0.1  
+		}
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	loyalty_to_britain = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	loyalty_to_pakistan = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	loyalty_to_india = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	IRQ_golden_square_member = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
 		}
 	}
 

@@ -8,7 +8,7 @@ state={
 
 	history={
 		owner = SPR
-		add_core_of = SPR
+		add_core_of = WST
 		victory_points = {
 			758 5
 		}
@@ -19,7 +19,10 @@ state={
 			infrastructure = 3 #was: 6
 			dockyard = 2
 			arms_factory = 1
-			#air_base = 2
+			air_base = 2
+			758 = {
+				naval_base = 6
+			}
 		}
 		add_core_of = SPR
 	}

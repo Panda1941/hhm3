@@ -1,25 +1,27 @@
 state= {
 	id=599
 	name="STATE_599"
-	manpower = 12685200
-	state_category = large_city
+	manpower = 8685200
+	state_category = town
 	resources={
 		tungsten=15 # was: 20
 		steel= 15 # was: 20
 		chromium = 3 # was: 4
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history= {
 		owner = CHI
 		add_core_of = CHI
+		add_core_of = CHI
+		
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 3
-			arms_factory = 5
-			air_base = 5
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 2
 		}
 		victory_points = { 
-			10404 15 
+			10404 3 
 		}
 
 		1938.10.25 = {

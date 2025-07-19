@@ -5,12 +5,10 @@ state=
 	manpower = 241621
 	state_category = small_island
 	history= {
-	set_state_flag = ENG_controls
-	set_state_flag = AFRICA_COMMONWEALTH_controls
 		owner = ENG
-		add_core_of = SWE
+		add_core_of = WST
 		victory_points = {
-			12003 6
+			12003 5 
 		}
 		buildings = {
 			infrastructure = 2
@@ -23,5 +21,5 @@ state=
 	}
 	provinces= { 12003 }
 
-	local_supplies=12.0 
+	local_supplies=0.0 
 }

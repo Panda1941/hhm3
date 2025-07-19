@@ -14,9 +14,17 @@ state={
 			synthetic_refinery = 1 #NSB
 		}
 		victory_points = {
-			413 20
+			413 5
 		}
 		add_core_of = SOV
+		1939.1.1 = {
+			buildings = {
+				9448 = {
+					air_facility = 1
+				}
+			}
+			
+		}
 	}
 
 	provinces={

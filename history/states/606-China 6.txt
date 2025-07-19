@@ -5,14 +5,13 @@ state={
 		steel=11.000
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
+		
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
-			arms_factory = 3
 
 		}
 		victory_points = {

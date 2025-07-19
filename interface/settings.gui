@@ -1154,7 +1154,7 @@ guiTypes = {
 			size = { width=480 height = 600 }
 			Orientation = center
 			moveable = yes
-			fade_time = 1
+			fade_time = 500
 			fade_type = linear
 
 			background = {
@@ -1672,21 +1672,40 @@ guiTypes = {
 						position = { x=0 y =120}	
 						clicksound = click_scroll						
 					}
-	
-		
-					
+				}
+
+				instantTextBoxType = {
+					name = "corner_scrolling_enabled"
+					position = { x = 65 y = 54 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = {x = 0 y =0}
+					text = "SM_CORNER_SCROLL"
+					maxWidth = 258
+					maxHeight = 20
+					fixedsize = yes
+					format = left
+					vertical_alignment = center	
+				}
+
+				checkboxType = {
+					name = "corner_scrolling_checkbox"
+					position = { x = 21 y = 50}
+					quadTextureSprite ="GFX_generic_checkbox"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_checkbox
 				}
 
 				iconType = {
 					name = "zoomspeed_bg"
 					quadTextureSprite ="GFX_generic_bg_417"
-					position = { x = 21 y = 56 }
+					position = { x = 21 y = 84 }
 					Orientation = "UPPER_LEFT"
 					alwaystransparent = yes
 				}
 				
 				instantTextBoxType={
-					position = {x = 40 y = 61 }
+					position = {x = 40 y = 89 }
 					name = "zoomspeed_label"
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}	
@@ -1705,7 +1724,7 @@ guiTypes = {
 					leftbutton = "landslider_upButton"
 					rightbutton = "landslider_downButton"
 					size = {x =172 y =16 }
-					position = {x= 260 y =61}
+					position = {x= 260 y =89}
 					priority = 100			
 					borderSize = {x =16 y = 16}	
 					maxValue = 100
@@ -1751,7 +1770,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_visual_alerts_label"
-					position = { x = 65 y = 100 }
+					position = { x = 65 y = 124 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1765,7 +1784,7 @@ guiTypes = {
 
 				checkboxType = {
 					name = "accessibility_visual_alerts"
-					position = { x = 21 y = 96}
+					position = { x = 21 y = 120}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -1775,7 +1794,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_large_fonts_label"
-					position = { x = 65 y = 140 }
+					position = { x = 65 y = 160 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1789,7 +1808,7 @@ guiTypes = {
 
 				checkboxType = {
 					name = "accessibility_large_fonts"
-					position = { x = 21 y = 136}
+					position = { x = 21 y = 156}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -1799,7 +1818,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_tts_label"
-					position = { x = 65 y = 180 }
+					position = { x = 65 y = 196 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1813,7 +1832,7 @@ guiTypes = {
 
 				checkboxType = {
 					name = "accessibility_tts"
-					position = { x = 21 y = 176}
+					position = { x = 21 y = 192}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -1823,7 +1842,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_stt_label"
-					position = { x = 65 y = 220 }
+					position = { x = 65 y = 232 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1837,7 +1856,7 @@ guiTypes = {
 
 				checkboxType = {
 					name = "accessibility_stt"
-					position = { x = 21 y = 216}
+					position = { x = 21 y = 228}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -1847,7 +1866,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_stt_shortcut_label"
-					position = { x = 65 y = 260 }
+					position = { x = 65 y = 268 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1861,7 +1880,7 @@ guiTypes = {
 
 				checkboxType = {
 					name = "accessibility_stt_shortcut"
-					position = { x = 21 y = 256}
+					position = { x = 21 y = 264}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -1871,7 +1890,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_stt_shortcut_editbox_label"
-					position = { x = 65 y = 300 }
+					position = { x = 65 y = 304 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1887,7 +1906,7 @@ guiTypes = {
 				iconType = {
 					name = "stt_shortcut_editbox_bg"
 					quadTextureSprite ="GFX_generic_box_96"
-					position = { x = 315 y = 300 }
+					position = { x = 315 y = 304 }
 					Orientation = "UPPER_LEFT"
 					alwaystransparent = yes
 				}					
@@ -1905,7 +1924,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "accessibility_ingameclock_label"
-					position = { x = 65 y = 340 }
+					position = { x = 65 y = 336 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -1919,7 +1938,7 @@ guiTypes = {
 
 				checkboxType = {
 					name = "accessibility_ingameclock"
-					position = { x = 21 y = 336}
+					position = { x = 21 y = 330}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox

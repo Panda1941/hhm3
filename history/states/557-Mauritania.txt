@@ -2,13 +2,13 @@
 state={
 	id=557
 	name="STATE_557" # Mauritania
-	manpower = 1
+	manpower = 225000
 	
 	state_category = pastoral
 
 	history={
-		owner = WST
-		add_core_of = SWE
+		owner = FRA
+		add_core_of = WST
 		victory_points = {
 			5034 1
 		}

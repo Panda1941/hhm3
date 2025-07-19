@@ -10,10 +10,13 @@ state={
 	}
 
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = SIA
 		buildings = {
 			infrastructure = 2
+			 12230 = {
+                naval_base = 1
+            }
 		}
 		victory_points = {
 			7236 1 

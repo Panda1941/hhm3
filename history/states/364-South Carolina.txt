@@ -4,13 +4,13 @@ state={
 	name="STATE_364"
 	manpower = 1738764
 	
-	state_category = metropolis
+	state_category = city
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 7
+			industrial_complex = 2
 			7202 = {
 				naval_base = 2
 

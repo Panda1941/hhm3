@@ -5,7 +5,7 @@ state={
 	manpower = 225564
 	state_category = rural
 	
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 2

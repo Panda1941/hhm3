@@ -649,13 +649,13 @@ NDefines.NGraphics.NAVAL_MINES_COUNT_TO_VISUAL_ASPECT = 0.1 -- How many in-game-
 
 NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
 	0.0/360.0, 1.0, 1.0,	--red
-	10.0/360.0, 1.0, 1.0,	--orange
 	60.0/360.0, 1.0, 1.0,	--yellow
 	120.0/360.0, 0.75, 1.0,	--green
 	180.0/360.0, 1.0, 1.0,	--turq
 	235.0/360.0, 1.0, 1.0,	--blue
 	260.0/360.0, 1.0, 1.0,	--dark purple
 	300.0/360.0, 1.0, 1.0,	--light purple
+	10.0/360.0, 1.0, 0.0,	--black
 	330.0/360.0, 0, 1.0		--white
 }
 

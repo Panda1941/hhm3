@@ -9,8 +9,8 @@ state= {
 		rubber=1 # was: 2
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = PHI 
+	history= {
+		owner = PHI
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

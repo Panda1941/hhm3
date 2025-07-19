@@ -77,6 +77,8 @@ ideas = {
 			}
 		}
 
+
+
 		RAJ_marginalized_muslim_community_angry = {
 		
 			picture = raj_marginalized_muslim_community_angry
@@ -92,8 +94,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.15
+				stability_factor = -0.1
+				war_support_factor = -0.05
 				conscription_factor = -0.2
+				autonomy_gain = -0.4
 			}
 		}
 
@@ -113,8 +117,51 @@ ideas = {
 
 			modifier = {
 				stability_factor = -0.02
-				conscription_factor = -0.05
-				autonomy_gain = 0.5
+				conscription_factor = -0.1
+				autonomy_gain = 0.6
+			}
+		}
+
+		RAJ_marginalized_muslim_community_happy_alt = {
+		
+			picture = raj_marginalized_muslim_community_happy
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.12
+				stability_factor = -0.02
+				conscription_factor = -0.1
+				autonomy_gain = 0.1
+			}
+		}
+
+		RAJ_marginalized_muslim_community_very_happy = {
+		
+			picture = raj_marginalized_muslim_community_happy
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				conscription_factor = 0.06
+				autonomy_gain = 0.9
 			}
 		}
 
@@ -162,7 +209,7 @@ ideas = {
 				industrial_capacity_factory = -0.25
 				industrial_capacity_dockyard = -0.25
 				conscription_factor = -0.1
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.10
 			}
 		}
 
@@ -183,47 +230,14 @@ ideas = {
 				}
 			}
 
-			removal_cost = -1
-
-			modifier = {
-				
-			}
-		}
-
-		RAJ_british_rail_investors_raj = {
-
-			picture = generic_build_infrastructure
-
-			name = RAJ_british_rail_investors
-
-			allowed = {
-				OR = {
-					original_tag = RAJ
-					original_tag = ENG
-				}
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-			}
-
-			available = { 
-				OR = {
-					original_tag = RAJ
-					original_tag = ENG
-				} 
+			cancel = {
+				is_subject = no
 			}
 
 			removal_cost = -1
 
 			modifier = {
-				production_speed_rail_way_factor = 0.15
-				production_speed_industrial_complex_factor = 0.1
+				autonomy_gain = -0.1
 			}
 		}
 
@@ -232,10 +246,7 @@ ideas = {
 			picture = generic_build_infrastructure
 
 			allowed = {
-				OR = {
-					original_tag = RAJ
-					original_tag = ENG
-				}
+				original_tag = RAJ
 			}
 
 			allowed_civil_war = {
@@ -247,12 +258,7 @@ ideas = {
 				}
 			}
 
-			available = { 
-				OR = {
-					original_tag = RAJ
-					original_tag = ENG
-				} 
-			}
+			available = { is_subject_of = ENG }
 
 			removal_cost = -1
 
@@ -281,7 +287,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = -0.15
+				autonomy_gain = -0.4
 			}
 		}
 
@@ -470,6 +476,50 @@ ideas = {
 				autonomy_gain = 0.4
 			}
 		}
+
+		RAJ_womens_royal_indian_naval_service_spirit = {
+
+			picture = generic_women_in_the_army
+			allowed = {
+				original_tag = RAJ
+			}
+
+			removal_cost = -1
+
+			modifier = { 
+				conscription = 0.01
+			}
+
+		}
+
+		RAJ_modernized_navy_spirit = {
+
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = RAJ
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				naval_invasion_planning_bonus_speed = 0.25
+				naval_coordination = 0.25
+				naval_damage_factor = 0.15
+				naval_defense_factor = 0.15
+			}
+
+		}
+
+		RAJ_british_naval_agreement = {
+
+
+			picture = HUN_treaty_of_triannon
+
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+			}
+
+		}
 	}
 
 	naval_manufacturer = {
@@ -490,7 +540,7 @@ ideas = {
 			}
 			
 			traits = { convoy_escort_naval_manufacturer }
-			modifier = { naval_manufacturer_cost_factor = -1 }
+
 		}
 		
 		garden_reach_shipbuilders = {
@@ -507,7 +557,6 @@ ideas = {
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer }
-			modifier = { naval_manufacturer_cost_factor = -1 }
 		}
 		
 		scindia_shipyard = {
@@ -524,7 +573,7 @@ ideas = {
 			}
 			
 			traits = { atlantic_fleet_naval_manufacturer }
-			modifier = { naval_manufacturer_cost_factor = -1 }
+			
 		}
 		
 	}
@@ -548,7 +597,8 @@ ideas = {
 			
 			traits = { light_aircraft_manufacturer }
 			
-			modifier = { aircraft_manufacturer_cost_factor = -1 }
+			modifier = {
+			}
 		}
 					
 	}
@@ -560,6 +610,7 @@ ideas = {
 			
 			allowed = {
 				has_dlc = "Together for Victory"
+				NOT = { has_dlc = "Graveyard of Empires" }
 				original_TAG = RAJ
 			}
 
@@ -579,6 +630,7 @@ ideas = {
 			
 			allowed = {
 				has_dlc = "Together for Victory"
+				NOT = { has_dlc = "Graveyard of Empires" }
 				original_TAG = RAJ
 			}
 			
@@ -594,4 +646,5 @@ ideas = {
 			}
 		}
 	}
+
 }

@@ -133,6 +133,10 @@
 
 		completion_reward = {
 			navy_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzn
 				cost_reduction = 0.5
@@ -448,7 +452,7 @@
 	focus = {
 		id = NZL_expand_the_nzpaf
 		icon = GFX_goal_generic_air_doctrine
-		x = 18
+		x = 13
 		y = 0
 
 		cost = 10
@@ -517,6 +521,16 @@
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_equipment_subsidy = {
+					cic = 1000
+					equipment_type = medium_plane_airframe
+					seller_tags = { ENG }
+				}
+			}
 		}
 	}
 
@@ -549,6 +563,10 @@
 
 		complete_tooltip = {
 			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 			random_state = {				
 				limit = {
 					has_state_flag = NZL_expand_the_nzpaf_AB
@@ -569,6 +587,10 @@
 
 		completion_reward = {
 			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -739,10 +761,7 @@
 				name = NZL_modern_fighters
 				bonus = 1.0
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				category = light_fighter
 				category = cat_heavy_fighter
 			}
 		}
@@ -794,7 +813,7 @@
 	focus = {
 		id = NZL_national_roads_board
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 12
+		x = 18
 		y = 0
 
 		cost = 10
@@ -1158,7 +1177,7 @@
 		id = NZL_think_big
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = NZL_industrial_conscription }
-		#prerequisite = { focus = NZL_domestic_arms_industry }
+		prerequisite = { focus = NZL_domestic_arms_industry }
 		x = 2
 		y = 4
 		relative_position_id = NZL_national_roads_board
@@ -1252,9 +1271,9 @@
 	focus = {
 		id = NZL_project_seal
 		icon = GFX_focus_wonderweapons
-		#prerequisite = { focus = NZL_heavy_bombers focus = NZL_modern_fighters }
+		prerequisite = { focus = NZL_heavy_bombers focus = NZL_modern_fighters }
 		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
-		x = 0
+		x = -2
 		y = 4
 		relative_position_id = NZL_national_roads_board
 
@@ -1278,11 +1297,24 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_project_seal
-				bonus = 1.0
-				uses = 2
-				category = nuclear
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = NZL_project_seal
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
 			}
 		}
 	}
@@ -1291,7 +1323,7 @@
 		id = NZL_national_defense_institute
 		icon = GFX_focus_research
 		prerequisite = { focus = NZL_project_seal }
-		x = 1
+		x = -2
 		y = 5
 		relative_position_id = NZL_national_roads_board
 
@@ -1324,7 +1356,7 @@
 		icon = GFX_focus_research
 		prerequisite = { focus = NZL_think_big }
 		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
-		x = -1
+		x = 0
 		y = 5
 		relative_position_id = NZL_national_roads_board
 
@@ -1360,7 +1392,7 @@
 	focus = {
 		id = NZL_army_reforms
 		icon = GFX_goal_generic_army_doctrines
-		x = 24
+		x = 23
 		y = 0
 
 		cost = 10
@@ -1465,7 +1497,13 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = NZL_bob_semple_tank
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					NOT = { has_dlc = "No Step Back" }
@@ -1582,6 +1620,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.15
+			}
 			add_tech_bonus = {
 				name = NZL_schofield_tank
 				bonus = 1.0
@@ -1656,6 +1698,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
 			add_tech_bonus = {
 				name = NZL_artillery_focus
 				bonus = 1.00
@@ -1669,8 +1715,8 @@
 		id = NZL_research_collaboration
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = NZL_big_bob_tank }
-		#prerequisite = { focus = NZL_think_big }
-		x = 1
+		prerequisite = { focus = NZL_think_big }
+		x = -1
 		y = 5
 		relative_position_id = NZL_army_reforms
 
@@ -1735,6 +1781,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
 			if = {
 				limit = {
 					NOT = { has_dlc = "No Step Back" }
@@ -2129,6 +2179,7 @@
 		}
 	}
 
+
 	############################
 	# GO COMMONWEALTH SECTION ##
 	############################
@@ -2231,6 +2282,23 @@
 			}
 		}
 	}
+
+	############################
+	### GO COMMUNIST SECTION ###
+	############################
+
+
+	############################
+	#### GO FASCIST SECTION ####
+	############################
+
+
+
+	############################
+	##### GO ALONE SECTION #####
+	############################
+
+
 
 
 }		

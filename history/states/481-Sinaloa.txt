@@ -2,12 +2,12 @@
 state={
 	id=481
 	name="STATE_481" # Durango
-	manpower = 1
+	manpower = 1255094
 	
 	state_category = rural
 	
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = WST
+	history={
+		owner = MEX
 		buildings = {
 			infrastructure = 2
 			dockyard = 1
@@ -15,7 +15,7 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 				naval_base = 3
 			}
 		}
-		add_core_of = WST
+		add_core_of = MEX
 		victory_points = {
 			7921 10
 		}

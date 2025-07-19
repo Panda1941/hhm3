@@ -5,7 +5,7 @@ state={
 	manpower = 1358394
 
 
-	state_category = large_city
+	state_category = town
 
 	history={
 		owner = BUL
@@ -27,7 +27,6 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
-			dockyard = 1
 			9783 = {
 				naval_base = 3
 			}

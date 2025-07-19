@@ -1,4 +1,5 @@
 ﻿add_namespace = wtt_japan
+add_namespace = goe_japan
 
 #Jakob ID 1-100
 #Drikus ID 101-200
@@ -74,15 +75,6 @@ country_event = {
 			}
 		}
 		FROM = { country_event = { id = wtt_japan.2 days = 1 } }
-	}
-
-	#Refuse
-	option = {
-		name = wtt_japan.1.b
-		ai_chance = {
-			base = 0
-		}
-		FROM = { country_event = { id = wtt_japan.3 days = 1 } }
 	}
 }
 
@@ -265,12 +257,17 @@ country_event = {
 			base = 10
 		}
 		FROM = {		
-			every_army_leader = {
+			every_character = {
 				limit = { has_trait = JAP_samurai_lineage }
 				set_nationality = ROOT
 			}
 		}		
-		FROM = { country_event = { id = wtt_japan.22 } }
+		FROM = { 
+			country_event = { 
+				id = wtt_japan.22 
+				hours = 6
+			} 
+		}
 	}
 }
 
@@ -1502,8 +1499,11 @@ country_event = {
 						controls_state = 527
 					}
 				}
+				JAP = {
+					owns_state = 525
+					owns_state = 527
+				}
 			}
-			release = KOR
 			KOR = {
 				transfer_state = 525
 				transfer_state = 527
@@ -1911,4 +1911,89 @@ country_event = {
 		
 	}
 	
+}
+
+#japan escalates
+country_event = {
+	id = goe_japan.1
+	title = goe_japan.1.t
+	desc = goe_japan.1.desc
+	picture = GFX_report_event_japanese_parade
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = JAP
+		OR = {
+			AND = {
+				has_war_with = RAJ
+				OR = {
+					RAJ = { is_subject = yes }
+					RAJ = { is_in_faction_with = ENG }
+					RAJ = { NOT = { has_completed_focus = RAJ_forward_bloc } }
+				}
+			}
+			AND = {
+				has_war_with = BRM
+				OR = {
+					BRM = { is_in_faction_with = ENG }
+					BRM = { is_subject_of = ENG }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = goe_japan.1.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_timed_idea = {
+			idea = idea_RAJ_azad_hind_fervor
+			days = 70
+		}
+
+		division_template = {
+			name = "Azad Hind Legion"
+			is_locked = no
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				
+			}
+			support = {
+				
+			}
+		}
+
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			prioritize = { 282 } #optional: to pick those states first if they fulfill the limit
+			create_unit = {
+				division = "name = \"Azad Hind Legion\" division_template = \"Azad Hind Legion\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = JAP
+				prioritize_location = 1182 # optional 
+				allow_spawning_on_enemy_provs = no 
+				country_score = {} # optional 
+				count = 6 
+			}
+		}
+
+
+	}
+
+	option = {
+		name = goe_japan.1.b
+		ai_chance = {
+			base = 0
+		}
+
+	}
 }

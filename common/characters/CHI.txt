@@ -347,6 +347,7 @@ characters={
 		name=CHI_chen_jitang
 		portraits={
 			army={
+				large=GFX_portrait_GXC_chen_jitang #This guy also exists in GXC as a unit leader and can be transferred to CHI via integrate warlord decisions, so he needs a large portrait definition
 				small="GFX_idea_generic_army_asia_5"
 			}
 		}
@@ -792,6 +793,34 @@ characters={
 			}
 			traits  = {
 				first_lady 
+			}
+		}
+	}
+
+
+
+  #####                                                              
+ #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
+ #        #    #  #  #       ##   #    #    #  #         #    #      
+  #####   #       #  #####   # #  #    #    #   ####     #     ####  
+       #  #       #  #       #  # #    #    #       #    #         # 
+ #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
+  #####    ####   #  ######  #    #    #    #   ####     #     ####  
+
+
+
+	CHI_wang_ganchang = {
+		name = CHI_wang_ganchang
+		portraits = {
+			army = {
+				large = GFX_portrait_CHI_wang_ganchang
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist }
+			skills = {
+				specialization_nuclear = 2
 			}
 		}
 	}

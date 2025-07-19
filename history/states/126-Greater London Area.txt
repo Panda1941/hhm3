@@ -12,8 +12,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 5 #was: 9
-			arms_factory = 7
-			industrial_complex = 2
+			arms_factory = 3
+			industrial_complex = 3
 			dockyard = 1
 			anti_air_building = 5
 			radar_station = 1
@@ -21,6 +21,16 @@ state={
 			11374 = {
 				naval_base = 10
 			}
+
+			6103 = { 
+			    landmark_big_ben = {
+			        allowed = {
+			            has_dlc = "Gotterdammerung"
+			        }
+			        level = 1
+			    }
+			}
+
 		}
 		add_core_of = ENG
 		1939.1.1 = {

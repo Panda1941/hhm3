@@ -1,23 +1,23 @@
 ﻿capital = 500
 
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-
-	add_to_tech_sharing_group = commonwealth_research
-}
-
 oob = "BRA_1936"
-
-set_air_oob = "BRA_1936_air_bba"
-# Air techs
-set_technology = {
-	early_fighter = 1
-	fighter1 = 1
-
-	early_bomber = 1
+every_core_state = {
+	ROOT = {
+		add_to_array = { cores_at_game_start = PREV }
+	}
 }
-
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BRA_1936_air_bba"
+	ELSE = {
+		set_air_oob = "BRA_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
 recruit_character = BRA_getulio_vargas
 ###############################################################################
 # ToA
@@ -28,7 +28,61 @@ IF = {
 	}
 	set_country_flag = BRA_toa_DLC
 
+
+	add_ideas = {
+		SMB_MTG_naval_arms_race_legacy
+	}
+
 	add_ideas = BRA_separatism_idea
+
+	every_owned_state = {
+		limit = {
+			OR = {
+				has_state_category = wasteland
+				has_state_category = pastoral
+				has_state_category = rural
+				#TODO_JUNO: Check states below are correct after map changes implemented
+				state = 498
+				state = 499
+			}
+			NOT = {
+				state = 961
+				state = 962
+				state = 963
+				state = 964
+				state = 965
+				state = 966
+				state = 967
+				state = 968
+				state = 496
+			}
+		}
+
+		# Neglected State Modifier
+		set_variable = { BRA_state_development_production_speed = -0.4 }
+		set_variable = { BRA_state_development_local_building_slots_factor = -0.4 }
+		set_variable = { BRA_state_development_local_factories = -0.4 }
+		set_variable = { BRA_state_development_state_resources_factor = -0.4 }
+
+		add_dynamic_modifier = {
+			modifier = BRA_neglected_state_dynamic_modifier
+		}
+	}
+
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 498
+				state = 499
+				state = 935
+				state = 936
+				state = 937
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = BRA_cangaceiro_state
+		}
+	}
 
 	JUNO_set_shared_military_branch_defaults = yes
 
@@ -122,6 +176,7 @@ IF = {
 	}
 	#Political
 	recruit_character = BRA_armando_de_sales_oliveira
+	recruit_character = BRA_domingos_bras
 	recruit_character = BRA_jose_linhares
 	recruit_character = BRA_benedito_valadres
 	recruit_character = BRA_alfred_agache
@@ -138,9 +193,16 @@ IF = {
 	recruit_character = BRA_pedro_de_alcantara
 	recruit_character = BRA_alianca_nacional_libertadora_council
 	recruit_character = BRA_minervino_de_oliveira
+	recruit_character = BRA_olga_benario_prestes
+	recruit_character = BRA_apolonio_de_carvalho
 	recruit_character = BRA_war_industrialist
 	recruit_character = BRA_captain_of_industry
+	recruit_character = BRA_leoncio_basbaum
+	recruit_character = BRA_geremia_lunarelli
 	recruit_character = BRA_henry_ford
+	recruit_character = BRA_gustavo_barroso
+	recruit_character = BRA_miguel_reale
+	recruit_character = BRA_oliveria_viana
 	#Army
 	recruit_character = BRA_augusto_fragoso
 	recruit_character = BRA_alvaro_de_castro
@@ -186,34 +248,36 @@ IF = {
 }
 ###############################################################################
 
-
-
-
-
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_trucks = 1
-	motorised_infantry = 1
 	tech_support = 1		
 	tech_engineers = 1
-	tech_recon = 1
+	tech_trucks = 1
 	gw_artillery = 1
 	interwar_antiair = 1
 	basic_train = 1	
-	tech_special_forces_gear = 1
 }
 
-# TANK TECHS
-set_technology = {
-	gwtank = 1
-	basic_light_tank = 1
-}
-if = {
+IF = {
 	limit = {
-		not = { has_dlc = "Man the Guns"}
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+IF = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+IF = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns"}
 	}
 	set_technology = {
 		early_submarine = 1
@@ -225,7 +289,7 @@ if = {
 	}
 	set_naval_oob = "BRA_1936_naval_legacy"
 }
-if = {
+IF = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
 		basic_naval_mines = 1
@@ -241,11 +305,6 @@ if = {
 	}
 	set_naval_oob = "BRA_1936_naval"	
 }
-set_country_flag = monroe_doctrine
-
-
-set_stability = 0.5
-set_war_support = 0.5
 
 set_country_flag = monroe_doctrine
 recruit_character = BRA_plinio_salgado
@@ -268,14 +327,135 @@ recruit_character = BRA_ismael_motta_paes
 recruit_character = BRA_jorge_martins
 recruit_character = BRA_newton_cavalcanti
 recruit_character = BRA_afranio_de_mello_franco
+recruit_character = BRA_washington_luis_pereira
 recruit_character = BRA_osvaldo_aranha
 recruit_character = BRA_arlindo_veiga_dos_santos
 recruit_character = BRA_random_army_chief
 
-set_convoys = 40
-set_research_slots = 3
+1939.1.1 = {
 
-if = {
+	add_political_power = 1198
+	add_command_power = 100
+	
+	#Setting up which focuses are to be coplete upon start
+	IF = {
+		limit = {
+			has_dlc = "Trial of Allegiance"
+		}
+
+		complete_national_focus = BRA_tribunal_de_seguranca_nacional
+		complete_national_focus = BRA_coffee_crisis_aftermath
+		complete_national_focus = BRA_ensure_continued_military_support #35
+		complete_national_focus = BRA_work_with_the_integralists #35
+		complete_national_focus = SMB_army #35
+		complete_national_focus = SMB_navy #35
+		complete_national_focus = BRA_desenvolvimentismo
+		complete_national_focus = BRA_cohen_plan
+		complete_national_focus = BRA_estado_novo #35
+		complete_national_focus = BRA_promote_resource_extraction
+		complete_national_focus = BRA_the_polaca
+		complete_national_focus = BRA_stimulate_the_civilian_economy
+		complete_national_focus = BRA_radio_nacional
+		complete_national_focus = BRA_deal_with_the_cangaceiro
+		complete_national_focus = BRA_establish_psad
+		complete_national_focus = BRA_autarky 
+		complete_national_focus = BRA_departamendo_de_propaganda
+		complete_national_focus = BRA_tech_slot_1
+
+		ELSE = {
+			#generic focuses
+			complete_national_focus = army_effort
+			complete_national_focus = equipment_effort
+			complete_national_focus = motorization_effort
+			complete_national_focus = aviation_effort
+			complete_national_focus = naval_effort
+			complete_national_focus = large_navy
+			complete_national_focus = industrial_effort
+			complete_national_focus = construction_effort
+			complete_national_focus = production_effort
+		}
+	}
+
+# no need to manually add in ideas and modifiers, I have tried and it is not needed, in fact, adding them in does nothing and adding to variables adds double. I write this here to serve as a note to future me, and other rookie CDs, it is not needed. You need not do it. The ideas, modifiers and such are set automatically.
+	
+	oob = "BRA_1939"
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+			set_air_oob = "BRA_1939_air_bba"
+		else = {
+			set_air_oob = "BRA_1939_air_legacy"
+		}
+	}
+	set_technology = {
+		interwar_artillery = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
+	IF = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+			basic_destroyer = 1
+		}
+		set_naval_oob = "BRA_1939_naval_legacy"
+	}
+	IF = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			basic_ship_hull_light = 1
+		}
+		set_naval_oob = "BRA_1939_naval"
+	}
+}
+
+set_convoys = 40
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1934.7.17"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+}
+
+IF = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
@@ -309,7 +489,6 @@ if = {
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
 			mid_1_custom_slot = empty
 			mid_2_custom_slot = ship_light_battery_1
 			rear_1_custom_slot = empty
@@ -341,6 +520,26 @@ if = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
 			fixed_ship_engine_slot = sub_ship_engine_2
 			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+}
+
+# 1939 Start #
+1939.1.1 = {
+	IF = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Tupi Class"
+			type = ship_hull_submarine_2
+			name_group = BRA_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				fixed_ship_engine_slot = sub_ship_engine_1
+				rear_1_custom_slot = empty
+			}
 		}
 	}
 }

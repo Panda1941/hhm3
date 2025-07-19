@@ -6,7 +6,7 @@ guiTypes = {
 		position = { x = -303 y = -310 }
 		orientation = CENTER
 		moveable = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 		click_to_front = yes
 		clipping = no
@@ -243,7 +243,7 @@ guiTypes = {
 		position = { x = -303 y = -310 }
 		orientation = CENTER
 		moveable = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 		click_to_front = yes
 		clipping = no
@@ -492,7 +492,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -586,7 +586,7 @@ guiTypes = {
 		position = { x = -607 y = -290 }
 		orientation = CENTER_RIGHT
 		moveable = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -721,7 +721,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -870,7 +870,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -993,7 +993,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1100,7 +1100,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1234,7 +1234,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1329,7 +1329,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1424,7 +1424,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1566,7 +1566,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1673,7 +1673,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1802,7 +1802,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1897,7 +1897,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {
@@ -1992,7 +1992,7 @@ guiTypes = {
 		orientation = CENTER_RIGHT
 		moveable = yes
 		click_to_front = yes
-		fade_time = 1
+		fade_time = 300
 		fade_type = linear
 
 		background = {

@@ -193,14 +193,18 @@ characters={
 					has_dlc = "Trial of Allegiance"
 				}
 				available = {
-					is_country_leader = NO
+					OR = { 
+						has_completed_focus = BRA_posts_for_generals 
+						has_completed_focus = BRA_issue_lordships
+					}
+					is_country_leader = no
 				}
 				traits = {
 					BRA_minister_of_defense
 				}
 			}	
 			corps_commander={
-				traits={ ranger infantry_leader }
+				traits={ ranger }
 				skill=3
 				attack_skill=2
 				defense_skill=3
@@ -221,7 +225,7 @@ characters={
 				}
 			}
 			corps_commander={
-				traits={ ranger infantry_leader }
+				traits={ ranger }
 				skill=3
 				attack_skill=2
 				defense_skill=3
@@ -245,7 +249,7 @@ characters={
 				}
 			}
 			corps_commander={
-				traits={ jungle_rat infantry_leader commando }
+				traits={ jungle_rat }
 				skill=4
 				attack_skill=2
 				defense_skill=4
@@ -268,7 +272,7 @@ characters={
 				}
 			}
 			corps_commander={
-				traits={ jungle_rat infantry_leader commando }
+				traits={ jungle_rat }
 				skill=4
 				attack_skill=2
 				defense_skill=4
@@ -419,7 +423,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				army_chief_offensive_2
+				army_chief_drill_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -567,7 +571,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				army_commando_2
+				air_air_combat_training_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -591,7 +595,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				army_logistics_2
+				navy_naval_air_defense_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -639,7 +643,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				army_artillery_2
+				air_air_superiority_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1023,6 +1027,7 @@ characters={
 			}
 			available  = {
 				has_government = democratic
+				has_completed_focus = BRA_free_speech
 			}
 			traits  = {
 				BRA_anti_authoritarian
@@ -1045,6 +1050,7 @@ characters={
 			}
 			available  = {
 				has_government = democratic
+				has_completed_focus = BRA_free_speech
 			}
 			traits  = {
 				BRA_academic_writer
@@ -1076,6 +1082,7 @@ characters={
 			}
 			available  = {
 				has_government = democratic
+				has_completed_focus = BRA_free_speech
 				is_country_leader = no
 			}
 			traits  = {
@@ -1105,6 +1112,7 @@ characters={
 			}
 			available  = {
 				has_government = democratic
+				has_completed_focus = BRA_free_speech
 				is_country_leader = no
 			}
 			traits  = {
@@ -1560,7 +1568,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ cavalry_leader }
+			traits={ }
 			skill=2
 			attack_skill=1
 			defense_skill=1
@@ -1579,7 +1587,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ career_officer offensive_doctrine jungle_rat logistics_wizard }
+			traits={ career_officer offensive_doctrine jungle_rat }
 			skill=2
 			attack_skill=3
 			defense_skill=1
@@ -1598,7 +1606,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader organizer }
+			traits={ }
 			skill=2
 			attack_skill=2
 			defense_skill=2
@@ -1712,7 +1720,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ skilled_staffer desert_fox }
+			traits={ }
 			skill=2
 			attack_skill=1
 			defense_skill=2

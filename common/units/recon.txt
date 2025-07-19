@@ -21,17 +21,12 @@ sub_units = {
 			category_recon
 		}
 
-		battalion_mult = {
-			category = category_artillery
-			soft_attack = 0.10
-		}
-
 	
 		combat_width = 0
 	
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 40
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -39,13 +34,13 @@ sub_units = {
 		#Misc Abilities
 		weight = 0.1
 		supply_consumption = 0.02
-		recon = 1.25
+		recon = 1
 		can_be_parachuted = yes
 
 		# Support nerfs to combat abilities
 		defense = -0.5
 		breakthrough = -0.5
-		soft_attack = -0.7
+		soft_attack = -0.9
 		hard_attack = -0.9
 
 		maximum_speed = 0.6 # move at horsie speeds
@@ -56,10 +51,15 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 80
-			support_equipment = 20
+			infantry_equipment = 40
+			support_equipment = 10
 		}
-
+		
+		battalion_mult = {
+			category = category_artillery
+			soft_attack = 0.10
+		}
+		
 		forest = {
 			movement = 0.05
 		}
@@ -67,16 +67,16 @@ sub_units = {
 			movement = 0.10
 		}
 		mountain = {
-			movement = 0.05
+			movement = 0.10
 		}
 		jungle = {
-			movement = 0.05
+			movement = 0.10
 		}
 		marsh = {
-			movement = 0.05
+			movement = 0.10
 		}
 		plains = {
-			movement = 0.10
+			movement = 0.05
 		}
 		desert = {
 			movement = 0.05
@@ -109,19 +109,17 @@ sub_units = {
 			category_army
 			category_recon
 		}
-
-
+		
 		battalion_mult = {
 			category = category_artillery
-			soft_attack = 0.15
+			soft_attack = 0.10
 		}
-
 	
 		combat_width = 0
 	
 		#Size Definitions
 		max_strength 		= 2
-		max_organisation 	= 40
+		max_organisation 	= 20
 		default_morale 		= 0.3
 		manpower 			= 500
 		training_time 		= 120
@@ -136,7 +134,7 @@ sub_units = {
 		defense = -0.09
 		breakthrough = -0.5
 		soft_attack = -0.9
-		hard_attack = -0.7
+		hard_attack = -0.9
 		
 		essential = {
 			infantry_equipment
@@ -146,9 +144,9 @@ sub_units = {
 
 		transport = motorized_equipment
 		need = {
-			infantry_equipment = 80
-			support_equipment = 20
-			motorized_equipment = 40
+			infantry_equipment = 40
+			support_equipment = 10
+			motorized_equipment = 20
 		}
 
 		forest = {
@@ -167,10 +165,10 @@ sub_units = {
 			movement = 0.1
 		}
 		plains = {
-			movement = 0.1
+			movement = 0.15
 		}
 		desert = {
-			movement = 0.1
+			movement = 0.20
 		}
 		river = {
 			movement = 0.1
@@ -201,22 +199,19 @@ sub_units = {
 			category_recon
 		}
 
-		
 		battalion_mult = {
 			category = category_artillery
-			soft_attack = 0.15
+			soft_attack = 0.10
 		}
-
-	
+		
 		combat_width = 0
 	
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 40
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
-		affects_speed = no
 
 		#Misc Abilities
 		weight = 0.1
@@ -225,7 +220,7 @@ sub_units = {
 		can_be_parachuted = yes
 
 		# Support nerfs to combat abilities
-		breakthrough 	= -0.5
+		breakthrough 	= -0.2
 		defense 		= -0.5		
 		soft_attack 	= -0.5
 		hard_attack 	= -0.5
@@ -235,7 +230,7 @@ sub_units = {
 		}
 
 		need = {
-			armored_car_equipment = 28
+			armored_car_equipment = 24
 		}
 
 		forest = {
@@ -254,10 +249,10 @@ sub_units = {
 		#	movement = 0.1
 		#}
 		plains = {
-			movement = 0.1
+			movement = 0.15
 		}
 		desert = {
-			movement = 0.1
+			movement = 0.15
 		}
 		river = {
 			movement = 0.1
@@ -278,7 +273,12 @@ sub_units = {
 			infantry
 			support
 		}
-		affects_speed = no
+		
+		battalion_mult = {
+			category = category_all_armor
+			hard_attack = 0.10
+		}
+		
 		group = support
 		
 		categories = {
@@ -289,18 +289,12 @@ sub_units = {
 			category_recon
 		}
 
-		
-		battalion_mult = {
-			category = category_artillery
-			soft_attack = 0.15
-		}
-
 	
 		combat_width = 0
 	
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 40
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -308,49 +302,132 @@ sub_units = {
 		#Misc Abilities
 		weight = 0.1
 		supply_consumption = 0.02
-		recon = 1.5
-		can_be_parachuted = yes
+		recon = 1
+		can_be_parachuted = no
 
 		# Support nerfs to combat abilities
-		defense = -0.5
-		breakthrough = -0.5
-		soft_attack = -0.5
-		hard_attack = -0.5
-
+		defense = -0.6
+		breakthrough = -0.6
+		soft_attack = -0.6
+		hard_attack = -0.6
+		armor_value = -0.6
 
 		essential = {
 			light_tank_chassis
 		}
 
 		need = {
-			light_tank_chassis = 30
+			light_tank_chassis = 24
 		}
 
 		forest = {
-			movement = 0.05
+			movement = 0.1
 		}
 		hills = {
-			movement = 0.05
+			movement = 0.1
 		}
 		mountain = {
-			movement = 0.05
+			movement = 0.1
 		}
 		jungle = {
-			movement = 0.05
+			movement = 0.1
 		}
 		marsh = {
-			movement = 0.05
+			movement = 0.1
 		}
 		plains = {
-			movement = 0.05
+			movement = 0.1
 		}
 		desert = {
-			movement = 0.05
+			movement = 0.1
 		}
 		river = {
-			movement = 0.05
+			movement = 0.1
 		}
 		same_support_type = recon # blocks adding other recon types to template
+	}
+	
+	airborne_light_armor = { #light tanks
+		abbreviation = "LTA"
+		sprite = light_armor
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+			category_all_armor
+			category_paratroopers
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		recon = 1
+		can_be_parachuted = yes
+
+		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.25
+		soft_attack = -0.25
+		hard_attack = -0.25
+		armor_value = -0.5
+		can_be_parachuted = yes
+		
+		essential = {
+			light_tank_chassis
+		}
+
+		need = {
+			light_tank_chassis = 24
+		}
+
+		forest = {
+			movement = 0.1
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		jungle = {
+			movement = 0.1
+		}
+		marsh = {
+			movement = 0.1
+		}
+		plains = {
+			movement = 0.1
+		}
+		desert = {
+			movement = 0.1
+		}
+		river = {
+			movement = 0.1
+		}
+
+		same_support_type = recon
 	}
 	
 	rangers_support = { #independent recon
@@ -360,7 +437,6 @@ sub_units = {
 		priority = 0
 		ai_priority = 0
 		active = no
-		affects_speed = yes
 
 		type = {
 			infantry
@@ -377,11 +453,6 @@ sub_units = {
 			category_mountaineers
 		}
 
-		battalion_mult = {
-			category = category_artillery
-			soft_attack = 0.10
-		}
-
 	
 		combat_width = 0
 	
@@ -395,12 +466,12 @@ sub_units = {
 		#Misc Abilities
 		weight = 0.1
 		supply_consumption = 0.06
-		recon = 1.25
+		recon = 1
 		can_be_parachuted = yes
 
 		# Support nerfs to combat abilities
 
-		
+		maximum_speed = 0.6 # move at horsie speeds
 		
 		essential = {
 			infantry_equipment
@@ -408,9 +479,8 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 100
-			support_equipment = 50
-			special_forces_equipment = 25
+			infantry_equipment = 40
+			support_equipment = 15
 		}
 		
 		forest = {
@@ -419,18 +489,18 @@ sub_units = {
 		}
 		hills = {
 			movement = 0.15
-			attack = 0.02
+			attack = 0.05
 		}
 		mountain = {
 			movement = 0.10
-			defence = 0.02
+			defence = 0.05
 		}
 		jungle = {
 			movement = 0.10
 		}
 		plains = {
-			movement = 0.05
-			attack = 0.02
+			movement = 0.1
+			attack = 0.05
 		}
 		
 		same_support_type = recon # blocks adding other recon types to template
@@ -443,7 +513,6 @@ sub_units = {
 		priority = 0
 		ai_priority = 0
 		active = no
-		affects_speed = no
 
 		type = {
 			infantry
@@ -451,8 +520,6 @@ sub_units = {
 		}
 		
 		group = support
-		
-		
 		
 		categories = {
 			category_front_line
@@ -474,23 +541,12 @@ sub_units = {
 		#Misc Abilities
 		weight = 0.1
 		supply_consumption = 0.05
-		#recon = 1 #TODO_Manu: Removed for now, more appropriate for actual rangers
+		#recon = 1 #Removed -> more appropriate for actual rangers
 		can_be_parachuted = yes
-
-		#battalion_mult = { #TODO_Manu: Potentially undesirable, jut removing the negative defense below should be good
-		#	category = category_light_infantry
-		#	defense = 0.25
-		#	add = yes
-		#}
-
-		battalion_mult = {
-			category = category_artillery
-			soft_attack = 0.10
-		}
 
 		# Support nerfs to combat abilities
 		
-		#defense = -0.5 #TODO_Manu: Don't reduce Defense (remove if okay)
+		#defense = -0.5 #Don't reduce Defense
 		breakthrough = -0.5
 		soft_attack = -0.5
 		hard_attack = -0.5
@@ -502,18 +558,16 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 100
-			support_equipment = 50
-			special_forces_equipment = 25
+			infantry_equipment = 40
+			support_equipment = 10
 		}
 		
 		snow = { #This can end up stacking with terrain benefits
-			attack = 0.2
-			defence = 0.1
-			movement = 0.20
+			attack = 0.25
+			defence = 0.25
+			movement = 0.3
 		}
 	}
-
 	
 	long_range_patrol_support = { # Long-range patrols for Finland
 		abbreviation = "LRP"
@@ -522,7 +576,6 @@ sub_units = {
 		priority = 0
 		ai_priority = 0
 		active = no
-		affects_speed = no
 
 		type = {
 			infantry
@@ -543,7 +596,7 @@ sub_units = {
 
 		battalion_mult = {
 			category = category_light_infantry
-			initiative = 0.25
+			initiative = 0.02
 			add = yes
 		}
 	
@@ -565,7 +618,7 @@ sub_units = {
 		recon = 2 #Recon is 1
 		can_be_parachuted = yes
 
-		
+		maximum_speed = 0.6 # move at horsie speeds
 		
 		essential = {
 			infantry_equipment
@@ -573,8 +626,8 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 80
-			support_equipment = 60
+			infantry_equipment = 40
+			support_equipment = 10
 		}
 		
 		forest = {
@@ -591,6 +644,7 @@ sub_units = {
 		}
 		plains = {
 			movement = 0.1
+			attack = 0.05
 		}
 
 		mountain = {
@@ -613,4 +667,96 @@ sub_units = {
 			defence = 0.1
 		}
 	}
+
+	
+
+	########################
+	### SPECIAL PROJECTS ###
+	########################
+
+	# WW - SP tech - Helicopter Recon - Using Helicopters -> Helicopter Recon
+	helicopter_recon = {
+		abbreviation = "HELR"
+		sprite = helicopter_brigade
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_recon
+			category_helicopter_support_companies
+		}
+		
+		battalion_mult = {
+			category = category_artillery
+			soft_attack = 0.1 #Same as reg recon (0.1)
+		}
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength 		= 2
+		max_organisation 	= 20
+		default_morale 		= 0.3
+		manpower 			= 500
+		training_time 		= 120
+
+		#Misc Abilities
+		weight 				= 0.1
+		supply_consumption 	= 0.070
+		recon 				= 2 #More than reg recon (1)
+		can_be_parachuted 	= no
+
+		essential = {
+			infantry_equipment
+			support_equipment
+			helicopter_equipment
+		}
+
+		transport = motorized_equipment 
+		need = {
+			infantry_equipment = 20
+			support_equipment = 10
+			helicopter_equipment = 20
+		}
+
+		forest = {
+			movement = 0.15
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		jungle = {
+			movement = 0.15
+		}
+		marsh = {
+			movement = 0.15
+		}
+		plains = {
+			movement = 0.15
+		}
+		desert = {
+			movement = 0.15
+		}
+		river = {
+			movement = 0.15
+		}
+		
+		same_support_type = recon # blocks adding other recon types to template
+		same_support_type = helicopter_recon
+	}
+
 }

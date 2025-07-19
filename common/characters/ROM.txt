@@ -83,6 +83,7 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
+			traits={ anti_democrat }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -111,7 +112,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ logistics_wizard offensive_doctrine cavalry_leader }
+			traits={ logistics_wizard offensive_doctrine }
 			skill=4
 			attack_skill=4
 			defense_skill=4
@@ -130,49 +131,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ hill_fighter commando }
-			skill=4
+			traits={ hill_fighter }
+			skill=3
 			attack_skill=2
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=2
 			legacy_id=-1
-		}
-	}
-
-	ROM_generic_general_1 = {
-		name="Robert Costiniu"
-		portraits={
-			army={
-				large="GFX_Portrait_Europe_Generic_land_5"
-				small="GFX_Portrait_Europe_Generic_land_5_small"
-			}
-		}
-		corps_commander={
-			traits={ organizer hill_fighter }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-		}
-	}
-
-	ROM_generic_general_2 = {
-		name="Remus Galca"
-		portraits={
-			army={
-				large="GFX_Portrait_Europe_Generic_land_4"
-				small="GFX_Portrait_Europe_Generic_land_4_small"
-			}
-		}
-		corps_commander={
-			traits={ trait_engineer infantry_leader offensive_doctrine }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=4
 		}
 	}
 
@@ -249,7 +214,7 @@ characters={
 		}
 
 		corps_commander={
-			traits={ infantry_expert infantry_officer infantry_leader }
+			traits={ infantry_expert }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -287,7 +252,7 @@ characters={
 		}
 		
 		field_marshal={
-			traits={ offensive_doctrine organizer hill_fighter }
+			traits={ offensive_doctrine }
 			skill=4
 			attack_skill=4
 			defense_skill=4
@@ -434,11 +399,10 @@ characters={
 		}
 
 		corps_commander={
-		    traits={ trickster organizer cavalry_leader panzer_leader }
-			skill=4
-			attack_skill=4
+			skill=3
+			attack_skill=3
 			defense_skill=2
-			planning_skill=3
+			planning_skill=2
 			logistics_skill=3
 			legacy_id=-1
 		}
@@ -483,7 +447,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				army_concealment_2
+				air_strategic_bombing_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -507,7 +471,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				army_logistics_2
+				air_airborne_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -638,7 +602,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				war_industrialist 
+				backroom_backstabber 
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -661,7 +625,7 @@ characters={
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = ROM_elections_of_1937 
+					has_completed_focus = ROM_appoint_german_friendly_government
 				}
 				if = {
 					limit = {

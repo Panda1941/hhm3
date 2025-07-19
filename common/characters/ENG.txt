@@ -9,6 +9,32 @@ characters={
 				small="GFX_idea_ENG_winston_churchill"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_winston_churchill
+			available  = {
+				has_government  = neutrality 
+				has_completed_focus  = ENG_the_kings_party 
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				royalist_bulldog 
+			}
+			ai_will_do  = {
+				base = 1
+			}
+		}
 
 		country_leader={
 			ideology=conservatism
@@ -45,7 +71,25 @@ characters={
 				small="GFX_idea_ENG_oswald_mosley"
 			}
 		}
-
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_oswald_mosley
+			available  = {
+				has_government  = neutrality 
+				has_completed_focus  = ENG_the_kings_party 
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				economic_organizer 
+			}
+			ai_will_do  = {
+				base = 1
+			}
+		}
+		
 		country_leader={
 			ideology=fascism_ideology
 			traits={ champion_of_peace_1 economic_reformer }
@@ -62,6 +106,40 @@ characters={
 			}
 			army={
 				small="GFX_idea_harry_pollitt"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = harry_pollitt
+			allowed  = {
+				original_tag  = ENG
+			}
+			available  = {
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					has_government  = communism 
+				}
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			traits  = {
+				communist_revolutionary 
+			}
+			do_effect  = {
+				NOT = {
+					has_government  = communism 
+				}
+			}
+			ai_will_do  = {
+				base = 0
 			}
 		}
 		
@@ -121,13 +199,16 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			traits = {
 				army_chief_maneuver_3
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 1.000
+				base = 0.5
 			}
 		}
 		
@@ -139,6 +220,25 @@ characters={
 			planning_skill=5
 			logistics_skill=3
 			legacy_id=997
+		}
+	}
+
+	ENG_jack_churchill={
+		name = ENG_jack_churchill
+		portraits = {
+			army = {
+				large = GFX_portrait_RAJ_jack_churchill
+				small = GFX_portrait_ENG_jack_churchill_small
+			}
+		}
+		
+		corps_commander={
+			traits={ inspirational_bagpiper }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
 		}
 	}
 
@@ -161,10 +261,22 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			
 			traits = {
 				grand_battle_plan_expert
+			}
+
+			ai_will_do = {
+				base = 2
+				modifier = {
+					has_idea_with_trait = industrial_concern
+					has_idea_with_trait = silent_workhorse
+					factor = 5
+				}
 			}
 		}
 		
@@ -201,12 +313,12 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 2.000
+				base = 2
 			}
 		}
 		
 		corps_commander={
-			traits={ inflexible_strategist career_officer infantry_leader }
+			traits={ inflexible_strategist career_officer }
 			skill=5
 			attack_skill=3
 			defense_skill=5
@@ -225,7 +337,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist armor_officer politically_connected panzer_leader organizer }
+			traits={ inflexible_strategist armor_officer politically_connected }
 			skill=4
 			attack_skill=3
 			defense_skill=4
@@ -262,7 +374,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ war_hero trickster infantry_leader hill_fighter }
+			traits={ war_hero trickster }
 			skill=5
 			attack_skill=3
 			defense_skill=3
@@ -280,13 +392,12 @@ characters={
 				small=GFX_portrait_ENG_richard_oconnor_small
 			}
 		}
-		traits = { infantry_leader desert_fox }
 		corps_commander={
 			skill=4
-			attack_skill=1
-			defense_skill=5
-			planning_skill=3
-			logistics_skill=5
+			attack_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
 			legacy_id=999
 		}
 	}
@@ -347,22 +458,20 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			traits = {
 				military_theorist
 			}
 			ai_will_do = {
-				factor = 2.000
-				modifier = {
-					has_idea_with_trait = industrial_concern
-					has_idea_with_trait = silent_workhorse
-					factor = 10.000
-				}
+				base = 2
 			}
 		}
 		
 		corps_commander={
-			traits={ politically_connected desert_fox }
+			traits={ politically_connected }
 			skill=5
 			attack_skill=4
 			defense_skill=4
@@ -482,18 +591,26 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			traits = {
 				army_chief_offensive_2
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 2.000
+				base = 3
+				modifier = {
+					has_idea_with_trait = industrial_concern
+					has_idea_with_trait = silent_workhorse
+					factor = 10
+				}
 			}
 		}
 
 		corps_commander={
-			traits={ trait_cautious politically_connected commando }
+			traits={ trait_cautious politically_connected }
 			skill=4
 			attack_skill=3
 			defense_skill=3
@@ -512,7 +629,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard politically_connected naval_invader infantry_leader swamp_fox }
+			traits={ old_guard politically_connected }
 			skill=4
 			attack_skill=2
 			defense_skill=4
@@ -531,7 +648,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist armor_officer war_hero panzer_leader }
+			traits={ inflexible_strategist armor_officer war_hero }
 			skill=3
 			attack_skill=2
 			defense_skill=3
@@ -635,13 +752,16 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			traits = {
 				army_regrouping_2
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 1
 			}
 		}
 		
@@ -715,7 +835,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 0.700
+				base = 0.7
 			}
 		}
 		
@@ -751,12 +871,21 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 0.500
+				base = 0.5
+
+				modifier = {
+					# Increase weight of navy chief after army chief is hired
+					factor = 2
+					amount_taken_ideas = {
+						amount > 0
+						slots = { army_chief }
+					}
+				}
 			}
 		}
 		
 		navy_leader={
-			traits={ gunnery_expert bold navy_career_officer blockade_runner superior_tactician  }
+			traits={ gunnery_expert bold navy_career_officer blockade_runner superior_tactician }
 			skill=5
 			attack_skill=5
 			defense_skill=4
@@ -949,10 +1078,17 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			
 			traits = {
 				grand_fleet_proponent
+			}
+
+			ai_will_do  = {
+				base = 1
 			}
 		}
 	}
@@ -973,6 +1109,9 @@ characters={
 				original_tag = ENG
 			}
 			traits = { naval_theorist }
+			ai_will_do  = {
+				base = 0.5
+			}
 		}
 	}
 
@@ -993,6 +1132,10 @@ characters={
 			}
 			traits = {
 				air_warfare_theorist
+			}
+
+			ai_will_do  = {
+				base = 0.5
 			}
 		}
 	}
@@ -1016,55 +1159,11 @@ characters={
 			traits = {
 				victory_through_airpower
 			}
-		}
-	}
 
-	ENG_james_chadwick={
-		name=ENG_james_chadwick
-		portraits={
-			army={
-				small="GFX_idea_james_chadwick"
+			ai_will_do  = {
+				base = 0.25
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = james_chadwick
-			ledger = army
-			allowed = {
-				original_tag = ENG
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}
-	}
-
-	ENG_frank_whittle={
-		name=ENG_frank_whittle
-		portraits={
-			army={
-				small="GFX_idea_frank_whittle"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = frank_whittle
-			ledger = air
-			allowed = {
-				original_tag = ENG
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
-			}
-		}		
 	}
 
 	ENG_jfc_fuller={
@@ -1072,6 +1171,26 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_jfc_fuller"
+			}
+		}
+		advisor={
+			cost = 200
+			slot = theorist
+			idea_token = ENG_jfc_fuller
+			ledger = army
+			available = {
+				has_government = fascism
+			}
+			allowed = {
+				original_tag = ENG
+				has_dlc = "Man the Guns"
+			}
+			
+			traits = {
+				blitzkrieg_theorist
+			}
+			ai_will_do = {
+				base = 1
 			}
 		}
 	}
@@ -1154,7 +1273,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 2.000
+				base = 2
 			}
 		}
 	}
@@ -1182,7 +1301,16 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 3
+
+				modifier = {
+					# Increase weight of navy chief after army chief is hired
+					factor = 2
+					amount_taken_ideas = {
+						amount > 0
+						slots = { army_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1201,11 +1329,20 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				navy_chief_decisive_battle_2
+				navy_chief_decisive_battle_1
 			}
-			cost = 100
+			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				base = 1
+
+				modifier = {
+					# Increase weight of navy chief after army chief is hired
+					factor = 2
+					amount_taken_ideas = {
+						amount > 0
+						slots = { army_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1231,7 +1368,16 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 2
+
+				modifier = {
+					# Increase weight of air chief after navy chief is hired
+					factor = 3
+					amount_taken_ideas = {
+						amount > 0
+						slots = { navy_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1254,7 +1400,16 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 3
+
+				modifier = {
+					# Increase weight of air chief after navy chief is hired
+					factor = 3
+					amount_taken_ideas = {
+						amount > 0
+						slots = { navy_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1277,7 +1432,16 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 1
+
+				modifier = {
+					# Increase weight of air chief after navy chief is hired
+					factor = 3
+					amount_taken_ideas = {
+						amount > 0
+						slots = { navy_chief }
+					}
+				}
 			}
 		}		
 	}
@@ -1309,7 +1473,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 2.000
+				base = 2
 			}
 		}
 	}
@@ -1333,7 +1497,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 1
 			}
 		}
 	}
@@ -1357,7 +1521,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 1
 			}
 		}
 	}
@@ -1377,11 +1541,11 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				air_close_air_support_2
+				air_naval_strike_2
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 1
 			}
 		}
 	}
@@ -1401,13 +1565,16 @@ characters={
 				original_tag = ENG
 			}
 			available = {
+				NOT = {
+					has_completed_focus = ENG_eliminate_the_upper_class
+				}
 			}
 			traits = {
 				navy_amphibious_assault_3
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 1.000
+				base = 1.000
 			}
 		}
 	}
@@ -1431,7 +1598,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 0.200
+				base = 0.2
 			}
 		}
 	}
@@ -1458,7 +1625,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 0.200
+				base = 0.2
 			}
 		}
 	}
@@ -1483,6 +1650,22 @@ characters={
 			slot = political_advisor
 			idea_token = clement_attlee
 			available  = {
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_completed_focus  = ENG_a_change_in_course 
+					}
+				}
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
 			}
 			allowed  = {
 				original_tag  = ENG
@@ -1496,7 +1679,7 @@ characters={
 				}
 			}
 			ai_will_do  = {
-				factor  = 0.000
+				base = 0
 			}
 		}		
 	}
@@ -1506,6 +1689,40 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_john_beckett"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = john_beckett
+			allowed  = {
+				original_tag  = ENG
+			}
+			available  = {
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					has_government  = fascism 
+				}
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			traits  = {
+				fascist_demagogue 
+			}
+			do_effect  = {
+				NOT = {
+					has_government  = fascism 
+				}
+			}
+			ai_will_do  = {
+				base = 0
 			}
 		}
 	}
@@ -1521,6 +1738,15 @@ characters={
 			slot = political_advisor
 			idea_token = ENG_philip_kerr
 			available  = {
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_completed_focus  = ENG_no_further_appeasement 
+					}
+					has_government  = democratic 
+				}
 			}
 			allowed  = {
 				original_tag  = ENG
@@ -1529,13 +1755,13 @@ characters={
 				silent_workhorse 
 			}
 			ai_will_do  = {
-				factor  = 2.000
+				base = 2
 				modifier  = {
 					has_country_leader = {
 						character = ENG_stanley_baldwin
 						ruling_only = yes 
 					}
-					factor  = 10.000
+					factor = 10
 				}
 			}
 		}		
@@ -1557,6 +1783,9 @@ characters={
 			traits  = {
 				backroom_backstabber 
 			}
+			ai_will_do  = {
+				base = 0.5
+			}
 		}
 	}
 
@@ -1577,7 +1806,7 @@ characters={
 				war_industrialist 
 			}
 			ai_will_do  = {
-				factor  = 2.000
+				base = 2
 			}
 		}
 	}
@@ -1597,6 +1826,9 @@ characters={
 			}
 			traits  = {
 				armaments_organizer 
+			}
+			ai_will_do  = {
+				base = 0
 			}
 		}
 	}
@@ -1618,7 +1850,7 @@ characters={
 				quartermaster_general 
 			}
 			ai_will_do  = {
-				factor  = 1.000
+				base = 1.000
 			}
 		}
 	}
@@ -1630,6 +1862,23 @@ characters={
 				small="GFX_idea_ENG_mary_sophia_allen"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_mary_sophia_allen
+			available  = {
+				has_government  = fascism 
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				princess_of_terror 
+			}
+			ai_will_do  = {
+				base = 1.5
+			}
+		}
 	}
 
 	ENG_george_orwell={
@@ -1637,6 +1886,31 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_george_orwell"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_george_orwell
+			available  = {
+				has_government  = communism 
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				socialist_novelist 
+			}
+			ai_will_do  = {
+				base = 1.5
 			}
 		}
 	}
@@ -1649,6 +1923,55 @@ characters={
 			}
 		}
 		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_sylvia_pankhurst
+			available  = {
+				OR = {
+					has_government  = communism 
+					SWE_refuge_for_revolutionaries_trigger = yes
+				}
+			}
+			allowed  = {
+				OR = {
+					AND = {
+						original_tag  = ENG
+						has_dlc = "Man the Guns"
+					}
+					AND = {
+						original_tag = ETH
+						has_dlc = "By Blood Alone"
+					}
+
+					AND = {
+						original_tag = SWE
+						has_aat = yes
+					}
+				}
+				
+			}
+			traits  = {
+				red_suffragette 
+			}
+			ai_will_do  = {
+				base = 1
+			}
+			on_add = {
+				owner = {
+					IF = {
+						limit = {
+							has_power_balance = {
+								id = ETH_centralization_balance
+							}
+						}
+						
+						hidden_effect = {
+							ETH_BOP_decentralization_large_effect = yes
+						}
+					}				
+				}
+			}
+		}
 	}
 
 	ENG_david_lloyd_george={
@@ -1656,6 +1979,24 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_david_lloyd_george"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_david_lloyd_george
+			available  = {
+				has_government  = neutrality 
+				has_completed_focus  = ENG_the_kings_party 
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				old_figurehead 
+			}
+			ai_will_do  = {
+				base = 1
 			}
 		}
 	}
@@ -2059,6 +2400,9 @@ characters={
 			traits  = {
 				head_of_intelligence 
 			}
+			ai_will_do  = {
+				base = 0.5
+			}
 		}
 	}
 
@@ -2080,10 +2424,10 @@ characters={
 				}
 			}
 			ai_will_do  = {
-				factor  = 1.000
+				base = 1
 				modifier  = {
-					has_political_power < 200.000
-					factor  = 0.000
+					has_political_power < 200
+					factor = 0
 				}
 			}
 			allowed  = {
@@ -2092,6 +2436,147 @@ characters={
 			}
 			traits  = {
 				mastermind_code_cracker 
+			}
+		}
+	}
+
+
+
+  #####                                                              
+ #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
+ #        #    #  #  #       ##   #    #    #  #         #    #      
+  #####   #       #  #####   # #  #    #    #   ####     #     ####  
+       #  #       #  #       #  # #    #    #       #    #         # 
+ #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
+  #####    ####   #  ######  #    #    #    #   ####     #     ####  
+
+
+	ENG_james_chadwick = {
+		name = ENG_james_chadwick
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_james_chadwick
+				small = GFX_idea_james_chadwick
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+
+		#advisor = {
+		#	cost = 100
+		#	slot = theorist
+		#	idea_token = james_chadwick
+		#	ledger = army
+		#	allowed = {
+		#		original_tag = ENG
+		#	}
+		#	research_bonus = {
+		#		nuclear = 0.150
+		#	}
+		#	traits = {
+		#		nuclear_scientist
+		#	}
+		#}
+	}
+
+	ENG_frank_whittle = {
+		name = ENG_frank_whittle
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_frank_whittle
+				small = GFX_idea_frank_whittle
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_bright }
+			skills = {
+				specialization_air = 2
+			}
+		}
+
+		#advisor = {
+		#	cost = 100
+		#	slot = theorist
+		#	idea_token = frank_whittle
+		#	ledger = air
+		#	allowed = {
+		#		original_tag = ENG
+		#	}
+		#	research_bonus = {
+		#		rocketry = 0.150
+		#	}
+		#	traits = {
+		#		rocket_scientist
+		#	}
+		#}		
+	}
+
+	ENG_john_cockcroft = {
+		name = ENG_john_cockcroft
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_john_cockcroft
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	ENG_charles_goodeve = {
+		name = ENG_charles_goodeve
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_charles_goodeve
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	ENG_nevil_shute = {
+		name = ENG_nevil_shute
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_nevil_shute
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	ENG_robert_watson_watt = {
+		name = ENG_robert_watson_watt
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_robert_watson_watt
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
 			}
 		}
 	}

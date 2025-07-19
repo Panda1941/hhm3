@@ -5,10 +5,10 @@ state={
 	
 	state_category = town
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
+		
 		buildings = {
 			infrastructure = 2
 

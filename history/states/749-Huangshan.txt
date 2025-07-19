@@ -7,13 +7,12 @@ state={
 	manpower=5000000
 	buildings_max_level_factor=1.000
 	state_category=town
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
+		
 		buildings = {
 			infrastructure = 2
-			arms_factory = 4
 		}
 		victory_points = {
 			12019 1

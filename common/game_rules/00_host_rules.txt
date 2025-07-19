@@ -1,0 +1,420 @@
+select_host_country = {
+	name = "Select Host for Host Tool"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = GER
+		text = "Germany"
+		desc = ""
+	}
+	option = {
+		name = ITA
+		text = "Italy"
+		desc = ""
+	}
+	option = {
+		name = ROM
+		text = "Romania"
+		desc = ""
+	}
+	option = {
+		name = HUN
+		text = "Hungary"
+		desc = ""
+	}
+	option = {
+		name = BUL
+		text = "Bulgaria"
+		desc = ""
+	}
+	option = {
+		name = FIN
+		text = "Finland"
+		desc = ""
+	}
+	option = {
+		name = ENG
+		text = "United Kingdom"
+		desc = ""
+	}
+	option = {
+		name = USA
+		text = "USA"
+		desc = ""
+	}
+	option = {
+		name = CAN
+		text = "Canada"
+		desc = ""
+	}
+	option = {
+		name = SAF
+		text = "South Africa"
+		desc = ""
+	}
+	option = {
+		name = RAJ
+		text = "British Raj"
+		desc = ""
+	}
+	option = {
+		name = AST
+		text = "Australia"
+		desc = ""
+	}
+	option = {
+		name = NZL
+		text = "New Zealand"
+		desc = ""
+	}
+	option = {
+		name = JAP
+		text = "Japan"
+		desc = ""
+	}
+	option = {
+		name = MAN
+		text = "Manchukuo"
+		desc = ""
+	}
+	option = {
+		name = SOV
+		text = "Soviet Union"
+		desc = ""
+	}
+	option = {
+		name = FRA
+		text = "France"
+		desc = ""
+	}
+	option = {
+		name = BRA
+		text = "Brazil"
+		desc = ""
+	}
+	option = {
+		name = MEX
+		text = "Mexico"
+		desc = ""
+	}
+	option = {
+		name = IRE
+		text = "Ireland"
+		desc = ""
+	}
+	option = {
+		name = SPR
+		text = "Spain"
+		desc = ""
+	}
+}
+Brasil_AC_rule = {
+	name = "Select if Brasil can be AC"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = Brasil_AC
+		text = "Brasil can AC"
+		desc = ""
+	} 
+	default = {
+		name = Brasil_no_AC
+		text = "Brasil cant AC"
+		desc = ""
+	}
+
+}
+Germany_Wirtschaftswunder = {
+	name = "Select if Germany is allowed to complete Wirtschaftswunder"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = Germany_no_wirtschaftswunder
+		text = "Germany cant do Wirtschaftswunder"
+		desc = ""
+	}
+	default = {
+		name = Germany_wirtschaftswunder
+		text = "Germany can do Wirtschaftswunder"
+		desc = ""
+	}
+
+}
+Germany_Cancel_Mefo= {
+	name = "Select if Germany is allowed to cancel MEFO Bills"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = Germany_no_cancel_MEFO_Bills
+		text = "Germany cant cancel MEFO Bills"
+		desc = ""
+	}
+	option = {
+		name = Germany_cancel_MEFO_Bills
+		text = "Germany can cancel MEFO Bills"
+		desc = ""
+	}
+
+}
+urban_assault_vechile= {
+	name = "Select if Urban Assault Vechile is allowed or not "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_tank"
+	default = {
+		name = off
+		text = "You CANNOT research armoured enginieer company."
+		desc = "You also don't get the urban assault vechile."
+	}
+	option = {
+		name = on
+		text = "You CAN research armoured enginieer company"
+		desc = "You also get the urban assault vechile."
+	}
+}
+
+super_heavy_railway_gun= {
+	name = "Select if Super Heavy Railway Battery is allowed or not "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "You CANNOT research Super Heavy Railway Battery."
+		desc = "###."
+	}
+	option = {
+		name = on
+		text = "You CAN research Super Heavy Railway Battery."
+		desc = "###"
+	}
+}
+multi_charge_large_caliber_gun= {
+	name = "Select if Multi Charge LCG is allowed or not "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "You CANNOT research Multi Charge LCG."
+		desc = "###."
+	}
+	option = {
+		name = on
+		text = "You CAN research Multi Charge LCG."
+		desc = "###"
+	}
+}
+sov_boost = {
+	name = "Soviets Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Soviets won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = sov4
+		text = "ROn-4"
+		desc = "Soviets get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = sov8
+		text = "ROn-8"
+		desc = "Soviets get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = sov12
+		text = "ROn-12"
+		desc = "Soviets get 12 Civilian factories (Not Recommmended)"
+	}
+}     
+  
+ger_boost = {
+	name = "German Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Germany won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = ger4
+		text = "ROn-4"
+		desc = "Germany get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ger8
+		text = "ROn-8"
+		desc = "Germany get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ger12
+		text = "ROn-12"
+		desc = "Germany get 12 Civilian factories (Not Recommmended)"
+	}
+} 
+jap_boost = {
+	name = "Japan Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Japan won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = jap4
+		text = "ROn-4"
+		desc = "Japan get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = jap8
+		text = "ROn-8"
+		desc = "Japan get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = jap12
+		text = "ROn-12"
+		desc = "Japan get 12 Civilian factories (Not Recommmended)"
+	}
+}          
+eng_boost = {
+	name = "Britain Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Britain won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = eng4
+		text = "ROn-4"
+		desc = "Britain get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = eng8
+		text = "ROn-8"
+		desc = "Britain get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = eng12
+		text = "ROn-12"
+		desc = "Britain get 12 Civilian factories (Not Recommmended)"
+	}
+}
+ita_boost = {
+	name = "Italiano Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Italiano won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = ita4
+		text = "ROn-4"
+		desc = "Italiano get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ita8
+		text = "ROn-8"
+		desc = "Italiano get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ita12
+		text = "ROn-12"
+		desc = "Italiano get 12 Civilian factories (Not Recommmended)"
+	}
+}
+fra_boost = {
+	name = "Français Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Français won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = fra4
+		text = "ROn-4"
+		desc = "Français get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = fra8
+		text = "ROn-8"
+		desc = "Français get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = fra12
+		text = "ROn-12"
+		desc = "Français get 12 Civilian factories (Not Recommmended)"
+	}
+}
+usa_boost = {
+	name = "USA Civ Boost?Are you ok , like mentaly??"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "USA won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = usa4
+		text = "ROn-4"
+		desc = "USA get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = usa8
+		text = "ROn-8"
+		desc = "USA get 8 Civilian factories (Not Recommmended)"
+	}
+}
+playable_iraq = {
+	name = "Playable Iraq?"
+	group = "HMM Rules"
+	icon = "GFX_decision_category_usa_intervention_mandate"
+	default = {
+		name = no
+		text = "No"
+		desc = "Iraq gets day 1 annexed into The UK"
+	}
+	option = {
+		name = yes
+		text = "Yes"
+		desc = "Iraq is playable"
+	}
+}
+extra_sf_branch_ast = {
+	name = "SF branch AST"
+	group = "HMM Rules"
+	icon = "GFX_decision_category_usa_intervention_mandate"
+	default = {
+		name = no
+		text = "No"
+		desc = "AST doesn't get extra SF branch from focus"
+	}
+	option = {
+		name = yes
+		text = "Yes"
+		desc = "AST does get extra SF branch from focus"
+	}
+}
+extra_sf_branch_bra = {
+	name = "SF branch BRA"
+	group = "HMM Rules"
+	icon = "GFX_decision_category_usa_intervention_mandate"
+	default = {
+		name = no
+		text = "No"
+		desc = "BRA doesn't get extra SF branch from focus"
+	}
+	option = {
+		name = yes
+		text = "Yes"
+		desc = "BRA does get extra SF branch from focus"
+	}
+}

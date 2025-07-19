@@ -2,7 +2,7 @@ state={
 	id=166
 	name="STATE_166"
 	resources={
-		steel=31.000
+		steel=15.000
 	}
 
 	history={
@@ -18,7 +18,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 3 #was: 6
-			#air_base = 3
+			industrial_complex = 1
+			air_base = 3
 
 		}
 		add_core_of = SPR

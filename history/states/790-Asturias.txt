@@ -10,7 +10,11 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 1
-			arms_factory = 3
+			arms_factory = 1
+			11707 = {
+				naval_base = 2
+
+			}
 
 		}
 		add_core_of = SPR

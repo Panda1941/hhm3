@@ -17,14 +17,15 @@ sub_units = {
 			anti_air
 		}
 		
-		group = infantry
+		group = combat_support
 		
 		categories = {
 			category_army
 			category_line_artillery
+			category_anti_air
 		}		
 		
-		combat_width = 2
+		combat_width = 1
 		
 		#Size Definitions
 		max_organisation = 0
@@ -37,7 +38,7 @@ sub_units = {
 		supply_consumption = 0.1
 
 		need = {
-			anti_air_equipment = 32
+			anti_air_equipment = 30
 		}
 
 		forest = {
@@ -77,19 +78,20 @@ sub_units = {
 			anti_air
 		}
 		
-		group = mobile
+		group = mobile_combat_support
 		
 		categories = {
 			category_army
 			category_line_artillery
+			category_mobile_and_mobile_combat_sup
 		}		
 		
-		combat_width = 2
+		combat_width = 1
 		
 		#Size Definitions
-		max_organisation = 30
-		default_morale = 0.3
-		max_strength = 20
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
 		manpower = 500
 		training_time = 120
 		weight = 0.5
@@ -102,8 +104,8 @@ sub_units = {
 		}
 
 		need = {
-			anti_air_equipment = 32
-			motorized_equipment = 32
+			anti_air_equipment = 30
+			motorized_equipment = 50
 		}
 
 		forest = {
@@ -126,71 +128,6 @@ sub_units = {
 			movement = -0.2
 		}
 
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	mech_anti_air = {
-		sprite = infantry
-		map_icon_category = infantry
-		priority = 301
-		ai_priority = 10
-		active = yes
-		type = {
-			mechanized
-			anti_air
-		}
-		breakthrough = -0.5
-		group = mobile
-		categories = {
-			category_army
-			category_line_artillery
-		}		
-		essential = {
-			mechanized_equipment
-		}	
-		combat_width = 2		
-		#Size Definitions
-		max_strength = 20
-		max_organisation = 30
-		default_morale = 0.30
-		manpower = 500
-		training_time = 60
-		weight = 0.125
-		supply_consumption = 0.17
-		transport = mechanized_equipment
-		need = {
-			anti_air_equipment = 32
-			mechanized_equipment = 32
-		}
-		
-
-		forest = {
-			attack = -0.1
-		}
-		mountain = {
-			attack = -0.6
-			defence = -0.6
-		}
-		jungle = {
-			attack = -0.3
-			defence = -0.5
-		}
-		marsh = {
-			attack = -0.1
-		}
-		urban = {
-			attack = -0.2
-			defence = -0.15
-		}
-		urban_fortress = {
-			attack = -0.2
-			defence = -0.15
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
 		amphibious = {
 			attack = -0.4
 		}

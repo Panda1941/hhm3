@@ -2,21 +2,15 @@
 state={
 	id=417
 	name="STATE_417" # Hamadan
-	manpower = 796396
-	state_category = rural
+	manpower = 1
+	state_category = wasteland
 
 	history={
-		owner = PER
-		victory_points = {
-			8040 3 
-		}
-		victory_points = {
-			2065 1 
-		}
-		buildings = {
-			infrastructure = 2
-		}
-		add_core_of = PER
+		owner = WST
+		
+		
+		
+		add_core_of = WST
 	}
 
 	provinces={

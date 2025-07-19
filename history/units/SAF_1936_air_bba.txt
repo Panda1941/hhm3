@@ -4,10 +4,11 @@ air_wings = {
 	###South African Air Force (SAAF)
 	275 = {
 		# SAAF Fighter Squadron -- Hawker Furys
-		fighter_equipment_0 =  {
+		small_plane_airframe_0 =  {
 			owner = "SAF" 
-			amount = 100
+			amount = 30
 			creator = "ENG"
+			version_name = "Hawker Fury"
 		}
 	}
 }

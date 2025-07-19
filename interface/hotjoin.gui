@@ -8,7 +8,7 @@ guiTypes = {
 		orientation = upper_left
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 0
+		animation_time = 1000
 		
 		iconType = {
 			name ="hotjoin_request_entry_bg"
@@ -47,7 +47,7 @@ guiTypes = {
 		position = { x = 0 y = 160 }
 		size = { width = 205 height = 100%% }
 		hide_animation_type = linear
-		animation_time = 0
+		animation_time = 1000
 	
 		containerWindowType = {
 			name = "requests_window"
@@ -71,7 +71,7 @@ guiTypes = {
 			hide_position = { x = -210 y = 0 }
 			show_animation_type = decelerated
 			hide_animation_type = accelerated
-			animation_time = 0
+			animation_time = 1000
 			size = { width=200 height= 48 }
 			
 			iconType = {

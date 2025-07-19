@@ -4,12 +4,12 @@ state = {
 	name = "STATE_158"
 	manpower = 4765476
 	
-	state_category = large_city
+	state_category = metropolis
 	resources = {
-		steel = 40 # was: 40
-		#aluminium = 28 # was: 28
-		#chromium = 12 # was: 4
-		#tungsten = 12 # was: 2
+		steel = 24 # was: 40
+		aluminium = 16 # was: 28
+		chromium = 2 # was: 4
+		tungsten = 1 # was: 2
 	}
 
 	history = {
@@ -22,7 +22,7 @@ state = {
 		}
 		buildings = {
 			infrastructure = 4 #was: 7
-			arms_factory = 5
+			arms_factory = 7
 			industrial_complex = 1
 			dockyard = 2
 			air_base = 8
@@ -31,12 +31,15 @@ state = {
 			}
 		}
 		add_core_of = ITA
-		add_core_of = ITA
+		add_core_of = WST
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 10
 				industrial_complex = 2
 				dockyard = 3
+				6788 = {
+					naval_facility = 1 # Genoa Facilities
+				}
 			}
 		}
 	}

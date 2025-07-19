@@ -180,7 +180,7 @@ guiTypes = {
 		size = { width =1000 height=515 }
 		orientation= center
 		moveable = yes
-		fade_time = 1
+		fade_time = 200
 		fade_type = linear
 		clipping = no
 
@@ -946,7 +946,7 @@ guiTypes = {
 				margin = { left = 4 right = 4 top = 4 bottom = 4 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
-				animation_time = 0
+				animation_time = 300
 				clipping = yes
 
 				background = {

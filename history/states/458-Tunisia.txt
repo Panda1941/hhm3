@@ -5,19 +5,17 @@ state={
 	manpower = 1982940
 	state_category = town
 	resources={
-		steel=6 # was: 8
+		steel=31 #was 14 # was: 8
 	}
 
 	history={
-	set_state_flag = ITA_controls
-	set_state_flag = AFRICA_COMMONWEALTH_controls
 		owner = FRA
-		add_core_of = SWE
+		add_core_of = WST
 		victory_points = {
-			11969 20 
+			11969 10 
 		}
 		victory_points = {
-			9994 3 
+			9994 1 
 		}
 		victory_points = {
 			11921 1 

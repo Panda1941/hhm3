@@ -48,7 +48,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -113,7 +113,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -179,7 +179,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -227,7 +227,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -282,7 +282,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -352,7 +352,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -422,7 +422,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -477,7 +477,7 @@ foreign_influence = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 		}
 	}
 
@@ -487,10 +487,7 @@ foreign_influence = {
 		cost = 0
 
 		available = {
-			has_core_occupation_modifier = {
-				occupied_country_tag = FROM
-				modifier = compliance_80
-			}
+			always = no
 		}
         visible = {
 			has_rule = can_create_collaboration_government

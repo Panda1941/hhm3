@@ -17,9 +17,6 @@ equipments = {
 			steel = 1
 		}
 
-		upgrades = {
-			
-		}
 		can_be_lend_leased = {
 			always = no
 		}

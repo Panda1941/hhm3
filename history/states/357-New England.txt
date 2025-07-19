@@ -8,7 +8,7 @@ state={
 	state_category = metropolis
 
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 4 #was: 7

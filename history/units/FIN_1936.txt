@@ -1,93 +1,53 @@
 ﻿##### Division Templates #####
 division_template = {
-	name = "MP"
+	name = "Jalkaväkidivisioona"		# Infantry Division
 
-	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 0 y = 3 }
-		cavalry = { x = 0 y = 4 }
-
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 1 y = 2 }
-		cavalry = { x = 1 y = 3 }
-		cavalry = { x = 1 y = 4 }
-
-		cavalry = { x = 2 y = 0 }
-		cavalry = { x = 2 y = 1 }
-		cavalry = { x = 2 y = 2 }
-		cavalry = { x = 2 y = 3 }
-		cavalry = { x = 2 y = 4 }
-
-		cavalry = { x = 3 y = 0 }
-		cavalry = { x = 3 y = 1 }
-		cavalry = { x = 3 y = 2 }
-		cavalry = { x = 3 y = 3 }
-		cavalry = { x = 3 y = 4 }
-
-		cavalry = { x = 4 y = 0 }
-		cavalry = { x = 4 y = 1 }
-		cavalry = { x = 4 y = 2 }
-		cavalry = { x = 4 y = 3 }
-		cavalry = { x = 4 y = 4 }
-
-	}
-	support = {
-
-	}
-}
-
-division_template = {
-	name = "50W"
+	division_names_group = FIN_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
-
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		infantry = { x = 1 y = 4 }
-
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-		infantry = { x = 2 y = 3 }
-		infantry = { x = 2 y = 4 }
-
-		infantry = { x = 3 y = 0 }
-		infantry = { x = 3 y = 1 }
-		infantry = { x = 3 y = 2 }
-		infantry = { x = 3 y = 3 }
-		infantry = { x = 3 y = 4 }
-
-		infantry = { x = 4 y = 0 }
-		infantry = { x = 4 y = 1 }
-		infantry = { x = 4 y = 2 }
-		infantry = { x = 4 y = 3 }
-		infantry = { x = 4 y = 4 }
-
 	}
 	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Erillinen Prikaati" 	# Separate Brigade - Represents groups of separate battalions (Erillinen Pataljoona) and various garrison units
 
+	division_names_group = FIN_GAR_01
+	template_counter = 7
+	override_model = FIN_infantry_alt_1_entity
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+	priority = 0
+}
+division_template = {
+	name = "Ratsuväkiprikaati"  		# Cavalry Division
+
+	division_names_group = FIN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 1 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }   
 	}
 }
 
-##### OOB #####
-units = {
-	division= {
-		location = 11105
-		division_template = "50W"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.01
-	}
-}
+
 	
 ### No air units (first formed Jan-1938) ###
 
@@ -101,6 +61,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.66
 		efficiency = 100
+		industrial_manufacturer = mio:FIN_valtion_kivaaritehdas_organization
 	}
 	add_equipment_production = {
 		equipment = {

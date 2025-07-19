@@ -2,7 +2,7 @@
 state={
 	id=478
 	name="STATE_478" # Jalisco
-	manpower = 1
+	manpower = 2470875
 	
 	state_category = town
 	
@@ -10,13 +10,13 @@ state={
 		tungsten=8 # was: 10
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = WST
+	history={
+		owner = MEX
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 		}
-		add_core_of = WST
+		add_core_of = MEX
 		victory_points = {
 			13089 10
 		}

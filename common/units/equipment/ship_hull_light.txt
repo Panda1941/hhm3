@@ -4,8 +4,18 @@ equipments = {
 		year = 1922
 
 		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
 			}
 		}
 
@@ -98,19 +108,19 @@ equipments = {
 
 		
 		surface_detection = 20
-		sub_detection = 1
+		sub_detection = 2.5
 		surface_visibility = 10
 		naval_speed = 32
 		reliability = 0.80
 		
 		naval_range = 1500
 		
-		max_strength = 50
+		max_strength = 25
 		
 
-		fuel_consumption = 4
+		fuel_consumption = 0
 		
-		build_cost_ic = 700
+		build_cost_ic = 400
 		resources = {
 			steel = 2
 		}
@@ -168,10 +178,11 @@ equipments = {
 		}
 
 
-		reliability = 0.82
+		reliability = 0.85
 		naval_range = 1800
-		max_strength = 90
-		build_cost_ic = 950
+		max_strength = 40
+		build_cost_ic = 500
+		sub_detection = 3
 		resources = {
 			steel = 2
 		}
@@ -234,13 +245,13 @@ equipments = {
 		resources = {
 			steel = 3
 		}
-
+		sub_detection = 3.5
 		surface_detection = 20
 		surface_visibility = 10
 		reliability = 0.90
-		naval_range = 2200
-		max_strength = 110
-		build_cost_ic = 1100
+		naval_range = 2000
+		max_strength = 50
+		build_cost_ic = 550
 		manpower = 400
 
 		default_modules = {
@@ -302,13 +313,12 @@ equipments = {
 			}
 		}
 
-
+		sub_detection = 4
 		surface_detection = 20
 		reliability = 0.92
 		naval_range = 2500
-		max_strength = 140
-		build_cost_ic = 1300
-		fuel_consumption = 6
+		max_strength = 60
+		build_cost_ic = 600
 		resources = {
 			steel = 4
 			chromium = 1
@@ -414,6 +424,7 @@ equipments = {
 		}		
 		manpower = 325
 	}
+	
 	destroyer_3 = {
 		year = 1940
 
@@ -464,6 +475,7 @@ equipments = {
 		}
 		manpower = 400
 	}
+	
 	destroyer_4 = {
 		year = 1944
 

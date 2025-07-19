@@ -2,13 +2,13 @@ state={
 	id=600
 	name="STATE_600"
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
+		
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 4
+			industrial_complex = 2
 
 		}
 		victory_points = {

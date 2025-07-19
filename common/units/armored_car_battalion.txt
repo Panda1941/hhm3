@@ -18,6 +18,7 @@ sub_units = {
 		categories = {
 			category_front_line
 			category_army
+			category_mobile_and_mobile_combat_sup
 		}
 
 
@@ -27,7 +28,7 @@ sub_units = {
 			armored_car_equipment = 60
 		}
 		manpower = 500
-		max_organisation = 10
+		max_organisation = 20
 		default_morale = 0.3
 		training_time = 180
 		max_strength = 5
@@ -55,13 +56,8 @@ sub_units = {
 		}
 		desert = {
 			movement = 0.15
-			attack = 0.10
-			defence = 0.10
 		}
 		urban = {
-			attack = -0.3
-		}
-		urban_fortress = {
 			attack = -0.3
 		}
 		river = { 

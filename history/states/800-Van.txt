@@ -3,36 +3,29 @@ state={
 	name="STATE_800" #Van
 
 	history={
-        owner = WST
-
-
-
-
-
-
-		buildings = {
-			infrastructure = 1
-		}
+		owner =CHO
+		
+		
+		
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"
 			}
-			add_core_of = KUR
+			add_core_of =CHO
 		}
 		if = {
 			limit = {
 				NOT = { has_dlc = "Battle for the Bosporus" }
 			}
-			add_core_of = TUR
-			add_core_of = KUR
+			add_core_of =CHO
 		}
 	}
 
 	provinces={
 		652 4583 6935 7470 11880 12376 13121 
 	}
-    manpower = 1
-	state_category = rural
+	manpower = 1
+	state_category = wasteland
 
 	local_supplies=0.0 
 }

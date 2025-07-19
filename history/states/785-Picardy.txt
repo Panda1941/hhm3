@@ -5,7 +5,7 @@ state={
 	
 	state_category = town
 	resources={
-		steel=20 # was: 112
+		steel=12 #was:20 was: 112
 		aluminium=4 # was: 22
 	}
 	
@@ -15,7 +15,6 @@ state={
 		}
 		owner = FRA
 		add_core_of = FRA
-add_core_of = VIC
 		buildings = {
 			infrastructure = 4 #was: 8
 			industrial_complex = 1

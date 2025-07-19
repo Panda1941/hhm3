@@ -6,7 +6,7 @@ state={
 		tungsten=2.000
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = SIA
 		buildings = {
 			infrastructure = 2
@@ -25,7 +25,6 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		
 		
 		add_core_of = SIA
-		set_state_flag = JAP_controls
 
 	}
 

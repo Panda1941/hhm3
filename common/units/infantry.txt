@@ -17,6 +17,9 @@ sub_units = {
 			infantry
 		}
 		
+		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
+		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
+		
 		group = infantry
 		
 		categories = {
@@ -24,13 +27,14 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_infantry_and_bicycle
 		}
 		
 		combat_width = 2
 		
 		#Size Definitions
 		max_strength = 25
-		max_organisation = 40
+		max_organisation = 60
 		default_morale = 0.3
 		manpower = 1000
 
@@ -39,13 +43,10 @@ sub_units = {
 		suppression = 1.5
 		weight = 0.5
 		
-		supply_consumption = 0.07
+		supply_consumption = 0.06
 	
 		need = {
 			infantry_equipment = 100
-		}
-		essential = {
-			infantry_equipment
 		}
 	}
 
@@ -69,6 +70,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_infantry_and_bicycle
 		}
 		
 		combat_width = 2
@@ -85,19 +87,15 @@ sub_units = {
 		suppression = 2
 		weight = 0.5
 		
-		supply_consumption = 0.08
+		supply_consumption = 0.06
 	
 		need = {
 			infantry_equipment = 100
-			support_equipment = 15			
-		}
-		essential = {
-			infantry_equipment
-			support_equipment
+			support_equipment = 10			
 		}
 
 		forest = {
-			movement = 0.05
+			movement = 0.00
 		}
 		hills = {
 			movement = 0.1
@@ -114,84 +112,8 @@ sub_units = {
 		urban = {
 			movement = 0.2
 		}
-		urban_fortress = {
-			movement = 0.2
-		}
 		desert = {
 			movement = 0.05
-		}
-		river = {
-			movement = -0.05
-		}
-		amphibious = {
-			movement = -0.05
-		}
-	}
-	
-	infantry_mot = {
-		sprite = infantry
-		map_icon_category = infantry
-		
-		priority = 600
-		ai_priority = 200
-		active = no
-
-		type = {
-			infantry
-		}
-		
-		group = infantry
-		
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 25
-		max_organisation = 50
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 90
-		suppression = 2.2
-		weight = 0.75
-		supply_consumption = 0.08
-		breakthrough = 0.05
-		
-		own_equipment_fuel_consumption_mult = 0.25
-		
-		hardness = -0.5
-		maximum_speed = 1.0
-		#supply_consumption_factor = 0.05
-		
-		transport =	infantry_equipment
-	
-		need = {
-			infantry_equipment = 100
-			motorized_equipment = 15
-		}
-		essential = {
-		    infantry_equipment
-			motorized_equipment
-		}
-
-		forest = {
-			movement = -0.10
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.10
-		}
-		marsh = {
-			movement = -0.10
 		}
 		river = {
 			movement = -0.05
@@ -225,6 +147,7 @@ sub_units = {
 			category_army
 			category_special_forces
 			category_marines
+			category_special_forces_leg_infantry
 		}
 		
 		combat_width = 2
@@ -239,30 +162,24 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		initiative = 0.01
-		supply_consumption = 0.09
+		supply_consumption = 0.05
+		breakthrough = 0.3
 	
 		need = {
 			infantry_equipment = 150
-			special_forces_equipment = 40
-		}
-		essential = {
-		    infantry_equipment
-			support_equipment
-			special_forces_equipment
 		}
 
 		marsh = {
-			attack = 0.10
+			attack = 0.3
 		}
 		river = {
-			attack = 0.10
+			attack = 0.3
 		}
 		amphibious = {
 			attack = 0.5
 		}
 	}
-	
+
 	marine_commando  = {
 		abbreviation = "MRC"
 		sprite = infantry
@@ -288,44 +205,36 @@ sub_units = {
 			category_army
 			category_special_forces
 			category_marines
+			category_special_forces_leg_infantry
 		}
 		
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 25
-		max_organisation = 60
-		default_morale = 0.45
+		max_strength = 20
+		max_organisation = 70
+		default_morale = 0.4
 		manpower = 1000
 
 		#Misc Abilities
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		initiative = 0.01
-		supply_consumption = 0.1
-		breakthrough = 0.10
-		soft_attack = 0.05
+		supply_consumption = 0.05
+		breakthrough = 0.3
 	
 		need = {
-			infantry_equipment = 250
-			special_forces_equipment = 60
-		}
-		essential = {
-		    infantry_equipment
-			support_equipment
-			special_forces_equipment
+			infantry_equipment = 150
 		}
 
 		marsh = {
-			attack = 0.15
+			attack = 0.3
 		}
 		river = {
-			attack = 0.15
-			defense = 0.05
+			attack = 0.3
 		}
 		amphibious = {
-			attack = 0.55
+			attack = 0.5
 		}
 	}
 	
@@ -353,6 +262,7 @@ sub_units = {
 			category_army
 			category_special_forces
 			category_mountaineers
+			category_special_forces_leg_infantry
 		}
 		
 		combat_width = 2
@@ -367,28 +277,23 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		initiative = 0.01
-		supply_consumption = 0.09
+		
+		supply_consumption = 0.05
+		breakthrough = 0.3
 	
 		need = {
-			infantry_equipment = 150
-			special_forces_equipment = 40
-		}
-		essential = {
-		    infantry_equipment
-			support_equipment
-			special_forces_equipment
+			infantry_equipment = 140
 		}
 
 		hills = {
-			attack = 0.15
+			attack = 0.2
 			defence = 0.05
-			movement = 0.10
+			movement = 0.1
 		}
 		mountain = {
-			attack = 0.15
-			defence = 0.05
-			movement = 0.10
+			attack = 0.35
+			defence = 0.1
+			movement = 0.2
 		}
 	}
 
@@ -415,6 +320,7 @@ sub_units = {
 			category_army
 			category_special_forces
 			category_paratroopers
+			category_special_forces_leg_infantry
 		}
 		
 		combat_width = 2
@@ -429,140 +335,12 @@ sub_units = {
 		training_time = 150
 		suppression = 1
 		weight = 0.5
-		initiative = 0.01
-		supply_consumption = 0.09
+		supply_consumption = 0.05
 
-		soft_attack = 0.1
-
-		can_be_parachuted = yes
-
-		need = {
-			infantry_equipment = 150
-			special_forces_equipment = 40
-		}
-		essential = {
-		    infantry_equipment
-			support_equipment
-			special_forces_equipment
-		}
-	}
+		can_be_parachuted = no
 	
-	shock_troops = {
-	    
-		sprite = infantry
-		map_icon_category = infantry
-		special_forces = yes
-			
-		priority = 6000
-		ai_priority = 2
-		active = no
-
-		type = {
-			infantry
-		}
-		
-		group = infantry
-		
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-			category_special_forces
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 70
-		default_morale = 0.7
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 275
-		suppression = 1.5
-		weight = 0.4
-		initiative = 0.01
-		supply_consumption = 0.09
-		
 		need = {
-			infantry_equipment = 150
-			special_forces_equipment = 40
-		}
-		
-		essential = {
-		    infantry_equipment
-			support_equipment
-			special_forces_equipment
-			#mechanized_equipment
-		}
-		
-		urban = {
-			attack = 0.10
-		}
-		
-		urban_fortress = {
-			attack = 0.10
-		}
-		fort = {
-			attack = 0.15
-		}
-	}
-	
-	jaeger = {
-		sprite = infantry
-		map_icon_category = infantry
-		special_forces = yes
-
-		ai_priority = 2
-		priority = 400
-		active = no
-
-		type = {
-			infantry
-		}
-
-		group = infantry
-
-
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-			category_special_forces
-		}
-
-		combat_width = 2
-
-		#Size Definitions
-		max_strength = 25
-		max_organisation = 70
-		default_morale = 0.4
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 150
-		suppression = 1
-		weight = 0.5
-		initiative = 0.01
-		supply_consumption = 0.09
-
-		need = {
-			infantry_equipment = 150
-			special_forces_equipment = 40
-		}
-		essential = {
-		    infantry_equipment
-			support_equipment
-			special_forces_equipment
-		}
-
-
-		
-		forest = {
-			attack = 0.15
+			infantry_equipment = 130
 		}
 	}
 
@@ -585,6 +363,8 @@ sub_units = {
 			category_front_line
 			category_all_infantry
 			category_army
+			category_vehicle_infantry
+			category_mobile_and_mobile_combat_sup
 		}
 		
 		combat_width = 2
@@ -599,8 +379,7 @@ sub_units = {
 		training_time = 90
 		suppression = 2.2
 		weight = 0.75
-		supply_consumption = 0.08
-		breakthrough = 0.03
+		supply_consumption = 0.065
 	
 		# this is what moves us and sets speed
 		transport = motorized_equipment
@@ -609,22 +388,16 @@ sub_units = {
 			infantry_equipment = 100
 			motorized_equipment = 35
 		}
-		essential = {
-		    infantry_equipment
-			motorized_equipment
-		}
 
 		forest = {
 			attack = -0.1
 			movement = -0.5
 		}
 		mountain = {
-			attack = -0.30
-			defence = -0.40
+			attack = -0.05
 		}
 		jungle = {
-			attack = -0.30
-			defence = -0.40
+			attack = -0.2
 			movement = -0.5
 		}
 		marsh = {
@@ -633,11 +406,6 @@ sub_units = {
 		}
 		urban = {
 			attack = -0.1
-			defence = -0.1
-		}
-		urban_fortress = {
-			attack = -0.1
-			defence = -0.1
 		}
 		river = {
 			attack = -0.1
@@ -667,16 +435,18 @@ sub_units = {
 			category_front_line
 			category_all_infantry
 			category_army
+			category_vehicle_infantry
+			category_mobile_and_mobile_combat_sup
 		}
 
 		combat_width = 2
 
-
-		soft_attack = 0.2
-		hard_attack = 0.8
+		#Offensive Abilities
+		soft_attack = 0.1
+		hard_attack = 4.0
 		
 		#Size Definitions
-		max_strength = 25
+		max_strength = 30
 		max_organisation = 60
 		default_morale = 0.3
 		manpower = 1200
@@ -685,10 +455,8 @@ sub_units = {
 		training_time = 120
 		suppression = 2
 		weight = 1
-		breakthrough = 0.03
 		
-		supply_consumption = 0.095 #was 0.14
-
+		supply_consumption = 0.14
 		
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
@@ -708,23 +476,17 @@ sub_units = {
 			attack = -0.2
 		}
 		mountain = {
-			attack = -0.30
-			defence = -0.40
+			attack = -0.05
 		}
 		jungle = {
-			attack = -0.30
-			defence = -0.40
+			attack = -0.3
 		}
 		marsh = {
 			attack = -0.1
 		}
 		urban = {
-			attack = -0.10
-			defence = -0.10
-		}
-		urban_fortress = {
-			attack = -0.10
-			defence = -0.10
+			attack = -0.2
+			defence = -0.05
 		}
 		river = {
 			attack = -0.2
@@ -804,10 +566,10 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 20 #25 (HP)
-		max_organisation = 80 #60 -> Lower HP but higher Org: They should keep fighting longer
+		max_strength = 15 #25 (HP)
+		max_organisation = 70 #60 -> Lower HP but higher Org: They should keep fighting longer
 		default_morale = 0.4 #0.3 (Recovery) -> Easy to get more punishees
-		manpower = 1000 #1000 -> Usually no more than 850
+		manpower = 850 #1000 -> Usually no more than 850
 
 		#Misc Abilities
 		training_time = 50 #90 -> Already trained
@@ -817,17 +579,7 @@ sub_units = {
 		supply_consumption = 0.05 #0.07 -> Don't need that much supply, and they have lower HP
 	
 		need = {
-			infantry_equipment = 100 #100 -> Same ratio as regular Infantry			
-		}
-		essential = {
-		    infantry_equipment
-		}
-		
-		urban = {
-			defence = 0.05
-		}
-		urban_fortress = {
-			defence = 0.05
+			infantry_equipment = 85 #100 -> Same ratio as regular Infantry			
 		}
 	}
 
@@ -856,8 +608,8 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 35 # reg inf 25
-		max_organisation = 50 # reg inf 60
+		max_strength = 30 # reg inf 25
+		max_organisation = 45 # reg inf 60
 		default_morale = 0.2 #  reg inf 0.3
 		manpower = 1000
 
@@ -876,28 +628,25 @@ sub_units = {
 		# Terrain bonuses
 		# Attack bonuses higher as they thought defending was dishonourable
 		hills = {
-			attack = 0.1 # was 0.1 
+			attack = 0.15 # was 0.1 
 			defence = 0.05
 		}
 		forest = {
-			attack = 0.1 # was 0.1 
+			attack = 0.15 # was 0.1 
 			defence = 0.05
 		}
 		mountain = {
-			attack = 0.1 # was 0.1 
+			attack = 0.15 # was 0.1 
 			defence = 0.05
 		}
 		desert = {
-			attack = 0.2 # was 0.1 
-			defence = 0.05	
+			attack = 0.25 # was 0.1 
+			defence = 0.10	
 		}
 		
 		
 		need = {
 			infantry_equipment = 80 # was 100 
-		}
-		essential = {
-		    infantry_equipment
 		}
 	}
 
@@ -927,8 +676,8 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 30
-		max_organisation = 55 #reg infantry 60
+		max_strength = 25
+		max_organisation = 50 #reg infantry 60
 		default_morale = 0.3
 		manpower = 1000
 
@@ -940,20 +689,7 @@ sub_units = {
 		supply_consumption = 0.06
 	
 		need = {
-			infantry_equipment = 80
-		}
-		essential = {
-		    infantry_equipment
-		}
-		
-		forest = {
-			defence = 0.05
-		}	
-		urban = {
-			defence = 0.05
-		}
-		urban_fortress = {
-			defence = 0.05
+			infantry_equipment = 100
 		}
 	}
 }

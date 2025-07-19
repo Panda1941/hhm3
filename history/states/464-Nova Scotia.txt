@@ -4,7 +4,7 @@ state={
 	name="STATE_464"
 	manpower = 490912
 	
-	state_category = metropolis
+	state_category = rural
 
 	history={
 		owner = CAN
@@ -13,9 +13,10 @@ state={
 		}
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 1
 			air_base = 3
 			7361 = {
-				naval_base = 10
+				naval_base = 4
 
 			}
 		}

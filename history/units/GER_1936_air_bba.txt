@@ -2,80 +2,129 @@
 ### Air oob
 air_wings = {
 	### I. Luftkreiskommando -- Konigsberg ###
-	64 = { 
+	763 = { 
 		# Jagdgeschwader 232 	
-		fighter_equipment_0 =  {		# He 51
+		small_plane_airframe_0 =  {		# He 51
 			owner = "GER" 
-			amount = 100
+			amount = 40
+			version_name = "He 51"
 		}
 		name = "Jagdgeschwader 232"
-		# Jagdgeschwader 233 	
-		fighter_equipment_0 =  {		# He 51
-			owner = "GER" 
-			amount = 100
-		}
-		name = "Jagdgeschwader 233"
-		# Jagdgeschwader 234 	
-		fighter_equipment_0 =  {		# He 51
-			owner = "GER" 
-			amount = 100
-		}
-		name = "Jagdgeschwader 234"
+	}
+
+	### II. Luftkreiskommando -- Berlin ###
+	763 = { 
 		# Jagdgeschwader 132 'Richtofen'		
-		fighter_equipment_0 =  {		# Ar 68
+		small_plane_airframe_0 =  {		# Ar 68
 			owner = "GER" 
-			amount = 100
+			amount = 80
+			version_name = "He 51"
 		}
 		name = "Jagdgeschwader 132"
-		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
-			modifier="fighter_genius"
-			name="Erich"
-			surname="Hartmann"
-			callsign="Bubi"
-			portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
-		}
-		# Jagdgeschwader 136		
-		fighter_equipment_0 =  {		# He 51
-			owner = "GER" 
-			amount = 100
-		}
-		name = "Jagdgeschwader 136"
+		#ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
+		#	modifier="fighter_genius"
+		#	name="Erich"
+		#	surname="Hartmann"
+		#	callsign="Bubi"
+		#	portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
+		#}
 		# Kampfgeschwader 153		
 		medium_plane_airframe_0 = {		# Do 23
 			owner = "GER" 
-			amount = 100
+			amount = 80
+			version_name = "Do 23"
+		}
+		medium_plane_airframe_0 = {		# Ju 86
+			owner = "GER" 
+			amount = 40
+			version_name = "Ju 86"
 		}
 		name = "Kampfgeschwader 153"
+		# TODO: REMOVE THIS LATER ???
 		transport_plane_equipment_1 = {
 			owner = "GER" 
-			amount = 100
+			amount = 80
 		}
+	}
+
+	### III. Luftkreiskommando -- Breslau ###
+	763 = { 
 		# Kampfgeschwader 253 'General Wever'		
-		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
+		medium_plane_airframe_0 = {		# He 45 or Do 23 ?
 			owner = "GER" 
-			amount = 100
+			amount = 60
+			version_name = "Do 23"
 		}
 		name = "Kampfgeschwader 253"
-		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
+		medium_plane_airframe_0 = {		# He 45 or Do 23 ?
 			owner = "GER" 
-			amount = 100
+			amount = 60
+			version_name = "Do 23"
 		}
 		# Sturzkampfgeschwader 162		
-		CAS_equipment_1 =  {			# Hs 123
+		small_plane_cas_airframe_0 =  {			# Hs 123
 			owner = "GER" 
-			amount = 100
+			amount = 80
+			version_name = "Hs 123"
 		}
-		name = "Sturzkampfgeschwader 162"
-		# Kampfgeschwader 152 'Hindenburg'	
-		tac_bomber_equipment_0 = {		# Do 23
+		name = "Sturzkampfgeschwader 162"	
+	}
+
+	### IV. Luftkreiskommando -- Kassel ###
+	763 = { 
+		# Jagdgeschwader 134 'Horst Wessel'		
+		small_plane_airframe_0 =  {		# He 51 # Ar 68
 			owner = "GER" 
-			amount = 100
+			amount = 60
+			version_name = "He 51"
+		}
+		name = "Jagdgeschwader 134"
+		small_plane_airframe_0 =  {		# He 51 # Ar 68
+			owner = "GER" 
+			amount = 60
+			version_name = "He 51"
+		}
+		# Kampfgeschwader 152 'Hindenburg'	
+		medium_plane_airframe_0 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+			version_name = "Do 23"
 		}
 		name = "Kampfgeschwader 152"
-		# Küstenfliegergruppe 106		
-		nav_bomber_equipment_1 =  {		# He 59, Do 18
+		# Kampfgeschwader 155	
+		medium_plane_airframe_0 = {		# He 45 or Do 23 ? (light bomber)
 			owner = "GER" 
-			amount = 100
+			amount = 80
+			version_name = "Do 23"
+		}
+		name = "Kampfgeschwader 155"
+	}
+
+	### V. Luftkreiskommando -- Munich ###
+	763 = { 
+		# Jagdgeschwader 136		
+		small_plane_airframe_0 =  {		# He 51
+			owner = "GER" 
+			amount = 40
+			version_name = "He 51"
+		}
+		name = "Jagdgeschwader 136"
+		# Kampfgeschwader 154	
+		medium_plane_airframe_0 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+			version_name = "Do 23"
+		}
+		name = "Kampfgeschwader 154"
+	}
+
+	### VI. Luftkreiskommando -- Kiel ###
+	763 = { 
+		# Küstenfliegergruppe 106		
+		small_plane_naval_bomber_airframe_1 =  {		# He 59, Do 18
+			owner = "GER" 
+			amount = 72
+			version_name = "Do 22"
 		}
 		name = "Küstenfliegergruppe 106"
 		# Küstenfliegergruppe 206
@@ -89,8 +138,9 @@ air_wings = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_1
-			creator = "GER" 
+			type = small_plane_airframe_1
+			creator = GER 
+			version_name = "Bf 109 D"
 		}
 		requested_factories = 1
 		progress = 0.15
@@ -100,8 +150,9 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = CAS_equipment_1
-			creator = "GER"
+			type = small_plane_cas_airframe_1
+			creator = GER 
+			version_name = "Ju 87"
 		}
 		requested_factories = 1
 		progress = 0.2
@@ -111,13 +162,14 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_1
-			creator = "GER" 
+			type = medium_plane_airframe_1
+			creator = GER 
+			version_name = "He 111"
 		}
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 50
-		industrial_manufacturer = mio:GER_heinkel_organization
+		#industrial_manufacturer = mio:GER_heinkel_organization #Dornier now #Dornier now
 	}
 }
 

@@ -2,18 +2,17 @@ state={
 	id=894
 	name="STATE_894"
 	manpower = 69300
-	state_category = city
+	state_category = wasteland
 
 	history={
 		owner = SAF
 		buildings = {
 			infrastructure = 2
-			dockyard = 2
 
 		}
 		
 		add_core_of = SAF
-		add_core_of = SAF
+		add_core_of = WST
 
 	}
 	provinces={

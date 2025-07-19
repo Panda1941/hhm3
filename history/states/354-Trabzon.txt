@@ -2,29 +2,18 @@
 state={
 	id=354
 	name="STATE_354"
-    manpower = 1
+	manpower = 1
 	
-	state_category = town
+	state_category = wasteland
 
 	history={
-        owner = WST
+		owner =CHO
 		
-
-
-
-
-
-
-
-
-
-		buildings = {
-			infrastructure = 2
-			9932 = {
-				naval_base = 2
-			}
-		}
-		add_core_of = TUR
+		
+		
+		
+		
+		add_core_of =CHO
 	}
 
 	provinces={

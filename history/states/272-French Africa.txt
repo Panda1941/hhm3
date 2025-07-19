@@ -2,7 +2,7 @@
 state={
 	id=272
 	name="STATE_272"
-	manpower = 1
+	manpower = 1638000
 	resources={
 		steel=3 # was: 4
 	}
@@ -10,8 +10,8 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = WST
-		add_core_of = SWE
+		owner = FRA
+		add_core_of = WST
 		victory_points = {
 			4948 5 
 		}

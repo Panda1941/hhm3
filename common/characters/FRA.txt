@@ -140,10 +140,10 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist cavalry_officer armor_officer war_hero trickster cavalry_leader panzer_leader organizer trait_engineer ranger }
-			skill=6
+			traits={ brilliant_strategist cavalry_leader organizer war_hero trickster }
+			skill=4
 			attack_skill=6
-			defense_skill=4
+			defense_skill=5
 			planning_skill=4
 			logistics_skill=5
 			legacy_id=0
@@ -159,12 +159,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer trait_cautious cavalry_officer armor_officer cavalry_leader panzer_leader organizer trait_engineer hill_fighter }
-			skill=6
-			attack_skill=5
-			defense_skill=5
+			traits={ career_officer trait_cautious armor_officer panzer_leader trait_engineer }
+			skill=4
+			attack_skill= 7
+			defense_skill= 5
 			planning_skill=4
-			logistics_skill=6
+			logistics_skill=5
 			legacy_id=0
 		}
 	}
@@ -194,17 +194,17 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 7
 			}
 		}
 
 		field_marshal={
-			traits={ old_guard inflexible_strategist career_officer defensive_doctrine organizer }
-			skill=6
-			attack_skill=5
-			defense_skill=5
-			planning_skill=6
-			logistics_skill=4
+			traits={ old_guard inflexible_strategist career_officer defensive_doctrine }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
 			legacy_id=0
 		}
 	}
@@ -234,17 +234,17 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 7
 			}
 		}
 		
 		field_marshal={
-			traits={ old_guard inflexible_strategist career_officer defensive_doctrine organizer }
-			skill=5
-			attack_skill=4
-			defense_skill=5
-			planning_skill=5
-			logistics_skill=3
+			traits={ old_guard inflexible_strategist career_officer defensive_doctrine }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
 			legacy_id=0
 		}
 	}
@@ -263,10 +263,7 @@ characters={
 			slot = army_chief
 			idea_token = alphonse_georges
 			allowed = {
-				OR = {
-					original_tag = FRA
-					original_tag = VIC
-				}
+				original_tag = FRA
 			}
 			traits = {
 				army_chief_maneuver_1
@@ -345,8 +342,8 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ media_personality harsh_leader armor_officer infantry_leader skilled_staffer trait_engineer commando hill_fighter ranger urban_assault_specialist }
-			skill=5
+			traits={ media_personality harsh_leader armor_officer }
+			skill=4
 			attack_skill=4
 			defense_skill=4
 			planning_skill=3
@@ -382,7 +379,7 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer trait_reckless armor_officer panzer_leader }
+			traits={ career_officer trait_reckless armor_officer }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -426,7 +423,7 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer trait_cautious infantry_officer trickster infantry_leader }
+			traits={ career_officer trait_cautious infantry_officer trickster }
 			skill=3
 			attack_skill=2
 			defense_skill=2
@@ -451,10 +448,7 @@ characters={
 			idea_token = charles_huntziger
 			ledger = army
 			allowed = {
-				OR = {
-					original_tag = FRA
-					original_tag = VIC
-				}
+				original_tag = FRA
 			}
 			traits = {
 				army_logistics_1
@@ -466,7 +460,7 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ old_guard infantry_officer infantry_leader engineer }
+			traits={ old_guard infantry_officer }
 			skill=3
 			attack_skill=3
 			defense_skill=1
@@ -485,7 +479,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard trait_cautious infantry_officer engineer trait_mountaineer }
+			traits={ old_guard trait_cautious infantry_officer }
 			skill=2
 			attack_skill=1
 			defense_skill=3
@@ -523,7 +517,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard infantry_officer trait_mountaineer commando hill_fighter }
+			traits={ old_guard infantry_officer trait_mountaineer }
 			skill=3
 			attack_skill=2
 			defense_skill=4
@@ -770,30 +764,6 @@ characters={
 		}
 	}
 
-	FRA_frederic_irene_joliot_curie={
-		name=FRA_frederic_irene_joliot_curie
-		portraits={
-			army={
-				small="GFX_idea_frederic_irene_joliot_curie"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = frederic_irene_joliot_curie
-			ledger = army
-			allowed = {
-				original_tag = FRA
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}
-	}
-
 
 	### ARMY CHIEFS ###
 
@@ -822,6 +792,10 @@ characters={
 			cost =  50
 			ai_will_do = {
 				factor = 1.000
+				modifier = {
+					factor = 2
+					has_capitulated = yes
+				}
 			}
 		}		
 	}
@@ -921,7 +895,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				factor = 2
 			}
 		}
 	}
@@ -944,7 +918,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				factor = 0.5
 			}
 		}
 	}
@@ -967,7 +941,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
@@ -1154,13 +1128,130 @@ characters={
 		}
 	}
 
+	FRA_marcel_bucard = {
+		name = FRA_marcel_bucard
+		portraits = {
+			civilian = {	
+				large = GFX_portrait_FRA_marcel_bucard
+				small = GFX_portrait_FRA_marcel_bucard_small
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { fascist_corporatist }
+			expire = "1949.1.1.12"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = marcel_bucard
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				OR = {
+					has_completed_focus  = FRA_right_wing_rhetoric 
+					has_completed_focus  = FRA_utilize_the_leagues 
+					has_focus_tree  = vichy_french_focus
+				}
+				IF  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT  = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			traits  = {
+				fascist_demagogue 
+			}
+			do_effect  = {
+				NOT  = {
+					has_government  = fascism 
+				}
+			}
+			on_add  = {
+				IF  = {
+					limit  = {
+						NOT  = {
+							owner = { tag = VIC }
+						}
+					}
+					owner = {
+						country_event = lar_france_political_violence.2
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
 
+	FRA_marcel_deat = {
+		name = FRA_marcel_deat
+		portraits = {
+			civilian = {	
+				large = GFX_portrait_FRA_marcel_deat
+				small = GFX_portrait_FRA_marcel_deat_small
+			}
+		}
+		#country_leader = {
+		#	ideology = fascism_ideology
+		#	traits = {  }
+		#	expire = "1949.1.1.12"
+		#	id = -1
+		#}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_marcel_deat
+			allowed  = {
+				original_tag = FRA
+			}
+			available  = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			cost = 150
+			traits  = {
+				FRA_neo_jacobin
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				base = 1.000
+			}
+		}
+	}
 
 	FRA_rene_massigli={
 		name=FRA_rene_massigli
 		portraits={
 			army={
 				small="GFX_idea_rene_massigli"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = rene_massigli
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				has_completed_focus  = FRA_confirm_eastern_commitments 
+				has_government  = democratic 
+			}
+			cost  = 75.000
+			traits  = {
+				hawk 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
 			}
 		}
 	}
@@ -1172,15 +1263,71 @@ characters={
 				small="GFX_idea_georges_bonnet"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = georges_bonnet
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				has_completed_focus  = FRA_buy_time 
+				has_government  = democratic 
+			}
+			cost  = 75.000
+			traits  = {
+				appeaser 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
 	}
 
-	FRA_charles_maurras={
-		name=FRA_charles_maurras
-		portraits={
-			army={
-				small=GFX_portrait_FRA_charles_maurras_small
+	FRA_charles_maurras = {
+		name = FRA_charles_maurras
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FRA_charles_maurras
+				small = GFX_portrait_FRA_charles_maurras_small
 			}
-		}	
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { editor monarchist_media_mogul }
+			expire = "1949.1.1.12"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = charles_maurras
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				OR = {
+					has_completed_focus = FRA_integralism 
+					has_completed_focus = FRA_orleanist_restoration 
+				}
+				OR  = {
+					has_government  = fascism 
+					has_government  = neutrality 
+				}
+			}
+			visible  = {
+				has_dlc = "La Resistance"
+			}
+			cost  = 75.000
+			traits  = {
+				national_integralist 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}		
 	}
 
 	FRA_philippe_henriot={
@@ -1188,6 +1335,29 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_FRA_philippe_henriot"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_philippe_henriot
+			allowed  = {
+				original_tag  = FRA
+			}
+			visible  = {
+				has_dlc = "La Resistance"
+			}
+			available  = {
+				has_completed_focus  = FRA_national_regeneration 
+				has_government  = fascism 
+			}
+			cost  = 75.000
+			traits  = {
+				propaganda_expert 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
 			}
 		}
 	}
@@ -1206,6 +1376,9 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
+				not  = {
+					has_government  = communism 
+				}
 			}
 			cost  = 150.000
 			traits  = {
@@ -1218,6 +1391,37 @@ characters={
 			}
 		}
 	}
+
+	#FRA_georges_valois = {
+	#	name = FRA_georges_valois
+	#	portraits = {
+	#		army = {
+	#			small = GFX_portrait_PLACEHOLDER_small # TODO_JA: hook in if we get it or remove character!
+	#		}
+	#	}
+	#	advisor = {
+	#		slot = political_advisor
+	#		idea_token = FRA_georges_valois
+	#		allowed  = {
+	#			original_tag = FRA
+	#		}
+	#		available  = {
+	#			OR = {
+	#				has_government = fascism
+	#				has_government = neutrality
+	#			}
+	#		}
+	#		cost = 150
+	#		traits  = {
+	#			FRA_national_syndicalist 
+	#		}
+	#		do_effect  = {
+	#		}
+	#		ai_will_do  = {
+	#			base = 1.000
+	#		}
+	#	}
+	#}
 	
 	FRA_gaston_henry_haye={
 		name=FRA_gaston_henry_haye
@@ -1289,7 +1493,7 @@ characters={
 			do_effect  = {
 			}
 			ai_will_do  = {
-				factor  = 1.000
+				factor = 0
 			}
 		}
 	}
@@ -1347,7 +1551,7 @@ characters={
 			do_effect  = {
 			}
 			ai_will_do  = {
-				factor  = 1.000
+				factor = 0.5
 			}
 		}
 	}
@@ -1398,8 +1602,8 @@ characters={
 			}
 			do_effect  = {
 			}
-			ai_will_do  = {
-				factor  = 1.000
+			ai_will_do = {
+				factor = 0.75
 			}
 		}
 	}
@@ -1425,7 +1629,7 @@ characters={
 			do_effect  = {
 			}
 			ai_will_do  = {
-				factor  = 1.000
+				factor = 0
 			}
 		}
 	}
@@ -1478,6 +1682,171 @@ characters={
 			}
 			traits  = {
 				head_of_intelligence 
+			}
+			ai_will_do  = {
+				factor  = 0.25
+			}
+		}
+	}
+
+
+  #####                                                              
+ #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
+ #        #    #  #  #       ##   #    #    #  #         #    #      
+  #####   #       #  #####   # #  #    #    #   ####     #     ####  
+       #  #       #  #       #  # #    #    #       #    #         # 
+ #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
+  #####    ####   #  ######  #    #    #    #   ####     #     ####  
+
+	# OLD combo character theorist for both Curies, now each one is an independent person with their own dreams.
+	#FRA_frederic_irene_joliot_curie={
+	#	name=FRA_frederic_irene_joliot_curie
+	#	portraits={
+	#		army={
+	#			small="GFX_idea_frederic_irene_joliot_curie"
+	#		}
+	#	}
+	#	advisor={
+	#		cost = 100
+	#		slot = theorist
+	#		idea_token = frederic_irene_joliot_curie
+	#		ledger = army
+	#		allowed = {
+	#			original_tag = FRA
+	#		}
+	#		research_bonus = {
+	#			nuclear = 0.150
+	#		}
+	#		traits = {
+	#			nuclear_scientist
+	#		}
+	#	}
+	#}
+
+	FRA_irene_joliot_curie = {
+		name = FRA_irene_joliot_curie
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_irene_joliot_curie
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	FRA_frederic_joliot_curie = {
+		name = FRA_frederic_joliot_curie
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_frederic_joliot_curie
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	FRA_francois_hussenot = {
+		name = FRA_francois_hussenot
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_francois_hussenot
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	FRA_louis_renault = {
+		name = FRA_louis_renault
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_louis_renault
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist }
+			skills = {
+				specialization_land = 2
+			}
+		}
+	}
+
+	FRA_emile_rimailho = {
+		name = FRA_emile_rimailho
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_emile_rimailho
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_land = 2
+			}
+		}
+	}
+
+	FRA_eugene_schneider_ii = {
+		name = FRA_eugene_schneider_ii
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_eugene_schneider_ii
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist scientist_trait_resourceful }
+			skills = {
+				specialization_land = 2
+			}
+		}
+	}
+
+	FRA_henri_edmond_fouche = {
+		name = FRA_henri_edmond_fouche
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_henri_edmond_fouche
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	FRA_joseph_bethenod = {
+		name = FRA_joseph_bethenod
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_joseph_bethenod
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
 			}
 		}
 	}

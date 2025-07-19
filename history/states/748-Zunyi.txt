@@ -4,10 +4,10 @@ state={
 	provinces={
 		1010 4141 4325 4431 9939 10763 11972 
 	}
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = WST
-		add_core_of = WST
+	history={
+		owner = CHI
 		add_core_of = CHI
+		
 		buildings = {
 			infrastructure = 1
 
@@ -22,7 +22,7 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 			}
 		}
 	}
-	manpower=1	
+	manpower=1500000
 	state_category=pastoral
 	buildings_max_level_factor=1.000
 

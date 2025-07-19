@@ -7,7 +7,7 @@ air_wings = {
 		small_plane_airframe_0 =  {
 			owner = "BUL"
 			creator = "GER" 
-			amount = 100
+			amount = 48
 			version_name = "He 51"
 		}
 	}

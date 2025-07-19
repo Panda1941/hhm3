@@ -2,11 +2,13 @@ state={
 	id=622
 	name="STATE_622"
 	resources={
+		steel=3.000
+		tungsten=3.000
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = WST
-		add_core_of = WST
+	history={
+		owner = CHI
+		add_core_of = CHI
 		victory_points = {
 			8049 3 
 		}
@@ -34,7 +36,7 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 	provinces={
 		517 1458 4939 5007 7208 7314 7659 8049 10733 10880 12156 12356 
 	}
-	manpower=1
+	manpower=7006200
 	buildings_max_level_factor=1.000
 	state_category=city
 

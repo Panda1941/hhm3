@@ -2,16 +2,16 @@
 state={
 	id=607
 	name="STATE_607"
-	manpower=1
+	manpower=34289800
 	
 	state_category = town
 	
 	buildings_max_level_factor=1.000
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = WST
-		add_core_of = WST
+	history={
+		owner = CHI
 		add_core_of = CHI
+		
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 2
