@@ -268,12 +268,11 @@ buildings = {
 		country_modifiers = {
 			modifiers = {
 				fuel_gain_from_states = 6.0 #per hour
-				consumer_goods_factor = 0.005
 			}
 		}
 
 		level_cap = {
-			shares_slots = yes
+			shares_slots = no
 			state_max = 3
 		}
 	}
@@ -292,12 +291,11 @@ buildings = {
 
 		country_modifiers = {
 			modifiers = {
-				consumer_goods_factor = 0.005
 			}
 		}
 
 		level_cap = {
-			shares_slots = yes
+			shares_slots = no
 			state_max = 2
 		}
 	}
@@ -316,12 +314,11 @@ buildings = {
 
 		country_modifiers = {
 			modifiers = {
-				consumer_goods_factor = 0.005
 			}
 		}
 
 		level_cap = {
-			shares_slots = yes
+			shares_slots = no
 			state_max = 2
 		}
 	}
@@ -341,12 +338,11 @@ buildings = {
 
 		country_modifiers = {
 			modifiers = {
-				consumer_goods_factor = 0.005
 			}
 		}
 
 		level_cap = {
-			shares_slots = yes
+			shares_slots = no
 			state_max = 2
 		}
 	}
@@ -369,6 +365,44 @@ buildings = {
 		level_cap = {
 			state_max = 3
 			shares_slots = yes
+		}
+	}
+
+	state_administration = {
+		show_on_map = 1
+		base_cost = 5000
+		icon_frame = 33
+		value = 5
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+
+		state_modifiers = {
+			local_building_slots = 3
+		}
+
+		level_cap = {
+			state_max = 1
+		}
+	}
+
+	conscription_center = {
+		show_on_map = 1
+		base_cost = 5000
+		icon_frame = 34
+		value = 5
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+
+		country_modifiers = {
+			modifiers = {
+				weekly_manpower = 950
+			}
+		}
+
+		level_cap = {
+			state_max = 1
 		}
 	}
 
