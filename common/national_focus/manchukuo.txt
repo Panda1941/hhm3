@@ -361,7 +361,7 @@
 				name = MAN_trade_delegation
 				bonus = 1.0
 				uses = 1
-				category = industry_late
+				category = industry
 			}
 		}
 	}

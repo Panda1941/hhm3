@@ -59,7 +59,7 @@ focus_tree = {
 				name = ROM_encourage_trade_with_germany
 				bonus = 1.0
 				uses = 2
-				category = industry_late
+				category = industry
 			}
 		}
 	}

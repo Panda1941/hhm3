@@ -271,7 +271,7 @@
 				name = CAN_dollar_a_year_men
 				bonus = 1.0
 				uses = 3
-				category = industry_late
+				category = industry
 			}
 		}
 	}
