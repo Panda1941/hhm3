@@ -171,38 +171,38 @@ ideas = {
 				production_lack_of_resource_penalty_factor = -1
 			}
 		}
-		peace_training = {
-			allowed = {
-				always = no
-			}
-			cancel = {
-				OR = {
-					has_war = yes
-					AND = {
-						tag = SPR
-						GER = { has_war = yes }
-					}
-				}
-			}
-			removal_cost = -1
-			picture = generic_infantry_bonus
-			modifier = {
-				experience_gain_army = 0.12
-				experience_gain_special_forces = 0.08
+		#peace_training = {
+		#	allowed = {
+		#		always = no
+		#	}
+		#	cancel = {
+		#		OR = {
+		#			has_war = yes
+		#			AND = {
+		#				tag = SPR
+		#				GER = { has_war = yes }
+		#			}
+		#		}
+		#	}
+		#	removal_cost = -1
+		#	picture = generic_infantry_bonus
+		#	modifier = {
+		#		experience_gain_army = 0.12
+		#		experience_gain_special_forces = 0.08
 
-				training_time_army_factor = -0.25
-				air_training_xp_gain_factor = 10
-				experience_gain_navy_unit_factor = 10
-				
-				air_accidents_factor = -2
-				naval_accidents_chance = -2
+		#		training_time_army_factor = -0.25
+		#		air_training_xp_gain_factor = 10
+		#		experience_gain_navy_unit_factor = 10
+		#		
+		#		air_accidents_factor = -2
+		#		naval_accidents_chance = -2
 
-				mobilization_speed = 2
+		#		mobilization_speed = 2
 
-				air_fuel_consumption_factor = -0.99
-				navy_fuel_consumption_factor = -0.99
-			}
-		}
+		#		air_fuel_consumption_factor = -0.99
+		#		navy_fuel_consumption_factor = -0.99
+		#	}
+		#}
 		ai_limiter = {
 			cancel = {
 				is_ai = no
