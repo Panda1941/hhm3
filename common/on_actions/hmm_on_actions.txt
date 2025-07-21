@@ -16,7 +16,7 @@ on_actions = {
 							has_trait = no_grind
 						}
 					}
-				add_unit_leader_trait = no_grind
+					#add_unit_leader_trait = no_grind
 				}
 			}
 			every_country = {
@@ -59,31 +59,6 @@ on_actions = {
 				}
 				add_ideas = {
 					ai_war
-				}
-			}
-
-			every_country = {
-				limit = {
-					AND = {
-						is_playable_country = yes
-						NOT = {
-							tag = SPR
-						}
-					}
-
-				}
-				add_ideas = {
-					novols
-				}
-			}
-			SPR = {
-				add_ideas = {
-					no_faction
-				}
-			}
-			HOL = {
-				add_ideas = {
-					noresistance
 				}
 			}
 			every_country = {
@@ -132,60 +107,6 @@ on_actions = {
 	}
 	on_monthly = {
 		effect = {
-			if = {
-				limit = {date > 1941.8.31
-				NOT = { GER = {has_war_with = SOV}}
-			}
-				GER = {
-					declare_war_on = {
-					target = SOV
-					type = annex_everything
-					}
-				}
-			}
-			if = {
-				limit = {
-					date > 1941.5.31
-					NOT = { JAP = {has_war_with = USA}}
-				}
-				JAP = {
-					declare_war_on = {
-					target = USA
-					type = annex_everything
-					}
-				}
-			}
-			if = {
-				limit = {
-						BEL = {
-							has_capitulated = yes
-						}
-						HOL = {
-							has_capitulated = yes
-						}
-						LUX = {
-							has_capitulated = yes
-						}
-						DEN = {
-							has_capitulated = yes
-						}
-						NOR = {
-							has_capitulated = yes
-						}
-						POL = {
-							has_capitulated = yes
-						}
-				}
-				every_country = {
-					limit = {
-						axis = yes
-					}
-					every_army_leader = {
-						remove_unit_leader_trait = no_grind
-					}
-					set_global_flag = grind_allowed
-				}
-			}
 			every_country = {
 				limit = {
 					is_playable_country = yes
@@ -193,15 +114,6 @@ on_actions = {
 						OR = {
 							has_war = yes
 							has_idea = peace_training
-							AND = {
-								tag = SPR
-								any_country = {
-									has_volunteers_amount_from = {
-										tag = SPR
-										count > 0
-									} 
-								}	
-							}
 						}
 					}
 				}
@@ -223,71 +135,11 @@ on_actions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					OR={
-						BEL = {
-							has_capitulated = no
-						}
-						HOL = {
-							has_capitulated = no
-						}
-						LUX = {
-							has_capitulated = no
-						}
-						DEN = {
-							has_capitulated = no
-						}
-						NOR = {
-							has_capitulated = no
-						}
-						POL = {
-							has_capitulated = no
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						axis = yes
-						NOT = {
-							has_global_flag = grind_allowed
-						}
-					}
-					every_army_leader = {
-						limit = {
-							NOT = { 
-								has_trait = no_grind
-							}
-						}
-						add_unit_leader_trait = no_grind
-					}
-				}
-			}
-			if = {
-				limit = {
-					GER = {has_war = no }
-				}
-				every_country = {
-					limit = {
-						allies = yes
-					}
-					every_army_leader = {
-						limit = {
-							NOT = { 
-								has_trait = no_grind
-							}
-						}
-						add_unit_leader_trait = no_grind
-					}
-				}
-			}
 		}
 	}
 	on_capitulation = {
 		effect = {
 			hmm_capitulations_on_actions = yes
-
-			
 		}
 	}
 	on_state_control_changed = {
@@ -301,103 +153,21 @@ on_actions = {
 				}
 
 
-			FRA = { 
-				set_country_flag = france_tp
-				transfer_units_fraction = {
-					target = COG
-					size = 1
-					stockpile_ratio = 1
-					army_ratio = 0
-					navy_ratio = 0
-					air_ratio = 0
-					keep_unit_leaders_trigger = {
-						always = yes
+				FRA = { 
+					set_country_flag = france_tp
+					transfer_units_fraction = {
+						target = COG
+						size = 1
+						stockpile_ratio = 1
+						army_ratio = 0
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders_trigger = {
+							always = yes
 						}
 					}					
 				}
 			}
-
-			#VP System
-
-			if = {
-				limit = {
-					FROM.FROM = {
-						OR = {
-							state = 613 #Nanjing
-							state = 439 #Dehli
-							state = 447 #Alexandria
-							state = 450 #Benghasi
-							state = 7 #Amsterdam
-							state = 16 #Paris
-							state = 20 #Lyon
-							state = 224 #Bryansk
-							state = 219 #Moscow
-							state = 217 #Stalingrad
-						}
-					}
-				}
-				ROOT = { #gained controll (add var)
-					if = {
-						limit = {
-							allies = yes
-						}
-						add_to_variable = {
-							var = global.allies_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.allies_score
-							min = 0
-							max = 10
-						}
-					}
-					else_if = {
-						limit = { 
-							axis = yes
-						}
-						add_to_variable = {
-							var = global.axis_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.axis_score
-							min = 0
-							max = 10
-						}
-					}
-				}
-				FROM = { #lost controll (sub var)
-					if = {
-						limit = {
-							allies = yes
-						}
-						subtract_from_variable = {
-							var = global.allies_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.allies_score
-							min = 0
-							max = 10
-						}
-					}
-					else_if = {
-						limit = { 
-							axis = yes
-						}
-						subtract_from_variable = {
-							var = global.axis_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.axis_score
-							min = 0
-							max = 10
-						}
-					}
-				}
-			}
-
 		}
 	}
 	on_war_relation_added = {
@@ -467,20 +237,8 @@ on_actions = {
 						tag = POL
 					}
 				}
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = Brasil_AC_rule
-							option = Brasil_AC
-						}
-					}
-					ENG = {
-						add_to_faction = BRA
-					}
-					BRA = {
-						add_political_power = -25
-					}
-
+				ENG = {
+					add_to_faction = BRA
 				}
 				HOL ={
 					diplomatic_relation = {
@@ -489,24 +247,8 @@ on_actions = {
 						active = yes
 					}
 				}
-				every_country = {
-					limit = {
-						allies = yes
-					}
-					every_army_leader = {
-						remove_unit_leader_trait = no_grind
-					}
-				}
-				ENG = {
-					puppet = IRE
-					set_autonomy = {
-						target = IRE
-						autonomy_state = autonomy_integrated_puppet
-					}
-				}
-				
-
 			}
+
 			if = {
 				limit = {
 					FROM = {
@@ -518,16 +260,7 @@ on_actions = {
 					add_to_faction = FROM
 				}
 			}
-			if = {
-                limit = {
-                    FROM = {
-                        tag = ALB
-                    }
-                }
-                ALB = {
-                    load_oob = "ALB_CHROM_SPAWN"
-                }
-            }
+
             if = {
                 limit = {
                     FROM = {
@@ -538,6 +271,7 @@ on_actions = {
                     load_oob = "BEL_CHROM_SPAWN"
                 }
             }
+
             if = {
                 limit = {
                     FROM = {
@@ -548,6 +282,7 @@ on_actions = {
                     load_oob = "DEN_CHROM_SPAWN"
                 }
             }
+
             if = {
                 limit = {
                     FROM = {
@@ -558,6 +293,7 @@ on_actions = {
                     load_oob = "HOL_CHROM_SPAWN"
                 }
             }
+
             if = {
                 limit = {
                     FROM = {
@@ -568,6 +304,7 @@ on_actions = {
                     load_oob = "LUX_CHROM_SPAWN"
                 }
             }
+
             if = {
                 limit = {
                     FROM = {
@@ -578,6 +315,7 @@ on_actions = {
                     load_oob = "NOR_CHROM_SPAWN"
                 }
             }
+
 			if = {
                 limit = {
                     FROM = {
@@ -588,37 +326,6 @@ on_actions = {
                    load_oob = "POL_CHROM_SPAWN"
                 }
             }
-			if = {
-                limit = {
-                    FROM = {
-                        tag = YUG
-                    }
-                }
-                YUG = {
-                    load_oob = "YUG_CHROM_SPAWN"
-                }
-            }
-			if = {
-                limit = {
-                    FROM = {
-                        tag = GRE
-                    }
-                }
-                GRE = {
-                    load_oob = "GRE_CHROM_SPAWN"
-                }
-            }
-			if = {
-                limit = {
-                    FROM = {
-                        tag = CHI
-                    }
-                }
-                CHI = {
-                    load_oob = "CHI_CHROM_SPAWN"
-                }
-            }
-			
 		}
 	}
 	on_startup = {
@@ -639,6 +346,11 @@ on_actions = {
 						set_compliance = 80
 					}
 				}
+			}
+
+			## ANNEX STUFF LIKE MEXICO CUZ ITS NOT PLAYABLE ATM
+			WST = {
+				annex_country = { target = MEX transfer_troops = no }
 			}
 		}
 	}

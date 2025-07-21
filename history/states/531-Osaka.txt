@@ -24,6 +24,9 @@ state = {
 			7072 = {
 				naval_base = 3
 			}
+			1051 = {
+				land_facility = 1
+			}
 
 		}
 

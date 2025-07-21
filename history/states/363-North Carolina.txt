@@ -15,6 +15,9 @@ state={
 			1132 = {
 				naval_base = 1
 			}
+			10096 = {
+				air_facility = 1
+			}
 		}
 		add_core_of = USA
 		victory_points = {

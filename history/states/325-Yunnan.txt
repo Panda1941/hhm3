@@ -6,8 +6,8 @@ state={
 	}
 
 	history={
-		owner = CHI
-		add_core_of = CHI
+		owner = WST
+		add_core_of = WST
 		add_core_of = CHI
 		
 		victory_points = {

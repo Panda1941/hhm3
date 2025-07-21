@@ -4,7 +4,7 @@ state = {
 	name = "STATE_772" # Middle Congo (Brazzaville)
 
 	manpower = 746415
-	state_category = pastoral
+	state_category = metropolis
 	resources = {
 		rubber = 2
 	}
@@ -23,9 +23,9 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			12975 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 

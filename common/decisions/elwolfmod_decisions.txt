@@ -1,28 +1,33 @@
 templates_retards_ai = {
     
 	FIX_convoys = {
-		icon = SWE_set_navy_budget
-		name = "Fix Convoys"
-		fire_only_once = no
-		cost = 0
-		days_remove = 1
-		available = { ROOT = { is_ai = no } }
-		visible = { ROOT = { always = yes } }
-		complete_effect = { ROOT = { add_equipment_to_stockpile = { type = convoy amount = 1 } add_manpower = 1 } }
-		remove_effect = { ROOT = { add_equipment_to_stockpile = { type = convoy amount = -1 } add_manpower = -1 } }
-	}
-	
-	guide_decision = {
-	
-		available = { 
-			
+		priority = 100
+        icon = SWE_set_navy_budget
+        allowed = {
+ 		}
+		visible = {
+			is_ai = no
 		}
+        days_remove = 10
+        cost = 0
+        complete_effect = {
+            add_manpower = 1
+            add_equipment_to_stockpile = {
+                type = convoy_1
+                amount = 1
+            }
+        }
 		
-		fire_only_once = no
-		
-		complete_effect = {
-			country_event = hhm_event.1
-		}
+ 		remove_effect = {
+            add_manpower = -1
+            add_equipment_to_stockpile = {
+                type = convoy_1
+                amount = -1
+            }
+ 		}
+        ai_will_do = {
+            factor = 0
+        }
 	}
 	
 	inf_templates = {
@@ -257,45 +262,6 @@ templates_retards_ai = {
 	}
 }
 
-political_actions = {
-
-	move_capital_to_cascablanca = {
-		fire_only_once = yes
-		allowed = {
-			tag = FRA
-		}
-		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
-		}
-		complete_effect = {
-			set_capital = {
-				state = 461
-			}
-		}
-	}
-
-	move_capital_to_gabon = {
-		fire_only_once = yes
-		allowed = {
-			tag = FRA
-		}
-		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
-		}
-		complete_effect = {
-			set_capital = {
-				state = 539
-			}
-		}
-	}
-}
-
 operations = {
 	japanese_invasion_of_china = {
 		# icon = generic_operation
@@ -382,7 +348,12 @@ operations = {
 		}
 		available = {
 			date > 1940.01.01 
+			NOT = {
+				16 = {
+					is_owned_and_controlled_by = FRA
+				}
 			}
+		}
 			
 		
 		complete_effect = {
@@ -439,44 +410,6 @@ operations = {
 			if = { limit = { country_exists = ENG }	ITA = { add_to_war = { targeted_alliance = GER enemy = ENG } } }
 		}
 	}
-	invade_IRAQ = {
-
-		icon = generic_operation
-	
-		allowed = {
-			tag = WST
-		}
-		
-		available = {
-			tag = WST
-			ITA = { has_war_with = ENG }
-			
-		}
-
-		cost = 0
-		
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-		
-		complete_effect = {
-			ENG = {
-				annex_country = {
-						target = IRQ
-						transfer_troops = no
-					}
-				every_state = {
-					limit = {
-						is_core_of = IRQ
-						is_controlled_by = ENG
-					}
-					add_compliance = 40
-				}
-			}
-		}
-	}
 	auto_annex_iraq_to_italy_if_no_britsh_troops_present = {
 
 		icon = generic_operation
@@ -489,6 +422,14 @@ operations = {
 			tag = WST
 			ITA = { has_war_with = ENG }
 			ENG = {
+				divisions_in_state = {
+					size < 1
+					state = 1010
+				}
+				divisions_in_state = {
+					size < 1
+					state = 1011
+				}
 				divisions_in_state = {
 					size < 1
 					state = 675
@@ -519,6 +460,8 @@ operations = {
 		
 		complete_effect = {
 			ITA = {
+				transfer_state = 1010
+				transfer_state = 1011
 				transfer_state = 675
 				transfer_state = 291
 				transfer_state = 676
@@ -566,6 +509,7 @@ operations = {
 			OR = {
 				SPR = {has_war_with = ENG} 
 				ITA = {has_war_with = ENG}
+				date > 1939.01.01
 			}
 		}
 			
@@ -598,6 +542,10 @@ operations = {
 			add_named_threat = {
 				threat = 5 
 				name = spanish_civil_war_started
+			}
+			# Hidden Attache
+			every_country = {
+				add_war_support = 0.1
 			}
 		}
 	}
@@ -633,9 +581,7 @@ operations = {
 			factor = 100
 		}
 		available = {
-			
-				ITA = { has_war_with = ENG }
-			
+			ITA = { has_war_with = ENG }
 		}
 		complete_effect = {
 			ENG = {
@@ -680,32 +626,6 @@ operations = {
 			}
 		}
 	}
-	#BUL_joins_war = {
-	#	# icon = generic_operation
-	#	allowed = {
-	#		tag = WST
-	#	}
-	#	fire_only_once = yes
-	#	cost = 0
-	#	ai_will_do = {
-	#		factor = 100
-	#	}
-	#	available = {
-	#		ITA = { has_war_with = YUG } 
-	#		}
-	#		
-	#	
-	#	complete_effect = {
-	#		BUL = {
-	#			declare_war_on = {
-	#				target = YUG 
-	#				type = annex_everything
-	#			}
-	#		}
-	#
-	#		if = { limit = { country_exists = YUG }	BUL = { add_to_war = { targeted_alliance = ITA enemy = YUG } } }
-	#	}
-	#}
 	
 	BUL_slow = {
 		# icon = generic_operation
