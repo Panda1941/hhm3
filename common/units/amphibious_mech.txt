@@ -41,6 +41,7 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 1
+		breakthrough = 0.03
 		
 		supply_consumption = 0.18
 		
@@ -54,28 +55,30 @@ sub_units = {
 		transport = amphibious_mechanized_equipment
 
 		need = {
-			amphibious_mechanized_equipment = 50
-			infantry_equipment = 100
+			amphibious_mechanized_equipment = 40
+			infantry_equipment = 150
 		}
 
 		forest = {
-			attack = -0.2
+			attack = -0.3
 		}
 		mountain = {
-			attack = -0.05
+			attack = -0.4
+			defence = -0.40
 		}
 		jungle = {
-			attack = -0.3
+			attack = -0.4
+			defence = -0.40
 		}
 		urban = {
 			attack = -0.2
-			defence = -0.05
+			defence = -0.10
 		}
 		marsh = {
-			attack = 0.2
+			attack = 0.15
 		}
 		river = {
-			attack = 0.3
+			attack = 0.25
 		}
 		amphibious = {
 			attack = 0.5

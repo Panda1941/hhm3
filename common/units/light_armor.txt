@@ -28,10 +28,10 @@ sub_units = {
 			light_tank_chassis = 60
 		}
 		manpower = 500
-		max_organisation = 10
+		max_organisation = 15
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 2
+		max_strength = 10
 		weight = 1
 		supply_consumption = 0.22
 
@@ -43,23 +43,26 @@ sub_units = {
 		suppression = 2.5
 
 		forest = {
-		    attack = -0.2
+		    attack = -0.05
 			movement = -0.4
 		}
 		mountain = 	{
-		    attack = -0.1
+		    attack = -0.50
+			defence = -0.40
 		}
 		jungle = {
-		    attack = -0.3
+		    attack = -0.4
+			defence = -0.8
 			movement = -0.4
 		}
 		marsh = {
 		    attack = -0.1 
 			movement = -0.1
+			defence = -0.15
 		}
 		urban = {
 			attack = -0.4
-			defence = -0.1
+			defence = -0.10
 		}
 		river = { 
 			attack = -0.2 
@@ -67,6 +70,10 @@ sub_units = {
 		}
 		amphibious = { 
 			attack = -0.4
-		}	
+		}
+        desert = {
+			attack = 0.1
+			movement = -0.2
+		}		
 	}
 }

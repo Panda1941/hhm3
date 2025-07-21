@@ -24,7 +24,7 @@ sub_units = {
 	
 		#Size Definitions
 		max_strength = 1
-		max_organisation = 20	
+		max_organisation = 40	
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -35,15 +35,15 @@ sub_units = {
 		can_be_parachuted = yes
 		
 		# Important Ability
-		reliability_factor = 0.05
-		equipment_capture_factor = 0.05
+		reliability_factor = 0.1
+		equipment_capture_factor = 0.025
 		
 		essential = {
 			support_equipment
 		}
 		
 		need = {
-			support_equipment = 25
+			support_equipment = 50
 		}
 		same_support_type = maintenance_company
 	}

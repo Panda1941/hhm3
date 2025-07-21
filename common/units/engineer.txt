@@ -26,21 +26,21 @@ sub_units = {
 		combat_width = 0
 	
 		#Size Definitions
-		max_strength = 2
-		max_organisation = 20
+		max_strength = 2.5
+		max_organisation = 40
 		default_morale = 0.3
-		manpower = 300
+		manpower = 350
 		training_time = 120
 
 		#Misc Abilities
-		weight = 0.1
+		weight = 0.05
 		supply_consumption = 0.02
 		
-		entrenchment = 2
-		
+		entrenchment  = 3
+
 		battalion_mult = {
 			category = category_light_infantry
-			entrenchment = 0.20
+			entrenchment = 0.08
 			add = yes
 		}
 
@@ -56,43 +56,46 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 10
+			infantry_equipment = 40
 			support_equipment = 30
 		}
 
 		can_be_parachuted = yes
 		forest = {
-			defence = 0.25
+			defence = 0.05
 			movement = 0.05
 		}
 
 		hills = {
-			defence = 0.1
+			defence = 0.05
 		}
 
 		jungle = {
-			defence = 0.25
+			defence = 0.05
 		}
 
 		marsh = {
-			defence = 0.25
 			movement = 0.2
 		}
 
 		fort = {
-			attack = 0.1
-			defence = 0.25
+			attack = 0.05
+		}
+
+		urban = {
+			attack = 0.05
 		}
 
 		river = {
-			defence = 0.25
-			movement = 0.25
+			defence = 0.15
+			movement = 0.15
 		}
 
 		amphibious = {
-			attack = 0.15
+			attack = 0.1
 		}
 
+		same_support_type = flame
 		same_support_type = engineer
 	}
 	
@@ -130,7 +133,7 @@ sub_units = {
 		training_time = 120
 
 		#Misc Abilities
-		weight = 0.1
+		weight = 0.075
 		supply_consumption = 0.02
 		
 		entrenchment = 2
@@ -154,29 +157,29 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 10
-			support_equipment = 40
+			infantry_equipment = 80
+			support_equipment = 60
 		}
 
 		can_be_parachuted = yes
 
 		marsh = {
-			attack = 0.10
-			defence = 0.20
-			movement = 0.2
+			attack = 0.05
+			defence = 0.05
+			movement = 0.1
 		}
 
 		fort = {
-			attack = 0.15
-			defence = 0.20
+			attack = 0.05
+			defence = 0.05
 		}
 
 		river = {
-			attack = 0.10
-			defence = 0.20
+			attack = 0.05
 			movement = 0.25
 		}
 		
+		same_support_type = flame
 		same_support_type = engineer
 		
 	}
