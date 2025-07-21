@@ -15,12 +15,16 @@ equipments = {
 		
 		interface_category = interface_category_land
 		
-		reliability = 0.8
+		reliability = 0.85
+
+		#Shovels to dig a hole
+		defense = 1.5
+		breakthrough = 1
 
 		#Space taken in convoy
 		lend_lease_cost = 1
 
-		build_cost_ic = 4
+		build_cost_ic = 2.5
 		resources = {
 			aluminium = 1
 			steel = 2

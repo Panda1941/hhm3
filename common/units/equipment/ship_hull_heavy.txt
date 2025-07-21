@@ -93,6 +93,11 @@ equipments = {
 			category = ship_radar
 			count < 2
 		}
+
+		module_count_limit = {
+			category = ship_airplane_launcher
+			count < 2
+		}
 		
 		default_modules = {
 			fixed_ship_battery_slot = empty
@@ -130,7 +135,7 @@ equipments = {
 		
 		naval_range = 3000
 		
-		max_strength = 350
+		max_strength = 400
 
 		fuel_consumption = 67
 		
@@ -196,11 +201,11 @@ equipments = {
 		}
 		naval_range = 2250
 		
-		max_strength = 300
+		max_strength = 250
 		naval_speed = 18
 		fuel_consumption = 67
-		reliability = 0.65
-		build_cost_ic = 2600
+		reliability = 0.55
+		build_cost_ic = 2000
 		resources = {
 			steel = 1
 			chromium = 1
@@ -294,11 +299,11 @@ equipments = {
 
 		naval_range = 3000
 		
-		max_strength = 350
-		reliability = 0.80
+		max_strength = 400
+		reliability = 0.75
 		fuel_consumption = 67
 		
-		build_cost_ic = 2800
+		build_cost_ic = 2700
 	}
 
 	ship_hull_heavy_2 = {
@@ -353,11 +358,11 @@ equipments = {
 		}
 		naval_range = 3500
 		
-		max_strength = 370
+		max_strength = 460
 		reliability = 0.85
 		fuel_consumption = 67
 		naval_speed = 24
-		build_cost_ic = 3000
+		build_cost_ic = 3150
 		resources = {
 			#oil = 1
 			steel = 1
@@ -417,9 +422,9 @@ equipments = {
 			rear_1_custom_slot = empty
 			
 		}
-		naval_range = 4000
+		naval_range = 4300
 		naval_speed = 25
-		max_strength = 400
+		max_strength = 500
 		reliability = 0.9
 		fuel_consumption = 67
 		
@@ -478,6 +483,7 @@ equipments = {
 					ship_airplane_launcher
 				}
 			}
+			rear_2_custom_slot = rear_1_custom_slot
 		}
 
 		default_modules = {
@@ -486,11 +492,11 @@ equipments = {
 		}
 		naval_range = 4500
 		
-		max_strength = 450
+		max_strength = 530
 		naval_speed = 26
 		fuel_consumption = 67
 		reliability = 0.95
-		build_cost_ic = 3400
+		build_cost_ic = 3700
 		resources = {
 			#oil = 1
 			steel = 1
@@ -607,7 +613,7 @@ equipments = {
 			}
 			fixed_ship_armor_slot = {
 				required = yes
-				allowed_module_categories = { ship_heavy_armor }	
+				allowed_module_categories = { ship_super_heavy_armor }	
 			}
 			front_1_custom_slot = {
 				required = no
@@ -658,10 +664,10 @@ equipments = {
 		}
 		naval_range = 4500
 		naval_speed = 24
-		max_strength = 700
-		fuel_consumption = 75
-		reliability = 0.80
-		build_cost_ic = 5500
+		max_strength = 880
+		fuel_consumption = 95
+		reliability = 0.7
+		build_cost_ic = 6000
 		resources = {
 			steel = 1
 			chromium = 1
