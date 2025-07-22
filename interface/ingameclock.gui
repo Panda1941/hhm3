@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "clock_window"
 		position = { x=-210 y=-40 }
-		animation_time = 450
+animation_time = 0
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		Orientation = LOWER_RIGHT

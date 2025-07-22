@@ -698,7 +698,7 @@ guiTypes = {
 		show_position = { x=10 y=-170 }
 		hide_position = { x=10 y=-60 }
 		animation_type = "decelerated"
-		animation_time = 1000
+animation_time = 0
 		size = { x=720 y= 48 }
 		moveable = 0
 		dontRender = ""
@@ -1509,7 +1509,7 @@ guiTypes = {
 			show_position = { x = -710 y = -175 }
 			hide_position = { x = -710 y = -65 }
 			animation_type = "decelerated"
-			animation_time = 1000
+animation_time = 0
 			size = { x= 300 y = 40 }
 			moveable = 0
 			dontRender = ""
@@ -1536,7 +1536,7 @@ guiTypes = {
 			show_position = { x=-1270 y=-100 }
 			hide_position = { x=-1270 y=10 }
 			animation_type = "decelerated"
-			animation_time = 1000
+animation_time = 0
 			size = { x=770 y=100 }	
 			moveable = 0
 			dontRender = ""
@@ -1793,7 +1793,7 @@ guiTypes = {
 			show_position = { x= -200 y = -460 }
 			hide_position = { x= 10 y = -460 }	
 			animation_type = "decelerated"
-			animation_time = 300	
+animation_time = 0
 			size = { x=32 y= 20 }
 			Orientation = "LOWER_RIGHT"
 			backGround=""
@@ -2140,7 +2140,7 @@ guiTypes = {
 		name = "messageicon_entry_window"
 		backGround=""
 		position = { x = -10 y = -186 }
-		animation_time = 3
+animation_time = 0
 		size = { x=40 y= 40 }
 		moveable = 0
 		dontRender = ""

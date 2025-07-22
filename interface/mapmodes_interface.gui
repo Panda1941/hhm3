@@ -1173,7 +1173,7 @@ guiTypes = {
 		position = { x=0 y=0 }	
 		size = { width=160 height=20 }
 
-		fade_time = 700
+fade_time = 1
 		fade_type = linear
 
 		buttonType = {
@@ -1204,7 +1204,7 @@ guiTypes = {
 		position = { x=0 y=0 }	
 		size = { width=160 height=20 }
 
-		fade_time = 700
+fade_time = 1
 		fade_type = linear
 
 		buttonType = {
@@ -1266,7 +1266,7 @@ guiTypes = {
 		position = { x=-253 y=-240 }	
 		size = { width=180 height=192 }
 		Orientation = lower_RIGHT
-		fade_time = 500
+fade_time = 1
 		fade_type = linear
 
 		background = {
@@ -1307,7 +1307,7 @@ guiTypes = {
 		position = { x=-255 y=-322 }
 		size = { width=180 height=296 }
 		Orientation = lower_RIGHT
-		fade_time = 500
+fade_time = 1
 		fade_type = linear
 
 		background = {
@@ -1330,7 +1330,7 @@ guiTypes = {
 		position = { x=-255 y=-292 }
 		size = { width=180 height=296 }
 		Orientation = lower_RIGHT
-		fade_time = 500
+fade_time = 1
 		fade_type = linear
 
 		background = {

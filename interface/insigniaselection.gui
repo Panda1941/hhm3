@@ -33,7 +33,7 @@ guiTypes = {
 		size = { width = 350 height = 400 }
 		Orientation = center
 		clipping = no
-		animation_time = 400
+animation_time = 0
 		moveable = yes
 		
 		background = {

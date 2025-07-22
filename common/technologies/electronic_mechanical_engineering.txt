@@ -38,7 +38,7 @@ technologies = {
 			ship_fire_control_system_0
 		}
 		
-		research_cost = 1
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = electronics_folder
@@ -74,15 +74,15 @@ technologies = {
 	radio = {
 
 		# units with radios can more efficiently join combats when there is room
-		land_reinforce_rate = 0.02
-		coordination_bonus = 0.02
+		land_reinforce_rate = 0.05
+		coordination_bonus = 0.04
 		
 		path = {
 			leads_to_tech = improved_radio 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1
 		
 		folder = {
 			name = electronics_folder
@@ -126,8 +126,8 @@ technologies = {
 	improved_radio = {
 
 		# units with radios can more efficiently join combats when there is room
-		land_reinforce_rate = 0.02
-		coordination_bonus = 0.02
+		land_reinforce_rate = 0.01
+		coordination_bonus = 0.01
 		
 		path = {
 			leads_to_tech = advanced_radio 
@@ -175,7 +175,7 @@ technologies = {
 
 		# units with radios can more efficiently join combats when there is room
 		land_reinforce_rate = 0.01
-		coordination_bonus = 0.02
+		coordination_bonus = 0.01
 		
 		start_year = 1941
 		
@@ -532,6 +532,10 @@ technologies = {
 		enable_equipment_modules = {
 			bomb_sights_1
 		}
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_1
+		}
 		
 		research_cost = 2.5
 		
@@ -555,7 +559,11 @@ technologies = {
 	computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.06
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_2
+		}
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -611,6 +619,9 @@ technologies = {
 		enable_equipment_modules = {
 			stabilizer
 			bomb_sights_2
+		}
+		enable_equipment_modules = { 
+			ship_fire_control_system_3
 		}
 		path = {
 			leads_to_tech = advanced_computing_machine 
@@ -669,7 +680,7 @@ technologies = {
 	advanced_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.08
+		research_speed_factor = 0.1
 		
 		path = {
 			leads_to_tech = advanced_encryption 
@@ -956,127 +967,6 @@ technologies = {
 			decryption_tech
 		}
 	}
-
-	basic_fire_control_system = {
-
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-
-		enable_equipment_modules = { 
-			ship_fire_control_system_1
-		}
-		
-		research_cost = 1
-		
-		folder = {
-			name = electronics_folder
-			position = { x = @firecontrol y = 4 }
-		}
-		
-		ai_will_do = {
-			factor = 0.75
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
-			}
-			modifier = {
-				OR = {
-					can_research = improved_fire_control_system
-					has_tech = improved_fire_control_system
-				}
-				factor = 0
-			}
-		}
-		
-		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-		}
-	}
-
-	improved_fire_control_system = {
-
-		enable_equipment_modules = { 
-			ship_fire_control_system_2
-		}
-		
-		research_cost = 1
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-		folder = {
-			name = electronics_folder
-			position = { x = @firecontrol y = 8 }
-		}
-		
-		ai_will_do = {
-			factor = 0.75
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
-			}
-			modifier = {
-				OR = {
-					can_research = advanced_fire_control_system
-					has_tech = advanced_fire_control_system
-				}
-				factor = 0
-			}
-		}
-		
-		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-		}
-	}
-
-	advanced_fire_control_system = {
-
-		enable_equipment_modules = { 
-			ship_fire_control_system_3
-		}
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-		
-		research_cost = 1
-		
-		folder = {
-			name = electronics_folder
-			position = { x = @firecontrol y = 12 }
-		}
-		
-		ai_will_do = {
-			factor = 0.75
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
-			}
-			
-		}
-		
-		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-		}
-	}
-
 
 ###  ##  ###  ### ### ### ###  ##   ##  ### ###  ##  #  #     ### ###  ##  #  # #  #  ##  #    ##   ##  #   #     
 #   #  # #  #  #   #  #    #  #  # #  #  #   #  #  # ## #      #  #   #  # #  # ## # #  # #   #  # #     # #      
@@ -1638,7 +1528,7 @@ technologies = {
 	
 	atomic_research = {
 
-		research_speed_factor = 0.04
+		research_speed_factor = 0.07
 		
 		#path = {
 		#	leads_to_tech = nuclear_reactor 

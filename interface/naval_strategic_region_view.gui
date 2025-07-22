@@ -21,7 +21,7 @@ guiTypes = {
 		show_position = { x=2 y =-280 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 300
+animation_time = 0
 		orientation = lower_left
 		size = { width=438 height=280 }
 		

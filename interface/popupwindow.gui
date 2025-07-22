@@ -6,7 +6,7 @@ guiTypes = {
 		size = { width = 584 height = 320 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -137,7 +137,7 @@ guiTypes = {
 		size = { width = 586 height = 323 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -534,7 +534,7 @@ guiTypes = {
 				show_position = { x = 0 y = 25 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
-				animation_time = 300
+animation_time = 0
 				size = { width=219 height=300 }
 				verticalScrollbar = "right_vertical_slider"
 				margin = { top = 7 bottom = 7 right = 6 }
@@ -644,7 +644,7 @@ guiTypes = {
 		size = { width = 584 height = 480 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -752,7 +752,7 @@ guiTypes = {
 		size = { width = 500 height = 260 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		hide_sound = menu_close_window
 		click_to_front = yes
@@ -915,7 +915,7 @@ guiTypes = {
 		size = { width = 500 height = 260 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		hide_sound = menu_close_window
 		click_to_front = yes
@@ -1008,7 +1008,7 @@ guiTypes = {
 		size = { width = 500 height = 320 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -1119,7 +1119,7 @@ guiTypes = {
 		size = { width = 500 height = 400 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		click_to_front = yes
 
@@ -1268,7 +1268,7 @@ guiTypes = {
 		size = { width = 520 height = 320 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -1371,7 +1371,7 @@ guiTypes = {
 		size = { width = 520 height = 420 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -1474,7 +1474,7 @@ guiTypes = {
 		size = { width = 520 height = 320 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -1577,7 +1577,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		click_to_front = yes
 
@@ -1640,7 +1640,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		click_to_front = yes
 
@@ -1813,7 +1813,7 @@ guiTypes = {
 		size = { width = 500 height = 260 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = complete_focus
 		hide_sound = menu_close_window
@@ -1903,7 +1903,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = peace_summary_message
 		hide_sound = menu_close_window
@@ -1972,7 +1972,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = peace_summary_message
 		hide_sound = menu_close_window
@@ -2026,7 +2026,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = peace_summary_message
 		hide_sound = menu_close_window
@@ -2091,7 +2091,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -2153,7 +2153,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = peace_summary_message
 		hide_sound = menu_close_window
@@ -2215,7 +2215,7 @@ guiTypes = {
 		size = { width = 520 height = 320 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -2318,7 +2318,7 @@ guiTypes = {
 		size = { width = 584 height = 140 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -2393,7 +2393,7 @@ guiTypes = {
 		size = { width = 584 height = 140 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = diplomatic_notification
 		hide_sound = menu_close_window
@@ -2468,7 +2468,7 @@ guiTypes = {
 		size = { width = 500 height = 260 }
 		orientation= center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		hide_sound = menu_close_window
 		click_to_front = yes
@@ -2558,7 +2558,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		click_to_front = yes
 
@@ -2654,7 +2654,7 @@ guiTypes = {
 		orientation= center
 		origo = center
 		moveable = yes
-		fade_time = 200
+fade_time = 1
 		fade_type = linear
 		show_sound = ui_special_project_finished_sound
 		hide_sound = menu_close_window

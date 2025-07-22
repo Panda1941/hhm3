@@ -30,7 +30,7 @@ guiTypes = {
 		name = "countrytechtreeview"
 		position = { x=-3 y=78 }
 		size = { width = 100%% height = 100%% }
-		fade_time = 400
+fade_time = 1
 		fade_type = linear
 
 		background = {
@@ -283,21 +283,28 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "marines_tree"
-				position = { x = 140 y = 825 }
+				position = { x = 140 y = 1030 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
 				name = "tech_mountaineers_tree"
-				position = { x = 140 y = 930 }
+				position = { x = 140 y = 1130 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
-				name = "paratroopers_tree"
-				position = { x = 140 y = 1035 }
+				name = "shock_troops_tree"
+				position = { x = 140 y = 1230 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+			
+			gridboxtype = {
+				name = "jaegers_tree"
+				position = { x = 140 y = 1330 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
@@ -1542,7 +1549,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1922"
+					text = "1933"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -1568,7 +1575,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1940"
+					text = "1939"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -1581,7 +1588,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1944"
+					text = "1942"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -1833,7 +1840,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1922"
+					text = "1933"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -1859,7 +1866,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1940"
+					text = "1939"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -1872,7 +1879,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1944"
+					text = "1942"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -3894,7 +3901,7 @@ guiTypes = {
 		Orientation = UPPER_LEFT
 		moveable = yes
 		#clipping = no
-		fade_time = 500
+fade_time = 1
 		fade_type = linear
 
 		show_sound = pop_up
@@ -4008,7 +4015,7 @@ guiTypes = {
 		Orientation = UPPER_LEFT
 		moveable = yes
 		#clipping = no
-		fade_time = 500
+fade_time = 1
 		fade_type = linear
 
 		show_sound = pop_up

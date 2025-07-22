@@ -6,7 +6,7 @@ guiTypes = {
 		size = { width=320 height=70%% }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 300
+animation_time = 0
 
 		background = {
 			name = "Background"
@@ -171,7 +171,7 @@ guiTypes = {
 		size = { width=320 height=70%% }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 300
+animation_time = 0
 
 		background = {
 			name = "Background"

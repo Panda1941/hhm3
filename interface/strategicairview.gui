@@ -466,7 +466,7 @@ guiTypes = {
 			orientation = upper_left
 			size = {width=513 height=515}
 			clipping = no
-			fade_time = 300
+fade_time = 1
 			fade_type = linear
 
 			
@@ -480,7 +480,7 @@ guiTypes = {
 				position = { x=12 y=13}
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
-				animation_time = 300
+animation_time = 0
 				size = { width=489 height=225 }
 				
 				background = {
