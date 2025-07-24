@@ -14,23 +14,23 @@ sp_complexity = {
     }
 
     small = {
-        min = 25
-        max = 25
+        min = 21
+        max = 21
     }
 
     medium = {
-        min = 20
-        max = 20
-    }
-
-    large = {
         min = 17
         max = 17
     }
 
+    large = {
+        min = 15
+        max = 15
+    }
+
     insane = {
-        min = 13
-        max = 13
+        min = 12
+        max = 12
     }
 }
 
@@ -45,10 +45,10 @@ sp_time = {
         }
     }
     prototype = {
-        short = 45
-        medium = 60
-        long = 90
-        very_long = 180
+        short = 50
+        medium = 70
+        long = 100
+        very_long = 200
     }
 }
 
@@ -90,9 +90,9 @@ sp_military_xp_gain = {
         any_key = yes
         data = int
     }
-    low = 15
-    medium = 30
-    high = 50
+    low = 10
+    medium = 20
+    high = 30
 }
 
 sp_breakthrough_progress = {
