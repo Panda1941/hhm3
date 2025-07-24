@@ -22,7 +22,7 @@ replace_path="common/national_focus"
 replace_path="history/countries"
 replace_path="history/states"
 replace_path="history/units/"
-replace_path="interface"
+#replace_path="interface"
 replace_path="map/strategicregions"
 
 name="HHM3: Reforged"

@@ -38,10 +38,8 @@ sub_units = {
 		supply_consumption = 0.1
 		
 		#support unit nerf
-
-		defense = -0.50
-		breakthrough = -0.6
-		#armor_value = -0.75
+		breakthrough = -0.5
+		defense = -0.4
 		
 		amphibious = {
 			attack = -0.5
@@ -87,9 +85,8 @@ sub_units = {
 		supply_consumption = 0.11
 		
 		#support unit nerf
-		defense = -0.50
-		breakthrough = -0.6
-		#armor_value = -0.75
+		breakthrough = -0.5
+		defense = -0.4
 		
 		amphibious = {
 			attack = -0.5
@@ -133,9 +130,8 @@ sub_units = {
 		supply_consumption = 0.15
 		
 		#support unit nerf
-		defense = -0.50
-		breakthrough = -0.6
-		#armor_value = -0.75
+		breakthrough = -0.5
+		defense = -0.4
 		
 		amphibious = {
 			attack = -0.5
@@ -179,9 +175,8 @@ sub_units = {
 		supply_consumption = 0.2
 		
 		#support unit nerf
-		defense = -0.50
-		breakthrough = -0.6
-		#armor_value = -0.75
+		breakthrough = -0.5
+		defense = -0.4
 		
 		amphibious = {
 			attack = -0.5
@@ -225,9 +220,8 @@ sub_units = {
 		supply_consumption = 0.15
 		
 		#support unit nerf
-		defense = -0.50
-		breakthrough = -0.6
-		#armor_value = -0.75
+		breakthrough = -0.5
+		defense = -0.4
 		
 		amphibious = {
 			attack = -0.5

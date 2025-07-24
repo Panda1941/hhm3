@@ -19,6 +19,11 @@ equipment_modules = {
 			maximum_speed = 0.15
 		}
 
+		can_convert_from = {
+			module_category = tank_engine_type
+			convert_cost_ic = 1.0
+		}
+
 	}
 
 	tank_diesel_engine = {
@@ -33,6 +38,11 @@ equipment_modules = {
 			maximum_speed = 0.5
 		}
 		multiply_stats = {  }
+
+		can_convert_from = {
+			module_category = tank_engine_type
+			convert_cost_ic = 1.0
+		}
 	}
 
 	tank_petrol_electric_engine = {
@@ -51,6 +61,11 @@ equipment_modules = {
 			defense = 0.15
 			build_cost_ic = 0.15
 		}
+
+		can_convert_from = {
+			module_category = tank_engine_type
+			convert_cost_ic = 2.0
+		}
 	}
 
 	tank_gas_turbine_engine = {
@@ -68,6 +83,11 @@ equipment_modules = {
 
 		multiply_stats = {
 			maximum_speed = 0.25
+		}
+
+		can_convert_from = {
+			module_category = tank_engine_type
+			convert_cost_ic = 4.0
 		}
 	}
 
@@ -231,6 +251,11 @@ equipment_modules = {
 		dismantle_cost_ic = 0.5
 		multiply_stats = {
 		}
+
+		can_convert_from = {
+			module_category = tank_light_turret_type
+			convert_cost_ic = 1.0
+		}
 	}
 	tank_light_improved_tank_turret = {
 		abbreviation = "l2m"
@@ -248,6 +273,11 @@ equipment_modules = {
 		dismantle_cost_ic = 0.5
 		multiply_stats = {
 		}
+
+		can_convert_from = {
+			module_category = tank_light_turret_type
+			convert_cost_ic = 1.0
+		}
 	}
 	tank_light_advanced_tank_turret = {
 		abbreviation = "l2m"
@@ -264,6 +294,11 @@ equipment_modules = {
 		
 		dismantle_cost_ic = 0.5
 		multiply_stats = {
+		}
+
+		can_convert_from = {
+			module_category = tank_light_turret_type
+			convert_cost_ic = 1.0
 		}
 	}
 
@@ -290,6 +325,11 @@ equipment_modules = {
 		
 		multiply_stats = {
 		}
+
+		can_convert_from = {
+			module_category = tank_medium_turret_type
+			convert_cost_ic = 1.0
+		}
 	}
 
 	tank_medium_improved_tank_turret = {
@@ -313,6 +353,11 @@ equipment_modules = {
 		
 		multiply_stats = {
 		}
+
+		can_convert_from = {
+			module_category = tank_medium_turret_type
+			convert_cost_ic = 1.0
+		}
 	}
 
 	tank_medium_advanced_tank_turret = {
@@ -335,6 +380,11 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		
 		multiply_stats = {
+		}
+
+		can_convert_from = {
+			module_category = tank_medium_turret_type
+			convert_cost_ic = 2.0
 		}
 	}
 
@@ -363,6 +413,11 @@ equipment_modules = {
 
 		multiply_stats = {
 		}
+
+		can_convert_from = {
+			module_category = tank_heavy_turret_type
+			convert_cost_ic = 2.0
+		}
 	}
 
 	tank_heavy_improved_tank_turret = {
@@ -388,6 +443,11 @@ equipment_modules = {
 
 		multiply_stats = {
 		}
+
+		can_convert_from = {
+			module_category = tank_heavy_turret_type
+			convert_cost_ic = 4.0
+		}
 	}
 
 	tank_heavy_advanced_tank_turret = {
@@ -412,6 +472,11 @@ equipment_modules = {
 		}
 
 		multiply_stats = {
+		}
+
+		can_convert_from = {
+			module_category = tank_heavy_turret_type
+			convert_cost_ic = 6.0
 		}
 	}
 
@@ -518,7 +583,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 7
 			hard_attack = 14
-			ap_attack = 40
+			ap_attack = 45
 			build_cost_ic = 2
 			reliability = -0.1
 		}
@@ -539,7 +604,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 11
 			hard_attack = 20
-			ap_attack = 55
+			ap_attack = 65
 			build_cost_ic = 3
 			reliability = -0.12
 		}
@@ -547,7 +612,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 1.5
+			convert_cost_ic = 1.0
 		}
 	}
 
@@ -560,7 +625,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 14
 			hard_attack = 28
-			ap_attack = 75
+			ap_attack = 85
 			build_cost_ic = 4
 			reliability = -0.15
 		}
@@ -568,7 +633,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 2.5
+			convert_cost_ic = 2.0
 		}
 	}
 
@@ -591,7 +656,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 1
+			convert_cost_ic = 1.0
 		}
 	}
 
@@ -614,7 +679,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 2
+			convert_cost_ic = 2.0
 		}
 		build_cost_resources = {
 			steel = 0
@@ -641,7 +706,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 3
+			convert_cost_ic = 3.0
 		}
 		build_cost_resources = {
 			steel = 0
@@ -657,15 +722,15 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 14
 			hard_attack = 9
-			ap_attack = 25
-			build_cost_ic = 1.5
+			ap_attack = 35
+			build_cost_ic = 1.0
 			reliability = -0.1
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 0.5
+			convert_cost_ic = 1.0
 		}
 	}
 
@@ -677,15 +742,15 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 18
 			hard_attack = 15
-			ap_attack = 30
-			build_cost_ic = 3
+			ap_attack = 45
+			build_cost_ic = 2
 			reliability = -0.1
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 1
+			convert_cost_ic = 1.0
 		}
 	}
 
@@ -697,15 +762,15 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 23
 			hard_attack = 22
-			ap_attack = 45
-			build_cost_ic = 4
+			ap_attack = 60
+			build_cost_ic = 3
 			reliability = -0.12
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 2
+			convert_cost_ic = 1.0
 		}
 	}
 
@@ -725,7 +790,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 2
+			convert_cost_ic = 2.0
 		}
 		build_cost_resources = {
 			steel = 0
@@ -748,7 +813,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_small_main_armament
-			convert_cost_ic = 3
+			convert_cost_ic = 3.0
 		}
 		build_cost_resources = {
 			steel = 0
@@ -763,8 +828,8 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 20
 			hard_attack = 15
-			ap_attack = 30
-			build_cost_ic = 3
+			ap_attack = 40
+			build_cost_ic = 5
 			reliability = -0.15
 			breakthrough = 2
 		}
@@ -772,7 +837,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 2
+			convert_cost_ic = 1.0
 		}
 
 		build_cost_resources = {
@@ -790,8 +855,8 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 30
 			hard_attack = 22
-			ap_attack = 50
-			build_cost_ic = 4
+			ap_attack = 60
+			build_cost_ic = 6
 			reliability = -0.15
 			breakthrough = 4
 		}
@@ -799,7 +864,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 3
+			convert_cost_ic = 1.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -817,8 +882,8 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 40
 			hard_attack = 29
-			ap_attack = 60
-			build_cost_ic = 5
+			ap_attack = 80
+			build_cost_ic = 7
 			reliability = -0.18
 			breakthrough = 6
 		}
@@ -826,7 +891,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 4
+			convert_cost_ic = 1.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -845,14 +910,14 @@ equipment_modules = {
 			soft_attack = 35
 			hard_attack = 2
 			ap_attack = 20
-			build_cost_ic = 4
+			build_cost_ic = 5
 			reliability = -0.2
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 3
+			convert_cost_ic = 1.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -870,14 +935,14 @@ equipment_modules = {
 			soft_attack = 45
 			hard_attack = 4
 			ap_attack = 30
-			build_cost_ic = 5.5
+			build_cost_ic = 6
 			reliability = -0.2
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 4
+			convert_cost_ic = 1.5
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -897,14 +962,14 @@ equipment_modules = {
 			soft_attack = 60
 			hard_attack = 1
 			ap_attack = 5
-			build_cost_ic = 7
+			build_cost_ic = 7.5
 			reliability = -0.1
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 5
+			convert_cost_ic = 2.0
 		}
 
 		build_cost_resources = {
@@ -922,15 +987,15 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 12
 			hard_attack = 26
-			ap_attack = 45
-			build_cost_ic = 3
+			ap_attack = 55
+			build_cost_ic = 5
 			reliability = -0.05
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
-			module_category = tank_small_main_armament
-			convert_cost_ic = 2
+			module_category = tank_medium_main_armament
+			convert_cost_ic = 1.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -947,15 +1012,15 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 17
 			hard_attack = 36
-			ap_attack = 75
-			build_cost_ic = 5
+			ap_attack = 90
+			build_cost_ic = 6
 			reliability = -0.175
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
 			module_category = tank_medium_main_armament
-			convert_cost_ic = 3.5
+			convert_cost_ic = 1.5
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -972,15 +1037,15 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 20
 			hard_attack = 46
-			ap_attack = 95
+			ap_attack = 115
 			build_cost_ic = 7
 			reliability = -0.2
 		}
 		dismantle_cost_ic = 1
 		
 		can_convert_from = {
-			module_category = tank_heavy_main_armament
-			convert_cost_ic = 5
+			module_category = tank_medium_main_armament
+			convert_cost_ic = 2.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -998,7 +1063,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 26
 			hard_attack = 24
-			ap_attack = 55
+			ap_attack = 75
 			build_cost_ic = 6
 			reliability = -0.25
 		}
@@ -1006,7 +1071,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_heavy_main_armament
-			convert_cost_ic = 4
+			convert_cost_ic = 1.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -1024,7 +1089,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 28
 			hard_attack = 36
-			ap_attack = 75
+			ap_attack = 95
 			build_cost_ic = 7
 			reliability = -0.25
 		}
@@ -1032,7 +1097,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_heavy_main_armament
-			convert_cost_ic = 5
+			convert_cost_ic = 2.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -1050,7 +1115,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 31
 			hard_attack = 42
-			ap_attack = 125
+			ap_attack = 135
 			build_cost_ic = 8
 			reliability = -0.3
 		}
@@ -1058,7 +1123,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_heavy_main_armament
-			convert_cost_ic = 6
+			convert_cost_ic = 2.0
 		}
 		build_cost_resources = {
 			tungsten = 1
@@ -1076,7 +1141,7 @@ equipment_modules = {
 		add_stats = {
 			soft_attack = 65
 			hard_attack = 4
-			ap_attack = 30
+			ap_attack = 35s
 			build_cost_ic = 7
 			reliability = -0.3
 		}
@@ -1084,7 +1149,7 @@ equipment_modules = {
 		
 		can_convert_from = {
 			module_category = tank_heavy_main_armament
-			convert_cost_ic = 5
+			convert_cost_ic = 3.0
 		}
 
 		build_cost_resources = {
@@ -1151,6 +1216,11 @@ equipment_modules = {
 			defense = 0.20
 			breakthrough = 0.15
 		}
+		
+		can_convert_from = {
+			module_category = tank_radio_module
+			convert_cost_ic = 1.0
+		}
 	}
 
 	tank_radio_2 = {
@@ -1167,6 +1237,11 @@ equipment_modules = {
 			defense = 0.40
 			breakthrough = 0.25
 		}
+		
+		can_convert_from = {
+			module_category = tank_radio_module
+			convert_cost_ic = 1.5
+		}
 	}
 
 	tank_radio_3 = {
@@ -1182,6 +1257,11 @@ equipment_modules = {
 		multiply_stats = {
 			defense = 0.60
 			breakthrough = 0.40
+		}
+		
+		can_convert_from = {
+			module_category = tank_radio_module
+			convert_cost_ic = 2.0
 		}
 	}
 
@@ -1214,7 +1294,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			build_cost_ic = 2.0
+			build_cost_ic = 2.5
 			defense = 1
 			soft_attack = 6
 		}
@@ -1265,8 +1345,6 @@ equipment_modules = {
 			build_cost_ic = 3
 			breakthrough = 5
 		}
-		
-
 	}
 
 	smoke_launchers = {
