@@ -597,7 +597,7 @@ spriteTypes = {
 
 	### ARG
 
-	spriteType = {
+	spriteType = { #EASTER EGG
 		name = "GFX_portrait_south_america_generic_leader_1"
 		texturefile = "gfx/leaders/ARG/portrait_south_america_generic_leader_1.dds"
 	}
@@ -621,11 +621,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_portrait_GRE_adolfos_i_small"
-		texturefile = "gfx/interface/ideas/idea_GRE_adolfos_i.dds"
-	}
-
-	spriteType = {
 		name = "GFX_portrait_GRE_napoleon_zervas"
 		texturefile = "gfx/leaders/GRE/portrait_gre_napoleon_zervas.dds"
 	}
@@ -643,17 +638,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_portrait_germany_agent_h_f_small"
-		texturefile = "gfx/interface/ideas/idea_GER_hilter_f.dds"
-	}
-	spriteType = {
 		name = "GFX_portrait_germany_agent_h_m"
 		texturefile = "gfx/leaders/GER/Portrait_Germany_Hilter_M.dds"
-	}
-
-	spriteType = {
-		name = "GFX_portrait_germany_agent_h_m_small"
-		texturefile = "gfx/interface/ideas/idea_GER_hilter_m.dds"
 	}
 
 	###RAJ
@@ -4567,11 +4553,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = GFX_portrait_GER_adolf_hitler
-		texturefile = "gfx/leaders/GER/Portrait_Germany_Adolf_Hitler.dds"
-	}
-
-	spriteType = {
 		name = GFX_portrait_GER_konrad_adenauer
 		texturefile = "gfx/leaders/GER/Portrait_Germany_Konrad_Adenauer.dds"
 	}
@@ -7664,11 +7645,6 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_portrait_Thomas_E_Dewey
 		texturefile = gfx/leaders/USA/portrait_USA_thomas_dewey.dds
-	}
-
-	spriteType = {
-		name = GFX_portrait_Adolfos_I
-		texturefile = gfx/leaders/GRE/portrait_gre_adolfos_i.dds
 	}
 
 	spriteType = {
