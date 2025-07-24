@@ -512,9 +512,6 @@ equipments = {
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
-					tank_heavy_turret_type
 					tank_modern_turret_type
 				}
 			}
@@ -522,7 +519,7 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
+					tank_medium_turret_type
 				}
 			}
 
@@ -550,7 +547,6 @@ equipments = {
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					tank_special_module
 					tank_radio_module
 				}
 			}
@@ -559,7 +555,6 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
 				}
 			}
 
@@ -567,7 +562,6 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
 				}
 			}
 
@@ -575,7 +569,6 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
-					tank_radio_module
 				}
 			}
 
@@ -636,8 +629,8 @@ equipments = {
 		}
 
 		fuel_consumption = 0
-		maximum_speed = 7
-		build_cost_ic = 6
+		maximum_speed = 7.5
+		build_cost_ic = 15
 		reliability = 1.2
 		armor_value = 65
 		hardness = 0.95
@@ -689,7 +682,7 @@ equipments = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
+					tank_heavy_main_armament
 				}
 			}
 

@@ -897,3 +897,31 @@
  
  ENG_industrial_expansion_effect_tt:0 "§RFor every colony developed gain 2 military factories after the conference is over!"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ tank_light_basic_tank_turret:0 "Basic Light tank Turret"
+ tank_medium_basic_tank_turret:0 "Basic Medium tank Turret"
+ tank_heavy_basic_tank_turret:0 "Basic Heavy tank Turret"
+ tank_light_improved_tank_turret:0 "Improved Light tank Turret"
+ tank_medium_improved_tank_turret:0 "Improved Medium tank Turret"
+ tank_heavy_improved_tank_turret:0 "Improved Heavy tank Turret"
+ tank_light_advanced_tank_turret:0 "Advanced Light tank Turret"
+ tank_medium_advanced_tank_turret:0 "Advanced Medium tank Turret"
+ tank_heavy_advanced_tank_turret:0 "Advanced Heavy tank Turret"
+ tank_close_support_gun_2:0 "Close Support Gun 2"
+ tank_small_cannon_3:0 "Small Cannon 3"
+ tank_auto_cannon_3:0 "Auto Cannon 3"
+ tank_medium_cannon_3:0 "Medium Cannon 3"
