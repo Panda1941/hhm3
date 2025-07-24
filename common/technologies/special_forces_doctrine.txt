@@ -1101,6 +1101,9 @@ technologies = {
 		
 		#xor = { special_forces_mountaineers special_forces_marines } 
 	
+		allow = {
+			has_tech = shock_troops
+		}
 
 		shock_troops = {
 			max_organisation = 2
@@ -1510,6 +1513,10 @@ technologies = {
 		
 		#xor = { special_forces_mountaineers special_forces_marines } 
 	
+		
+		allow = {
+			has_tech = jaegers
+		}
 
 		jaeger = {
 			max_organisation = 3

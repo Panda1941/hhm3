@@ -18,17 +18,17 @@ spriteTypes = {
 	
 
 	SpriteType = {
-		name = "GFX_shocktroops3_medium"
-		texturefile = "gfx/interface/technologies/shocktroops3.dds"
+		name = "GFX_shock_troops3_medium"
+		texturefile = "gfx/interface/technologies/shock_troops3.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_shocktroops2_medium"
-		texturefile = "gfx/interface/technologies/shocktroops2.dds"
+		name = "GFX_shock_troops2_medium"
+		texturefile = "gfx/interface/technologies/shock_troops2.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_shocktroops_medium"
-		texturefile = "gfx/interface/technologies/shocktroops.dds"
+		name = "GFX_shock_troops_medium"
+		texturefile = "gfx/interface/technologies/shock_troops.dds"
 	}
 }

@@ -7,21 +7,21 @@ is_playable_country = {
 		tag = SPR
 		tag = BUL
 		tag = JAP
-		tag = SIA
+		#tag = SIA
 		tag = MAN
-		tag = FIN
+		#tag = FIN
 		tag = ENG
 		tag = FRA
 		tag = CAN
 		tag = AST
 		tag = BRA
-		tag = MEX
+		#tag = MEX
 		tag = NZL
 		tag = USA
 		tag = RAJ
 		tag = SAF
 		tag = SOV
-		tag = PHI
+		#tag = PHI
 		tag = IRQ
 	}
 }
@@ -103,7 +103,8 @@ ai_manpower = {
 		tag = DEN
 		tag = ALB
 		tag = IRE
-
+		tag = FIN
+		tag = MEX
 	}
 }
 ai_annex = {
@@ -114,6 +115,8 @@ ai_annex = {
 		tag = AUS
 		tag = CZE
 		tag = COG	
+		tag = PHI
+		tag = SIA
 	}
 }
 ai_rk = {
