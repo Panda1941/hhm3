@@ -14,23 +14,23 @@ sp_complexity = {
     }
 
     small = {
-        min = 21
-        max = 21
+        min = 20
+        max = 25
     }
 
     medium = {
-        min = 17
-        max = 17
+        min = 15
+        max = 20
     }
 
     large = {
-        min = 15
-        max = 15
+        min = 12
+        max = 18
     }
 
     insane = {
-        min = 12
-        max = 12
+        min = 10
+        max = 15
     }
 }
 
@@ -45,10 +45,10 @@ sp_time = {
         }
     }
     prototype = {
-        short = 50
-        medium = 70
-        long = 100
-        very_long = 200
+        short = 45
+        medium = 60
+        long = 90
+        very_long = 180
     }
 }
 
