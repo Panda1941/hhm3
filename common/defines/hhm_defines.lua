@@ -13,7 +13,6 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 30                           -- Up fr
 NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.25, 0.19, 0.06, 0.0 }
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 14
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 21
-NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	    -- WAS 60 | less messages lying around at the top of your screen
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 25
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3
@@ -51,16 +50,11 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 2000		                     -- WAS 500 |
 
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
+NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = -0.25				-- base MIC speed modifier for licensed equipment
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
+
 -- Slots
 NDefines.NBuildings.MAX_SHARED_SLOTS = 99
-
--- Market
-NDefines.NMarket.LOW_PRICE_LEVEL_FACTOR = 0.5
-NDefines.NMarket.HIGH_PRICE_LEVEL_FACTOR = 1.1
-
-NDefines.NMarket.PURCHASE_CONTRACT_DELIVERY_TOTAL_DAYS = 14
-NDefines.NMarket.IC_TO_CIC_FACTOR = 1
 
 -- Research
 NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3
@@ -70,10 +64,12 @@ NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 	--Base cost to unlock a
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0	--Base cost to change a regiment column.
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	--Base cost to unlock a support slot
 
--- Refit
-NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0			-- DEFAULT: 0.2 - Minimum fraction of an equipment type's base industry capacity cost to use when converting a naval equipment, such as through ship refitting.
+-- Refit / conversion
 NDefines.NProduction.BASE_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0       -- Fraction of the hull industry cost which is always included in the refitting cost.
 NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0		-- DEFAULT: 0.2 - Minimum fraction of an equipment type's base strategic resource cost to use when converting a naval equipment, such as through ship refitting.
+NDefines.NProduction.BASE_LAND_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.25        -- Fraction of the chassis industry cost which is always included in the conversion cost.
+NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.5		-- Minimum fraction of a land equipment's strategic resource cost that any conversion will cost.
+
 
 -- Free Designs
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0				    -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
@@ -81,17 +77,8 @@ NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0				-- XP cost for repl
 NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0				-- XP cost for converting one equipment module to a related module when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0
 
--- Minelaying
-NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 2000.0							-- Max number of mines that can be layed by the ships. The value should be hidden from the user, as we present % so it's an abstract value that should be used for balancing.
-NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0.008						-- Value used to overall balance of the speed of planting naval mines
-NDefines.NNavy.NAVAL_MINES_SWEEPING_SPEED_MULT = 0.009	
-
 -- Airbase capacity change
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100		-- 200 how many planes u can have per level of airbase
-
--- NERF TO INFRA
-
-NDefines.NProduction.INFRA_MAX_CONSTRUCTION_COST_EFFECT = 0.5
 
 -- Production changes
 NDefines.NProduction.BASE_FACTORY_SPEED = 5						-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
@@ -103,20 +90,18 @@ NDefines.NProduction.CAPITULATE_STOCKPILES_RATIO = 0.05 -- How much equipment fr
 NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300 -- 150 how many mils u can put on a line
 
 -- Army Balance
-NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 5
-
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0, 0.3, 0.75, 0.9 }		-- Experience needed to progress to the next level
 
 NDefines.NMilitary.TRAINING_ATTRITION = 0  -- vanilla 0.06
 NDefines.NNavy.NAVAL_INVASION_PREPARE_HOURS = 72							-- base hours needed to prepare an invasion
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.10
-NDefines.NMilitary.RELIABILTY_RECOVERY = 0.02 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
+NDefines.NMilitary.RELIABILTY_RECOVERY = 0.1 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 -- WAS 1 aka TRAINED | Since the above was changed there is no point to not allowing divs to be trained to regular considering that its only 10% stats now.
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.1
 
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 40				--base is 24
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 40				--base is 24
-NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1
+NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 2
 
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.30
 
@@ -129,15 +114,13 @@ NDefines.NMilitary.COMBAT_VALUE_ORG_IMPORTANCE = 0
 NDefines.NMilitary.COMBAT_VALUE_STR_IMPORTANCE = 0
 NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_MALUS = -0.5
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.35                 -- vanilla -0.30 | small river crossing
-NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.60          -- vanilla -0.6 | large river crossing
 NDefines.NMilitary.PLANNING_MAX = 0.25                          	-- can get more from techs
  
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 2   -- extra damage dice if our armor outclasses enemy
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 4   -- extra damage dice if our armor outclasses enemy
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 0.60 -- damage reduction if armor outclassing enemy
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.60 -- damage reduction if armor outclassing enemy
-NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FACTOR = 0.002		   -- Factor to scale collateral damage to infra and forts with.
-NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 13		-- chance to get a hit to damage on forts. (out of 100)
+NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 8		-- chance to get a hit to damage on forts. (out of 100)
 NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.066		   -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
 NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.066 -- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
 
@@ -146,9 +129,7 @@ NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
 NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.4			--0.8
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.2			--0.25
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.4	--0.5
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.3	--0.3
 NDefines.NMilitary.OUT_OF_SUPPLY_SPEED = -0.6					--0.8
-NDefines.NMilitary.OUT_OF_FUEL_SPEED_MULT = 0.4					--0.4
 NDefines.NMilitary.INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = 0.00	--0.05
 
 --Supply and combat changes
@@ -224,7 +205,6 @@ NDefines.NMilitary.BASE_CAPTURE_EQUIPMENT_RATIO = 0.05		-- 0.0 after a successfu
 -------------------------------------------------------
 ---speed------------------
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.030                   -- basic speed control
-NDefines.NMilitary.SLOWEST_SPEED = 4
 	
 
 -- Navy Balance
@@ -233,7 +213,6 @@ NDefines.NMilitary.SLOWEST_SPEED = 4
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0
 NDefines.NNavy.ACCIDENTS_CHANCE_BALANCE_FACTOR = 0
 
-NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.5
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0
 NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 500
 NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 100
@@ -275,9 +254,6 @@ NDefines.NNavy.SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING                      = 1 
 NDefines.NNavy.CARRIER_STACK_PENALTY = 2 -- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
 NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.25 -- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 ---------------------------------------------------------------------------------------------------------------------------------------
-NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.1  -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier
-NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier
-------------------------------------------------------------------------------------------------------------------------------
 NDefines.NNavy.SPEED_TO_ESCAPE_SPEED = 1.5
 NDefines.NNavy.BASE_ESCAPE_SPEED = 0.25 
 NDefines.NNavy.AGGRESION_MULTIPLIER_FOR_COMBAT = 1.5				-- ships are more aggresive in combat
@@ -449,6 +425,8 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 		0.0, -- NAVAL_MINES_SWEEPING
 		0.0, -- RECON
 		0.0, -- NAVAL_PATROL
+		0,0, -- BARRAGE
+		0,0, -- SAM
 	}
 	
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
@@ -502,12 +480,6 @@ NDefines.NIntel.ARMY_INTEL_COMBAT_BONUS_MAX_BONUS = 0.15
 -- NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_FOCUS_TREE = 0.7 -- min required intel to focus tree with taken focuses
 -- NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_CURRENT_FOCUS = 0.4  -- min required intel to show currently focus
 -- NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_CURRENT_FOCUS_PROGRESS = 0.5  -- min required intel to show current focus progress
-
--- Flicker Bombing
-NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER = 0.192    -- How much efficiency to regain per day. Gain applied hourly.
-NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.072    -- How much efficiency to regain per day. Gain applied hourly.
-NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_NAVAL_BOMBER = 0.192
-
 
 ---- Dockyards
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 14
@@ -576,7 +548,6 @@ NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 9999    --168 every 20 
 
 -- AI will defend cities as well
 NDefines.NAI.AREA_DEFENSE_SETTING_VP = true --False (AI will garrison cities)
-NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES = false
 
 -- Nukes buffed
 NDefines.NMilitary.NUKE_MIN_DAMAGE_PERCENT = 0.9					-- Minimum damage from nukes as a percentage of current strength/organisation
@@ -629,7 +600,7 @@ NDefines.NTrade.DISTANCE_TRADE_FACTOR = 0				-- Trade factor is modified by dist
 NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opinion value times this
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0 -- You get all the factories in a territory when you annex it
 
-NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 5.9
 
 
 
