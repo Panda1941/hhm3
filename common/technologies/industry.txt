@@ -227,7 +227,7 @@ technologies = {
 	###############
 	concentrated_industry = {
 
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.14
 		industrial_capacity_dockyard = 0.08
 		global_building_slots_factor = 0.25
 		
@@ -298,7 +298,7 @@ technologies = {
 	
 	concentrated_industry2 = {
 
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.14
 		industrial_capacity_dockyard = 0.07
 		global_building_slots_factor = 0.25
 		
@@ -337,7 +337,7 @@ technologies = {
 	
 	concentrated_industry3 = {
 
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.06
 		industrial_capacity_dockyard = 0.06
 		global_building_slots_factor = 0.25
 		
@@ -375,7 +375,7 @@ technologies = {
 	
 	concentrated_industry4 = {
 
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.05
 		global_building_slots_factor = 0.25
 		
@@ -413,7 +413,7 @@ technologies = {
 	
 	concentrated_industry5 = {
 
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.05
 		global_building_slots_factor = 0.25
 		
@@ -451,10 +451,10 @@ technologies = {
 	
 	dispersed_industry = {
 
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.00
 		industrial_capacity_dockyard = 0.08
-		global_building_slots_factor = 0.2
-		production_factory_start_efficiency_factor = 0.075
+		global_building_slots_factor = 0.25
+		production_factory_start_efficiency_factor = 0.2
 		industry_air_damage_factor = -0.1
 		
 		path = {
@@ -524,10 +524,10 @@ technologies = {
 	
 	dispersed_industry2 = {
 
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.00
 		industrial_capacity_dockyard = 0.07
-		global_building_slots_factor = 0.2
-		production_factory_start_efficiency_factor = 0.075
+		global_building_slots_factor = 0.25
+		production_factory_start_efficiency_factor = 0.15
 		industry_air_damage_factor = -0.1
 		
 		path = {
@@ -564,10 +564,10 @@ technologies = {
 	
 	dispersed_industry3 = {
 
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.00
 		industrial_capacity_dockyard = 0.06
-		global_building_slots_factor = 0.2
-		production_factory_start_efficiency_factor = 0.075
+		global_building_slots_factor = 0.25
+		production_factory_start_efficiency_factor = 0.1
 		industry_air_damage_factor = -0.10
 		
 		path = {
@@ -604,10 +604,10 @@ technologies = {
 	
 	dispersed_industry4 = {
 
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.00
 		industrial_capacity_dockyard = 0.05
-		global_building_slots_factor = 0.2
-		production_factory_start_efficiency_factor = 0.075
+		global_building_slots_factor = 0.25
+		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
 		
 		path = {
@@ -644,10 +644,10 @@ technologies = {
 	
 	dispersed_industry5 = {
 
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.00
 		industrial_capacity_dockyard = 0.05
-		global_building_slots_factor = 0.2
-		production_factory_start_efficiency_factor = 0.075
+		global_building_slots_factor = 0.25
+		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
 		
 		
@@ -777,8 +777,8 @@ technologies = {
 
 	fuel_refining = {
 
-		fuel_gain_factor = 0.5
-		fuel_gain_factor_from_states = 0.1
+		fuel_gain_factor = 0.7
+		fuel_gain_factor_from_states = 0.2
 					
 		path = {
 			leads_to_tech = fuel_refining2 
@@ -842,8 +842,8 @@ technologies = {
 
 	fuel_refining2 = {
 		
-		fuel_gain_factor = 0.5
-		fuel_gain_factor_from_states = 0.1
+		fuel_gain_factor = 0.7
+		fuel_gain_factor_from_states = 0.2
 
 		path = {
 			leads_to_tech = fuel_refining3 
@@ -899,8 +899,8 @@ technologies = {
 
 	fuel_refining3 = {
 		
-		fuel_gain_factor = 0.5
-		fuel_gain_factor_from_states = 0.1
+		fuel_gain_factor = 0.7
+		fuel_gain_factor_from_states = 0.2
 
 		path = {
 			leads_to_tech = fuel_refining4 
@@ -946,8 +946,8 @@ technologies = {
 
 	fuel_refining4 = {
 		
-		fuel_gain_factor = 0.5
-		fuel_gain_factor_from_states = 0.1
+		fuel_gain_factor = 0.7
+		fuel_gain_factor_from_states = 0.2
 
 		path = {
 			leads_to_tech = fuel_refining5
@@ -993,8 +993,8 @@ technologies = {
 
 	fuel_refining5 = {
 		
-		fuel_gain_factor = 0.5
-		fuel_gain_factor_from_states = 0.1
+		fuel_gain_factor = 0.7
+		fuel_gain_factor_from_states = 0.2
 
 		research_cost = 3
 		start_year = 1943
@@ -1038,8 +1038,8 @@ technologies = {
 	
 	construction1 = {
 		
-		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
 
 		path = {
 			leads_to_tech = construction2
@@ -1152,8 +1152,8 @@ technologies = {
 	
 	construction2 = {
 
-		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = construction3 
@@ -1269,8 +1269,8 @@ technologies = {
 	
 	construction3 = {
 
-		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		production_speed_buildings_factor = 0.08
+		industry_repair_factor = 0.1
 		path = {
 			leads_to_tech = construction4 
 			research_cost_coeff = 1
@@ -1396,8 +1396,8 @@ technologies = {
 	
 	construction4 = {
 
-		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		production_speed_buildings_factor = 0.06
+		industry_repair_factor = 0.1
 
 		on_research_complete = {
 			custom_effect_tooltip = {
@@ -1519,8 +1519,8 @@ technologies = {
 	
 	construction5 = {
 
-		production_speed_buildings_factor = 0.05
-		industry_repair_factor = 0.05
+		production_speed_buildings_factor = 0.06
+		industry_repair_factor = 0.1
 		
 		path = {
 			leads_to_tech = excavation5
