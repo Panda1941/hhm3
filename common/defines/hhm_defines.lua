@@ -18,11 +18,8 @@ NDefines.NCountry.EVENT_PROCESS_OFFSET = 25
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3
 
 NDefines.NInterface.MINIMAP_PING_DELAY_BETWEEN_PINGS = 1	-- less spam ping
-
 NDefines.NMilitary.COMBAT_MINIMUM_TIME = 1  -- affects micro, much smoother
-
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- General grinding :smug:
-
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 3.0
 
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0                     -- Removed for game stability/reducing chance of desync
@@ -68,8 +65,7 @@ NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	--Base cost to unlock a 
 NDefines.NProduction.BASE_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0       -- Fraction of the hull industry cost which is always included in the refitting cost.
 NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0		-- DEFAULT: 0.2 - Minimum fraction of an equipment type's base strategic resource cost to use when converting a naval equipment, such as through ship refitting.
 NDefines.NProduction.BASE_LAND_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.25        -- Fraction of the chassis industry cost which is always included in the conversion cost.
-NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.5		-- Minimum fraction of a land equipment's strategic resource cost that any conversion will cost.
-
+NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 1.0		-- Minimum fraction of a land equipment's strategic resource cost that any conversion will cost.
 
 -- Free Designs
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0				    -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
@@ -83,10 +79,9 @@ NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100		-- 200 how many planes u can ha
 -- Production changes
 NDefines.NProduction.BASE_FACTORY_SPEED = 5						-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
 NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.5				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
-NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 3.5				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 4.0				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
 
 NDefines.NProduction.CAPITULATE_STOCKPILES_RATIO = 0.05 -- How much equipment from deployed divisions will be transferred on capitulation
-
 NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300 -- 150 how many mils u can put on a line
 
 -- Army Balance
@@ -104,9 +99,7 @@ NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 40				--base is 24
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 2
 
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.30
-
 NDefines.NMilitary.BASE_FORT_PENALTY = -0.3
-
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.0 -- 0.0015
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- 0.5
 NDefines.NMilitary.UNIT_DIGIN_CAP = 0
