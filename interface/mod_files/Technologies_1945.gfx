@@ -31,7 +31,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_flexible_line_medium"
-		texturefile = "gfx/interface/technologies/flexible_line1.png"
+		texturefile = "gfx/interface/technologies/flexible_line.png"
 	}
 	
 	SpriteType = {
@@ -41,7 +41,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_streamlined_line_medium"
-		texturefile = "gfx/interface/technologies/streamlined_line1.png"
+		texturefile = "gfx/interface/technologies/streamlined_line.png"
 	}
 
 	SpriteType = {
