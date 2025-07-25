@@ -4,13 +4,11 @@ tags={
 	"Historical"
 	"Gameplay"
 }
-
 replace_path="common/characters"
 replace_path="history/countries"
 replace_path="history/states"
 replace_path="common/national_focus"
 replace_path="common/opinion_modifiers"
-
 replace_path="common/abilities"
 replace_path="common/ai_strategy"
 replace_path="common/ai_strategy_plans"
@@ -22,9 +20,7 @@ replace_path="common/national_focus"
 replace_path="history/countries"
 replace_path="history/states"
 replace_path="history/units/"
-#replace_path="interface"
 replace_path="map/strategicregions"
-
 name="HHM3: Reforged"
 picture="thumbnail.png"
 supported_version="1.16.*"
