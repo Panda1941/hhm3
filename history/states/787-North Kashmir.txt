@@ -9,7 +9,8 @@ state={
 		victory_points = {
 			1910 1
 		}
-		owner = RAJ
+		owner = RAJ 
+ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		buildings = {
 			infrastructure = 1
 		}

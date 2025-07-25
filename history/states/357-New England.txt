@@ -9,7 +9,8 @@ state={
 
 
 	history={
-		owner = USA
+		owner = USA 
+ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		buildings = {
 			infrastructure = 4 #was: 7
 			arms_factory = 1

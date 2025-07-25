@@ -10,7 +10,8 @@ state= {
 	}
 
 	history= {
-		owner = CHI
+		owner = CHI 
+ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		add_core_of = CHI
 		add_core_of = CHI
 		
@@ -26,7 +27,8 @@ state= {
 
 		1938.10.25 = {		
 			remove_core_of = CHI
-			owner = CHI
+			owner = CHI 
+ 1936.1.1.13 = { owner = WST add_core_of = WST }
 			JAP = {
 				set_province_controller = 1202
 				set_province_controller = 4050

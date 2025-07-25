@@ -5,7 +5,8 @@ state={
 	impassable = yes
 
 	history={
-		owner = AST
+		owner = AST 
+ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		buildings = {
 			infrastructure = 1
 
