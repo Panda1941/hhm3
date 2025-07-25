@@ -1101,7 +1101,6 @@ technologies = {
 	tech_field_hospital2 = {
 
 		allow = {
-			always = no
 		}
 
 		field_hospital = {
@@ -1296,6 +1295,7 @@ technologies = {
 
 		enable_subunits = {
 			logistics_company
+			logistics_company_infantry
 		}
 
 		path = {
@@ -1357,6 +1357,10 @@ technologies = {
 			fuel_consumption_factor = -0.05
 		}
 
+		logistics_company_infantry = {
+			supply_consumption_factor = -0.08
+		}
+
 		helicopter_transport = {
 			supply_consumption_factor = -0.12
 		}
@@ -1412,6 +1416,10 @@ technologies = {
 			fuel_consumption_factor = -0.05
 		}
 
+		logistics_company_infantry = {
+			supply_consumption_factor = -0.08
+		}
+
 		helicopter_transport = {
 			supply_consumption_factor = -0.12
 		}
@@ -1463,6 +1471,10 @@ technologies = {
 		logistics_company = {
 			supply_consumption_factor = -0.1
 			fuel_consumption_factor = -0.05
+		}
+
+		logistics_company_infantry = {
+			supply_consumption_factor = -0.08
 		}
 
 		helicopter_transport = {
