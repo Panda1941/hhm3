@@ -348,11 +348,11 @@ operations = {
 		}
 		available = {
 			date > 1940.01.01 
-			NOT = {
-				16 = {
-					is_owned_and_controlled_by = FRA
-				}
-			}
+			#NOT = {
+			#	16 = {
+			#		is_owned_and_controlled_by = FRA
+			#	}
+			#}
 		}
 			
 		
