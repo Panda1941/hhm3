@@ -159,9 +159,9 @@ on_actions = {
 						target = COG
 						size = 1
 						stockpile_ratio = 1
-						army_ratio = 0
-						navy_ratio = 0
-						air_ratio = 0
+						army_ratio = 1
+						navy_ratio = 1
+						air_ratio = 1
 						keep_unit_leaders_trigger = {
 							always = yes
 						}

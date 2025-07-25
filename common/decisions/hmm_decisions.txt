@@ -61,7 +61,7 @@ operations = {
 			factor = 0
 		}
 		available = {
-			FRA = {has_completed_focus = FRA_appeal_to_the_french_nation} 
+			FRA = {has_country_flag = france_tp} 
 		}
 		targets = {
 			COG
@@ -76,7 +76,7 @@ operations = {
 					navy_ratio = 1
 					air_ratio = 1
 					keep_unit_leaders_trigger = {
-						always = no
+						always = yes
 					}
 				}
 			}
