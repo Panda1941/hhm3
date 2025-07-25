@@ -316,7 +316,7 @@ instant_effect = {
 
 		add_equipment_production = { 
 			equipment = { 
-				type = light_tank_chassis_1 
+				type = light_tank_chassis_2 
 				creator = "ITA" 
 				version_name = "L3/35"
 			}

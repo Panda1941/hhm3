@@ -797,14 +797,7 @@ focus_tree = {
 			add_to_variable = { ITA_re_modifier_army_sub_unit_infantry_defence_factor = 0.05 }
 			custom_effect_tooltip = ITA_preserve_army_traditions_re_tt
 
-			army_experience = 10
-
-			set_variable = {
-				var = special_forces_xp_to_add
-				value = 10
-				tooltip = add_positive_amount_of_special_forces_xp_tt
-			}
-			add_set_amount_of_special_forces_xp = yes
+			army_experience = 30
 
 			add_doctrine_cost_reduction = {
 				name = ITA_preserve_army_traditions
@@ -1151,14 +1144,7 @@ focus_tree = {
 			add_to_variable = { ITA_re_modifier_army_sub_unit_mountaineers_max_org_factor = 0.05 }
 			custom_effect_tooltip = ITA_divisioni_alpine_re_tt
 
-			army_experience = 10
-
-			set_variable = {
-				var = special_forces_xp_to_add
-				value = 20
-				tooltip = add_positive_amount_of_special_forces_xp_tt
-			}
-			add_set_amount_of_special_forces_xp = yes
+			army_experience = 30
 
 			add_tech_bonus = {
 				name = ITA_divisioni_alpine
@@ -1191,14 +1177,7 @@ focus_tree = {
 			add_to_variable = { ITA_re_modifier_army_sub_unit_paratrooper_max_org_factor = 0.05 }
 			custom_effect_tooltip = ITA_fanti_dell_aria_re_tt
 
-			army_experience = 10
-
-			set_variable = {
-				var = special_forces_xp_to_add
-				value = 20
-				tooltip = add_positive_amount_of_special_forces_xp_tt
-			}
-			add_set_amount_of_special_forces_xp = yes
+			army_experience = 30
 
 			hidden_effect = {
 				if = {
@@ -1229,7 +1208,7 @@ focus_tree = {
 		relative_position_id = ITA_superesercito
 		cost = 5
 		available = {
-			has_tech = basic_medium_tank
+			has_tech = improved_tank_modules
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}

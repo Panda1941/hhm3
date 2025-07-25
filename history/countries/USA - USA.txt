@@ -590,7 +590,7 @@ if = {
 		name = "P-6" #export models only
 		type = small_plane_airframe_0
 		modules = {
-			fixed_main_weapon_slot = light_mg_2x
+			fixed_main_weapon_slot = light_mg_4x
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
@@ -600,7 +600,7 @@ if = {
 		name = "P-26A" # Boeing P-26 Peashooter
 		type = small_plane_airframe_0
 		modules = {
-			fixed_main_weapon_slot = light_mg_2x
+			fixed_main_weapon_slot = light_mg_4x
 			engine_type_slot = engine_1_1x
 			fixed_auxiliary_weapon_slot_1 = bomb_locks
 		}
@@ -612,7 +612,7 @@ if = {
 		type = small_plane_cas_airframe_0
 		modules = {
 			fixed_main_weapon_slot = bomb_locks
-			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
 			engine_type_slot = engine_1_1x
 		}
 		obsolete = yes
@@ -664,8 +664,8 @@ if = {
 		name = "P-35A" #
 		type = small_plane_airframe_1
 		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = empty
 		}
@@ -676,7 +676,7 @@ if = {
 		type = small_plane_airframe_1
 		modules = {
 			fixed_main_weapon_slot = light_mg_4x
-			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = empty
 		}
@@ -687,7 +687,7 @@ if = {
 		type = medium_plane_airframe_0
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
-			engine_type_slot = engine_1_2x
+			engine_type_slot = engine_1_3x
 			special_type_slot_1 = lmg_defense_turret
 		}
 		obsolete = yes
@@ -697,7 +697,7 @@ if = {
 		type = medium_plane_airframe_1
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
-			engine_type_slot = engine_1_2x
+			engine_type_slot = engine_1_3x
 			special_type_slot_1 = lmg_defense_turret
 		}
 		icon = "GFX_medium_plane_1_medium"
@@ -707,7 +707,7 @@ if = {
 		type = medium_plane_airframe_1
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
-			engine_type_slot = engine_2_2x
+			engine_type_slot = engine_2_3x
 			special_type_slot_1 = lmg_defense_turret
 		}
 		icon = "GFX_USA_early_bomber_medium"
@@ -718,7 +718,7 @@ if = {
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			engine_type_slot = engine_2_2x
+			engine_type_slot = engine_2_3x
 			special_type_slot_1 = flying_boat_medium
 			special_type_slot_2 = lmg_defense_turret
 		}
@@ -732,7 +732,7 @@ if = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
 			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
-			engine_type_slot = engine_2_2x
+			engine_type_slot = engine_2_3x
 			special_type_slot_1 = flying_boat_medium
 			special_type_slot_2 = lmg_defense_turret
 		}
@@ -742,7 +742,7 @@ if = {
 		name = "F4B" #also covers F2F
 		type = cv_small_plane_airframe_0
 		modules = {
-			fixed_main_weapon_slot = light_mg_2x
+			fixed_main_weapon_slot = light_mg_4x
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
@@ -753,7 +753,7 @@ if = {
 		name = "F3F" #
 		type = cv_small_plane_airframe_0
 		modules = {
-			fixed_main_weapon_slot = light_mg_2x
+			fixed_main_weapon_slot = light_mg_4x
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = empty
 		}
@@ -766,11 +766,11 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "M1 Combat Car"
-		type = light_tank_chassis_1
+		type = light_tank_chassis_2
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_two_man_tank_turret
+			turret_type_slot = tank_light_basic_tank_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
@@ -784,11 +784,11 @@ if = {
 	}
 	create_equipment_variant = { #Note: There is a copy of this variant in Finnish National Focus file (FIN_bring_foreign_armor_experts). Any changes here should also be applied there
 		name = "M2A2"
-		type = light_tank_chassis_1
+		type = light_tank_chassis_2
 		parent_version = 1
 		modules = {
 			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_one_man_tank_turret
+			turret_type_slot = tank_light_basic_tank_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
@@ -1173,7 +1173,7 @@ if = {
 			name = "F2A Buffalo" #
 			type = cv_small_plane_airframe_1
 			modules = {
-				fixed_main_weapon_slot = heavy_mg_4x
+				fixed_main_weapon_slot = light_mg_4x
 				engine_type_slot = engine_2_1x
 				special_type_slot_1 = empty
 			}
@@ -1201,7 +1201,7 @@ if = {
 			type = medium_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay
-				engine_type_slot = engine_2_2x
+				engine_type_slot = engine_2_3x
 				special_type_slot_1 = lmg_defense_turret
 			}
 			icon = "GFX_USA_tactical_bomber1_medium"
@@ -1223,8 +1223,8 @@ if = {
 			modules = {
 				fixed_main_weapon_slot = small_bomb_bay
 				fixed_auxiliary_weapon_slot_1 = small_bomb_bay
-				fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-				engine_type_slot = engine_2_2x
+				fixed_auxiliary_weapon_slot_2 = light_mg_4x
+				engine_type_slot = engine_2_3x
 				special_type_slot_1 = hmg_defense_turret
 			}
 			icon = "GFX_USA_CAS2_medium"
@@ -1235,7 +1235,7 @@ if = {
 			modules = {
 				fixed_main_weapon_slot = large_bomb_bay
 				fixed_auxiliary_weapon_slot_1 = large_bomb_bay
-				engine_type_slot = engine_3_4x
+				engine_type_slot = engine_3_6x
 				special_type_slot_1 = hmg_defense_turret_2x
 				special_type_slot_2 = hmg_defense_turret_2x
 				special_type_slot_3 = bomb_sights_1

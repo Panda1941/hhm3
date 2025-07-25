@@ -71,6 +71,18 @@
  modifier_production_speed_aluminium_refinery_factor:0 "§YAluminium Refinery§! construction speed"
  modifier_production_speed_advanced_steel_refinery_factor:0 "§YHeavy Metal Refinery§! construction speed"
 
+ steel_refinery:0 "Steel Refinery"
+ steel_refinery_desc:0 "This building provides the state with"
+ aluminium_refinery:0 "Aluminium Refinery"
+ aluminium_refinery_desc:0 "This building provides the state with"
+ advanced_steel_refinery:0 "Heavy Metal Refinery"
+ advanced_steel_refinery_desc:0 "This building provides the state with"
+
+ state_administration:0 "State Administration"
+ state_administration_desc:0 "A state administration building allows the state to function more efficiently, providing a few extra building slots."
+ conscription_center:0 "Conscription Center"
+ conscription_center_desc:0 "A conscription center allows the state to conscript more soldiers, providing some extra soldiers."
+
  tech_pioneers:0 "Pioneers"
  tech_ranger_recon:0 "Rangers"
 
@@ -584,6 +596,11 @@
  
  shock_troops:0"Assault Troops"
  shock_troops_desc:0"As it shows in history, you need a numerical advantage to win offensive battles. However, the best of the best have a different approach to this theory. Instead of strength by numbers, we have strength in skilled soldiers that can carry out the most daring assaults"
+ shock_troops2:0"Assault Troops II"
+ shock_troops2_desc:0"As it shows in history, you need a numerical advantage to win offensive battles. However, the best of the best have a different approach to this theory. Instead of strength by numbers, we have strength in skilled soldiers that can carry out the most daring assaults"
+ shock_troops3:0"Assault Troops III"
+ shock_troops3_desc:0"As it shows in history, you need a numerical advantage to win offensive battles. However, the best of the best have a different approach to this theory. Instead of strength by numbers, we have strength in skilled soldiers that can carry out the most daring assaults"
+
 
  jaegers:0"Jäger I"
  jaegers_desc:0"Jägers, or 'hunters,' are forces that specialize in surviving the wilderness of the boreal forest. Usually these troops are native to their territory and take a long time to train."
@@ -907,11 +924,6 @@
 
 
 
-
-
-
-
-
  tank_light_basic_tank_turret:0 "Basic Light tank Turret"
  tank_medium_basic_tank_turret:0 "Basic Medium tank Turret"
  tank_heavy_basic_tank_turret:0 "Basic Heavy tank Turret"
@@ -925,3 +937,6 @@
  tank_small_cannon_3:0 "Small Cannon 3"
  tank_auto_cannon_3:0 "Auto Cannon 3"
  tank_medium_cannon_3:0 "Medium Cannon 3"
+
+ improved_tank_modules:0 "Improved Tank Modules"
+ advanced_tank_modules:0 "Advancd Tank Modules"

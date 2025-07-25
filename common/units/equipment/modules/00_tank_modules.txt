@@ -1368,7 +1368,6 @@ equipment_modules = {
 		add_stats = {
 			reliability = -0.10
 			build_cost_ic = 2.5
-			breakthrough = 1
 		}
 		multiply_stats = {
 			soft_attack = 0.1
@@ -1417,7 +1416,7 @@ equipment_modules = {
 
 		add_stats = {
 			armor_value = 6
-			breakthrough = 3
+			breakthrough = 4
 			maximum_speed = -0.1
 			build_cost_ic = 1
 		}

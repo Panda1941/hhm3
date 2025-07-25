@@ -702,12 +702,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ENG_david_stirling
 
-			set_variable = {
-				var = special_forces_xp_to_add
-				value = 25
-				tooltip = add_positive_amount_of_special_forces_xp_tt
-			}
-			add_set_amount_of_special_forces_xp = yes
+			army_experience = 30
 		}
 	}
 
@@ -1218,17 +1213,11 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			army_experience = 10
+			army_experience = 40
 			navy_experience = 10
 			air_experience = 10
 			add_ideas = ENG_chiefs_of_staff_committee_idea
 
-			set_variable = {
-				var = special_forces_xp_to_add
-				value = 25
-				tooltip = add_positive_amount_of_special_forces_xp_tt
-			}
-			add_set_amount_of_special_forces_xp = yes
 		}
 	}
 	focus = {

@@ -182,7 +182,7 @@ NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always r
 		0.15,
 		0.12,
 		0.08,
-		0.00
+		0.03
 	}
 ------------------------------------------------------------------------------------------------------
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2
@@ -205,6 +205,9 @@ NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.030                   -- basic speed 
 -- Training accidents removed
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0
 NDefines.NNavy.ACCIDENTS_CHANCE_BALANCE_FACTOR = 0
+
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.5
+NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.7
 
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0
 NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 500
