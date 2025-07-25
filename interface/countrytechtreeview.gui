@@ -2088,7 +2088,7 @@ fade_time = 1
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1940"
+					text = "1939"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
@@ -2101,7 +2101,7 @@ fade_time = 1
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1944"
+					text = "1942"
 					maxWidth = 170
 					maxHeight = 32
 					format = left
