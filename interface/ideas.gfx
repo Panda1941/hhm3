@@ -7161,8 +7161,104 @@ spriteTypes = {
 		name = "GFX_idea_generic_democracy_banned"
 		texturefile = "gfx/interface/ideas/idea_generic_democracy_banned.dds"
 	}
+	####################################################################################new ideas
+	
+	spriteType = {
+		name = "GFX_idea_GER_cold"
+		texturefile = "gfx/interface/ideas/idea_GER_cold.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_barbarossa_idea_1"
+		texturefile = "gfx/interface/ideas/idea_GER_barbarossa_idea_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_barbarossa_idea_2"
+		texturefile = "gfx/interface/ideas/idea_GER_barbarossa_idea_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_blitzkrieg"
+		texturefile = "gfx/interface/ideas/idea_GER_blitzkrieg.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Blitzkrieg3"
+		texturefile = "gfx/interface/ideas/idea_Blitzkrieg3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Blitzkrieg1"
+		texturefile = "gfx/interface/ideas/idea_Blitzkrieg1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_winter_offensive"
+		texturefile = "gfx/interface/ideas/idea_SOV_winter_offensive.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HUN_agricultural_society"
+		texturefile = "gfx/interface/ideas/HUN/HUN_agrarian_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HUN_hungaro_german_trade_treaty"
+		texturefile = "gfx/interface/ideas/HUN/HUN_german_hungaro_trade.dds"
+	}
+	
+	####TANK DESIGNER
+	
+	
+	spriteType = {
+		name = "GFX_idea_daimler_benz"
+		texturefile = "gfx/interface/ideas/idea_daimler_benz.dds"
+	}
+	
 
+    ######################rom#########################
+    spriteType = {
+		name = "GFX_idea_ROM_the_resource_curse"
+		texturefile = "gfx/interface/ideas/ROM/ROM_the_resource_curse.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_trade_treaty_with_germany"
+		texturefile = "gfx/interface/ideas/GER/ROM_ger_trade_deal.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_agricultural_economy"
+		texturefile = "gfx/interface/ideas/ROM/ROM_agricultural_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_waning_influence_of_democracy"
+		texturefile = "gfx/interface/ideas/ROM/ROM_waning_influence_of_democracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ROM_violent_paramilitary_groups"
+		texturefile = "gfx/interface/ideas/ROM/ROM_violent_paramilitary_groups.dds"
+	}	
 
+	spriteType = {
+		name = "GFX_idea_ROM_corruption_in_the_army"
+		texturefile = "gfx/interface/ideas/ROM/ROM_corruption_in_the_army.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_reichswerke_hermann_goring"
+		texturefile = "gfx/interface/ideas/reichswerke.dds"
+	}
+	#####################med and asia###########
+	
+	spriteType = {
+		name = "GFX_idea_ita_state_med"
+		texturefile = "gfx/interface/ideas/idea_ita_state_med.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Fate_Of_Med"
+		textureFile = "gfx/interface/ideas/Fate_Of_Med.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_jap_island_hopping"
+		textureFile = "gfx/interface/ideas/ideas_jap_island_hopping.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_usa_island_hopping"
+		textureFile = "gfx/interface/ideas/ideas_usa_island_hopping.dds"
+	}
 	
 		#####  ##    ##  #####
 		  #   #  #  #  #   #
