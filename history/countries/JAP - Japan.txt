@@ -9,34 +9,16 @@ set_fuel_ratio = 1.0
 
 # Starting Ideas
 add_ideas = {
-
-	# Laws
+	state_shintoism
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-
-	# National Spirits
-	state_shintoism
+    JAP_island_hopping8
 	JAP_zaibatsus
 	JAP_duplicate_research_efforts
 	JAP_militarism
-
 }
 
-IF = {
-	limit = { has_dlc = "Waking the Tiger" }
-	add_ideas = {
-		JAP_interservice_rivalry_balanced		
-	}
-}
-IF = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
-}
-
-# Setup Reisstance and Compliance
 609 = {
 	start_resistance = yes
 	set_compliance = 5
@@ -93,6 +75,13 @@ IF = {
 	set_garrison_strength = 1.0
 }
 
+if = {
+	limit = { has_dlc = "Waking the Tiger" }
+	add_ideas = {
+		JAP_interservice_rivalry_balanced		
+	}
+}
+
 
 ### Starting Technology ###
 
@@ -106,12 +95,14 @@ set_technology = {
 	motorised_infantry = 1
 	marines  = 1
 	gw_artillery = 1
+	interwar_antiair = 1
 	basic_train = 1
 	trench_warfare = 1
 	base_strike = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
+	grand_battleplan_overall = 1
 }
 
 complete_special_project = {
@@ -461,7 +452,7 @@ create_import = {
 	}
 }
 
-set_convoys = 400
+set_convoys = 900
 
 # No more ifs needed due to integration of Tfv and Wtt :0 
 set_autonomy = {

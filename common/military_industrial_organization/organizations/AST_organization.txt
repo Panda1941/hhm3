@@ -13,7 +13,16 @@ AST_new_south_wales_rc_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_new_south_wales_rc
 	allowed = {
-		original_TAG = AST
+		OR = {
+			
+			original_TAG = ENG
+			original_tag = CAN
+			original_tag = SAF
+			original_tag = BRA
+			original_tag = RAJ
+			original_tag = AST
+			original_tag = NZL
+		}
 		has_dlc = "Together for Victory"
 	}
 }
@@ -37,7 +46,6 @@ AST_cockatoo_doe_organization = {
 		has_dlc = "Together for Victory"
 	}
 	available = {
-		owner = { has_completed_focus = AST_cockatoo_island_shipyards}
 	}
 }
 AST_evans_deakin_co_organization = {
@@ -49,7 +57,6 @@ AST_evans_deakin_co_organization = {
 		has_dlc = "Together for Victory"
 	}
 	available = {
-		owner = { has_completed_focus = AST_kangaroo_point_shipyards}
 	}
 }
 
@@ -63,22 +70,6 @@ AST_evans_deakin_co_organization = {
 #    ### #  # #  # ### ##  
 
 ###########################
-
-AST_com_aircraft_corporation_organization = {
-	name = AST_com_aircraft_corporation_organization
-	include = generic_light_aircraft_organization
-	icon = GFX_idea_com_aircraft_corporation
-	allowed = {
-		original_TAG = AST
-		has_dlc = "Together for Victory"
-	}
-	available = {
-		owner = {
-			has_completed_focus = AST_commonwealth_aircraft_corporation
-			is_subject_of = ENG 
-		}
-	}
-}
 
 
 

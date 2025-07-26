@@ -28,61 +28,7 @@ IF = {
 	}
 	set_country_flag = BRA_toa_DLC
 
-
-	add_ideas = {
-		SMB_MTG_naval_arms_race_legacy
-	}
-
 	add_ideas = BRA_separatism_idea
-
-	every_owned_state = {
-		limit = {
-			OR = {
-				has_state_category = wasteland
-				has_state_category = pastoral
-				has_state_category = rural
-				#TODO_JUNO: Check states below are correct after map changes implemented
-				state = 498
-				state = 499
-			}
-			NOT = {
-				state = 961
-				state = 962
-				state = 963
-				state = 964
-				state = 965
-				state = 966
-				state = 967
-				state = 968
-				state = 496
-			}
-		}
-
-		# Neglected State Modifier
-		set_variable = { BRA_state_development_production_speed = -0.4 }
-		set_variable = { BRA_state_development_local_building_slots_factor = -0.4 }
-		set_variable = { BRA_state_development_local_factories = -0.4 }
-		set_variable = { BRA_state_development_state_resources_factor = -0.4 }
-
-		add_dynamic_modifier = {
-			modifier = BRA_neglected_state_dynamic_modifier
-		}
-	}
-
-	every_owned_state = {
-		limit = {
-			OR = {
-				state = 498
-				state = 499
-				state = 935
-				state = 936
-				state = 937
-			}
-		}
-		add_dynamic_modifier = {
-			modifier = BRA_cangaceiro_state
-		}
-	}
 
 	JUNO_set_shared_military_branch_defaults = yes
 
@@ -176,7 +122,6 @@ IF = {
 	}
 	#Political
 	recruit_character = BRA_armando_de_sales_oliveira
-	recruit_character = BRA_domingos_bras
 	recruit_character = BRA_jose_linhares
 	recruit_character = BRA_benedito_valadres
 	recruit_character = BRA_alfred_agache
@@ -193,16 +138,9 @@ IF = {
 	recruit_character = BRA_pedro_de_alcantara
 	recruit_character = BRA_alianca_nacional_libertadora_council
 	recruit_character = BRA_minervino_de_oliveira
-	recruit_character = BRA_olga_benario_prestes
-	recruit_character = BRA_apolonio_de_carvalho
 	recruit_character = BRA_war_industrialist
 	recruit_character = BRA_captain_of_industry
-	recruit_character = BRA_leoncio_basbaum
-	recruit_character = BRA_geremia_lunarelli
 	recruit_character = BRA_henry_ford
-	recruit_character = BRA_gustavo_barroso
-	recruit_character = BRA_miguel_reale
-	recruit_character = BRA_oliveria_viana
 	#Army
 	recruit_character = BRA_augusto_fragoso
 	recruit_character = BRA_alvaro_de_castro
@@ -327,7 +265,6 @@ recruit_character = BRA_ismael_motta_paes
 recruit_character = BRA_jorge_martins
 recruit_character = BRA_newton_cavalcanti
 recruit_character = BRA_afranio_de_mello_franco
-recruit_character = BRA_washington_luis_pereira
 recruit_character = BRA_osvaldo_aranha
 recruit_character = BRA_arlindo_veiga_dos_santos
 recruit_character = BRA_random_army_chief

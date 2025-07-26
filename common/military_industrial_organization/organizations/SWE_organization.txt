@@ -15,14 +15,6 @@ SWE_landsverk_organization = {
 	allowed = { 
 		OR = {
 			tag = SWE 
-			AND = {
-				tag = ETH
-				has_dlc = "By Blood Alone"
-			}
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
 		}
 	}
 
@@ -109,10 +101,6 @@ SWE_gotaverken_organization = {
 	allowed = {
 		OR = {
 			tag = SWE
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
 		}
 	}
 	available = {
@@ -164,10 +152,6 @@ SWE_saab_organization = {
 	allowed = { 
 		OR = {
 			tag = SWE
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
 		}
 	}
 
@@ -296,10 +280,6 @@ SWE_scania_vabis_organization = {
 		has_dlc = "La Resistance"
 		OR = {
 			tag = SWE
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
 		}
 	}
 	available = {

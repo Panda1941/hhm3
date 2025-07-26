@@ -112,7 +112,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ logistics_wizard offensive_doctrine }
+			traits={ logistics_wizard offensive_doctrine cavalry_leader }
 			skill=4
 			attack_skill=4
 			defense_skill=4
@@ -131,8 +131,8 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ hill_fighter }
-			skill=3
+			traits={ hill_fighter commando }
+			skill=4
 			attack_skill=2
 			defense_skill=3
 			planning_skill=3
@@ -214,7 +214,7 @@ characters={
 		}
 
 		corps_commander={
-			traits={ infantry_expert }
+			traits={ infantry_expert infantry_officer infantry_leader }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -252,7 +252,7 @@ characters={
 		}
 		
 		field_marshal={
-			traits={ offensive_doctrine }
+			traits={ offensive_doctrine organizer hill_fighter }
 			skill=4
 			attack_skill=4
 			defense_skill=4
@@ -399,10 +399,11 @@ characters={
 		}
 
 		corps_commander={
-			skill=3
-			attack_skill=3
+		    traits={ trickster organizer cavalry_leader panzer_leader }
+			skill=4
+			attack_skill=4
 			defense_skill=2
-			planning_skill=2
+			planning_skill=3
 			logistics_skill=3
 			legacy_id=-1
 		}
@@ -447,7 +448,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				air_strategic_bombing_2
+				army_concealment_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -471,7 +472,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				air_airborne_2
+				army_logistics_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -602,7 +603,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				backroom_backstabber 
+				war_industrialist 
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -625,7 +626,7 @@ characters={
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = ROM_appoint_german_friendly_government
+					has_completed_focus = ROM_elections_of_1937 
 				}
 				if = {
 					limit = {

@@ -80,18 +80,6 @@ SOV_morozov_design_bureau_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV
-			AND = {
-				tag = MEX 
-				has_dlc = "Man the Guns"
-			}
-			AND = {
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-				} 
-				has_dlc = "Waking the Tiger"
-			}
-			NOR_AAT = yes
 		}
 	}
 
@@ -369,10 +357,6 @@ SOV_okmo_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV 
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
 		}
 	}
 
@@ -528,10 +512,6 @@ SOV_mytishchy_machine_building_plant_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
 		}
 	}
 
@@ -671,10 +651,6 @@ SOV_kirov_organization = {
 	allowed = {	
 		OR = {
 			original_tag = SOV
-			AND = {
-				tag = BEL
-				has_dlc = "Gotterdammerung"
-			}
 		}
 	}
 
@@ -834,10 +810,6 @@ SOV_nevskoye_design_bureau_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV 
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
 		}
 	}
 	
@@ -997,19 +969,6 @@ SOV_rubin_design_bureau_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-			AND = {
-				tag = ARG
-				has_dlc = "Trial of Allegiance"
-			}
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			NOR_AAT = yes
 		}
 	}
 
@@ -1573,18 +1532,6 @@ SOV_mig_design_bureau_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-			AND = {
-				tag = ARG
-				has_dlc = "Trial of Allegiance" 
-			}
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance" #TODO MH Change DLC
-			}
 		}
 	}
 	
@@ -1761,10 +1708,6 @@ SOV_ilyushin_design_bureau_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV 
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
 		}
 	}
 	
@@ -2296,10 +2239,6 @@ SOV_grabin_design_bureau_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV 
-			AND = {
-				tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
 		}
 	}
 	
@@ -2572,27 +2511,6 @@ SOV_gaz_organization = {
 	allowed = {	
 		OR = {
 			tag = SOV 
-			AND = {
-				tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-			AND = {
-				tag = ARG
-				has_dlc = "Trial of Allegiance" #TODO_Eildih fix DLC
-			}
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance" #TODO MH fix DLC
-			}
-			AND = {
-				tag = AFG
-				has_dlc = "Graveyard of Empires"
-			}
-			NOR_AAT = yes
 		}
 	}
 

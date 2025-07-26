@@ -81,12 +81,49 @@ characters={
 			}
 		}
 		corps_commander={
+		traits={ commando infantry_leader  }
 			skill=4
 			attack_skill=2
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=5
 			legacy_id=-1
+		}
+	}
+
+	CAN_generic_general_1 = {
+		name="Aidan Robins"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_1"
+				small="GFX_Portrait_Europe_Generic_land_1_small"
+			}
+		}
+		corps_commander={
+			traits={ panzer_leader panzer_expert trait_engineer }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+		}
+	}
+
+	CAN_generic_general_2 = {
+		name="Brandon Till"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+				small="GFX_Portrait_Europe_Generic_land_2_small"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_leader offensive_doctrine organizer }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
 		}
 	}
 
@@ -99,6 +136,7 @@ characters={
 			}
 		}
 		field_marshal={
+			traits={ trickster infantry_officer armor_officer organizer panzer_leader }
 			skill=4
 			attack_skill=4
 			defense_skill=2
@@ -135,7 +173,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ hill_fighter }
+			traits={ hill_fighter infantry_officer }
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -434,7 +472,7 @@ characters={
 				has_dlc = "Together for Victory"
 			}
 			traits = {
-				navy_anti_submarine_2
+				army_CombinedArms_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -460,7 +498,7 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				air_air_superiority_2
+				army_logistics_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -910,7 +948,6 @@ characters={
 				has_dlc = "Together for Victory"
 			}
 			available = {
-				has_completed_focus = CAN_forced_quebec_conscription 
 			}
 			traits = {
 				compassionate_gentleman 

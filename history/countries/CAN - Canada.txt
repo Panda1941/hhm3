@@ -81,12 +81,10 @@ recruit_character = CAN_leo_richer_lafleche
 recruit_character = CAN_r_b_bennett
 recruit_character = CAN_louis_st_laurent
 recruit_character = CAN_lindsay_gordon
+recruit_character = CAN_first_nations_council
+recruit_character = CAN_generic_general_1
+recruit_character = CAN_generic_general_2
 
-IF = {
-	limit = {
-		has_dlc = "Trial of Allegiance"
-	}
-	recruit_character = CAN_first_nations_council
 }
 
 # Starting tech
@@ -162,7 +160,6 @@ if = {
 if = {
 	limit = { has_dlc = "Together for Victory" }
 	add_ideas = CAN_great_depression_1
-	add_ideas = CAN_conscription_crisis
 	set_cosmetic_tag = CAN_UK
 
 	add_to_tech_sharing_group = commonwealth_research

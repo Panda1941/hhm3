@@ -612,7 +612,7 @@ characters={
 				original_tag = AST
 			}
 			traits = {
-				quartermaster_general 
+				captain_of_industry 
 			}
 		}		
 	}
@@ -655,7 +655,6 @@ characters={
 				smooth_talking_charmer 
 			}
 			available = {
-				has_completed_focus = AST_never_another_gallipoli 
 			}
 		}		
 	}
@@ -678,12 +677,6 @@ characters={
 				silent_workhorse 
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_support_the_policy_of_appeasement 
-				}
 			}
 		}		
 	}

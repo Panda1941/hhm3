@@ -89,6 +89,7 @@ set_technology = {
 	tech_trucks = 1
 	motorised_infantry = 1
 	gw_artillery = 1
+	tech_mountaineers = 1
 	interwar_antiair = 1
 	basic_train = 1
 	trench_warfare = 1
@@ -97,6 +98,8 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	interwar_antitank = 1
+	grand_battleplan_overall = 1
 }
 
 complete_special_project = {
@@ -184,9 +187,7 @@ if = {
 		basic_fire_control_system = 1
 		basic_dp_light_battery = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
 	set_global_flag = MTG_second_london_conference
-	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
 }
 
 if = {
@@ -201,13 +202,14 @@ if = {
 set_variable = { var = eng_gateway_to_europe_influence value = 0 }
 
 add_ideas = {
+	free_trade
 	stiff_upper_lip
 	ENG_the_war_to_end_all_wars
 	george_v
 }
 	
 
-set_convoys = 1000
+set_convoys = 1200
 
 # DIPLOMACY
 if = {
@@ -228,6 +230,11 @@ if = {
 	}
 	set_autonomy = {
 		target = CAN
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = BRA
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.4
 	}
@@ -502,11 +509,12 @@ set_popularities = {
 
 create_faction = Allies
 add_to_faction = ENG
-#add_to_faction = FRA
+add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
 add_to_faction = NZL
 add_to_faction = SAF
+add_to_faction = BRA
 
 give_military_access = RAJ
 add_to_faction = RAJ		# Must be after puppet

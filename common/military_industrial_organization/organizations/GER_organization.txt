@@ -31,6 +31,12 @@ GER_porsche_organization = {
 				has_dlc = "Graveyard of Empires"
 			}
 			NOR_AAT = yes
+
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+			original_tag = SPR
+			original_tag = ITA
 		}
 	}
 
@@ -41,6 +47,7 @@ GER_porsche_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
 
 		IF = {
@@ -264,10 +271,6 @@ GER_henschel_organization = {
 		OR = {
 			original_tag = GER 
 			AND = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
 				original_tag = ETH
 				has_dlc = "By Blood Alone"
 			}
@@ -276,6 +279,12 @@ GER_henschel_organization = {
 				has_dlc = "Graveyard of Empires"
 				has_dlc = "Arms Against Tyranny"
 			}
+
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+			original_tag = SPR
+			original_tag = ITA
 		}
 	}
 	
@@ -297,33 +306,7 @@ GER_henschel_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
-		}
-
-		IF = {
-			limit = { 
-				OR = { 
-					FROM = { original_tag = BUL }
-					FROM = { original_tag = ETH } 
-				} 
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_henschel_mio_flag
-				}
-			}
-			
-		}
-		IF = {
-			limit = { FROM = { original_tag = BUL } } 
-			FROM = { 
-				OR = {
-					is_subject = no
-					is_subject_of = GER
-				}
-				#is_in_faction_with = GER
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
+			FROM = { is_in_faction_with = GER }
 		}
 		IF = {
 			limit = { FROM = { original_tag = PER } }
@@ -515,6 +498,11 @@ GER_man_organization = {
 				original_tag = GRE
 				has_dlc = "Battle for the Bosporus"
 			}
+
+			original_tag = ROM
+			original_tag = BUL
+			original_tag = SPR
+			original_tag = ITA
 		}
 	}
 	
@@ -525,6 +513,7 @@ GER_man_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
 	}
 
@@ -665,7 +654,25 @@ GER_alkett_organization = {
 	icon = GFX_idea_GER_alkett
 	
 	allowed = {	
-		original_tag = GER 
+		OR = {
+			original_tag = GER 
+
+			original_tag = BUL
+			original_tag = SPR
+			original_tag = ITA
+			original_tag = ROM
+		}
+	}
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
+		}
 	}
 
 	tree_header_text = {
@@ -836,14 +843,11 @@ GER_daimler_benz_organization = {
 	allowed = {	
 		OR = {
 			original_tag = GER 
-			AND = {
-				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			AND = {
-				original_tag = BEL
-				has_dlc = "Gotterdammerung"
-			}
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+			original_tag = SPR
+			original_tag = ITA
 		}
 	}
 
@@ -853,27 +857,7 @@ GER_daimler_benz_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
-		}
-		IF = {
-			limit = {
-				FROM = {
-					original_tag = BRA
-				}
-			}
-			FROM = {
-				has_completed_focus = BRA_german_tanks
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					original_tag = BEL
-				}
-			}
-			FROM = {
-				has_completed_focus = BEL_invite_german_tank_organization
-			}
+			FROM = { is_in_faction_with = GER }
 		}
 	}
 
@@ -1817,6 +1801,7 @@ GER_messerschmitt_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
 		
 		if = {
@@ -1997,6 +1982,7 @@ GER_junkers_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
 
 		IF = {
@@ -2361,6 +2347,7 @@ GER_heinkel_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
 
 		IF = {
@@ -2978,14 +2965,6 @@ GER_rheinmetall_organization = {
 	allowed = {	
 		OR = {
 			original_tag = GER 
-			AND = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = HUN
-				has_dlc = "Gotterdammerung"
-			}
 		}
 	}
 
@@ -2996,13 +2975,7 @@ GER_rheinmetall_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = HUN } }
-			FROM = { has_completed_focus = wuw_HUN_seek_german_contracts }
+			FROM = { is_in_faction_with = GER }
 		}
 	}
 
@@ -3158,6 +3131,7 @@ GER_mauser_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
 
 		IF = {
@@ -3289,14 +3263,7 @@ GER_opel_organization = {
 	allowed = {	
 		OR = {
 			original_tag = GER
-			AND = {
-				original_tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			AND = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
+			original_tag = BUL
 		}
 	}
 	
@@ -3307,29 +3274,8 @@ GER_opel_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+			FROM = { is_in_faction_with = GER }
 		}
-
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_opel_mio_flag
-				}
-			}
-			FROM = { 
-				OR = {
-					is_subject = no
-					is_subject_of = GER
-				}
-				#is_in_faction_with = GER
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = ROM } }
-			FROM = { has_country_flag = GER_mot_chosen }
-		}	
 	}
 
 	add_trait = {
@@ -3443,7 +3389,12 @@ GER_carl_walther_organization = {
 	icon = GFX_idea_GER_carl_walther
 	
 	allowed = {	
-		original_tag = GER 
+		OR = {
+			original_tag = GER 
+			
+			original_tag = ROM
+			original_tag = BUL
+		}
 	}
 
 	add_trait = {
@@ -3500,7 +3451,15 @@ GER_auto_union_organization = {
 	icon = GFX_idea_GER_auto_union
 	
 	allowed = {	
-		original_tag = GER 
+		OR = {
+			original_tag = GER 
+
+			original_tag = ROM
+			original_tag = BUL
+			original_tag = SPR
+			original_tag = ITA
+			original_tag = HUN
+		}
 	}
 
 	add_trait = {

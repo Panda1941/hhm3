@@ -193,11 +193,7 @@ characters={
 					has_dlc = "Trial of Allegiance"
 				}
 				available = {
-					OR = { 
-						has_completed_focus = BRA_posts_for_generals 
-						has_completed_focus = BRA_issue_lordships
-					}
-					is_country_leader = no
+					is_country_leader = NO
 				}
 				traits = {
 					BRA_minister_of_defense
@@ -423,7 +419,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				army_chief_drill_2
+				army_chief_offensive_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -571,7 +567,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				air_air_combat_training_2
+				army_commando_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -595,7 +591,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				navy_naval_air_defense_2
+				army_logistics_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -643,7 +639,7 @@ characters={
 				original_tag = BRA
 			}
 			traits = {
-				air_air_superiority_2
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1027,7 +1023,6 @@ characters={
 			}
 			available  = {
 				has_government = democratic
-				has_completed_focus = BRA_free_speech
 			}
 			traits  = {
 				BRA_anti_authoritarian
@@ -1050,7 +1045,6 @@ characters={
 			}
 			available  = {
 				has_government = democratic
-				has_completed_focus = BRA_free_speech
 			}
 			traits  = {
 				BRA_academic_writer
@@ -1082,7 +1076,6 @@ characters={
 			}
 			available  = {
 				has_government = democratic
-				has_completed_focus = BRA_free_speech
 				is_country_leader = no
 			}
 			traits  = {
@@ -1112,7 +1105,6 @@ characters={
 			}
 			available  = {
 				has_government = democratic
-				has_completed_focus = BRA_free_speech
 				is_country_leader = no
 			}
 			traits  = {
@@ -1568,7 +1560,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ }
+			traits={ cavalry_leader }
 			skill=2
 			attack_skill=1
 			defense_skill=1
@@ -1606,7 +1598,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ }
+			traits={ panzer_leader organizer }
 			skill=2
 			attack_skill=2
 			defense_skill=2

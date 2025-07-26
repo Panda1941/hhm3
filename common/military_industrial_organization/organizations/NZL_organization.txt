@@ -23,7 +23,16 @@ NZL_christchurch_workshops_organization = {
 	name = NZL_christchurch_workshops_organization
 	icon = GFX_idea_NZL_christchurch_workshops
 	allowed = {
-		original_TAG = NZL
+		OR = {
+			original_TAG = ENG
+			original_tag = CAN
+			original_tag = FRA
+			original_tag = SAF
+			original_tag = BRA
+			original_tag = AST
+			original_tag = NZL
+			original_tag = USA
+		}
 		has_dlc = "Together for Victory"
 	}
 }

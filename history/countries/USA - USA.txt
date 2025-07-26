@@ -79,6 +79,7 @@ set_technology = {
 	marines = 1
 	basic_train = 1
 	engine_tech_1 = 1
+	superior_firepower_overall = 1
 }
 
 add_breakthrough_progress = {
@@ -159,7 +160,6 @@ if = {
 		improved_airplane_launcher = 1
 		basic_dp_light_battery = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
 }
 ##Monroe Doctrine - We are trying to just remove the dlc check and see what, if any, things break. Will ask QA and BETAs to test new system both with and without ToA
 #IF = {
@@ -360,8 +360,7 @@ if = {
 
 
 
-
-set_convoys = 700
+set_convoys = 500
 
 
 set_politics = {
@@ -381,6 +380,7 @@ add_ideas = {
 	disarmed_nation
 	free_trade
 	home_of_the_free
+	USA_island_hopping8
 }
 
 
@@ -399,7 +399,6 @@ set_autonomy = {
 	}
 }
 
-recruit_character = USA_earl_browder
 recruit_character = USA_william_dudley_pelley
 recruit_character = USA_franklin_delano_roosevelt
 recruit_character = USA_george_s_patton
@@ -455,14 +454,12 @@ recruit_character = USA_william_donovan
 recruit_character = USA_whittaker_chambers
 recruit_character = USA_robert_taft
 recruit_character = USA_donald_nelson
-recruit_character = USA_joseph_mccarthy
 recruit_character = USA_cordell_hull
 recruit_character = USA_harold_ickes
 recruit_character = USA_william_regnery
 recruit_character = USA_joseph_patterson
 recruit_character = USA_henry_stimson
 recruit_character = USA_victor_perlo
-recruit_character = USA_charles_coughlin
 recruit_character = USA_harry_white
 recruit_character = USA_native_american_council
 recruit_character = USA_leslie_skinner

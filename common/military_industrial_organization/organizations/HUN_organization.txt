@@ -18,19 +18,6 @@
  	}
  	
  	available = {
- 		IF = {
- 			limit = {
- 				has_dlc = "Gotterdammerung"
- 			}
- 			FROM = {
- 				has_completed_focus = wuw_HUN_the_turan
- 			}
- 		}
- 		ELSE = {
- 			FROM = {
- 				has_completed_focus = HUN_develop_tanks
- 			}
- 		}
  	}
  }
 
@@ -44,19 +31,6 @@
  	}
  	
  	available = {
- 		IF = {
- 			limit = {
- 				has_dlc = "Gotterdammerung"
- 			}
- 			FROM = {
- 				has_completed_focus = wuw_HUN_establish_the_mavag_army_division
- 			}
- 		}
- 		ELSE = {
- 			FROM = {
- 				has_completed_focus = HUN_assault_gun_focus
- 			}
- 		}
  	}
  }
 
@@ -70,16 +44,6 @@
  	}
 
  	visible = {
- 		IF = {
- 			limit = {
- 				FROM = {
- 					original_tag = HUN
- 				}
- 			}
- 			FROM = {
- 				has_completed_focus = wuw_HUN_license_fiat_tankettes
- 			}
- 		}
  	}
  	
  	available = {
@@ -89,39 +53,6 @@
  				FROM = { NOT = { original_tag = ITA } }
  			}
  			FROM = { NOT = { has_war_with = ITA } }
- 		}
- 	}
- }
-
- HUN_henschel_organization = {
- 	include = generic_heavy_tank_organization
- 	icon = GFX_idea_henschel
- 	
- 	allowed = {	
- 		original_tag = HUN 
- 		has_dlc = "Arms Against Tyranny"
- 	}
-
- 	visible = {
- 		IF = {
- 			limit = {
- 				FROM = {
- 					original_tag = HUN
- 				}
- 			}
- 			FROM = {
- 				has_completed_focus = wuw_HUN_seek_german_contracts
- 			}
- 		}
- 	}
- 	
- 	available = {
- 		# When in a Foreign MIO, countries need to be at peace with original country
- 		IF = {
- 			limit = {
- 				FROM = { NOT = { original_tag = GER } }
- 			}
- 			FROM = { NOT = { has_war_with = GER } }
  		}
  	}
  }
@@ -205,75 +136,6 @@ HUN_obudai_hajogyar_organization = {
 
 ###########################
 
-HUN_mw_aircraft_organization = {
-	include = generic_light_aircraft_organization
-	icon = GFX_idea_mw_aircraft
-	allowed = { 
-		original_tag = HUN
-		has_dlc = "Arms Against Tyranny"
-	}
-
-	available = {
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			FROM = {
-				has_completed_focus = wuw_HUN_the_matyasfold_fighter_factory
-			}
-		}
-		ELSE = {
-			FROM = {
-				has_completed_focus = HUN_establish_the_air_force
-			}
-		}
-	}
-}
-
-HUN_mavag_aircraft_organization = {
-	include = generic_range_focused_aircraft_organization
-	icon = GFX_idea_HUN_mavag_aircraft
-	allowed = { 
-		original_tag = HUN
-		has_dlc = "Arms Against Tyranny"
-		has_dlc = "Gotterdammerung"
-	}
-
-	available = {
-		FROM = {
-			has_completed_focus = wuw_HUN_establish_the_mavag_aircraft_factory
-		}
-	}
-}
-
-HUN_mrt_aircraft_organization = {
-	include = generic_multi_role_aircraft_organization
-	icon = GFX_idea_HUN_mrt_aircraft
-	allowed = { 
-		original_tag = HUN
-		has_dlc = "Arms Against Tyranny"
-	}
-
-	initial_trait = {
-		name = HUN_mio_trait_aircraft_production_plant
-		
-		limit_to_equipment_type = { 
-			mio_cat_eq_all_small_plane
-			mio_cat_eq_all_medium_plane
-			mio_cat_eq_all_large_plane
-		}
-		
-		equipment_bonus = {
-			
-		}
-
-		production_bonus = {
-			production_cost_factor = -0.05
-			production_resource_need_factor = -0.1
-			production_capacity_factor = 0.05
-		}
-	}
-}
 
 ################################### 
 
@@ -304,19 +166,6 @@ HUN_danuvia_inf_organization = {
 	}
 
 	available = {
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			FROM = {
-				has_completed_focus = wuw_HUN_danuvia_submachine_guns
-			}
-		}
-		ELSE = {
-			FROM = {
-				has_completed_focus = HUN_danuvia_submachine_guns
-			}
-		}
 	}
 
 	initial_trait = {
