@@ -1869,9 +1869,6 @@ technologies = {
 		enable_equipments = {
 			motorized_rocket_equipment_1
 		}
-		dependencies = {
-			rocket_artillery = 1
-		}
 
 		research_cost = 1.5
 		start_year = 1939

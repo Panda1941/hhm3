@@ -19,6 +19,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_tank_destroyers
 		}
 
 		combat_width = 0
@@ -69,6 +70,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_tank_destroyers
 		}
 
 
@@ -117,6 +119,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_tank_destroyers
 		}
 
 		combat_width = 0
@@ -162,6 +165,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_tank_destroyers
 		}
 
 		combat_width = 0
@@ -208,6 +212,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_tank_destroyers
 		}
 
 		combat_width = 0

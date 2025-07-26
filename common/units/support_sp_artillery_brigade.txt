@@ -19,6 +19,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}	
 
 		combat_width = 0
@@ -68,6 +69,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}	
 		combat_width = 0
 
@@ -113,6 +115,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}
 
 		combat_width = 0
@@ -157,6 +160,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}
 		
 
@@ -203,6 +207,7 @@ sub_units = {
 			category_support_battalions
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}
 
 		combat_width = 0
