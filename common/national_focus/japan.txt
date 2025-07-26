@@ -2269,12 +2269,19 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+
 			add_tech_bonus = {
 				name = JAP_jet_prototypes
 				bonus = 1.0
-				uses = 2
+				uses = 1 # was 2
 				category = jet_technology
 			}
+
 		}
 	}
 
@@ -2644,7 +2651,7 @@
 		}
 
 		available = {
-
+			is_special_project_completed = sp:sp_naval_super_heavy_battleship
 		}
 
 		bypass = {
@@ -2660,6 +2667,12 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+
 			if = {
 				limit = {
 					not = { has_dlc = "Man the Guns" }
@@ -2672,14 +2685,14 @@
 				}
 			}
 			else = {
-				if = {
-					limit = {
-						not = { has_tech = ship_hull_super_heavy }
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
+				#if = {
+					#limit = {
+						#not = { has_tech = ship_hull_super_heavy }
+					#}
+					#set_technology = {
+						#ship_hull_super_heavy = 1
+					#}
+				#}
 				create_equipment_variant = {
 					name = "Yamato Class"
 					type = ship_hull_super_heavy_1
@@ -2804,8 +2817,11 @@
 
 	focus = {
 		id = JAP_torpedo_cruisers
+
 		icon = GFX_goal_generic_navy_cruiser
+
 		prerequisite = { focus = JAP_long_lance_torpedoes }
+
 		x = 0
 		y = 1
 		relative_position_id = JAP_long_lance_torpedoes
@@ -2829,16 +2845,27 @@
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
+
 		completion_reward = {
-			if = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.75
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
 				limit = {
-					not = { has_dlc = "Man the Guns" }
+					has_dlc = "Man the Guns"
 				}
-				set_technology = { torpedo_cruiser = 1 }
+				add_ideas = torpedo_cruisers_ns_mtg
 			}
-			else = {
-				set_technology = { torpedo_cruiser_mtg = 1 }
+			ELSE = {
+				add_ideas = torpedo_cruisers_ns
 			}
+			
 		}
 	}
+
 }
