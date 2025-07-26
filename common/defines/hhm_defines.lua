@@ -50,6 +50,8 @@ NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free 
 NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = -0.25				-- base MIC speed modifier for licensed equipment
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
 
+NDefines.NProject.RECRUIT_SCIENTIST_COST = {25, 25, 25, 25} 
+
 -- Slots
 NDefines.NBuildings.MAX_SHARED_SLOTS = 99
 
