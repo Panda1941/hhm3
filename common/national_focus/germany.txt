@@ -2149,7 +2149,6 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			has_tech = oil_processing
 		}
 
 		continue_if_invalid = yes
@@ -2244,7 +2243,6 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			has_tech = rubber_processing
 		}
 
 		continue_if_invalid = yes

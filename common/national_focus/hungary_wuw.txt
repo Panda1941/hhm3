@@ -5727,7 +5727,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				has_tech = basic_medium_tank_chassis
+				has_tech = gwtank_chassis
 			}
 			ELSE_IF = {
 				limit = {
@@ -5760,7 +5760,7 @@ focus_tree = {
 				}
 				IF = {
 					limit = {
-						has_tech = improved_medium_tank_chassis
+						has_tech = improved_tank_modules
 					}
 					#40M Turán
 					create_equipment_variant = {
@@ -5810,7 +5810,7 @@ focus_tree = {
 				}
 				IF = {
 					limit = {
-						has_tech = advanced_medium_tank_chassis
+						has_tech = advanced_tank_modules
 					}
 					#43M Turán III
 					create_equipment_variant = {
@@ -5934,7 +5934,7 @@ focus_tree = {
 				}
 				IF = {
 					limit = {
-						has_tech = advanced_medium_tank_chassis
+						has_tech = advanced_tank_modules
 					}
 					# 43M Zrínyi
 					create_equipment_variant = {
@@ -5980,7 +5980,7 @@ focus_tree = {
 				}
 				IF = {
 					limit = {
-						has_tech = improved_medium_tank_chassis
+						has_tech = improved_tank_modules
 					}
 					# 40M Nimród
 					create_equipment_variant = {
@@ -6084,7 +6084,7 @@ focus_tree = {
 				}
 				IF = {
 					limit = {
-						has_tech = improved_light_tank_chassis
+						has_tech = improved_tank_modules
 					}
 					#38M Toldi
 					create_equipment_variant = {
