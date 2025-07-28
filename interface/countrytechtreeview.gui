@@ -267,6 +267,14 @@ fade_time = 1
 			}
 
 			gridboxtype = {
+				name = "juggle_guns_tree"
+				position = { x = 1300 y = 350 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
 				name = "infantry_weapons_tree"
 				position = { x = 140 y = 325 }
 				slotsize = { width = 70 height = 70 }
@@ -526,6 +534,15 @@ fade_time = 1
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
+
+			gridboxtype = {
+				name = "juggle_support_tree"
+				position = { x = 1400 y = 150 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
 			gridboxtype = {
 				name = "radio_tree"
 				position = { x= 100 y=300 }
@@ -1074,72 +1091,20 @@ fade_time = 1
 			}
 
 
-			containerWindowType = {
-				name = "nsb_armour_subtitles"
-				position = { x = 750 y = 40 }
-				size = { width = 600 height = 80% }
-				orientation = upper_left
-				origo = upper_left
-
-				instantTextBoxType = {
-					name = "armour_subtitle_heavy"
-					position = { x = 275k  y = 50 }
-					textureFile = ""
-					font = "hoi_33"
-					borderSize = {x = 0 y = 4}
-					text = "ARMOUR_TITLE_HEAVY"
-					maxWidth = 200
-					maxHeight = 62
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
-					name = "armour_subtitle_medium"
-					position = { x = 150 y = 300 }
-					textureFile = ""
-					font = "hoi_33"
-					borderSize = {x = 0 y = 4}
-					text = "ARMOUR_TITLE_MEDIUM"
-					maxWidth = 200
-					maxHeight = 62
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
-					name = "armour_subtitle_light"
-					position = { x = -140 y = 55  }
-					textureFile = ""
-					font = "hoi_33"
-					borderSize = {x = 0 y = 4}
-					text = "ARMOUR_TITLE_LIGHT"
-					maxWidth = 200
-					maxHeight = 62
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "armour_subtitle_amphibious"
-					position = { x = -400 y = 305 }
-					textureFile = ""
-					font = "hoi_33"
-					borderSize = {x = 0 y = 4}
-					text = "ARMOUR_TITLE_AMPH"
-					maxWidth = 200
-					maxHeight = 62
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-			}
-
-
 			gridboxtype = {
 				name = "gwtank_chassis_tree"
 				position = { x= 750 y = 40 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "juggle_tank_tree"
+				position = { x = 1000 y = 150 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
 			}
 
 			gridboxtype = {
@@ -1510,6 +1475,14 @@ fade_time = 1
 				name = "gw_artillery_tree"
 				position = { x = 10% y = 172 }
 				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "juggle_arty_tree"
+				position = { x = 1000 y = 150 }
+				size = { width = 520 height = 800 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
@@ -2002,6 +1975,14 @@ fade_time = 1
 			}
 
 			gridboxtype = {
+				name = "juggle_navy_tree"
+				position = { x = 1500 y = 150 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
 				name = "basic_cruiser_armor_scheme_tree"
 				position = { x = 70 y = 455 }
 				size = { width = 100 height = 210 }
@@ -2229,6 +2210,14 @@ fade_time = 1
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "juggle_navy_sup_tree"
+				position = { x = 1400 y = 150 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
 			}
 
 			gridboxtype = {
@@ -2909,6 +2898,14 @@ fade_time = 1
 			}
 
 			gridboxtype = {
+				name = "juggle_air_tree"
+				position = { x = 1200 y = 150 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
 				name = "bba_early_transport_plane_tree"
 				position = { x = 850 y = 32 }
 				size = { width = 400 height = 1000 }
@@ -3213,6 +3210,14 @@ fade_time = 1
 			gridboxtype = {
 				name = "basic_machine_tools_tree"
 				position = { x = 100 y = 172 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "juggle_industry_tree"
+				position = { x = 800 y = 150 }
 				size = { width = 520 height = 800 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -3631,6 +3636,14 @@ fade_time = 1
 				position = { x=0 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "juggle_eme_tree"
+				position = { x = 360 y = 150 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 

@@ -529,7 +529,7 @@
  spam_truck_tt:0 "Motorized and Mechanized batallions need §G-8 Motorized / Mechanized equipment.§!"
  spam_arty_tt:0 "All Arillery brigades now require §G-4 Artillery equipment.§!"
  spam_tank_tt:0 "Armor Support Companies will require §G-4 Support Tanks§! §g(This includes SPG, TD, SPAA, Flame Tanks)§!"
- spam_trench_tt:0 "Leg Special Forces battalions require §G-10 Special Forces Equipment§!. \nAll support companies §g(Engineers, recon, etc.)§! Now require §G-5 Support Equipment§!"
+ spam_trench_tt:0 "Leg Special Forces battalions require §G-10 Infantry Equipment§!. \nAll support companies §g(Engineers, recon, etc.)§! Now require §G-5 Support Equipment§!"
  SPR_MIO:0 "§GCan use§! §YGerman Armored Military Industry Organizations.§!"
 
  MOBILE_WARFARE_DOCTRINE_DESC_MOD:0 "Best for nations that build tanks and fast-moving infantry. Prioritizes organization, speed, and breakthrough for aggressive armored pushes."
@@ -986,3 +986,35 @@
  USA_block_argentine_exports:0 "Block Argentine Exports"
  
  STRATEGICREGION_299: "Gibraltar"
+
+ MOBILE_WARFARE_OVERALL_LABEL:0 "Mobile Warfare Germany"
+ MOBILE_WARFARE_OVERALL_LABEL_TT:0 "Germany bonuses granted by this doctrine"
+ 
+ mobile_warfare_overall:0 "Mobile Warfare"
+ mobile_warfare_overall_desc:0 ""
+ 
+ 
+ SUPERIOR_FIREPOWER_OVERALL_LABEL:0 "Superior Firepower USA/FRA"
+ SUPERIOR_FIREPOWER_OVERALL_LABEL_TT:0 "USA/FRA bonuses granted by this doctrine"
+ 
+ superior_firepower_overall:0 "Superior Firepower"
+ superior_firepower_overall_desc:0 ""
+ 
+ 
+ GRAND_BATTLEPLAN_OVERALL_LABEL:0 "Grand Battleplan JAP/ITA/ENG"
+ GRAND_BATTLEPLAN_OVERALL_LABEL_TT:0 "JAP/ITA/ENG bonuses granted by this doctrine"
+ 
+ grand_battleplan_overall:0 "Grand Battleplan"
+ grand_battleplan_overall_desc:0 ""
+ 
+ 
+ MASS_ASSAULT_OVERALL_LABEL:0 "Mass Assault Soviet Union"
+ MASS_ASSAULT_OVERALL_LABEL_TT:0 "SOV bonuses granted by this doctrine"
+ 
+ mass_assault_overall:0 "Mass Assault"
+ mass_assault_overall_desc:0 ""
+ 
+ mass_assault_overall_debuff:0 "Mass Assault Debuff"
+ mass_assault_overall_debuff_desc:0 "§YA DEBUFF TO ENSURE YOU ARE NOT HAVING FUN AS NOAIR SOVIETS :)§!"
+ 
+ 

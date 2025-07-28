@@ -245,7 +245,7 @@ ideas = {
 			ledger = army
 			modifier = {
 				experience_gain_army = 0.05
-				land_doctrine_cost_factor = -0.025
+				land_doctrine_cost_factor = -0.05
 				command_power_gain = 0.2
 			}
 			cost = 25
@@ -310,8 +310,7 @@ ideas = {
 			ledger = army
 			available = { has_government = democratic }
 			modifier = {
-				experience_gain_army = 0.05
-				experience_gain_army_factor = 0.1
+				experience_gain_army = 0.1
 				army_advisor_cost_factor = -0.5
 			}
 			cost = 25
@@ -359,8 +358,7 @@ ideas = {
 			available = { OR = { has_government = fascism has_government = neutrality } }
 			modifier = {
 				political_power_factor = 0.1
-				experience_gain_army = 0.06
-				party_popularity_stability_factor = 0.05
+				experience_gain_army = 0.1
 			}
 			cost = 25
 			ai_will_do = {
@@ -488,24 +486,6 @@ ideas = {
 				}
 			}
 		}
-		
-		special_ground_forces_training = {
-			ledger = army
-			available = { }
-			modifier = {
-				experience_gain_special_forces = 0.08
-				experience_gain_army = -0.08
-			}
-			cost = 10
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
-		
 	}
 
 	division_command_spirit = {

@@ -1,0 +1,111 @@
+technologies = {
+	juggle_industry = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_industry=0 }
+		}
+	}
+	juggle_eme = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_eme=0 }
+		}
+	}
+	juggle_air = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_air=0 }
+		}
+	}
+	juggle_navy = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_navy=0 }
+		}
+	}
+	juggle_navy_sup = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_navy_sup=0 }
+		}
+	}
+	juggle_tank = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_tank=0 }
+		}
+	}
+	juggle_arty = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_arty=0 }
+		}
+	}
+	juggle_support = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_support=0 }
+		}
+	}
+	juggle_guns = {
+		
+		research_cost = 0
+		
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 0 }
+		}
+		on_research_complete = {
+			set_technology={ juggle_guns=0 }
+		}
+	}
+}
+

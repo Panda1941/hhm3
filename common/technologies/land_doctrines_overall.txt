@@ -113,9 +113,6 @@ technologies = {
 		rocket_artillery_brigade = {
 			need = { rocket_artillery_equipment = -4 }
 		}
-		pack_artillery = {
-			need = { pack_artillery_equipment = -4 }
-		}
 
 		on_research_complete = { 
 			custom_effect_tooltip = spam_arty_tt
@@ -152,8 +149,8 @@ technologies = {
 
 		# Effects
 		category_army = {
-			soft_attack = 0.08
-			hard_attack = 0.02
+			soft_attack = 0.1
+			hard_attack = 0.03
 		}
 
 	}
@@ -188,12 +185,12 @@ technologies = {
 		}
 
 		# BATALIONS
-		marine= { need = { special_forces_equipment = -10 } }
-		marine_commando= { need = { special_forces_equipment = -10 } }
-		mountaineers= { need = { special_forces_equipment = -10 } }
-		paratrooper= { need = { special_forces_equipment = -10 } }
-		shock_troops= { need = { special_forces_equipment = -10 } }
-		jaeger= { need = { special_forces_equipment = -10 } }
+		marine= { need = { infantry_equipment = -10 } }
+		marine_commando= { need = { infantry_equipment = -10 } }
+		mountaineers= { need = { infantry_equipment = -10 } }
+		paratrooper= { need = { infantry_equipment = -10 } }
+		shock_troops= { need = { infantry_equipment = -10 } }
+		jaeger= { need = { infantry_equipment = -10 } }
 		
 		# SUPPORT COMPANIES
 		engineer = { need = { support_equipment = -5 } }
@@ -206,8 +203,8 @@ technologies = {
 		mot_recon = { need = { support_equipment = -5 } }
 		armored_car_recon = { need = { support_equipment = -5 } }
 		light_tank_recon = { need = { support_equipment = -5 } }
-		rangers_support = { need = { support_equipment = -5 special_forces_equipment = -10 } }
-		pioneer_support = { need = { support_equipment = -5 special_forces_equipment = -10 } }
+		rangers_support = { need = { support_equipment = -5 } }
+		pioneer_support = { need = { support_equipment = -5 } }
 		winter_logistics_support = { need = { support_equipment = -5 } }
 		long_range_patrol_support = { need = { support_equipment = -5 } }
 		signal_company = { need = { support_equipment = -5 } }
@@ -234,7 +231,6 @@ technologies = {
 		}
 
 		# Effects
-		#industrial_capacity_factory = 0.05
 		planning_speed = 0.1
 		max_dig_in = 1
         special_forces_min = 36
@@ -329,8 +325,11 @@ technologies = {
 
 		# Effects
 		land_reinforce_rate = 0.04
+		max_dig_in = 1
+		supply_consumption_factor = -0.05
 		category_army = {
 			defense = 0.05
+			breakthrough = 0.1
 		}
 	}
 	
@@ -360,16 +359,7 @@ technologies = {
 		category_line_artillery = {
 			max_strength = -1.0
 		}
-		mechanized  = {
-			max_strength = -5.0
-		}
-		motorized   = {
-			max_strength = -5.0
-		}
-		amphibious_mechanized = {
-			max_strength = -5.0
-		}
-		category_cavalry = {
+		category_mobile_and_mobile_combat_sup = {
 			max_strength = -5.0
 		}
 

@@ -104,6 +104,7 @@ set_technology = {
 	fuel_refining = 1
 	basic_train = 1
 	basic_fortification_tech = 1
+	superior_firepower_overall = 1
 }
 
 if = {
