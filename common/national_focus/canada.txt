@@ -970,7 +970,7 @@
 		}
 
 		available = {
-		GER = { has_completed_focus = GER_end_of_czechoslovakia }	
+			GER = { has_completed_focus = GER_fate_of_czechoslovakia }	
 		}
 		
 		bypass = {
