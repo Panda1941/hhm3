@@ -322,4 +322,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 5505;6927;impassable;-1;-1;-1;-1;-1;;SPAIN 
 5505;9824;impassable;-1;-1;-1;-1;-1;;SPAIN 
 9767;6521;land;-1;-1;-1;-1;-1;;SPAIN_TELEPORT North of Madrid - Berlin
+2776;2800;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Aden STRAIT
 -1;-1;;-1;-1;-1;-1;-1;-1 

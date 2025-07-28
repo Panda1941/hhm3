@@ -9,7 +9,7 @@ state=
 	
 	history= {
 		add_core_of = WST
-		owner = ENG
+		owner = WST
 		buildings = {
 			infrastructure = 0
 		}

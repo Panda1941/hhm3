@@ -1,13 +1,14 @@
-
 state={
 	id=447
 	name="STATE_447"
-	manpower = 3859239
 	resources={
 		oil=1 # was: 2
 		tungsten = 3 #maganese
 		steel = 3 #Maganese
 		
+		oil=1.000
+		tungsten=3.000
+		steel=3.000
 	}
 	
 	state_category = town
@@ -33,10 +34,11 @@ state={
 
 		add_core_of = WST
 	}
-
 	provinces={
-		1071 4076 4145 7091 7164 10073 11964  
+		1071 4076 4145 7091 7164 10073 11964 
 	}
-
-	local_supplies=0.0 
+	manpower=3859239
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }
