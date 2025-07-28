@@ -777,8 +777,8 @@ technologies = {
 
 	fuel_refining = {
 
-		fuel_gain_factor = 0.7
-		fuel_gain_factor_from_states = 0.2
+		fuel_gain_factor = 0.5
+		fuel_gain_factor_from_states = 0.5
 					
 		path = {
 			leads_to_tech = fuel_refining2 
@@ -842,8 +842,8 @@ technologies = {
 
 	fuel_refining2 = {
 		
-		fuel_gain_factor = 0.7
-		fuel_gain_factor_from_states = 0.2
+		fuel_gain_factor = 0.5
+		fuel_gain_factor_from_states = 0.5
 
 		path = {
 			leads_to_tech = fuel_refining3 
@@ -899,8 +899,8 @@ technologies = {
 
 	fuel_refining3 = {
 		
-		fuel_gain_factor = 0.7
-		fuel_gain_factor_from_states = 0.2
+		fuel_gain_factor = 0.5
+		fuel_gain_factor_from_states = 0.5
 
 		path = {
 			leads_to_tech = fuel_refining4 
@@ -946,8 +946,8 @@ technologies = {
 
 	fuel_refining4 = {
 		
-		fuel_gain_factor = 0.7
-		fuel_gain_factor_from_states = 0.2
+		fuel_gain_factor = 0.5
+		fuel_gain_factor_from_states = 0.5
 
 		path = {
 			leads_to_tech = fuel_refining5
@@ -993,8 +993,8 @@ technologies = {
 
 	fuel_refining5 = {
 		
-		fuel_gain_factor = 0.7
-		fuel_gain_factor_from_states = 0.2
+		fuel_gain_factor = 0.5
+		fuel_gain_factor_from_states = 0.5
 
 		research_cost = 2
 		start_year = 1943
@@ -1189,7 +1189,7 @@ technologies = {
 
 	excavation2 = {
 		
-		local_resources_factor = 0.08
+		local_resources_factor = 0.1
 		on_research_complete = {
 			modify_building_resources = {
 				building = synthetic_refinery

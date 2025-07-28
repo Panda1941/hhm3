@@ -16,6 +16,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11779;6915;impassable;-1;-1;-1;-1;-1;;spain-france15
 11779;9853;impassable;-1;-1;-1;-1;-1;;spain-france16
 9824;9853;impassable;-1;-1;-1;-1;-1;;spain-france17
+1048;13228;impassable;-1;-1;-1;-1;-1;;spain-gibraltar1
+10094;13228;impassable;-1;-1;-1;-1;-1;;spain-gibraltar2
+10094;4135;impassable;-1;-1;-1;-1;-1;;spain-gibraltar3
+7153;4135;impassable;-1;-1;-1;-1;-1;;spain-gibraltar4
 12251;10321;sea;8313;-1;-1;-1;-1;;Andaman
 7413;1419;sea;5294;-1;-1;-1;-1;;Moluccas
 10141;1419;sea;5267;-1;-1;-1;-1;;Moluccas

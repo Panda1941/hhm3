@@ -10,9 +10,9 @@
 @experience_gain_medium = 0.06
 @experience_gain_high = 0.08
 
-@chief_experience_gain_low = 0.20
+@chief_experience_gain_low = 0.24
 @chief_experience_gain_medium = 0.30
-@chief_experience_gain_high = 0.40
+@chief_experience_gain_high = 0.36
 
 @army_chief_factor_1 = 0.42
 @army_chief_factor_2 = 0.68
@@ -665,7 +665,7 @@ leader_traits = {
 
 	revolutionary_general = { #Francisco José Mugica
 		random = no
-		resistance_growth_on_our_occupied_states = 0.25
+		#resistance_growth_on_our_occupied_states = 0.25
 		mobilization_laws_cost_factor = -0.25
 		economy_cost_factor = -0.25
 		theorist_cost_factor = -0.25
@@ -1131,6 +1131,7 @@ leader_traits = {
 		trade_laws_cost_factor = -0.33
 		economy_cost_factor = -0.33
 		consumer_goods_factor = -0.15
+		production_speed_buildings_factor = 0.05
 	}
 
 	strict_austerity_adherent = {
@@ -1149,7 +1150,7 @@ leader_traits = {
 	little_churchill = {
 		random = no
 		war_support_factor = 0.05
-		resistance_growth_on_our_occupied_states = 0.15
+		#resistance_growth_on_our_occupied_states = 0.15
 	}
 
 	wilhelmina = {
@@ -2239,7 +2240,7 @@ leader_traits = {
 	}
 	god_of_the_rastafari = {
 		random = no
-		compliance_growth = 0.2
+		#compliance_growth = 0.2
 		compliance_gain = 0.01
 		stability_factor = 0.1
 		drift_defence_factor = 0.5
@@ -2387,8 +2388,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		legitimacy_gain_factor = 0.15
-		compliance_growth_on_our_occupied_states = -0.1
-		resistance_growth_on_our_occupied_states = 0.1
+		#compliance_growth_on_our_occupied_states = -0.1
+		#resistance_growth_on_our_occupied_states = 0.1
 		defensive_war_stability_factor = 0.25
 	}
 
@@ -2489,7 +2490,7 @@ leader_traits = {
 		special_forces_out_of_supply_factor = -0.1
 		agency_upgrade_time = -0.1
 		intel_network_gain_factor = 0.1
-		resistance_growth_on_our_occupied_states = 0.1
+		#resistance_growth_on_our_occupied_states = 0.1
 		intelligence_agency_defense = 1
 	}
 	commander_of_the_fetno_derash_no_lar = {
@@ -2497,7 +2498,7 @@ leader_traits = {
 		sprite = 15
 		special_forces_cap = 0.2
 		special_forces_out_of_supply_factor = -0.15
-		resistance_growth_on_our_occupied_states = 0.15
+		#resistance_growth_on_our_occupied_states = 0.15
 	}
 
 	modernizer_and_diplomat = {
@@ -2751,7 +2752,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.02
 		party_popularity_stability_factor = 0.1
-		compliance_growth = 0.1
+		#compliance_growth = 0.1
 		non_core_manpower = 0.025
 	}
 
@@ -2759,7 +2760,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.02
 		party_popularity_stability_factor = 0.1
-		compliance_growth = 0.1
+		#compliance_growth = 0.1
 		non_core_manpower = 0.025
 	}
 
@@ -3107,7 +3108,7 @@ leader_traits = {
 
 	iron_duke = {
 		random = no
-		resistance_growth = -0.15
+		#resistance_growth = -0.15
 		resistance_damage_to_garrison = -0.1
 	}
 
@@ -3939,7 +3940,7 @@ leader_traits = {
 		sprite = 13
 		stability_factor = -0.05
 		fascism_drift = 0.05
-		resistance_growth_on_our_occupied_states = 0.1
+		#resistance_growth_on_our_occupied_states = 0.1
 		political_power_factor = 0.1
 	}
 
@@ -4150,7 +4151,7 @@ leader_traits = {
 		sprite = 10
 		random = no
 		resistance_target = -0.1
-		resistance_growth = -0.15
+		#resistance_growth = -0.15
 		resistance_activity = -0.2
 	}
 
@@ -4889,7 +4890,7 @@ leader_traits = {
 		random = no
 		intel_network_gain_factor = 0.2
 		agency_upgrade_time = -0.2
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -5145,7 +5146,7 @@ leader_traits = {
 	IRQ_minister_of_the_interior = {
 		random = no
 		sprite = 13
-		resistance_growth = -0.1
+		#resistance_growth = -0.1
 		political_power_factor = 0.1
 	}
 
@@ -5924,7 +5925,7 @@ leader_traits = {
 		conscription_factor = 0.15
 		army_morale_factor = 0.05
 		stability_factor = -0.05
-		compliance_growth = -0.05
+		#compliance_growth = -0.05
 	}
 
 	#KAMENEV
@@ -5940,7 +5941,7 @@ leader_traits = {
 	defier_of_the_sun_god = {
 		random = no
 		army_morale_factor = 0.05
-		compliance_growth = 0.05
+		#compliance_growth = 0.05
 		targeted_modifier = {
 			tag = JAP
 			attack_bonus_against = 0.1
@@ -5969,7 +5970,7 @@ leader_traits = {
 
 	emperor_and_autocrat_of_all_the_russias = {
 		random = no
-		resistance_growth_on_our_occupied_states = 0.1
+		#resistance_growth_on_our_occupied_states = 0.1
 		required_garrison_factor = -0.15
 		war_support_factor = 0.05
 	}
@@ -5984,7 +5985,7 @@ leader_traits = {
 		random = no
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
-		resistance_growth_on_our_occupied_states  = 0.25
+		#resistance_growth_on_our_occupied_states  = 0.25
 	}
 
 	dysfunctional_assembly = {
@@ -6142,7 +6143,7 @@ leader_traits = {
 		sprite = 13
 		stability_factor = 0.1
 		army_morale_factor = 0.1
-		compliance_growth_on_our_occupied_states = -0.15
+		#compliance_growth_on_our_occupied_states = -0.15
 	}
 
 	#Smirnov
@@ -6201,7 +6202,7 @@ leader_traits = {
 	pc_military_naval_affairs = {
 		random = no
 		sprite = 13
-		resistance_growth = -0.1
+		#resistance_growth = -0.1
 		army_org_factor = 0.1
 		experience_gain_army_factor = 0.1
 		experience_gain_navy_factor = 0.1
@@ -6552,7 +6553,7 @@ leader_traits = {
 		random = yes
 		sprite = 13
 		opinion_gain_monthly_factor = 0.2
-		compliance_growth = 0.02
+		#compliance_growth = 0.02
 		resistance_target = -0.05
 
 		ai_will_do = {
@@ -7008,7 +7009,7 @@ leader_traits = {
 		sprite = 10
 
 		consumer_goods_factor = -0.30
-		resistance_growth_on_our_occupied_states = 0.1
+		#resistance_growth_on_our_occupied_states = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -7777,7 +7778,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		political_power_factor = 0.1
-		resistance_growth = -0.1
+		#resistance_growth = -0.1
 		war_support_factor = -0.1
 	}
 
@@ -7984,7 +7985,7 @@ leader_traits = {
 		autonomy_gain = 0.15
 		war_support_factor = 0.05
 		stability_factor = -0.05
-		compliance_growth = 0.05
+		#compliance_growth = 0.05
 		
 		ai_will_do = {
 			factor = 0
@@ -8507,7 +8508,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		fascism_acceptance = 75
-		resistance_growth = -0.1
+		#resistance_growth = -0.1
 		political_power_factor = 0.15
 	}
 
@@ -8607,7 +8608,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		intelligence_agency_defense = 0.1
-		operative_slot = 2
+		intelligence_agency_defense = 1.5
 	}
 
 	HUN_her_serene_highness = {
@@ -8659,7 +8660,7 @@ leader_traits = {
 	HUN_military_intelligence_officer = {
 		random = no
 		sprite = 15
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		army_intel_to_others = -10.0
 		army_intel_factor = 0.15
 	}
@@ -9720,6 +9721,8 @@ leader_traits = {
 		random = no
 
 		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.05
+		research_speed_factor = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -9824,11 +9827,11 @@ leader_traits = {
 
 		equipment_bonus = {
 			infantry_equipment = {
-				build_cost_ic = -0.025
+				build_cost_ic = -0.03
 				instant = yes
 			}
 			artillery = {
-				build_cost_ic = -0.025
+				build_cost_ic = -0.03
 				instant = yes
 			}
 		}
@@ -9927,7 +9930,7 @@ leader_traits = {
 		sprite = 13 
 
 		communism_drift = 0.1
-		resistance_growth_on_our_occupied_states = 0.15
+		#resistance_growth_on_our_occupied_states = 0.15
 	}
 
 	NOR_radical_trade_unionist = {
@@ -9991,8 +9994,8 @@ leader_traits = {
 		random = no
 		sprite = 13 
 
-		compliance_growth = 0.05
-		resistance_growth = -0.1
+		#compliance_growth = 0.05
+		#resistance_growth = -0.1
 	}
 
 	NOR_fascist_advocate = {
@@ -10414,7 +10417,7 @@ leader_traits = {
 
 		targeted_modifier = {
 			tag = ENG
-			compliance_growth = 0.01
+			#compliance_growth = 0.01
 		}
 	}
 
@@ -10494,7 +10497,7 @@ leader_traits = {
 		random = no #this is heinrich maier
 		sprite = 15
 
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.2
 		civilian_intel_factor = 0.2
 		democratic_drift = 0.02
@@ -10889,7 +10892,7 @@ leader_traits = {
 	BEL_illusive_mastermind = { 
 		sprite = 15
 		random = no
-		operative_slot = 2
+		intelligence_agency_defense = 1.5
 		agency_upgrade_time = -0.2
 		civilian_intel_factor = 0.05
 		army_intel_factor = 0.05
@@ -11042,14 +11045,16 @@ leader_traits = {
 		consumer_goods_factor = 0.05 #yes, this is actually a penalty
 		local_resources_factor = 0.1
 		production_lack_of_resource_penalty_factor = -0.15
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
 
 		equipment_bonus = {
 			infantry_equipment = {
-				build_cost_ic = -0.05
+				build_cost_ic = -0.03
 				instant = yes
 			}
 			artillery = {
-				build_cost_ic = -0.05
+				build_cost_ic = -0.03
 				instant = yes
 			}
 		}
@@ -11063,18 +11068,18 @@ leader_traits = {
 	GER_mefo_bills_architect = { #Schacht
 		sprite = 10
 		random = no
-		production_speed_arms_factory_factor = 0.1
-		production_speed_dockyard_factor = 0.1
+		production_speed_arms_factory_factor = 0.15
+		production_speed_dockyard_factor = 0.15
 		consumer_goods_factor = -0.1
 	}
 
 	GER_reich_minister_of_economy = { #Funk 
 		sprite = 10
 		random = no
-		consumer_goods_factor = -0.1
-		production_speed_supply_node_factor = 0.15
-		production_lack_of_resource_penalty_factor = -0.05
-		industry_free_repair_factor = 0.15
+		consumer_goods_factor = -0.2
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_supply_node_factor = 0.2
+		industry_free_repair_factor = 0.2
 	}
 
 	GER_director_reich_security = { #Himmler - Gestapo
@@ -11092,7 +11097,7 @@ leader_traits = {
 		resistance_damage_to_garrison = -0.25
 		foreign_subversive_activites = -0.3
 		non_core_manpower = 0.05
-		resistance_growth = -0.1
+		#resistance_growth = -0.1
 	}
 
 	GER_reich_minister_of_propaganda = { #Goebbels
@@ -11217,15 +11222,15 @@ leader_traits = {
 
 		equipment_bonus = {
 			medium_plane_airframe = {
-				build_cost_ic = -0.025
+				build_cost_ic = -0.05
 				instant = yes
 			}
 			large_plane_airframe = {
-				build_cost_ic = -0.025
+				build_cost_ic = -0.05
 				instant = yes
 			}
 			small_plane_airframe = {
-				build_cost_ic = -0.025
+				build_cost_ic = -0.05
 				instant = yes
 			}
 		}
@@ -11244,7 +11249,7 @@ leader_traits = {
 		improve_relations_maintain_cost_factor = -0.5
 		trade_opinion_factor = 0.10
 		subjects_autonomy_gain = -0.1
-		compliance_growth = 0.01
+		#compliance_growth = 0.01
 		foreign_subversive_activites = -0.25
 
 		ai_will_do = {
@@ -11317,7 +11322,7 @@ leader_traits = {
 		political_power_factor = 0.08
 		non_core_manpower = 0.03
 		resistance_garrison_penetration_chance = -0.1
-		resistance_growth = -0.05
+		#resistance_growth = -0.05
 		modifier_army_sub_unit_militia_max_org_factor = 0.1
 	}
 
@@ -11345,7 +11350,7 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.05
 		party_popularity_stability_factor = 0.1
-		resistance_growth = -0.03
+		#resistance_growth = -0.03
 		fascism_drift = -0.05
 		communism_drift = -0.03
 		communism_acceptance = -25
@@ -11477,7 +11482,7 @@ leader_traits = {
 		random = no
 		sprite = 15
 
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.2
 	}
 
@@ -11485,7 +11490,7 @@ leader_traits = {
 		random = no
 		sprite = 15
 
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.2
 		resistance_damage_to_garrison = -0.2
 		foreign_subversive_activites = -0.3
@@ -11495,16 +11500,17 @@ leader_traits = {
 	GER_reich_security_main_office_director_lar = { #Heydrich
 		sprite = 15
 		random = no
-		resistance_growth = -0.05
+		#resistance_growth = -0.05
 		civilian_intel_to_others = -0.2
 		army_intel_to_others = -0.2
-		operative_slot = 1
+		intelligence_agency_defense = 1
+		political_power_gain = 0.1
 	}
 
 	GER_reich_security_main_office_director_no_lar = { #Heydrich
 		sprite = 15
 		random = no
-		resistance_growth = -0.05
+		#resistance_growth = -0.05
 		army_core_defence_factor = 0.02
 		foreign_subversive_activites = -0.25
 	}
@@ -11512,14 +11518,14 @@ leader_traits = {
 	head_of_the_abwehr = { # Canaris
 		random = no
 		sprite = 15
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.2
 	}
 
 	head_of_the_abwehr_improved = { # Canaris
 		random = no
 		sprite = 15
-		operative_slot = 2
+		intelligence_agency_defense = 1.5
 		agency_upgrade_time = -0.2
 		resistance_damage_to_garrison = -0.2
 		foreign_subversive_activites = -0.2
@@ -11529,9 +11535,8 @@ leader_traits = {
 	intelligence_service_deputy = { # Oster Upgrade
 		random = no
 		sprite = 15
-		operative_slot = 1
-		intelligence_agency_defense = 0.2
-		intel_network_gain_factor = 0.2
+		intelligence_agency_defense = 1
+		intel_network_gain_factor = 0.25
 	}
 
 	GER_film_director = { #Riefenstahl
@@ -11547,21 +11552,20 @@ leader_traits = {
 		sprite = 13
 		random = no
 		stability_factor = -0.05
-		compliance_growth = -0.01
-		resistance_growth = 0.03
-		industrial_capacity_factory = 0.025
-		industrial_capacity_dockyard = 0.025
-		production_factory_efficiency_gain_factor = 0.025
-		production_factory_start_efficiency_factor = 0.025
+		#compliance_growth = -0.01
+		#resistance_growth = 0.03
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		production_factory_efficiency_gain_factor = 0.1
 	}
 
 	GER_reich_minister_of_church_affairs = { #Kerrl
 		sprite = 13
 		random = no
-		political_power_factor = 0.05
+		political_power_factor = 0.1
 		party_popularity_stability_factor = 0.1
-		resistance_growth = -0.025
-		research_speed_factor = -0.025
+		#resistance_growth = -0.025
+		research_speed_factor = -0.03
 		weekly_bombing_war_support = 0.002
 	}
 
@@ -11607,7 +11611,7 @@ leader_traits = {
 		weekly_casualties_war_support = 0.001
 		ai_desired_divisions_factor = 0.20
 		political_power_factor = 0.1
-		compliance_growth = -0.02
+		#compliance_growth = -0.02
 		resistance_target = 0.05
 	}
 
@@ -11616,7 +11620,7 @@ leader_traits = {
 		weekly_casualties_war_support = 0.001
 		ai_desired_divisions_factor = 0.20
 		political_power_factor = 0.1
-		compliance_growth = -0.02
+		#compliance_growth = -0.02
 		resistance_target = 0.05
 
 		# Improved stuff
@@ -11636,7 +11640,7 @@ leader_traits = {
 		weekly_casualties_war_support = 0.001
 		ai_desired_divisions_factor = 0.20
 		political_power_factor = 0.1
-		compliance_growth = -0.02
+		#compliance_growth = -0.02
 		resistance_target = 0.05
 
 		# Improved stuff
@@ -11652,7 +11656,7 @@ leader_traits = {
 		weekly_casualties_war_support = 0.001
 		ai_desired_divisions_factor = 0.20
 		party_popularity_stability_factor = 0.1
-		compliance_growth = -0.02
+		#compliance_growth = -0.02
 		resistance_target = 0.05
 	}
 
@@ -11662,7 +11666,7 @@ leader_traits = {
 		ai_desired_divisions_factor = 0.20
 		political_power_factor = 0.25
 		party_popularity_stability_factor = 0.1
-		compliance_growth = -0.02
+		#compliance_growth = -0.02
 		resistance_target = 0.05
 
 		# From Wehrmacht
@@ -11683,7 +11687,7 @@ leader_traits = {
 		ai_desired_divisions_factor = 0.20
 		political_power_factor = 0.25
 		party_popularity_stability_factor = 0.1
-		compliance_growth = -0.02
+		#compliance_growth = -0.02
 		resistance_target = 0.05
 
 		# From von Neurath
@@ -11746,7 +11750,7 @@ leader_traits = {
 		foreign_subversive_activites = -0.3
 		non_core_manpower = 0.02
 		subversive_activites_upkeep = -0.25
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		intelligence_agency_defense = 0.2
 		intel_from_combat_factor = 0.25
 	}
@@ -11760,11 +11764,11 @@ leader_traits = {
 		foreign_subversive_activites = -0.3
 		non_core_manpower = 0.04
 		subversive_activites_upkeep = -0.25
-		operative_slot = 1
+		intelligence_agency_defense = 1
 		intelligence_agency_defense = 0.2
 		intel_from_combat_factor = 0.25
-		resistance_growth = -0.15
-		compliance_growth = -0.1
+		#resistance_growth = -0.15
+		#compliance_growth = -0.1
 		special_forces_cap = 0.05
 	}
 
@@ -11779,7 +11783,7 @@ leader_traits = {
 		surrender_limit = 0.1
 		offensive_war_stability_factor = 0.1
 		defensive_war_stability_factor = 0.1
-		operative_slot = 2
+		intelligence_agency_defense = 1.5
 		boost_ideology_mission_factor = 0.15
 		boost_resistance_factor = 0.15
 	}
@@ -11860,7 +11864,7 @@ leader_traits = {
 		war_support_factor = 0.05
 		stability_factor = 0.05
 		army_morale_factor = 0.05
-		resistance_growth = -0.02
+		#resistance_growth = -0.02
 	}
 
 	GER_supreme_leader = {
@@ -11868,7 +11872,7 @@ leader_traits = {
 		stability_factor = 0.05
 		army_morale_factor = 0.1
 		non_core_manpower = 0.01
-		resistance_growth = -0.05
+		#resistance_growth = -0.05
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 		subjects_autonomy_gain = -0.1
