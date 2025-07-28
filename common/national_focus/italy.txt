@@ -407,6 +407,12 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = 773
+				}
 			}
 		}
 	}
@@ -500,7 +506,7 @@ focus_tree = {
 		relative_position_id = ITA_fiocchi_munizioni
 		cost = 5
 		available = {
-			has_tech = radio_detection
+			is_special_project_completed = sp:sp_air_radar
 			has_full_control_of_state = 159
 		}
 
@@ -1172,22 +1178,6 @@ focus_tree = {
 			custom_effect_tooltip = ITA_fanti_dell_aria_re_tt
 
 			army_experience = 30
-
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_template = "Paratroopers" }
-					}
-					load_oob = "unlock_paratroopers"
-				}
-			}
-
-			add_tech_bonus = {
-				name = ITA_fanti_dell_aria
-				bonus = 1
-				uses = 1
-				category = para_tech
-			}
 		}
 	}
 
@@ -1380,18 +1370,29 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 
-			add_tech_bonus = {
-				name = ITA_air_innovations_bba #fighter_bonus
-				bonus = 0.5
-				uses = 1
-				category = light_air
-			}
-
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.33
+				uses = 4
 				category = air_doctrine
+			}
+
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 162 849 117 } #ABRUZZO as main fallback
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1412,13 +1413,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
-			
 
 			add_tech_bonus = {
 				name = ITA_citta_dell_aria
-				bonus = 0.33
-				uses = 3
+				bonus = 1.0
+				uses = 1
 				category = air_equipment
 			}
 
@@ -1427,15 +1426,15 @@ focus_tree = {
 					is_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
 				prioritize = { 162 849 117 } #ABRUZZO as main fallback
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1475,7 +1474,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_citta_dell_aria
-		cost = 5
+		cost = 10
 		available = {
 			has_full_control_of_state = 161
 		}
@@ -1483,7 +1482,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_iri_consumer_goods_factor = -0.03 }
+			add_to_variable = { ITA_iri_consumer_goods_factor = -0.01 }
 			custom_effect_tooltip = ITA_reggianes_exports_ricostruzione_industriale_tt
 
 			if = {
@@ -1491,16 +1490,16 @@ focus_tree = {
 					161 = {
 						free_building_slots = {
 							building = arms_factory
-							size > 0
+							size > 3
 							include_locked = yes
 						}
 					}
 				}
 				161 = { #EMILIA ROMAGNA (Reggio Emilio)
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -1511,25 +1510,18 @@ focus_tree = {
 						is_controlled_by = ROOT
 						free_building_slots = {
 							building = arms_factory
-							size > 0
+							size > 3
 							include_locked = yes
 						}
 					}
 					prioritize = { 162 157 } #TOSCANA as main fallback
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 4
 						instant_build = yes
 					}
 				}
-			}
-
-			add_tech_bonus = {
-				name = ITA_reggianes_exports
-				bonus = 0.5
-				uses = 1
-				category = air_equipment #Maybe more specific stuff? (Light/Medium bombers, fighters...)
 			}
 		}
 	}
@@ -1562,14 +1554,13 @@ focus_tree = {
 					producer = GER
 					variant_name = "Ju 87"
 				}
+				add_equipment_to_stockpile = { 
+					type = small_plane_naval_bomber_airframe_1
+					amount = 100
+					producer = GER
+					variant_name = "Do 22"
+				}
 			}
-			add_tech_bonus = {
-				name = ITA_diving_bombers
-				bonus = 0.5
-				uses = 1
-				category = light_air
-			}	
-			#NTH_Manu: Sends a request to Germany to purchase CAS and/or licensing design templates (historically 100 Ju87)
 		}
 	}
 
@@ -1605,310 +1596,6 @@ focus_tree = {
 			ITA_improve_regia_aeronautica_dm_effect = yes
 		}
 	}
-
-	focus = {
-		id = ITA_officers_of_the_service_role
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = ITA_superaereo }
-		prerequisite = { focus = ITA_expand_rome_flying_school }
-
-		x = 3
-		y = 1
-		relative_position_id = ITA_superaereo
-		cost = 5
-		available = {
-			
-		}
-
-		search_filters = {FOCUS_FILTER_AIR_XP}
-
-		completion_reward = {
-			add_to_variable = { ITA_ra_air_night_penalty = -0.05 }
-			add_to_variable = { ITA_ra_air_weather_penalty = -0.05 }
-			add_to_variable = { ITA_ra_air_accidents_factor = -0.1 }
-			custom_effect_tooltip = ITA_officers_of_the_service_role_ra_tt
-
-			air_experience = 25
-
-			hidden_effect = {
-				add_ace = {
-					type = "fighter_good"
-					name = "Adriano"
-					surname = "Visconti"
-					callsign = "Tigre" #Totally made up
-				}
-				add_ace = { #Ace is a fighter pilot really
-					type = "bomber_unique"
-					name = "Vittorio"
-					surname = "Sanseverino"
-					callsign = "Postino" #Totally made up
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_standardization
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = ITA_superaereo }
-		x = 0
-		y = 1
-		relative_position_id = ITA_superaereo
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			#More expensive to edit templates, more cheap to produce aircraft
-			custom_effect_tooltip = ITA_standardization_ra_tt
-
-			hidden_effect = {
-				add_ideas = ITA_hidden_standardization_ns
-			}
-
-			
-			
-		
-			add_tech_bonus = {
-				name = ITA_standardization
-				bonus = 0.75
-				uses = 1
-				category = air_equipment
-			}
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-
-			#Update NS icon
-			ITA_improve_regia_aeronautica_dm_effect = yes
-		}
-	}
-
-
-	focus = {
-		id = ITA_long_range_aircraft
-		icon = GFX_focus_generic_long_range_aircraft
-		prerequisite = { focus = ITA_standardization }
-
-		x = -3
-		y = 1
-		relative_position_id = ITA_standardization
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			add_to_variable = { ITA_ra_strategic_bomb_visibility = -0.05 }
-			add_to_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0.05 }
-			add_to_variable = { ITA_ra_air_range_factor = 0.05 }
-			custom_effect_tooltip = ITA_long_range_aircraft_ra_tt
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_bomber_designs
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = ITA_standardization }
-
-		x = 2
-		y = 0
-		relative_position_id = ITA_long_range_aircraft
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
-
-		completion_reward = {
-			air_experience = 25
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_fighter_designs
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = ITA_standardization }
-
-		x = 4
-		y = 0
-		relative_position_id = ITA_long_range_aircraft
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
-
-		completion_reward = {
-			air_experience = 25
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_multirole_aircraft
-		icon = GFX_focus_generic_multi_role_aircraft
-		prerequisite = { focus = ITA_standardization }
-
-		x = 6
-		y = 0
-		relative_position_id = ITA_long_range_aircraft
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
-
-		completion_reward = {
-			#add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = -0.25 }
-			#custom_effect_tooltip = ITA_multirole_aircraft_military_industry_tt
-
-			add_to_variable = { ITA_ra_air_mission_xp_gain_factor = 0.1 }
-			custom_effect_tooltip = ITA_multirole_aircraft_ra_tt
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_supremacy_in_the_skies
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ITA_multirole_aircraft focus = ITA_long_range_aircraft focus = ITA_fighter_designs focus = ITA_bomber_designs }
-
-		x = 1
-		y = 1
-		relative_position_id = ITA_bomber_designs
-		cost = 10
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
-
-		completion_reward = {
-			
-			
-
-			add_to_variable = { ITA_ra_air_superiority_bonus_in_combat = 0.05 }
-			add_to_variable = { ITA_ra_air_superiority_efficiency = 0.05 }
-			add_to_variable = { ITA_ra_air_intercept_efficiency = 0.05 }
-			custom_effect_tooltip = ITA_supremacy_in_the_skies_ra_tt
-
-			air_experience = 50
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			add_tech_bonus = {
-				name = ITA_thermojet_research
-				bonus = 1
-				uses = 1
-				category = air_equipment
-			}
-			add_tech_bonus = {
-				name = ITA_thermojet_research
-				ahead_reduction = 1
-				bonus = 2.0
-				category = jet_technology
-			}
-		}
-	}
-
 
 ########  ########  ######   ####    ###       ##     ##    ###    ########  #### ##    ##    ###    
 ##     ## ##       ##    ##   ##    ## ##      ###   ###   ## ##   ##     ##  ##  ###   ##   ## ##   
@@ -5809,8 +5496,8 @@ focus_tree = {
  			}
  		}
  		
- 		x = 25
- 		y = 6
+ 		x = 22
+ 		y = 5
  		cost = 1
  		ai_will_do = {
  			factor = 10
