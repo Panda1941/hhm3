@@ -85,8 +85,6 @@ recruit_character = CAN_first_nations_council
 recruit_character = CAN_generic_general_1
 recruit_character = CAN_generic_general_2
 
-}
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
