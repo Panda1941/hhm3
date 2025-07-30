@@ -81,6 +81,10 @@ technologies = {
 		supply_consumption_factor = -0.05
 		land_reinforce_rate = 0.02
 		air_cas_present_factor = 0.2
+
+		category_army = {
+			breakthrough = 0.05
+		}
 	}
 	
 	
@@ -150,8 +154,11 @@ technologies = {
 		# Effects
 		category_army = {
 			soft_attack = 0.1
-			hard_attack = 0.03
+			hard_attack = 0.05
 		}
+
+		no_supply_grace = 12
+		land_reinforce_rate = 0.05
 
 	}
 	
@@ -234,6 +241,10 @@ technologies = {
 		planning_speed = 0.1
 		max_dig_in = 1
         special_forces_min = 36
+
+		category_light_infantry = {
+			max_organisation = 5
+		}
 	}
 	
 	
@@ -324,11 +335,11 @@ technologies = {
 		}
 
 		# Effects
-		land_reinforce_rate = 0.04
+		land_reinforce_rate = 0.06
 		max_dig_in = 1
 		supply_consumption_factor = -0.05
 		category_army = {
-			defense = 0.05
+			defense = 0.1
 			breakthrough = 0.1
 		}
 	}

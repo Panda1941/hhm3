@@ -61,7 +61,7 @@ technologies = {
 		xp_unlock_cost = 100
 		
 		category_all_infantry = {
-			max_organisation = 15
+			max_organisation = 8
 		}
 		
 		
@@ -174,6 +174,7 @@ technologies = {
 			maximum_speed = 0.1
 			default_morale = 0.2
 		}		
+		supply_consumption_factor = 0.05
 		path = {
 			leads_to_tech = mass_motorization 
 			research_cost_coeff = 1
@@ -228,7 +229,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 6
 		}	
 		
 		path = {
@@ -349,7 +350,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_tanks = {
-			max_organisation = 7
+			max_organisation = 9
 			breakthrough = 0.20
 		}
 		category_all_armor = {
@@ -535,7 +536,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_infantry = {
 			default_morale = 0.2
-			max_organisation = 8
+			max_organisation = 5
 		}
 		# faster planning
 		planning_speed = 0.2
@@ -705,17 +706,17 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_tanks = {
-			max_organisation = 3
-			breakthrough = 0.20
+			max_organisation = 6
+			breakthrough = 0.25
 		}
 
 		category_all_armor = {
 			default_morale = 0.2
 		}
 		armored_car = {
-			max_organisation = 3
+			max_organisation = 5
 			default_morale = 0.2
-			breakthrough = 0.20
+			breakthrough = 0.25
 		}
 		
 		doctrine = yes	
@@ -990,7 +991,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_infantry = {
 			defense = 0.10
-			max_organisation = 5
+			max_organisation = 8
 		}
 		
 		enable_tactic = tactic_elastic_defense
@@ -1214,7 +1215,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_line_artillery = {
-			soft_attack = 0.10
+			soft_attack = 0.15
 			hard_attack = 0.05
 		}
 		coordination_bonus = 0.05
@@ -1269,7 +1270,11 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_armor = {
 			max_organisation = 5
-			breakthrough = 0.10
+			breakthrough = 0.15
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		category_mobile_and_mobile_combat_sup = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
@@ -1495,6 +1500,7 @@ technologies = {
 			
 		#combat advantage when air superior
 		army_bonus_air_superiority_factor = 0.15
+		land_reinforce_rate = 0.05
 		
 		recon = {
 			battalion_mult = {
@@ -1560,6 +1566,7 @@ technologies = {
 		category_artillery = { 
 			soft_attack = 0.05
 			hard_attack = 0.05
+			max_organisation = 4
 		}
 		path = {
 			leads_to_tech = forward_observers 
@@ -1843,7 +1850,7 @@ technologies = {
 		}
 		
 		#planning max bonus increase
-		max_planning = 0.1
+		max_planning = 0.05
 		command_power_gain = 0.25
 
 		doctrine = yes	
@@ -1888,8 +1895,9 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_infantry = {
 			defense = 0.10
-			max_organisation = 10
+			max_organisation = 15
 		}
+		supply_consumption_factor = -0.05
 		
 		path = {
 			leads_to_tech = grand_assault 
@@ -1991,10 +1999,13 @@ technologies = {
 		}
 	
 		category_vehicle_infantry = {
-			max_organisation = 5
+			max_organisation = 8
+		}
+		category_tanks = {
+			max_organisation = 8
 		}
 		armored_car = {
-			max_organisation = 5
+			max_organisation = 8
 		}
 		
 		additional_brigade_column_size = 1
@@ -2325,7 +2336,7 @@ technologies = {
 			grand_mechanized_offensive
 		}
 		category_light_infantry = {
-			max_organisation = 5
+			max_organisation = 10
 			breakthrough = 0.15
 		}
 
@@ -2712,6 +2723,7 @@ technologies = {
 		#reduced pocketed combat penalty and/or reduces the out of supply penalty or increases time before moving to worse penalty
 		no_supply_grace = 48 # more hours before supply penalty changes
 		out_of_supply_factor = -0.10
+		supply_consumption_factor = -0.10
 		land_reinforce_rate = 0.01
 				
 		path = {
@@ -2889,6 +2901,7 @@ technologies = {
 		category_all_infantry = {
 			soft_attack = 0.05
 			breakthrough = 0.10
+			max_organisation = 8
 		}
 		coordination_bonus = 0.05
 
