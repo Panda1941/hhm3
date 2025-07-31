@@ -60,7 +60,7 @@ USA_chrysler_organization = {
 			limit = {
 				FROM = { tag = MEX }
 			}
-			FROM = { is_in_faction_with = USA }
+			#FROM = { is_in_faction_with = USA }
 		} 
 		else_if = {
 			limit = {

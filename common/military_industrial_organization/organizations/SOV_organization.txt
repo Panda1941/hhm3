@@ -91,13 +91,6 @@ SOV_morozov_design_bureau_organization = {
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
-
-		IF = {
-			limit = {
-				FROM = { tag = MEX }
-			}
-			FROM = { is_in_faction_with = SOV }
-		}
 		ELSE_IF = {
 			limit = {
 				FROM = {
