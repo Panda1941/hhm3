@@ -8,12 +8,19 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				# No trade boosting / no selling resources
 				min_export = 0.0
 				
-				industrial_capacity_factory = 0.08
-				industrial_capacity_dockyard = 0.08
-				production_speed_buildings_factor = 0.08
-				research_speed_factor = 0.05
+				# Medium buff to production
+				industrial_capacity_factory = 0.05
+
+				# Small construction speed buff for mils and a bigger one for civs
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+
+				# Small buffs to soviet resources and states
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.1
 			}
 			allowed_to_remove = {
 				always = no
@@ -78,17 +85,6 @@ ideas = {
 
 
 
-		elwolfmod_novols = {
-			picture = air_support_focus
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				send_volunteer_size = -100
-				air_volunteer_cap = -1000
-			}
-		}
 		elwolfmod_noasia_research = {
 			picture = generic_fighter_production_diverted
 			allowed = {
@@ -100,12 +96,22 @@ ideas = {
 			}
 			removal_cost = -1
 			research_bonus = {
-				infantry_weapons = 0.12
-				artillery = 0.12
-				air_equipment = 0.12
+				infantry_weapons = 0.1
+				artillery = 0.1
 			}
 			modifier = {
 				global_building_slots_factor = 0.2
+			}
+		}
+		elwolfmod_novols = {
+			picture = air_support_focus
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_size = -100
+				air_volunteer_cap = -1000
 			}
 		}
 		nerd_on_country = {

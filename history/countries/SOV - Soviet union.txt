@@ -889,6 +889,8 @@ add_ideas = {
 	SOV_politicized_military
 
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
+
+	SOV_collectivized_society #SOVIET CLOSED ECO
 }
 
 1939.1.1 = {
