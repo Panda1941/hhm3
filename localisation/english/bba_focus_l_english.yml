@@ -1046,7 +1046,7 @@
  ITA_austrian_guarantees_tt:1 "In the event that Germany attempts to do the Anschluss, Italy will get an option to intervene."
  ITA_all_eth_initial_states_controlled_tt:0 "All initial Ethiopian states are controlled by §Y[ROOT.GetFlag][ROOT.GetNameDef]§! or an §Y[ROOT.GetAdjective] ally§!."
  ITA_fronte_militare_clandestino_modifier_tt:0 "Add §Y$ITA_fronte_militare_clandestino_modifier$ (Italy)§! (§Y730§! days) which grants: \n   $MODIFIER_RESISTANCE_GROWTH_ON_OUR_OCCUPIED_STATES$: §G+10%§! \n   $MODIFIER_REQUIRED_GARRISON_FACTOR$: §R+15%§! \n\n"
- ITA_flotta_d_evasione_admiral_traits_tt:0 "Two random Admirals will gain the trait §Y$bold$§!: \n- $MODIFIER_NAVAL_SPEED$: §G+10%§! \n- $MODIFIER_NAVAL_DAMAGE_FACTOR$: §G+5.00%§! \n\n"
+ ITA_flotta_d_evasione_admiral_traits_tt:0 "Two random Admirals will gain the trait §Y$bold$§!: \n- $MODIFIER_NAVAL_SPEED$: §G+5%§! \n- $MODIFIER_NAVAL_DAMAGE_FACTOR$: §G+2.50%§! \n\n"
  ITA_heroes_of_the_nation_general_traits_tt:0 "\nThree random Generals will gain the trait §Y$war_hero$§!: \n- $MODIFIER_UNIT_LEADER_PROMOTE_COST_FACTOR$: §G-50.0%§! \n- $MODIFIER_REASSIGNMENT_DURATION_FACTOR$: §R+50.0%§! \n\n"
  ITA_mussolini_becomes_field_marshal_tt:0 "$ITA_benito_mussolini$ becomes a Field Marshal."
 
@@ -1351,7 +1351,7 @@
  ITA_investments_in_edison_ricostruzione_industriale_tt:0 "$ITA_modify_ricostruzione_industriale_dynamic_modifier_ns_intro$ \n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-10.0%§! \n\n"
 
  ITA_modify_military_industry_dynamic_modifier_ns_intro:0 "Modify §Y$ITA_military_industry_dynamic_modifier$§! by"
- ITA_increase_production_military_industry_tt:2 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §G+20.00%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.00%§! \n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: §R-4.00%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§! \n\n"
+ ITA_increase_production_military_industry_tt:2 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §G+20.00%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.00%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§! \n\n"
  ITA_keep_specialization_military_industry_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §R-20.00%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+10.00%§! \n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: §G+10.00%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§! \n\n"
  ITA_increase_artillery_production_military_industry_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$ITA_military_industry_dynamic_modifier_arty_tt$\n"
  ITA_italian_tankettes_military_industry_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$ITA_military_industry_dynamic_modifier_tankettes_tt$\n"
@@ -1386,7 +1386,7 @@
  ITA_regia_aeronautica_name_default:0 "$ITA_regia_aeronautica_dynamic_modifier$"
  ITA_regia_aeronautica_name_alt:0 "$ITA_regia_aeronautica_alt_dynamic_modifier$"
  ITA_expand_rome_flying_school_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_ACE_GENERATION_CHANCE$: §G+5.00%§! \n$MODIFIER_AIR_TRAINING_XP_FACTOR$: §G+5%§! \n$MODIFIER_AIR_NIGHT_PENALTY$: §G-10.00%§! \n$MODIFIER_AIR_WEATHER_PENALTY$: §G-10.00%§! \n\n"
- ITA_superaereo_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_MISSION_EFFICIENCY$: §G+5%§! \n$MODIFIER_AIR_MISSION_XP_FACTOR$: §G+5%§! \n$MODIFIER_AIR_DOCTRINE_COST_FACTOR$: §G-10.00%§! \n\n"
+ ITA_superaereo_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_MISSION_XP_FACTOR$: §G+5%§! \n$MODIFIER_AIR_DOCTRINE_COST_FACTOR$: §G-10.00%§! \n\n"
  ITA_officers_of_the_service_role_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_ACCIDENTS$: §G-10.0%§! \n$MODIFIER_AIR_NIGHT_PENALTY$: §G-5.00%§! \n$MODIFIER_AIR_WEATHER_PENALTY$: §G-5.00%§! \n\n"
  ITA_standardization_ra_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_EQUIPMENT_UPGRADE_XP_COST$: §R+25%§! \n$ITA_standardization_dynamic_modifier_tt$\n"
  ITA_specialization_ra_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_EQUIPMENT_UPGRADE_XP_COST$: §G-50%§! \n$ITA_specialization_dynamic_modifier_tt$\n"

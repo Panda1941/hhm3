@@ -4235,33 +4235,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_leningrad_polytechnical_institute
-		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility
+		id = SOV_soviet_atomic_bomb_project
+		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_the_means_to_wage_war }
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 5
-		dynamic = yes 
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = SOV_soviet_atomic_bomb_project
-		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_leningrad_polytechnical_institute }
-		x = 0
-		y = 2
-		relative_position_id = SOV_leningrad_polytechnical_institute
 		cost = 5
 
 		available = {
@@ -4566,11 +4546,10 @@ focus_tree = {
 	focus = {
 		id = SOV_the_road_of_life
 		icon = GFX_focus_SOV_the_road_of_life
-		prerequisite = { focus = SOV_leningrad_polytechnical_institute }
 		prerequisite = { focus = SOV_move_industry_to_the_urals }
 		x = 1
 		y = 1
-		relative_position_id = SOV_leningrad_polytechnical_institute
+		relative_position_id = SOV_soviet_atomic_bomb_project
 		cost = 5
 
 		available = {
