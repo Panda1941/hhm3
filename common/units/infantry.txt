@@ -167,6 +167,7 @@ sub_units = {
 	
 		need = {
 			infantry_equipment = 150
+			support_equipment = 20
 		}
 
 		marsh = {
@@ -227,6 +228,7 @@ sub_units = {
 	
 		need = {
 			infantry_equipment = 250
+			support_equipment = 30
 		}
 
 		marsh = {
@@ -285,6 +287,7 @@ sub_units = {
 	
 		need = {
 			infantry_equipment = 150
+			support_equipment = 20
 		}
 
 		hills = {
@@ -346,6 +349,7 @@ sub_units = {
 
 		need = {
 			infantry_equipment = 150
+			support_equipment = 20
 		}
 	}
 	
@@ -390,6 +394,7 @@ sub_units = {
 		
 		need = {
 			infantry_equipment = 150
+			support_equipment = 20
 		}
 		
 		urban = {
@@ -442,6 +447,7 @@ sub_units = {
 
 		need = {
 			infantry_equipment = 150
+			support_equipment = 20
 		}
 		
 		forest = {

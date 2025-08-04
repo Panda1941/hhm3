@@ -5672,6 +5672,7 @@ focus_tree = {
 			any_enemy_country = {
 				SOV_is_major_not_original_sov = yes
 			}
+			has_war_with = GER
 		}
 		
 		search_filters = {}
@@ -5682,6 +5683,10 @@ focus_tree = {
 				days = 365
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = tot_economic_mobilisation
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt

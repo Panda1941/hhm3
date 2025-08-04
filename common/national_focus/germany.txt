@@ -11154,6 +11154,14 @@ focus_tree = {
 		completion_reward = {
 
 			IF = {
+				limit = { 
+					NOT = { ROOT = { has_idea = totaler_krieg_economy }}
+				}
+				add_ideas = tot_economic_mobilisation
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {
 					type = annex_everything

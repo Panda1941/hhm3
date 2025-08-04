@@ -1,6 +1,23 @@
 ideas = {
 
 	country = {
+
+		ROM_romanian_autarky_idea = {
+			name = "Romanian Autarky"
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_improved_industries
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
 	
 	    ROM_the_resource_curse_1 = { #The Oil Must Flow 
 

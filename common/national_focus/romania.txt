@@ -462,19 +462,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = HUN_autarky_idea
+			add_ideas = ROM_romanian_autarky_idea
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_tech_bonus = {
 				name = HOL_make_use_of_our_riches
 				bonus = 1.0
 				uses = 2
 				category = excavation_tech
 			}
-			add_tech_bonus = {
-				name = ROM_autarky
-				bonus = 1.0
-				uses = 1
-				category = synth_resources
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			GER = {
 				add_tech_bonus = {
 					name = ROM_autarky
@@ -634,6 +632,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ROM_expanded_axis_oil_trade
+			custom_effect_tooltip = generic_skip_one_line_tt
 			46 = {
 				add_resource = {
 					type = oil
@@ -1277,6 +1276,7 @@ focus_tree = {
 				}
 			}	
 			remove_ideas = neutrality_idea 
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			if = {
 				limit = {
@@ -1328,10 +1328,12 @@ focus_tree = {
 				}
 				remove_ideas = ROM_waning_influence_of_democracy2
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			create_country_leader = {
 				name = "Carol II"
 				desc = "POLITICS_CAROL_II_DESC"
@@ -1389,6 +1391,8 @@ focus_tree = {
 				}
 				remove_ideas = ROM_iron_guard2 
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ROM_securitate
 		}
 	}
@@ -1643,6 +1647,7 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}	
+			custom_effect_tooltip = generic_skip_one_line_tt
 			create_country_leader = {
 				name = "Ion Antonescu"
 				desc = "POLITICS_ION_ANTONESCU_DESC"
@@ -1654,13 +1659,16 @@ focus_tree = {
 				}
 			}	
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					has_idea = ROM_army_tensions
 				}
 				remove_ideas = ROM_army_tensions
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			remove_ideas = neutrality_idea 		
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = ROM_king_carol_ii_hedonist		
 		}
 	}
@@ -1875,9 +1883,11 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}	
+			custom_effect_tooltip = generic_skip_one_line_tt
 			army_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ROM_army_war_college
-			custom_effect_tooltip = ROM_war_college_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			#hidden_effect = {
 				create_corps_commander = { 
 					name = "Barbu Paraianu"
@@ -1926,6 +1936,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ROM_expand_the_army
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -2256,10 +2267,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1.00
 				uses = 1
-				technology = pack
-				technology = pack2
-				technology = pack3
-				technology = pack4
+				category = artillery
 			}
 			add_tech_bonus = {
 				name = ROM_mountain_arti
@@ -2322,10 +2330,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			mio:GER_opel_car_organization = {
-				add_mio_funds = 1000
-			}
-			mio:GER_opel_organization = {
+			mio:GER_auto_union_organization = {
 				add_mio_funds = 1000
 			}
 			mio:ROM_malaxa_organization = {
@@ -2362,7 +2367,7 @@ focus_tree = {
 			add_tech_bonus = {
 				category = cat_mechanized_equipment
 				uses = 1
-				bonus = 1.5
+				bonus = 2.0
 				name = ROM_mechanization_of_our_soldiers
 			}
 			
@@ -2409,7 +2414,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ROM_acquire_modern_tanks
+			custom_effect_tooltip = generic_skip_one_line_tt
 			army_experience = 50 
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.5

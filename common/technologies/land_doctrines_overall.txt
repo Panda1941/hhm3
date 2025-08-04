@@ -360,19 +360,19 @@ technologies = {
 			tag = SOV 			
 		}
 
-		category_all_armor = {
-			max_strength = -2	# This equals 0 for all tanks
-		}
-		category_light_infantry = {
-			max_strength = -2
-			breakthrough = -0.15
-		}
-		category_line_artillery = {
-			max_strength = -1.0
-		}
-		category_mobile_and_mobile_combat_sup = {
-			max_strength = -5.0
-		}
+		#category_all_armor = {
+		#	max_strength = -2	# This equals 0 for all tanks
+		#}
+		#category_light_infantry = {
+		#	max_strength = -2
+		#	breakthrough = -0.15
+		#}
+		#category_line_artillery = {
+		#	max_strength = -1.0
+		#}
+		#category_mobile_and_mobile_combat_sup = {
+		#	max_strength = -5.0
+		#}
 
 
 
@@ -402,5 +402,6 @@ technologies = {
 		}
 
 		# Effects
+		army_strength_factor = -0.1
 	}
 }

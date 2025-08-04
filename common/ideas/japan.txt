@@ -22,7 +22,6 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				intelligence_agency_defense = 1.5
-				agency_upgrade_time = -0.30
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.1
 			}
@@ -632,8 +631,8 @@ ideas = {
 				medium_plane_airframe = {
 					build_cost_ic = -0.15 instant = yes
 				}
-				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.15 instant = yes
+				small_plane_airframe = {
+					build_cost_ic = -0.05 instant = yes
 				}
 			}
 		}
@@ -661,7 +660,7 @@ ideas = {
 
 			equipment_bonus = {
 				small_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.1 instant = yes
