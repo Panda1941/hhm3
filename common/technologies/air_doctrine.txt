@@ -276,7 +276,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 50
 			modifier = {
 				ai_land_doctrine_tier_1_trigger = yes
 				factor = 2
@@ -487,7 +487,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 50
 			modifier = {
 				ai_land_doctrine_tier_1_trigger = yes
 				factor = 2
@@ -777,8 +777,16 @@ technologies = {
 				factor = 0
 				tag = USA
 			}
+			
 			modifier = {
-				tag = SOV
+				factor = 50
+				tag = HUN
+			}
+			modifier = {
+				OR = {
+					tag = SOV
+					tag = JAP
+				}
 				factor = 4
 			}
 			modifier = {

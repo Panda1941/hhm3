@@ -82,6 +82,10 @@ ideas = {
 			default = yes
 
 			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+			}
 		}
 
 		low_economic_mobilisation = {
@@ -192,21 +196,30 @@ ideas = {
 
 			ai_will_do = {
    				factor = 2
-
-   				modifier = {
-					factor = 20
-
-					is_major = yes
-				}
 				modifier = {
 					has_war_support > 0.25
 					factor = 0 #don't even look at it if you could be taking partial mob
 				}
+				
 				modifier = {
-					tag = ENG
-					has_war = no
-					date < 1937.6.1
+					date < 1937.06.01
+					factor = 2 #don't even look at it if you could be taking partial mob
+				}
+
+   				modifier = {
+					add = 2500
+					OR = {
+						has_idea = undisturbed_isolation
+						has_idea = isolation
+					}
+				}
+
+   				modifier = {
 					factor = 0
+					OR = {
+						has_idea = war_economy
+						has_idea = partial_economic_mobilisation
+					}
 				}
    			}
 		}
@@ -284,44 +297,55 @@ ideas = {
    				factor = 2
 
    				modifier = {
-					factor = 20
-
-					is_major = yes
-				}
-				
-				modifier = {
-					add = 80
-					original_tag = SOV
-					date < 1937.1.1
-					NOT = { 
-						OR = {
-							has_idea = war_economy 
-							has_idea = tot_economic_mobilisation
-						}
-					}
-				}
-				
-				modifier = {
-					original_tag = SIA
-					NOT = { 
-						OR = {
-							has_idea = war_economy 
-							has_idea = tot_economic_mobilisation
-						}
-					}
-					add = 1200 #Prep for invasion
-				}
-
-				modifier = {
-					factor = 100
+					factor = 10
+					date > 1937.2.1
 					OR = {
-						original_tag = URG
-						original_tag = PAR
+						has_idea = civilian_economy
+						has_idea = low_economic_mobilisation
 					}
-					NOT = {
+					has_war_support < 0.5
+				}
+
+   				modifier = {
+					add = 3000
+					OR = {
+						has_idea = undisturbed_isolation
+						has_idea = isolation
+					}
+				}
+
+   				modifier = {
+					add = 3000
+					date > 1936.8.1
+					has_war_support < 0.48
+					NOT = { 
+						OR = {
+							has_idea = war_economy 
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+
+   				modifier = {
+					factor = 0.1
+					OR = {
 						has_idea = war_economy
+						AND = {
+							has_war_support > 0.5
+							OR = {
+								has_war = yes
+								has_government = fascism
+								has_government = communism
+							}
+						}
 					}
-					has_completed_focus = GUAY_coup_detat
+				}
+
+   				modifier = {
+					add = 2000
+					has_idea = civilian_economy
+					has_idea = LSM_neutrality_idea
+					has_government = neutrality
 				}
    			}
 		}
@@ -451,43 +475,77 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-   				base = 3
+   				factor = 5
 
 				modifier = {
-					#High prio on production
-					factor = 20
-					manpower_per_military_factory >  1000
+					factor = 35
+					has_war = yes
 				}
 
-				modifier = {
-					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
-					factor = 0
+   				modifier = {
+					add = 1000
+					OR = {
+						has_idea = undisturbed_isolation
+						has_idea = isolation
+					}
+				}
 
-					manpower_per_military_factory > 15000
-					has_war = yes
-					has_war_support > 0.8
-					any_enemy_country = {
-						ic_ratio = {
-							tag = ROOT
-							ratio > 0.5
-						}
+   				modifier = {
+					add = 5500
+					OR = {
+						date > 1937.1.1
+						has_idea_with_trait = economic_reformer
+					}
+					OR = {
+						has_idea = civilian_economy
+						has_idea = low_economic_mobilisation
+						has_idea = partial_economic_mobilisation
+					}
+					has_war_support > 0.5
+					OR = {
+						has_war = yes
+						has_government = fascism
+						has_government = communism
 					}
 				}
 
 				modifier = {
-					add = 1800
-
-					# revert from closed_economy if we have large allies
-					has_idea = closed_economy
-					has_large_ally_not_pick_closed_economy = yes
+					add = 1000
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+						has_idea = disarmed_nation
+						has_dynamic_modifier = { modifier = SWI_gold_trade_with_switzerland }
+					}
+				}
+				modifier = {
+					factor = 0.1
+					tag = GER
+					is_historical_focus_on = yes
+					has_government = fascism
+					date < 1938.1.1
+					NOT = { has_idea_with_trait = economic_reformer }
 				}
 
+
 				modifier = {
-					# We will lose the war support after the war anyway
-					factor = 0
-					original_tag = GER
-					has_civil_war = yes
-					has_government = neutrality
+					add = 10000
+					has_war = yes
+					has_government = democratic
+					is_historical_focus_on = yes
+				}
+				modifier = {
+					add = 50000
+					has_war = yes
+					tag = USA
+					NOT = {
+						OR = {
+							has_idea = volunteer_only
+							has_idea = limited_conscription
+							has_idea = disarmed_nation
+							has_idea = tot_economic_mobilisation
+						}
+					}
 				}
    			}
 		}
@@ -802,6 +860,15 @@ ideas = {
 			ai_will_do = {
    				factor = 1
 
+				modifier = {
+					factor = 100
+
+					is_major = no
+					has_war = no
+					is_in_faction = no
+					has_idea = LSM_neutrality_idea
+				}
+
    				modifier = {
 					factor = 300
 
@@ -819,11 +886,33 @@ ideas = {
 					date > 1943.1.1 # at this point we can probably cash in on rubber lack in the world
 				}
 
+				modifier = {
+					factor = 400
+					OR = {
+						original_tag = SWE
+						original_tag = POR
+					}
+					has_war = no
+				}
+
 				# Oil for hitlers oil throne!
 				modifier = {
 					factor = 600
 					tag = ROM
 					is_in_faction_with = GER
+				}
+				modifier = {
+					factor = 0
+					original_tag = GER
+					NOT = { has_completed_focus = GER_prioritize_economic_growth }
+				}
+				modifier = {
+					factor = 20
+					original_tag = GER
+					has_completed_focus = GER_prioritize_economic_growth
+					has_idea_with_trait = economic_reformer
+					has_war = no
+					NOT = { has_country_flag = swapped_back_to_limited_export }
 				}
    			}
 		}
@@ -894,6 +983,12 @@ ideas = {
 				modifier = {
 					factor = 1000
 					has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
+				}
+				modifier = {
+					factor = 9999
+					tag = USA
+					date > 1938.6.1
+					has_idea = free_trade
 				}
    			}
 		}
@@ -968,6 +1063,9 @@ ideas = {
 				civilian_intel_to_others = 10.0
 				navy_intel_to_others = 5
 			}
+			on_add = {
+				set_country_flag = swapped_back_to_limited_export
+			}
 
 			cancel_if_invalid = no
 
@@ -1004,7 +1102,7 @@ ideas = {
 					has_large_ally_not_pick_closed_economy = yes
 				}
 				modifier = { #Germany should keep its Autarkic Economy
-					factor = 0.5
+					factor = 0.1
 					original_tag = GER
 					OR = {
 						has_idea = autarkic_economy

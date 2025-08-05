@@ -396,6 +396,26 @@ leader_traits = {
 		sprite = 15
 		intelligence_agency_defense = 1
 		agency_upgrade_time = -0.15
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				tag = JAP
+				OR = {
+					AND = {
+						CHI = { surrender_progress > 0.25 }
+						has_war_with = CHI
+					}
+					has_army_experience > 150
+					any_country = {
+						is_allied_ai = yes
+						is_ai = no
+					}
+					NEP = { is_ai = yes }
+				}
+			}
+		}
 	}
 
 	mastermind_code_cracker = {
@@ -1132,6 +1152,15 @@ leader_traits = {
 		economy_cost_factor = -0.33
 		consumer_goods_factor = -0.15
 		production_speed_buildings_factor = 0.05
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 200
+				tag = GER
+				has_completed_focus = GER_prioritize_economic_growth
+			}
+		}
 	}
 
 	strict_austerity_adherent = {
@@ -1708,6 +1737,10 @@ leader_traits = {
 
 		improve_relations_maintain_cost_factor = -0.5
 		drift_defence_factor = 0.25
+	
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	resolute_social_democrat = {
@@ -5626,7 +5659,7 @@ leader_traits = {
 		democratic_acceptance = -25
 		
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 	}
 
@@ -5690,6 +5723,16 @@ leader_traits = {
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.1
 		research_speed_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_completed_focus = BRA_promote_agriculture
+			}
+		}
+
+
 	}
 
 	BRA_vengeful_industrialist = {
@@ -6006,6 +6049,10 @@ leader_traits = {
 		enemy_operative_capture_chance_factor = 0.05
 		civilian_intel_to_others = -5
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_yagoda = {
@@ -6017,6 +6064,10 @@ leader_traits = {
 		civilian_intel_to_others = -5
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_yagoda_tt
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_yagoda_no_paranoia = {
@@ -6026,6 +6077,10 @@ leader_traits = {
 		enemy_operative_detection_chance = 0.1
 		enemy_operative_capture_chance_factor = 0.05
 		civilian_intel_to_others = -5
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_yezhov_initial = {
@@ -6037,6 +6092,10 @@ leader_traits = {
 		civilian_intel_to_others = -10
 		agency_upgrade_time = -0.1
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_yezhov = {
@@ -6049,6 +6108,10 @@ leader_traits = {
 		agency_upgrade_time = -0.1
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_yezhov_tt
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_yezhov_no_paranoia = {
@@ -6059,6 +6122,10 @@ leader_traits = {
 		enemy_operative_capture_chance_factor = 0.1
 		civilian_intel_to_others = -10
 		agency_upgrade_time = -0.1
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_beriya_initial = {
@@ -6070,6 +6137,10 @@ leader_traits = {
 		civilian_intel_to_others = -10
 		intel_network_gain_factor = 0.1
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_beriya = {
@@ -6082,6 +6153,10 @@ leader_traits = {
 		intel_network_gain_factor = 0.1
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_beriya_tt
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	head_of_the_nkvd_beriya_no_paranoia = {
@@ -6092,6 +6167,10 @@ leader_traits = {
 		enemy_operative_capture_chance_factor = 0.15
 		civilian_intel_to_others = -10
 		intel_network_gain_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	#Kaganovich
@@ -6107,6 +6186,19 @@ leader_traits = {
 		production_speed_rail_way_factor = 0.05
 		production_speed_supply_node_factor = 0.05
 		fuel_gain_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+			}
+			modifier = {
+				tag = SOV
+				factor = 25
+				date > 1940.1.1
+			}
+		}
 	}
 
 	#Khrsuhchyov
@@ -6116,6 +6208,14 @@ leader_traits = {
 		communism_drift = 0.1
 		political_power_gain = 0.1
 		max_command_power = 30
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+			}
+		}
 	}
 
 	#Molotov
@@ -6471,6 +6571,21 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = SOV
+				date < 1939.9.1
+				OR = {
+					has_idea = partial_economic_mobilisation
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				add = 9
+			}
+			modifier = {
+				tag = CHI
+				date > 1937.2.1
+				add = 9
+			}
 		}
 	}
 	anti_communist_crusader = {
@@ -6508,6 +6623,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 20
+				tag = USA
+			}
 		}
 	}
 
@@ -6620,6 +6739,20 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 25
+				tag = ENG
+				OR = {
+					NOT = { has_completed_focus = ENG_a_change_in_course }
+					NOT = { has_government = democratic }
+				}
+				NOT = { has_idea = civilian_economy }
+			}
+			modifier = {
+				factor = 50
+				tag = GER
+				has_idea = war_economy
+			}
 		}
 	}
 
@@ -6643,6 +6776,18 @@ leader_traits = {
 				factor = 1.8
 				date < 1939.1.1
 			}
+			modifier = {
+				factor = 50
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				num_of_civilian_factories < 13
+				OR = {
+					NOT = { has_government = democratic }
+					has_war = yes
+				}
+			}
 		}
 	}
 
@@ -6653,6 +6798,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 2000
+				tag = USA
+			}
 		}
 	}
 	economist = {
@@ -6710,6 +6859,12 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 0.2
+			modifier = {
+				factor = 5
+				tag = ENG
+				is_historical_focus_on = yes
+				has_government = democratic
+			}
 		}
 	}
 
@@ -6951,7 +7106,7 @@ leader_traits = {
 		conscription = 0.02
 
 		ai_will_do = {
-			factor = 1
+			factor = 500
 		}
 	}
 
@@ -8749,6 +8904,22 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = mass_assault
+				OR = {
+					AND = {
+						is_major = no
+						has_army_experience > 5
+					}
+					has_army_experience > 80
+				}
+				factor = 200
+			}
+			modifier = {
+				tag = BEL
+				has_army_experience > 0
+				factor = 200
+			}
 		}
 	}
 
@@ -8808,7 +8979,11 @@ leader_traits = {
 		air_doctrine_cost_factor = -0.10
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
+			modifier = {
+				factor = 0
+				has_country_flag = mobile_warfare_flag 
+			}
 		}
 	}
 
@@ -8888,6 +9063,11 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				factor = 10
+				has_army_experience > 20
+				has_country_flag = mobile_warfare_flag
+			}
 		}
 	}
 
@@ -9467,6 +9647,16 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = SOV
+				has_completed_focus = SOV_foreign_experts
+				add = -1
+			}
+			modifier = {
+				factor = -10
+				has_completed_focus = USA_wartime_industry
+				tag = USA
+			}
 		}
 	}
 
@@ -9478,6 +9668,11 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 10
+				has_completed_focus = USA_wartime_industry
+				tag = USA
+			}
 		}
 	}
 	
@@ -9488,7 +9683,7 @@ leader_traits = {
 		industrial_capacity_dockyard = 0.08
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 	}
 
@@ -9505,6 +9700,10 @@ leader_traits = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				tag = USA
+			}
 		}
 	}
 
@@ -9517,6 +9716,10 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = SOV
+				add = 99999
+			}
 		}
 	}
 
@@ -9607,17 +9810,6 @@ leader_traits = {
 		}
 	}
 
-	construction_company = {
-		random = no
-
-		production_speed_infrastructure_factor = 0.1
-		production_speed_rail_way_factor = 0.1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	resource_development_company = {
 		random = no
 
@@ -9646,7 +9838,7 @@ leader_traits = {
 		global_building_slots_factor = 0.3
 
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 	}
 
@@ -9654,7 +9846,7 @@ leader_traits = {
 		random = no
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 
@@ -9693,7 +9885,12 @@ leader_traits = {
 
 		research_speed_factor = 0.05
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				tag = SOV
+				has_completed_focus = SOV_foreign_experts
+				add = -1
+			}
 		}
 	}
 
@@ -11996,10 +12193,20 @@ leader_traits = {
 		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_1
+			factor = 1
 			modifier = {
 				factor = 0
 				command_power < @tier1_cp_cost
+			}
+			modifier = {
+				factor = 200
+				is_ai_mass_mob = yes
+				is_allied_ai = yes
+			}
+			modifier = {
+				factor = 200
+				tag = FRA
+				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -12013,10 +12220,22 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_2
+			factor = 2
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
+			}
+			modifier = {
+				factor = 200
+				tag = SAF
+			}
+			modifier = {
+				factor = 200
+				OR = {
+					is_ai_mech_mob = yes
+					is_ai_mass_mob = yes
+				}
+				is_allied_ai = yes
 			}
 		}
 	}
@@ -12026,14 +12245,25 @@ leader_traits = {
 		army_defence_factor = 0.12
 		experience_gain_army = @chief_experience_gain_high
 
+
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_3
+			factor = 3
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
+			}
+			modifier = {
+				factor = 200
+				is_ai_mass_mob = yes
+				is_allied_ai = yes
+			}
+			modifier = {
+				factor = 200
+				tag = FIN
+				NOT = { has_tech = human_wave_offensive }
 			}
 		}
 	}
@@ -12048,10 +12278,19 @@ leader_traits = {
 		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_1
+			factor = 5
 			modifier = {
 				factor = 0
 				command_power < @tier1_cp_cost
+			}
+			modifier = {
+				factor = 200
+				tag = FRA
+				OR = {
+					has_idea = low_economic_mobilisation 
+					has_idea = partial_economic_mobilisation
+					date > 1937.1.1
+				}
 			}
 		}
 	}
@@ -12065,10 +12304,16 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_2
+			factor = 500
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+				date < 1937.1.1
+				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -12082,7 +12327,7 @@ leader_traits = {
 		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_3
+			factor = 5000
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
@@ -12101,6 +12346,14 @@ leader_traits = {
 				factor = 0
 				command_power < @tier1_cp_cost
 			}
+			modifier = {
+				factor = 500
+				OR = {
+					tag = CHL
+					tag = CAN
+				}
+				has_war = no
+			}
 		}
 	}
 
@@ -12113,7 +12366,7 @@ leader_traits = {
 		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_1
+			factor = 1
 			modifier = {
 				factor = 0
 				command_power < @tier1_cp_cost
@@ -12130,7 +12383,7 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_2
+			factor = 2
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
@@ -12147,7 +12400,7 @@ leader_traits = {
 		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_3
+			factor = 3
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
@@ -12165,7 +12418,7 @@ leader_traits = {
 		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_1
+			factor = 1
 			modifier = {
 				factor = 0
 				command_power < @tier1_cp_cost
@@ -12182,7 +12435,7 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_2
+			factor = 2
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
@@ -12199,7 +12452,7 @@ leader_traits = {
 		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_3
+			factor = 3
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
@@ -12217,7 +12470,7 @@ leader_traits = {
 		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_1
+			factor = 1
 			modifier = {
 				factor = 0
 				command_power < @tier1_cp_cost
@@ -12234,7 +12487,7 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_2
+			factor = 2
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
@@ -12251,7 +12504,7 @@ leader_traits = {
 		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_3
+			factor = 3
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
@@ -12341,8 +12594,8 @@ leader_traits = {
 		ai_will_do = {
 			factor = @army_chief_factor_2
 			modifier = {
-				factor = 0
-				command_power < @tier2_cp_cost
+				factor = 2000
+				original_tag = HOL
 			}
 		}
 	}
@@ -12533,7 +12786,7 @@ leader_traits = {
 		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = @army_command_factor_1
+			factor = 1
 			modifier = {
 				factor = 0
 				command_power < @tier1_cp_cost
@@ -12551,7 +12804,7 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_command_factor_2
+			factor = 2
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
@@ -12569,7 +12822,7 @@ leader_traits = {
 		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = @army_command_factor_3
+			factor = 3
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
@@ -12648,6 +12901,10 @@ leader_traits = {
 				factor = 0
 				command_power < @tier1_cp_cost
 			}
+			modifier = {
+				factor = 10
+				tag = SOV
+			}
 		}
 	}
 
@@ -12666,6 +12923,10 @@ leader_traits = {
 				factor = 0
 				command_power < @tier2_cp_cost
 			}
+			modifier = {
+				factor = 10
+				tag = SOV
+			}
 		}
 	}
 
@@ -12683,6 +12944,10 @@ leader_traits = {
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
+			}
+			modifier = {
+				factor = 10
+				tag = SOV
 			}
 		}
 	}
@@ -12703,6 +12968,10 @@ leader_traits = {
 				factor = 0
 				command_power < @tier1_cp_cost
 			}
+			modifier = {
+				factor = 0.26
+				tag = FRA
+			}
 		}
 	}
 
@@ -12720,6 +12989,14 @@ leader_traits = {
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
+			}
+			modifier = {
+				factor = 0.26
+				tag = FRA
+			}
+			modifier = {
+				factor = 20
+				is_ai_amtrac = yes
 			}
 		}
 	}
@@ -13139,6 +13416,11 @@ leader_traits = {
 				factor = 0
 				command_power < @tier2_cp_cost
 			}
+			modifier = {
+				factor = 30
+				tag = ENG
+				is_historical_focus_on = yes
+			}
 		}
 	}
 
@@ -13155,6 +13437,12 @@ leader_traits = {
 			modifier = {
 				factor = 0
 				command_power < @tier3_cp_cost
+			}
+			modifier = {
+				factor = 290
+				tag = USA
+				has_idea = independent_air_force_spirit
+				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -13955,8 +14243,8 @@ leader_traits = {
 		ai_will_do = {
 			factor = @navy_chief_factor_2
 			modifier = {
-				factor = 0
-				command_power < @tier2_cp_cost
+				factor = 200
+				tag = JAP
 			}
 		}
 	}

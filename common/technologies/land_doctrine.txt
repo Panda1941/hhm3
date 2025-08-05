@@ -41,12 +41,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20 
+			factor = 5 
 			modifier = {
 				not = {
 					has_army_experience > 120
 				}
 				factor = 0.8
+			} 
+			modifier = {
+				is_major = no
+				is_ai_mech_mob = no
+				is_ai_mobile_warfare_TD = no
+				factor = 0
+			}
+			modifier = {
+				is_ai_mobile_warfare_TD = yes
+				factor = 200
 			}
 		}
 		
@@ -197,23 +207,12 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
+				tag = SOV
+				factor = 5
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
-
-			modifier = {
-				tag = GER
-				factor = 2
+				is_ai_mech_mob = yes
+				factor = 200
 			}
 		}
 		
@@ -253,20 +252,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
 		}
 		
 		ai_research_weights = {
@@ -323,20 +308,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
 		}
 		
 		ai_research_weights = {
@@ -387,19 +358,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
+
 			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
+				tag = GER
+				factor = 5
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
+				is_ai_mobile_warfare_TD = yes
+				factor = 200
 			}
 		}
 		
@@ -443,20 +409,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
 		}
 		
 		ai_research_weights = {
@@ -509,20 +461,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
 		}
 		
 		ai_research_weights = {
@@ -570,20 +508,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -632,18 +556,13 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
+				tag = GER
+				factor = 20
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
+				is_ai_mobile_warfare_TD = yes
+				is_major = yes
+				factor = 200
 			}
 		}
 		
@@ -687,14 +606,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -735,20 +646,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -789,22 +686,12 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
+				tag = SOV
+				factor = 5
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				tag = GER
-				factor = 3
+				is_ai_mech_mob = yes
+				factor = 200
 			}
 		}
 		
@@ -841,12 +728,9 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
+				is_ai_mobile_warfare_TD = yes
+				is_major = no
+				factor = 200
 			}
 		}
 		
@@ -880,14 +764,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -937,6 +813,14 @@ technologies = {
 				}
 				factor = 0.8
 			}
+			modifier = {
+				is_ai_tank_minor = yes
+				factor = 200
+			}
+			modifier = {
+				tag = AUS
+				factor = 200
+			}
 		}
 		
 		ai_research_weights = {
@@ -979,6 +863,10 @@ technologies = {
 				factor = 0.8
 			}
 			factor = 20
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
 		}
 		
 		ai_research_weights = {
@@ -1029,6 +917,10 @@ technologies = {
 				factor = 0.8
 			}
 			factor = 20
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
 		}
 		
 		ai_research_weights = {
@@ -1070,21 +962,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
 			factor = 20
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
 		}
 		
 		ai_research_weights = {
@@ -1122,20 +1004,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
 			factor = 20
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
+				has_war = yes
+				factor = 100
 			}
 		}
 		
@@ -1189,21 +1061,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			factor = 20
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1243,21 +1101,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
 			factor = 20
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
-			}
 		}
 		
 		ai_research_weights = {
@@ -1309,20 +1153,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.25
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -1363,20 +1193,18 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 5
 			modifier = {
-				not = {
-					has_army_experience > 120
+				is_ai_tank_minor = yes
+				factor = 200
+			}
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = SOV
 				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.25
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
+				factor = 10
 			}
 		}
 		
@@ -1418,20 +1246,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -1470,20 +1284,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -1591,20 +1391,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.25
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -2036,18 +1822,14 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				not = {
-					has_army_experience > 120
+				is_major = yes
+				NOT = { 
+					OR = {
+						tag = JAP 	
+						tag = ENG
+					}
 				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.35
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.65
+				factor = 5
 			}
 		}
 		
@@ -2370,18 +2152,16 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				not = {
-					has_army_experience > 120
+				has_country_flag = mech_brick
+				factor = 5
+			}
+			modifier = {
+				OR = {
+					tag = JAP 
+					tag = ENG 
+					is_major = no
 				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.35
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.65
+				factor = 5
 			}
 		}
 		
@@ -2709,6 +2489,51 @@ technologies = {
 				}
 				factor = 0.8
 			}
+			modifier = {
+				is_ai_generic_need_to_war_as_allied_member = yes
+				factor = 20
+			}
+			modifier = {
+				OR = {
+					tag = FIN
+					tag = AFG
+				}
+				factor = 20
+			}
+			modifier = {
+				is_ai_mech_mob = yes
+				factor = 200
+			}
+			modifier = {
+				OR = {
+					is_ai_mass_mob_ex = yes
+					is_spg_country = yes
+				}
+				factor = 20
+			}
+			modifier = {
+				is_historical_focus_on = no
+				OR = {
+					tag = FIN
+					tag = DEN
+					tag = ROM
+					tag = CAN
+					tag = AST
+					tag = LIT
+					tag = LAT
+					tag = EST
+					tag = BEL
+					tag = HOL
+					tag = IRE
+					original_tag = SPR
+				}
+				factor = 20
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				is_ai_mass_mob = yes
+				factor = 5
+			}
 		}
 		
 		ai_research_weights = {
@@ -2754,12 +2579,30 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 25
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
 				}
-				factor = 0.8
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
+			}
+			modifier = {
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
 			}
 		}
 		
@@ -2801,12 +2644,30 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 25
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
 				}
-				factor = 0.8
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
+			}
+			modifier = {
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
 			}
 		}
 		
@@ -2849,7 +2710,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 50
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -2857,8 +2718,26 @@ technologies = {
 				factor = 0.8
 			}
 			modifier = {
+				is_ai_mech_mob = yes
+				factor = 500
+			}
+			modifier = {
+				has_country_flag = mech_brick
+				factor = 500
+			}
+			modifier = {
+				OR = {
+					has_country_flag = spacemarine
+					has_country_flag = spacemarine_gbp
+					has_country_flag = mass_assault_flag
+					has_country_flag = mech_god
+				}
+				tag = GER
+				factor = 500
+			}
+			modifier = {
 				tag = SOV
-				factor = 2
+				factor = 0.2
 			}
 
 			modifier = {
@@ -2875,12 +2754,28 @@ technologies = {
 				}
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
 			}
 		}
 		
@@ -2930,7 +2825,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 200
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -2938,12 +2833,20 @@ technologies = {
 				factor = 0.8
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
+				tag = POL
+				is_historical_focus_on = yes
+				NOT = {
+					has_army_experience > 400
+				}
+				NOT = {
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_ozon
+				}
+				factor = 0
 			}
 		}
 		
@@ -2980,20 +2883,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 200
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				NOT = {
+					has_army_experience > 400
 				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.35
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.65
+				NOT = {
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_ozon
+				}
+				factor = 0
 			}
 		}
 		
@@ -3034,20 +2939,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 200
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				NOT = {
+					has_army_experience > 400
 				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.35
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.65
+				NOT = {
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_ozon
+				}
+				factor = 0
 			}
 		}
 		
@@ -3094,21 +3001,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.25
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
+			factor = 200
 		}
 		
 		ai_research_weights = {
@@ -3163,20 +3056,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
-			}
 		}
 		
 		ai_research_weights = {
@@ -3209,20 +3088,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.1
-			}
-			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.35
-			}
 		}
 		
 		ai_research_weights = {
@@ -3282,7 +3147,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 500
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -3290,12 +3155,32 @@ technologies = {
 				factor = 0.8
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.5
+				OR = {
+					has_country_flag = FRA_spacemarine
+					has_country_flag = mass_mob_flag
+					has_country_flag = mass_infantry_flag
+				}
+				factor = 10
 			}
 			modifier = {
-				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.75
+				is_ai_generic_need_to_war_as_allied_member = yes
+				factor = 20
+			}
+			modifier = {
+				tag = SOV
+				OR = {
+					has_country_flag = mass_assault_standard
+					has_country_flag = mass_assault_meatwall
+				}
+				factor = 5
+			}
+			modifier = {
+				OR = {
+					has_country_flag = mech_brick
+					is_ai_mech_mob = yes
+					has_country_flag = mech_god
+				}
+				factor = 0
 			}
 			modifier = {
 				factor = 0.6
@@ -3346,12 +3231,46 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 200
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				NOT = {
+					has_army_experience > 400
 				}
-				factor = 0.8
+				NOT = {
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_ozon
+				}
+				factor = 0
+			}
+			modifier = {
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
+			}
+			modifier = {
+				tag = POL
+				is_historical_focus_on = yes
+				has_army_experience < 400
+				NOT = { 
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = { has_completed_focus = POL_ozon }
+				factor = 0
 			}
 		}
 		
@@ -3394,12 +3313,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 200
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				NOT = {
+					has_army_experience > 400
 				}
-				factor = 0.8
+				NOT = {
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_ozon
+				}
+				factor = 0
 			}
 		}
 		
@@ -3440,12 +3369,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 200
 			modifier = {
-				not = {
-					has_army_experience > 120
+				tag = POL
+				is_historical_focus_on = yes
+				NOT = {
+					has_army_experience > 400
 				}
-				factor = 0.8
+				NOT = {
+					any_other_country = {
+						is_justifying_wargoal_against = POL
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_ozon
+				}
+				factor = 0
 			}
 		}
 		
@@ -3480,13 +3419,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			modifier = {
-				not = {
-					has_army_experience > 120
-				}
-				factor = 0.8
-			}
-			factor = 20
+			factor = 200
 		}
 		
 		ai_research_weights = {

@@ -458,7 +458,6 @@ NDefines.NMilitary.AIR_SUPPORT_BASE = 0.20                       -- CAS bonus fa
 NDefines.NSupply.COOLDOWN_DAYS_AFTER_MOVING_SUPPLY_CAPITAL = 7 -- vanilla 30  cooldown for moving supply again after last move
 NDefines.NSupply.DAYS_TO_START_GIVING_SUPPLY_AFTER_MOVING_SUPPLY_CAPITAL = 1  --vanilla 7 the country will start gaining supply after this many days moving its capital
 NDefines.NSupply.DAYS_TO_START_GIVING_FULL_SUPPLY_AFTER_MOVING_SUPPLY_CAPITAL =  2 -- vanilla 21  the country will reach max supply after this many days moving its capital
-NDefines.NAI.AIR_SUPERIORITY_FOR_FRIENDLY_CAS_RATIO = 0.30		-- Demand at least this proportion of our cas planes as air superiority regardless of other needs
 NDefines.NAir.ESCORT_FACTOR = 4  		-- cas enters battle earlier, fucks a lot of shit up
 
 NDefines.NAir.COMBAT_MULTIPLANE_CAP = 1.5                  -- VANILLA 3
@@ -517,12 +516,10 @@ NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 5.0
 
 --- Embargos
 NDefines.NDiplomacy.EMBARGO_COST = 10 -- 100
-NDefines.NDiplomacy.EMBARGO_THREAT_THRESHOLD = -1 -- 30
 NDefines.NDiplomacy.EMBARGO_SAME_IDEOLOGY_AI_WEIGHT = -20 -- -20
 NDefines.NDiplomacy.EMBARGO_DIFFERENT_IDEOLOGY_AI_WEIGHT = -20 -- 15
 NDefines.NDiplomacy.EMBARGO_DIFFERENT_IDEOLOGY_AT_OFFENSIVE_WAR_AI_WEIGHT = -20 -- 10 
 NDefines.NDiplomacy.EMBARGO_RECIPIENT_IS_MAJOR_AI_WEIGHT = 1 -- 10
-NDefines.NDiplomacy.EMBARGO_NEIGHBOUR_AI_WEIGHT =  1 -- 10
 
 -- War Support
 NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.5 -- -0.3
@@ -533,18 +530,6 @@ NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = -0.05 -- -0.2
 NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0.05 -- 0.2
 
 NDefines.NCountry.BASE_STABILITY_WAR_FACTOR = -0.05 -- -0.2
-
-
-
---All of this AI stuff doesn't affect strategy, just used to increase performance -- AI WILL NOT TOUCH ANYTHING
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 9999  --7 the ai will check what the best doctrine they can have is once every month
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 9999  --7 the ai will check what the best division template they can have is once every month
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 9999 --7 the ai will check what the best equipment they can have is once every month
-NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 9999 --7 the ai will refreshes need scores based on country situation
-NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 9999  --48 the ai will change templates less frequently
-NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 9999    --52 every 5 days the ai will check weather they should increase supply motorization
-NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 9999    --168 every 20 days the ai will check for supply related bottlenecks and try to fix them
-
 
 -- AI will defend cities as well
 NDefines.NAI.AREA_DEFENSE_SETTING_VP = true --False (AI will garrison cities)

@@ -258,7 +258,7 @@ characters = {
 			}
 			cost = 200
 			ai_will_do = {
-				base = 2
+				factor = 25.000
 			}
 		}		
 	}
@@ -288,6 +288,7 @@ characters = {
 			ledger = army
 			allowed = {
 				original_tag = SOV
+				is_ai = no
 			}
 			available = {
 				hidden_trigger = {
@@ -311,7 +312,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 2
+				factor = 1.000
 			}
 		}	
 	}
@@ -336,7 +337,7 @@ characters = {
 				military_theorist
 			}
 			ai_will_do = {
-				base = 1
+				factor = 2.000
 			}
 		}
 
@@ -481,7 +482,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 4
+				factor = 100.000
 			}
 		}
 
@@ -534,11 +535,7 @@ characters = {
 			}
 			cost = 50
 			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 5
-					NOT = { has_character = SOV_semyon_timoshenko }
-				}
+				factor = 1.000
 			}
 		}
 
@@ -580,9 +577,6 @@ characters = {
 			}
 			traits = {
 				mass_assault_expert
-			}
-			ai_will_do = {
-				base = 1
 			}
 		}
 
@@ -713,7 +707,24 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = SOV_kirill_meretskov
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 10.000
+			}
 		}
 	}
 
@@ -754,6 +765,23 @@ characters = {
 			logistics_skill = 1
 			legacy_id = 412
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+		advisor={
+			slot = high_command
+			idea_token = andrey_yeryomenko
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 25.000
+			}
 		}
 	}
 
@@ -834,6 +862,24 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = nikandr_chibisov
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				army_infantry_1
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -1227,9 +1273,6 @@ characters = {
 				}
 			}
 			traits = { naval_theorist }
-			ai_will_do = {
-				base = 0
-			}
 		}
 
 		navy_leader = {
@@ -1283,7 +1326,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.200
+				factor = 0.200
 			}
 		}
 
@@ -1338,7 +1381,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.200
+				factor = 0.200
 			}
 		}
 
@@ -1393,7 +1436,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.200
+				factor = 0.200
 			}
 		}
 
@@ -1429,7 +1472,7 @@ characters = {
 			}
 				cost = 100
 			ai_will_do = {
-				base = 1
+				factor = 1.000
 			}
 		}
 	}
@@ -1452,9 +1495,6 @@ characters = {
 			}
 			traits = {
 				grand_fleet_proponent
-			}
-			ai_will_do = {
-				base = 0
 			}
 		}
 	}
@@ -1479,7 +1519,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
+				factor = 1.000
 			}
 		}		
 	}
@@ -1503,7 +1543,11 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
+				factor = 0.25
+				modifier = {
+					factor = 0
+					NOT = { has_idea = independent_air_force_spirit }
+				}
 			}
 		}
 	}
@@ -1529,9 +1573,6 @@ characters = {
 			traits = {
 				close_air_support_proponent
 			}
-			ai_will_do = {
-				base = 0
-			}
 		}		
 	}
 
@@ -1554,7 +1595,11 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.200
+				factor = 0
+				modifier = {
+					add = 0.2
+					date > 1941.1.1
+				}
 			}
 		}
 	}
@@ -1578,7 +1623,11 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.200
+				factor = 0
+				modifier = {
+					add = 0.2
+					date > 1941.1.1
+				}
 			}
 		}		
 	}
@@ -1602,7 +1651,11 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
+				factor = 0.250
+				modifier = {
+					factor = 0
+					NOT = { has_idea = independent_air_force_spirit }
+				}
 			}
 		}	
 	}
@@ -1626,7 +1679,11 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
+				factor = 0.250
+				modifier = {
+					factor = 0
+					NOT = { has_idea = independent_air_force_spirit }
+				}
 			}
 		}		
 	}
@@ -1649,7 +1706,7 @@ characters = {
 			}
 			traits = { air_warfare_theorist }
 			ai_will_do = {
-				base = 0.5
+				factor = 2.000
 			}
 		}		
 	}
@@ -1673,7 +1730,11 @@ characters = {
 			}
 			cost = 50
 			ai_will_do = {
-				base = 0.200
+				factor = 0
+				modifier = {
+					add = 0.2
+					date > 1941.1.1
+				}
 			}
 		}
 	}
@@ -1698,7 +1759,7 @@ characters = {
 			}
 			cost = 50
 			ai_will_do = {
-				base = 0
+				factor = 1.000
 			}
 		}
 	}
@@ -1725,9 +1786,13 @@ characters = {
 			traits = {
 				navy_chief_naval_aviation_1
 			}
-			cost = 50
+				cost = 50
 			ai_will_do = {
-				base = 0.200
+				factor = 0
+				modifier = {
+					add = 0.2
+					date > 1941.1.1
+				}
 			}
 		}		
 	}
@@ -1751,11 +1816,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.5
-				modifier = {
-					factor = 5
-					NOT = { has_character = SOV_semyon_timoshenko }
-				}
+				factor = 1.000
 			}
 		}
 
@@ -1790,11 +1851,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 5
-					NOT = { has_character = SOV_semyon_timoshenko }
-				}
+				factor = 1.000
 			}
 		}
 
@@ -1828,7 +1885,11 @@ characters = {
 			}
 			cost = 200
 			ai_will_do = {
-				base = 1
+				factor = 25.000
+				modifier = {
+					factor = 0
+					NOT = { has_idea = independent_air_force_spirit }
+				}
 			}
 		}
 	}
@@ -1987,7 +2048,7 @@ characters = {
 			}
 			cost = 50
 			ai_will_do = {
-				base = 1
+				factor = 1.000
 			}
 		}
 		
@@ -2179,7 +2240,7 @@ characters = {
 				popular_figurehead 
 			}
 			ai_will_do = {
-				base = 0.5
+				base = 1
 			}
 		}
 	}
@@ -2230,9 +2291,6 @@ characters = {
 			traits = {
 				political_commissar 
 			}
-			ai_will_do = {
-				base = 0.5
-			}
 		}
 	}
 
@@ -2257,15 +2315,17 @@ characters = {
 			}
 			
 			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
+				OR = {
+					NOT = {
+						has_character_flag = SOV_character_purged_flag 
+					}
+					SOV = {
+						is_ai = yes
+					}
 				}
 			}
 			traits = {
 				captain_of_industry 
-			}
-			ai_will_do = {
-				base = 1
 			}
 		}
 	}
@@ -2298,9 +2358,6 @@ characters = {
 			
 			traits = {
 				iron_lazar 
-			}
-			ai_will_do = {
-				base = 1
 			}
 		}
 	}
@@ -2552,9 +2609,6 @@ characters = {
 			traits = {
 				head_of_intelligence 
 			}
-			ai_will_do = {
-				base = 0
-			}
 		}
 	}
 
@@ -2586,9 +2640,6 @@ characters = {
 			traits = {
 				pc_for_foreign_affairs_molotov 
 			}
-			ai_will_do = {
-				base = 0.5
-			}
 		}
 	}
 
@@ -2619,9 +2670,6 @@ characters = {
 			}
 			traits = {
 				pc_for_foreign_affairs_litvinov 
-			}
-			ai_will_do = {
-				base = 0.5
 			}
 		}
 	}
@@ -2770,9 +2818,6 @@ characters = {
 			}
 			traits = {
 				head_directorate_of_new_buildings 
-			}
-			ai_will_do = {
-				base = 2
 			}
 		}
 	}
@@ -3369,9 +3414,6 @@ characters = {
 			traits = {
 				appeasing_technocrat 
 			}
-			ai_will_do = {
-				base = 2
-			}
 		}
 	}
 
@@ -3434,9 +3476,6 @@ characters = {
 			traits = {
 				anti_stalinist_propagandist 
 			}
-			ai_will_do = {
-				base = 0.5
-			}
 		}
 	}
 	
@@ -3469,9 +3508,6 @@ characters = {
 			traits = {
 				patriarch_of_moscow_and_all_russia 
 			}
-			ai_will_do = {
-				base = 1.5
-			}
 		}
 	}
 	
@@ -3502,9 +3538,6 @@ characters = {
 			}
 			traits = {
 				orthodox_rabblerouser
-			}
-			ai_will_do = {
-				base = 1
 			}
 		}		
 	}
@@ -3538,9 +3571,6 @@ characters = {
 			traits = {
 				theocratic_diplomat
 			}
-			ai_will_do = {
-				base = 0.5
-			}
 		}
 	}
 
@@ -3572,9 +3602,6 @@ characters = {
 			}
 			traits = {
 				driver_of_the_faithful
-			}
-			ai_will_do = {
-				base = 1
 			}
 		}		
 	}
@@ -3614,9 +3641,6 @@ characters = {
 			}
 			traits = {
 				the_foreign_connection
-			}
-			ai_will_do = {
-				base = 1
 			}
 		}		
 	}
@@ -3684,9 +3708,6 @@ characters = {
 			traits = {
 				ataman_transbaikal_host
 			}
-			ai_will_do = {
-				base = 1
-			}
 		}		
 	}
 
@@ -3715,9 +3736,6 @@ characters = {
 			}
 			traits = {
 				political_chameleon
-			}
-			ai_will_do = {
-				base = 0
 			}
 		}		
 	}
@@ -3758,9 +3776,6 @@ characters = {
 			}
 			traits = {
 				mladorossi_theorist
-			}
-			ai_will_do = {
-				base = 0.5
 			}
 		}
 	}

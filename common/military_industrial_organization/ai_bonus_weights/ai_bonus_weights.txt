@@ -1,3 +1,17 @@
+small_plane_airframe = {
+	air_attack = 250000
+	air_agility = 100000
+	air_defence = 250000
+}
+
+small_plane_cas_airframe = {
+	air_ground_attack = 100000
+}
+
+medium_plane_airframe = {
+	air_ground_attack = 100000
+}
+
 default = {
 
 	# Equipment stats
@@ -39,8 +53,8 @@ default = {
 	naval_torpedo_hit_chance_factor = 1
 	naval_weather_penalty_factor = 1
 	night_penalty = 1
-	reliability = 1
-	reliability_factor = 1
+	reliability = 0
+	reliability_factor = 0
 	soft_attack = 1
 	strategic_attack = 1
 	sub_attack = 1

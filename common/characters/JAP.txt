@@ -218,15 +218,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 5
-				modifier = {
-					factor = 1.500
-					NOT = {
-						JAP = {
-							has_war_with = USA
-						}
-					}
-				}
+				factor = 35.00
 			}
 		}
 		
@@ -621,7 +613,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 3
+				factor = 30.000
 			}
 		}
 		
@@ -1033,7 +1025,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				base = 5
+				factor = 15.000
 			}
 		}
 	}
@@ -1059,7 +1051,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 2
+				factor = 1.000
 			}
 		}
 	}
@@ -1082,7 +1074,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 5
+				factor = 1.000
 			}
 		}
 	}
@@ -1153,7 +1145,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 0.200
+				factor = 1.200
 			}
 		}
 	}
@@ -1181,7 +1173,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				base = 10
+				factor = 1.000
 			}
 		}
 	}
@@ -1204,7 +1196,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				base = 2
+				factor = 500.000 #get this guy first, always
 			}
 		}
 	}
@@ -1239,7 +1231,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 3.000
 			}
 		}
 	}
@@ -1502,7 +1494,7 @@ characters={
 				prince_of_terror 
 			}
 			ai_will_do = {
-				base = 0.300
+				factor = 0.300
 			}
 		}
 	}
@@ -1522,9 +1514,6 @@ characters={
 			}
 			traits = {
 				compassionate_gentleman 
-			}
-			ai_will_do = {
-				base = 0.100
 			}
 		}		
 	}

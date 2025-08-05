@@ -10,6 +10,10 @@ technologies = {
 		on_research_complete = {
 			set_technology={ juggle_industry=0 }
 		}
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	juggle_eme = {
 		
@@ -21,6 +25,10 @@ technologies = {
 		}
 		on_research_complete = {
 			set_technology={ juggle_eme=0 }
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	juggle_air = {
@@ -34,6 +42,10 @@ technologies = {
 		on_research_complete = {
 			set_technology={ juggle_air=0 }
 		}
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	juggle_navy = {
 		
@@ -45,6 +57,10 @@ technologies = {
 		}
 		on_research_complete = {
 			set_technology={ juggle_navy=0 }
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	juggle_navy_sup = {
@@ -58,6 +74,10 @@ technologies = {
 		on_research_complete = {
 			set_technology={ juggle_navy_sup=0 }
 		}
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	juggle_tank = {
 		
@@ -69,6 +89,10 @@ technologies = {
 		}
 		on_research_complete = {
 			set_technology={ juggle_tank=0 }
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	juggle_arty = {
@@ -82,6 +106,10 @@ technologies = {
 		on_research_complete = {
 			set_technology={ juggle_arty=0 }
 		}
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	juggle_support = {
 		
@@ -94,6 +122,10 @@ technologies = {
 		on_research_complete = {
 			set_technology={ juggle_support=0 }
 		}
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	juggle_guns = {
 		
@@ -105,6 +137,10 @@ technologies = {
 		}
 		on_research_complete = {
 			set_technology={ juggle_guns=0 }
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

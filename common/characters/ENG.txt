@@ -185,15 +185,6 @@ characters={
 			traits = {
 				grand_battle_plan_expert
 			}
-
-			ai_will_do = {
-				base = 2
-				modifier = {
-					has_idea_with_trait = industrial_concern
-					has_idea_with_trait = silent_workhorse
-					factor = 5
-				}
-			}
 		}
 		
 		field_marshal={
@@ -380,7 +371,12 @@ characters={
 				military_theorist
 			}
 			ai_will_do = {
-				base = 2
+				factor = 2.000
+				modifier = {
+					has_idea_with_trait = industrial_concern
+					has_idea_with_trait = silent_workhorse
+					factor = 10.000
+				}
 			}
 		}
 		
@@ -669,7 +665,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
+				factor = 1.000
 			}
 		}
 		
@@ -779,15 +775,10 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 0.5
-
+				factor = 0.600
 				modifier = {
-					# Increase weight of navy chief after army chief is hired
-					factor = 2
-					amount_taken_ideas = {
-						amount > 0
-						slots = { army_chief }
-					}
+					date > 1937.3.1
+					factor = 500
 				}
 			}
 		}
@@ -994,10 +985,6 @@ characters={
 			traits = {
 				grand_fleet_proponent
 			}
-
-			ai_will_do  = {
-				base = 1
-			}
 		}
 	}
 
@@ -1017,9 +1004,6 @@ characters={
 				original_tag = ENG
 			}
 			traits = { naval_theorist }
-			ai_will_do  = {
-				base = 0.5
-			}
 		}
 	}
 
@@ -1040,10 +1024,6 @@ characters={
 			}
 			traits = {
 				air_warfare_theorist
-			}
-
-			ai_will_do  = {
-				base = 0.5
 			}
 		}
 	}
@@ -1066,10 +1046,6 @@ characters={
 			
 			traits = {
 				victory_through_airpower
-			}
-
-			ai_will_do  = {
-				base = 0.25
 			}
 		}
 	}
@@ -1098,7 +1074,7 @@ characters={
 				blitzkrieg_theorist
 			}
 			ai_will_do = {
-				base = 1
+				factor = 1.000
 			}
 		}
 	}
@@ -1209,16 +1185,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 3
-
-				modifier = {
-					# Increase weight of navy chief after army chief is hired
-					factor = 2
-					amount_taken_ideas = {
-						amount > 0
-						slots = { army_chief }
-					}
-				}
+				factor = 0.800
 			}
 		}
 	}
@@ -1241,16 +1208,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
-
-				modifier = {
-					# Increase weight of navy chief after army chief is hired
-					factor = 2
-					amount_taken_ideas = {
-						amount > 0
-						slots = { army_chief }
-					}
-				}
+				factor = 1.000
 			}
 		}
 	}
@@ -1276,16 +1234,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 2
-
-				modifier = {
-					# Increase weight of air chief after navy chief is hired
-					factor = 3
-					amount_taken_ideas = {
-						amount > 0
-						slots = { navy_chief }
-					}
-				}
+				factor = 4.000
 			}
 		}
 	}
@@ -1308,16 +1257,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 3
-
-				modifier = {
-					# Increase weight of air chief after navy chief is hired
-					factor = 3
-					amount_taken_ideas = {
-						amount > 0
-						slots = { navy_chief }
-					}
-				}
+				factor = 1.000
 			}
 		}
 	}
@@ -1340,16 +1280,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
-
-				modifier = {
-					# Increase weight of air chief after navy chief is hired
-					factor = 3
-					amount_taken_ideas = {
-						amount > 0
-						slots = { navy_chief }
-					}
-				}
+				factor = 1.000
 			}
 		}		
 	}
@@ -1530,7 +1461,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				base = 0.2
+				factor = 50.0
 			}
 		}
 	}
@@ -1628,9 +1559,6 @@ characters={
 			}
 			traits  = {
 				backroom_backstabber 
-			}
-			ai_will_do  = {
-				base = 0.5
 			}
 		}
 	}
@@ -2137,9 +2065,6 @@ characters={
 			traits  = {
 				head_of_intelligence 
 			}
-			ai_will_do  = {
-				base = 0.5
-			}
 		}
 	}
 
@@ -2161,10 +2086,10 @@ characters={
 				}
 			}
 			ai_will_do  = {
-				base = 1
+				factor  = 1.000
 				modifier  = {
-					has_political_power < 200
-					factor = 0
+					has_political_power < 200.000
+					factor  = 0.000
 				}
 			}
 			allowed  = {

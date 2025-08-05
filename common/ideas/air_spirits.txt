@@ -4,7 +4,7 @@ ideas = {
 			ledger = air
 			available = { has_air_academy = yes }
 			modifier = {
-				air_advisor_cost_factor = -0.25
+				air_advisor_cost_factor = -0.75
 				max_command_power = 25
 			}
 			cost = 30
@@ -14,6 +14,20 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					factor = 0
+					has_country_flag = air_force_spirit_swap 
+				}
+				modifier = {
+					factor = 9999
+					OR = {
+						tag = SOV
+						tag = JAP
+						tag = ENG
+						tag = USA
+					}
+					date < 1940.1.1
 				}
 			}
 		}
@@ -79,7 +93,7 @@ ideas = {
 			}
 			cost = 30
 			ai_will_do = {
-				factor = 1
+				factor = 15
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -132,6 +146,14 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					add = 1000
+					has_air_experience > 90
+				}
+				modifier = {
+					add = 1000
+					has_country_flag = air_force_spirit_swap 
 				}
 			}
 		}
@@ -193,7 +215,7 @@ ideas = {
 			cost = 30
 			visible = {  }
 			ai_will_do = {
-				factor = 1
+				factor = 50
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -241,7 +263,7 @@ ideas = {
 			}
 			cost = 30
 			ai_will_do = {
-				factor = 1
+				factor = 0
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -256,7 +278,7 @@ ideas = {
 			}
 			cost = 30
 			ai_will_do = {
-				factor = 1
+				factor = 0
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -272,7 +294,7 @@ ideas = {
 			}
 			cost = 30
 			ai_will_do = {
-				factor = 1
+				factor = 100
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -287,7 +309,7 @@ ideas = {
 			}
 			cost = 30
 			ai_will_do = {
-				factor = 1
+				factor = 0
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }

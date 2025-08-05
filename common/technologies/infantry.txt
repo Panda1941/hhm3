@@ -73,30 +73,33 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
+			factor = 100
+			
 			modifier = {
 				factor = 10
 				tag = CHI
-
-				OR = {
-					date > 1937.1.1
-					JAP = { is_ai = no }
-				}
 			}
-
+			
 			modifier = {
 				factor = 10
-				date > 1936.1.3
+				date > "1936.1.3"
+			}
+			
+			modifier = {
+				factor = 500
+				has_focus_tree = generic_focus
+			}
+			
+			modifier = {
+				factor = 0
+				has_war = yes
+				any_enemy_country = {
+					is_major = yes
+				}
 			}
 		}
-	}
-
+	}	
+	
 	infantry_weapons2 = {
 
 		category_light_infantry = {
@@ -128,31 +131,102 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
+			factor = 500
 
 			modifier = {
-				factor = 5
+				factor = 0
+				OR = {
+					tag = ENG
+					tag = FRA
+					AND = {
+						tag = GER
+						GER_AI_is_infantry_based = no
+					}
+					has_country_flag = grand_battleplan_15w
+				}
+				date < 1938.1.1
+			}
+			
+			modifier = {
+				factor = 0.01
+				date < 1938.1.1
 
 				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
+					is_literally_china = yes
 				}
 			}
 
 			modifier = {
 				factor = 5
-				is_major = yes
-				date > "1938.1.1"
+				date > "1937.7.1"
 			}
-
+			
+			modifier = {
+				factor = 10
+				has_focus_tree = generic_focus
+			}
+			
 			modifier = {
 				factor = 5
-				date > "1939.1.1"
+				tag = SOV
+				has_country_flag = mech_brick
+			}
+			
+			modifier = {
+				factor = 0.2
+				tag = FIN
+				NOT = { has_completed_focus = FIN_increase_military_budget }
+			}
+			
+			modifier = {
+				factor = 0
+				OR = {
+					tag = USA
+					tag = ITA
+					AND = {
+						has_idea = LSM_neutrality_idea
+						has_war = no
+					}
+					OR = {
+						AND = {
+							tag = ENG
+							any_country = {
+								is_subject_of = ENG
+								has_focus_tree = generic_focus
+							}
+						}
+						AND = {
+							tag = FRA
+							any_country = {
+								is_subject_of = FRA
+								has_focus_tree = generic_focus
+							}
+						}
+					}		
+				}
+				date < 1938.1.1
+			}
+			modifier = {
+				factor = 0
+				tag = AST
+				OR = {
+					AND = {
+						NOT = { has_tech = improved_small_airframe }
+						NOT = { is_researching_technology = improved_small_airframe }
+					}
+					AND = {
+						NOT = { has_tech = aa_lmg }
+						NOT = { is_researching_technology = aa_lmg }
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				tag = SOV
+				NOT = { has_completed_focus = SOV_pc_of_mechanical_engineering }
+				is_historical_focus_on = yes
+				has_global_flag = is_done
 			}
 		}
 	}
@@ -182,22 +256,67 @@ technologies = {
 		categories = {
 			infantry_weapons
 		}
-
+		
 		ai_will_do = {
-			factor = 3
-
+			factor = 500
+						
 			modifier = {
-				factor = 2
-				is_major = yes
+				factor = 0
+				OR = {
+					tag = ENG
+					tag = FRA
+					AND = {
+						tag = GER
+						GER_AI_is_infantry_based = no
+					}
+					has_country_flag = grand_battleplan_15w
+				}
+				date < 1938.6.1 #we might be a bit scuffed techwise
 			}
-
+						
 			modifier = {
 				factor = 10
-				date > "1939.1.1"
+				date > "1937.6.1"
 			}
+						
 			modifier = {
-				num_of_military_factories < 50
-				factor = 0.5
+				factor = 0
+				date < "1938.3.1"
+				tag = JAP
+				NOT = {
+					has_tech_bonus = {
+				  		 category = infantry_weapons
+					}
+				}
+			}
+						
+			modifier = {
+				factor = 10 #we want the guns
+				date > "1938.1.1"
+				tag = SOV
+			}
+			
+			modifier = {
+				factor = 50
+				has_focus_tree = generic_focus
+			}
+			
+			modifier = {
+				factor = 50
+				has_focus_tree = equipment_effort_2
+			}
+			
+			modifier = {
+				factor = 50
+				has_focus_tree = equipment_effort_3
+			}
+			
+			modifier = {
+				factor = 0
+				tag = SOV
+				NOT = { has_completed_focus = SOV_pc_of_mechanical_engineering }
+				is_historical_focus_on = yes
+				has_global_flag = is_done
 			}
 			#modifier = {
 			#	factor = 0
@@ -241,20 +360,66 @@ technologies = {
 		categories = {
 			infantry_weapons
 		}
-
+		
 		ai_will_do = {
-			factor = 2
+			factor = 3
 
 			modifier = {
-				factor = 2
-				date > "1940.1.1"
+				factor = 500
+				tag = SOV
+				has_completed_focus = SOV_pc_of_mechanical_engineering
 			}
 
+			modifier = {
+				factor = 200
+				OR = {
+					has_country_flag = gun3_licensed
+				}
+			}
+
+			modifier = {
+				factor = 5000
+				OR = {
+					has_country_flag = mass_infantry_flag
+					has_country_flag = GER_spacemarine
+					has_country_flag = mass_mob_flag
+					has_country_flag = mech_god
+				}
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.12.1"
+			}
+			
+			modifier = {
+				factor = 0
+				has_focus_tree = generic_focus
+				NOT = { has_completed_focus = equipment_effort }
+			}
+			
+			modifier = {
+				factor = 0
+				has_focus_tree = generic_focus
+				is_ai_tech_slave = yes
+				date < 1939.8.1
+			}
+			
+			modifier = {
+				factor = 500
+				has_focus_tree = generic_focus
+				has_completed_focus = equipment_effort
+				NOT = { tag = BEL }
+				NOT = { tag = MAL }
+				NOT = { tag = PHI }
+				NOT = { has_country_flag = gun2_rush }
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1941.1.1"
 			}
-
+			
 			modifier = {
 				factor = 5
 				date > "1942.1.1"
@@ -292,17 +457,35 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			
+			modifier = {
+				factor = 0
+				has_war = no
+				date < 1941.1.1
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1942.1.6"
 			}
-
+			
+			modifier = {
+				factor = 50
+				is_allied_ai = yes
+				date > "1941.3.1"
+			}
+			
+			modifier = {
+				factor = 50
+				tag = SOV
+				date > "1941.1.1"
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1943.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1944.1.1"
@@ -335,17 +518,29 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			
+			modifier = {
+				factor = 50
+				tag = SOV
+				has_war = yes
+			}
+			
+			modifier = {
+				factor = 50
+				is_allied_ai = yes
+				date > "1942.3.1"
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1943.1.6"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1944.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1945.1.1"
@@ -376,32 +571,56 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
+			factor = 2.5
 
 			modifier = {
-				tag = GER
-				factor = 2.5
+				factor = 50
+				OR = {
+					has_country_flag = gun3_licensed
+				}
+			}
+			
+			modifier = {
+				factor = 500
+				tag = SOV
+				OR = {
+					has_country_flag = pure_infantry
+					date > "1941.3.1"
+				}
 			}
 
 			modifier = {
-				factor = 2
-				date > "1942.1.1"
+				factor = 5000
+				OR = {
+					has_country_flag = mass_infantry_flag
+					has_country_flag = GER_spacemarine
+					has_country_flag = mass_mob_flag
+					has_country_flag = mech_god
+				}
 			}
-
+			
 			modifier = {
-				factor = 2
-				date > "1944.1.1"
+				factor = 5
+				date > "1941.6.1"
 			}
-
+					
+			modifier = {
+				factor = 200
+				has_completed_focus = equipment_effort_3
+				has_focus_tree = generic_focus
+				NOT = { tag = BEL }
+				NOT = { tag = MAL }
+				NOT = { tag = PHI }
+			}
+					
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = equipment_effort_3 }
+				has_focus_tree = generic_focus
+			}
 			modifier = {
 				num_of_military_factories > 150
 				factor = 2.5
-			}
-
-			modifier = {
-				num_of_military_factories < 50
-				factor = 0.5
 			}
 		}
 	}
@@ -650,20 +869,55 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
-
+			
 			modifier = {
 				factor = 3
 				tag = USA
+				date > 1937.1.1
 			}
-
+			
+			modifier = {
+				factor = 300
+				date > 1938.8.1
+				tag = ROM
+			}
+			
+			modifier = {
+				factor = 0
+				tag = SOV
+				date < 1943.1.1
+			}
+			
 			modifier = {
 				factor = 3
 				tag = JAP
 			}
-
+			
 			modifier = {
 				factor = 5
 				tag = ENG
+				date > 1937.1.1
+			}
+			
+			modifier = {
+				factor = 0.1
+				has_country_flag = mass_infantry_flag
+				tag = GER
+			}
+			modifier = {
+				factor = 0.1
+				tag = GER
+				NOT = { has_country_flag = spacemarine_gbp }
+			}
+			modifier = {
+				factor = 200
+				tag = GER
+				has_country_flag = spacemarine_gbp
+			}
+			modifier = {
+				factor = 800
+				date > 1939.1.1
+				is_ai_amtrac = yes
 			}
 		}
 	}
@@ -697,15 +951,28 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
-
+			
 			modifier = {
 				factor = 3
 				tag = USA
 			}
-
+			
 			modifier = {
 				factor = 3
 				tag = JAP
+			}
+			
+			modifier = {
+				factor = 300
+				OR = {
+					tag = USA
+					tag = ENG
+				}
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.1
+				tag = GER
 			}
 		}
 	}
@@ -789,6 +1056,28 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 200
+				tag = JAP
+			}
+			
+			modifier = {
+				factor = 200
+				tag = FIN 
+				date > 1938.8.1
+			}
+			
+			modifier = {
+				factor = 2000
+				OR = {
+					tag = CHL
+					tag = URG 
+					tag = ENG 
+					tag = USA
+					tag = RAJ
+				}  
+				date > 1937.5.1
+			}
 		}
 	}
 
@@ -1475,11 +1764,22 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			# All participants in this war will want to have this tech as early as possible
+			factor = 1	
+			
+			modifier = {
+				tag = SOV
+				has_completed_focus = SOV_pc_of_mechanical_engineering
+				NOT = {
+					OR = {
+						is_researching_technology = improved_infantry_weapons
+						has_tech = improved_infantry_weapons
+					}
+				}
+				factor = 0
+			}
 			modifier = {
 				factor = 15
+
 				OR = {
 					tag = CHI
 					tag = PRC
@@ -1488,29 +1788,100 @@ technologies = {
 					tag = GXC
 					tag = SHX
 					tag = YUN
-					tag = MAN
-					tag = MEN
-					tag = JAP
 				}
 			}
-
 			modifier = {
-				factor = 2
-				date > "1937.1.1"
+				factor = 500
+				OR = {
+					any_other_country = { is_justifying_wargoal_against = ROOT }
+					any_other_country = { has_wargoal_against = ROOT }
+					any_other_country = {
+						ROOT = { has_wargoal_against = PREV }
+					}
+					any_other_country = {
+						ROOT = { is_justifying_wargoal_against = PREV }
+					}
+					has_war = yes
+					any_country = {
+						is_in_faction_with = ROOT
+						has_war = yes
+					}
+				}
 			}
-
+			
+			modifier = {
+				factor = 0
+				has_focus_tree = generic_focus
+				is_ai_tech_slave = yes
+				date < 1940.1.1
+			}
+			
+			modifier = {
+				factor = 0
+				has_war = no
+				NOT = {
+					OR = {
+						is_researching_technology = improved_infantry_weapons
+						has_tech = improved_infantry_weapons
+					}
+				}
+			}
+			modifier = {
+				factor = 0.05
+				date < 1938.5.1
+				has_war = no
+				OR = {
+					tag = GER #we push with tanks
+					tag = SOV #dont have time
+					tag = FRA #we hold with tanks
+				}
+			}	
+			
+			modifier = {
+				tag = SOV
+				not_ready_for_tier_4_tech = yes
+				factor = 0
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1938.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1939.1.1"
 			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.1.1"
+				tag = FRA
+			}
 			modifier = {
 				has_war = yes
 				factor = 2
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { has_tech = advanced_infantry_weapons }
+				NOT = { has_country_flag = gun2_rush }
+				has_focus_tree = generic_focus
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { has_tech = improved_infantry_weapons }
+				has_country_flag = gun2_rush
+				has_focus_tree = generic_focus
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { has_tech = improved_infantry_weapons }
+				tag = CZE
+				has_completed_focus = CZE_inf_and_artillery_advancement
 			}
 		}
 	}
@@ -1551,8 +1922,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 1	
+			
+			modifier = {
+				tag = SOV
+				has_completed_focus = SOV_pc_of_mechanical_engineering
+				NOT = {
+					OR = {
+						is_researching_technology = improved_infantry_weapons
+						has_tech = improved_infantry_weapons
+					}
+				}
+				factor = 0
+			}
+			modifier = {
+				factor = 50
+				date > 1937.8.1
+				has_war = yes
+			}
+			
 			modifier = {
 				factor = 5
 
@@ -1565,22 +1953,39 @@ technologies = {
 					tag = SHX
 					tag = YUN
 				}
+			}	
+			
+			modifier = {
+				tag = SOV
+				not_ready_for_tier_4_tech = yes
+				factor = 0
+			}
+			
+			modifier = {
+				factor = 0
+				tag = SOV
+				NOT = {
+					OR = {
+						is_researching_technology = improved_infantry_weapons
+						has_tech = improved_infantry_weapons
+					}
+				}
 			}
 			modifier = {
 				factor = 2
 				date > "1938.1.6"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1939.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1940.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1941.1.1"
@@ -1588,6 +1993,12 @@ technologies = {
 			modifier = {
 				has_war = yes
 				factor = 2
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { has_tech = advanced_infantry_weapons }
+				has_focus_tree = generic_focus
 			}
 		}
 	}
@@ -1629,22 +2040,33 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 2
-				date > "1940.1.6"
+				date > "1940.6.1"
 			}
-
+			modifier = {
+				factor = 50
+				has_war = yes
+				date > 1940.1.1
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { has_tech = advanced_infantry_weapons }
+				has_focus_tree = generic_focus
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1941.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1942.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1943.1.1"
@@ -1777,6 +2199,13 @@ technologies = {
 				is_major = no
 				factor = 0.75
 			}
+			
+			modifier = {
+				factor = 0
+				has_focus_tree = generic_focus
+				NOT = { has_completed_focus = motorization_effort }
+				is_ai_tech_slave = yes
+			}
 		}
 	}
 
@@ -1840,24 +2269,45 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 2
 				date > "1937.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1938.1.1"
 			}
-
+			
 			modifier = {
 				factor = 2
 				date > "1939.1.1"
 			}
 			modifier = {
-				is_major = no
-				factor = 0.5
+				tag = BUL
+				factor = 50
+			}
+			modifier = {
+				is_ai_tank_minor = yes
+				date > 1937.1.1
+				factor = 50
+			}
+			modifier = {
+				is_ai_mech_mob = yes
+				factor = 100
+			}
+			modifier = {
+				OR = {
+					original_tag = CHL
+					original_tag = URG
+				}
+				factor = 2000
+			}
+			modifier = {
+				date > 1939.1.1
+				num_of_military_factories > 10
+				factor = 50
 			}
 		}
 	}
@@ -2196,31 +2646,90 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			base = 2
-
+			factor = 2
 			modifier = {
-				factor = 2
-				is_major = yes
+				tag = SOV
+				has_country_flag = pure_infantry
+				date < 1941.1.1
+				factor = 0
 			}
-
 			modifier = {
-				factor = 3
+				tag = SOV
+				has_country_flag = pure_infantry
+				factor = 0.5
+			}
+			modifier = {
 				tag = USA
+				date > 1939.1.1
+				factor = 200
 			}
-
 			modifier = {
-				factor = 1.5
-				date > 1941.1.1
+				tag = ENG
+				num_of_military_factories > 100
+				factor = 200
 			}
-
 			modifier = {
-				factor = 1.5
-				date > 1942.1.1
+				tag = SOV
+				date < 1940.1.1
+				NOT = { has_country_flag = mech_brick }
+				NOT = { has_country_flag = superior_firepower_mech }
+				NOT = { has_country_flag = grand_battleplan_15w }
+				factor = 0
 			}
-
 			modifier = {
-				factor = 1.5
-				date > 1943.1.1
+				tag = SOV
+				date > 1940.6.1
+				factor = 25
+			}
+			modifier = {
+				tag = SOV
+				date > 1939.1.1
+				has_country_flag = grand_battleplan_15w
+				factor = 100
+			}
+			modifier = {
+				factor = 30
+				tag = SOV
+				has_country_flag = mech_brick
+				has_completed_focus = SOV_pc_of_mechanical_engineering
+			}
+			modifier = {
+				factor = 30
+				tag = GER
+				OR = {
+					date > 1939.1.1
+					has_country_flag = spacemarine
+					is_in_faction_with = BUL
+				}
+				GER_AI_is_infantry_based = no
+			}
+			modifier = {
+				factor = 500
+				tag = GER
+				has_completed_focus = GER_panzergrenadier
+				GER_AI_is_infantry_based = no
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+				date < 1940.1.1
+				GER_AI_is_infantry_based = yes
+			}
+			modifier = {
+				tag = BUL
+				factor = 50
+				has_completed_focus = BUL_war_logistics
+			}
+			modifier = {
+				is_ai_mech_mob = yes
+				has_completed_focus = SMB_mechanized_troops
+				factor = 200
+			}
+			modifier = {
+				has_focus_tree = generic_focus
+				is_in_faction = yes
+				has_completed_focus = mechanization_effort
+				factor = 200
 			}
 		}
 	}
@@ -2268,10 +2777,27 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
+			factor = 1
 			modifier = {
-				tag = USA
-				factor = 2
+				factor = 0
+				OR = {
+					is_ai_amtrac = no
+					AND = {
+						date < 1940.5.1
+						NOT = { original_tag = CAN }
+					}
+				}
+			}
+			modifier = {
+				factor = 2000
+				OR = {
+					tag = CAN
+					AND = {
+						date > 1940.5.1
+						NOT = { original_tag = CAN }
+						is_ai_amtrac = yes
+					}
+				}
 			}
 		}
 	}

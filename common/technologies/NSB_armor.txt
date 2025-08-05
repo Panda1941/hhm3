@@ -123,6 +123,18 @@ technologies = {
 				factor = 1.2
 				date > 1939.1.1
 			}
+
+			modifier = {
+				factor = 10
+				OR = {
+					original_tag = SPR
+					original_tag = SOV
+					original_tag = GER
+					original_tag = CAN
+					original_tag = SAF
+					original_tag = USA
+				}
+			}
 		}
 
 		categories = {
@@ -165,6 +177,38 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 1.2
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.2
+				date > 1940.1.1
+			}
+
+			modifier = {
+				factor = 10
+				OR = {
+					original_tag = SPR
+					original_tag = SOV
+					original_tag = GER
+					original_tag = CAN
+					original_tag = SAF
+					original_tag = USA
+				}
+			}
 		}
 
 		path = {
@@ -212,6 +256,38 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.2
+				date > 1940.1.1
+			}
+
+			modifier = {
+				factor = 1.2
+				date > 1941.1.1
+			}
+
+			modifier = {
+				factor = 10
+				OR = {
+					original_tag = SPR
+					original_tag = SOV
+					original_tag = GER
+					original_tag = CAN
+					original_tag = SAF
+					original_tag = USA
+				}
+			}
 		}
 
 		path = {

@@ -166,6 +166,23 @@ characters={
 					mobile_warfare_expert
 				}
 		}
+		advisor={
+			slot = high_command
+			idea_token = george_patton
+			ledger = army
+			allowed = {
+				original_tag = USA
+			}
+			available = {
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 12.000
+			}
+		}
 
 		corps_commander={
 			traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
@@ -199,6 +216,17 @@ characters={
 			
 			traits = {
 				superior_firepower_expert
+			}
+			ai_will_do = {
+				factor = 0.500
+				modifier = {
+					factor = 200
+					has_army_experience > 80
+				}
+				modifier = {
+					factor = 0
+					date < 1939.1.1
+				}
 			}
 		}
 
@@ -234,7 +262,7 @@ characters={
 				}
 				cost = 100
 				ai_will_do = {
-					factor = 1.000
+					factor = 45.000
 				}
 		}
 		
@@ -309,7 +337,7 @@ characters={
 				}
 				cost = 100
 				ai_will_do = {
-					factor = 1.000
+					factor = 10.000
 				}
 		}
 		
@@ -618,7 +646,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 12.000
 			}
 		}
 		
@@ -838,7 +866,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 15.000
 			}
 		}
 	}
@@ -1086,17 +1114,12 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 10
-					# I don't care that it's earlier than historical, the US needs army XP earlier...
-					date > 1938.6.1
-				}
+				factor = 1.000
 			}
 		}
 	}
 
-
+	
 	### NAVY CHIEFS ###
 
 	# King up there
@@ -1124,7 +1147,11 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 1.000
+				factor = 1.000			
+				modifier = {
+					factor = 10
+					has_idea = independent_air_force_spirit
+				}
 			}
 		}
 	}
@@ -1366,7 +1393,7 @@ characters={
 			do_effect  = {
 			}
 			ai_will_do  = {
-				factor  = 0.000
+				factor  = 25.000
 			}
 		}
 		allowed_civil_war = {
@@ -1405,7 +1432,7 @@ characters={
 			do_effect  = {
 			}
 			ai_will_do  = {
-				factor  = 0.000
+				factor  = 15.000
 			}
 		}
 		allowed_civil_war  = {
@@ -1440,7 +1467,7 @@ characters={
 			traits  = {
 				editor 
 			}
-			cost  = 0.000
+			cost  = 5.000
 			do_effect  = {
 			}
 			ai_will_do  = {
@@ -1664,6 +1691,9 @@ characters={
 			traits  = {
 				silent_workhorse 
 			}
+			ai_will_do  = {
+				factor = 30
+			}
 		}
 	}
 
@@ -1748,6 +1778,20 @@ characters={
 			traits  = {
 				financial_expert 
 			}
+			ai_will_do  = {
+				factor = 50
+				modifier = {
+					factor = 0
+					has_government = democratic
+					OR = {
+						has_country_flag = USA_AI_RANDOM_DEMOCRATIC_ALTERNATE
+						has_game_rule = {
+							rule = USA_ai_behavior
+							option = DEMOCRATIC_ALTERNATE
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1766,6 +1810,9 @@ characters={
 			}
 			traits  = {
 				war_industrialist 
+			}
+			ai_will_do  = {
+				factor = 20
 			}
 		}
 	}

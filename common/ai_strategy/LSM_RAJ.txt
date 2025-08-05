@@ -1,0 +1,70 @@
+
+india_for_indians = {
+	allowed = {
+		OR = {
+			original_tag = RAJ
+			original_tag = BRM
+			original_tag = NEP
+		}
+	}
+	enable = { 
+		has_capitulated = no
+		OR = {
+			has_war_with = JAP
+			date > 1941.1.1
+		}
+		is_historical_focus_on = yes
+		NOT = { JAP = { surrender_progress > 0.02 } }
+	}
+
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		target = europe
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		target = africa
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		target = middle_east
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		target = south_america
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		target = north_america
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		id = INS
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		id = MAL
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		value = 1000
+		id = PHI
+	}
+
+
+}

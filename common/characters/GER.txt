@@ -1637,6 +1637,9 @@ AUS_eugen_beyer = {
 			traits = {
 				close_air_support_proponent
 			}
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -1679,6 +1682,9 @@ AUS_eugen_beyer = {
 			}
 			traits = {
 				dive_bomber
+			}
+			ai_will_do = {
+				factor = 122.000
 			}
 		}
 	}
@@ -1731,7 +1737,7 @@ AUS_eugen_beyer = {
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 8.000
+				factor = 28.000
 			}
 		}
 	}
@@ -1786,7 +1792,7 @@ AUS_eugen_beyer = {
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 25.000
 			}
 		}
 	}
@@ -2364,7 +2370,7 @@ AUS_eugen_beyer = {
 				GER_reich_minister_foreign_affairs_ribbentrop
 			}
 			ai_will_do = {
-				factor = 3
+				factor = 0
 			}
 		}
 	}

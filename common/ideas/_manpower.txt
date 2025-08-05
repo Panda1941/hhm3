@@ -299,15 +299,42 @@ ideas = {
 					factor = 3
 				}
 				modifier = {
-					tag = SOV
-					is_historical_focus_on = yes
-					date > 1939.1.1
-					has_idea = volunteer_only
-					factor = 201
+					factor = 0
+					NOT = { has_idea = volunteer_only }
+					NOT = { has_idea = disarmed_nation }
+				}
+				modifier = {
+					factor = 10
+					OR = {
+						has_idea = volunteer_only
+						has_idea = disarmed_nation
+					}
+				}
+				modifier = {
+					factor = 100
+					OR = {
+						is_ai_mass_mob = yes
+						is_ai_mech_mob = yes
+					}
+					OR = {
+						has_idea = volunteer_only
+						has_idea = disarmed_nation
+					}
 				}
 				modifier = {
 					factor = 0
-					NOT = { has_idea = volunteer_only }
+					has_idea = volunteer_only
+					date < 1937.4.1
+					NOT = { 
+						AND = {
+							tag = POR 
+							is_historical_focus_on = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					has_idea = extensive_conscription
 				}
 			}
 
@@ -506,7 +533,7 @@ ideas = {
 
 				modifier = {
 					#Prio if low on manpower
-					factor = 20
+					factor = 200
 					manpower_per_military_factory <  800
 				}
 
@@ -515,6 +542,20 @@ ideas = {
 					has_dlc = "Battle for the Bosporus"
 					factor = 50
 				}
+
+				modifier = {
+					tag = FIN
+					SOV = { is_ai = no }
+					factor = 50
+				}
+				modifier = {
+					factor = 3000
+					has_idea = limited_conscription
+					any_enemy_country = { is_major = yes }
+					manpower_per_military_factory >  800
+					manpower_per_military_factory <  5000
+				}
+
 
 				# china relies a lot on throwing bodies at the enemy
 				modifier = {
@@ -537,12 +578,7 @@ ideas = {
 
 					original_tag = SOV
 					has_war = yes
-					has_manpower < 1000000
-				}
-
-				modifier = {
-					factor = 0
-					NOT = { has_idea = limited_conscription }
+					has_manpower < 2000000
 				}
 
 				modifier = {
@@ -552,6 +588,45 @@ ideas = {
 						original_tag = PAR
 					}
 					has_completed_focus = GUAY_coup_detat
+				}
+
+				modifier = {
+					factor = 0.2
+					has_idea = service_by_requirement
+				}
+
+				modifier = {
+					factor = 200
+					tag = GER
+					date > 1939.1.1
+					has_idea = limited_conscription
+				}
+
+				modifier = {
+					add = 20000
+					is_historical_focus_on = no
+					OR = {
+						has_idea = limited_conscription
+						has_idea = volunteer_only
+					}
+				}
+				modifier = {
+					factor = 0
+					has_idea = volunteer_only
+					date < 1937.4.1
+					factor = 0
+				}
+
+				modifier = {
+					add = 30000
+					has_idea = limited_conscription
+					OR = {
+						has_war = yes
+						AND = {
+							has_country_flag = pure_infantry
+							date > 1940.1.1
+						}
+					}
 				}
 
 			}
@@ -737,7 +812,7 @@ ideas = {
    				factor = 1
 				modifier = {
 					#Prio if low on manpower
-					factor = 20
+					factor = 300
 					manpower_per_military_factory <  700
 				}
 				modifier = {
@@ -747,10 +822,11 @@ ideas = {
 				}
 				modifier = {
 					#Block has plenty manpower
-					factor = 0
+					factor = 0.1
 					NOT = { tag = CHI }
 					NOT = { tag = SOV }
 					manpower_per_military_factory >  3000
+					NOT = { has_country_flag = pure_infantry }
 				}
 
 				modifier = { # china relies a lot on throwing bodies at the enemy
@@ -764,26 +840,46 @@ ideas = {
 					factor = 5
 
 					original_tag = SOV
-					has_manpower < 400000
+					has_manpower < 1000000
 				}
 
-				modifier = { # germany needs this before russia, badly
-					factor = 10
-
-					original_tag = GER
-					has_manpower < 2000000
-				}
-
-				modifier = { # germany needs this before russia, badly
-					factor = 10
-
-					original_tag = GER
+				modifier = {
+					factor = 5
+					original_tag = SOV
 					date > 1941.1.1
+					has_manpower < 2500000
 				}
 
 				modifier = {
 					factor = 0
-					NOT = { has_idea = extensive_conscription }
+					has_manpower > 2000000
+				}
+
+				modifier = { 
+					factor = 0.25
+					has_manpower > 1000000
+				}
+
+				modifier = { 
+					factor = 10
+					has_war = yes
+					is_major = yes
+					has_manpower < 1000000
+				}
+
+				modifier = {
+					factor = 0.2
+					OR = {
+						has_idea = limited_conscription
+						has_idea = volunteer_only
+						has_idea = disarmed_nation
+					}
+				}
+
+				modifier = {
+					factor = 0.2
+					has_idea = all_adults_serve
+					has_war = yes
 				}
 
 				modifier = {
@@ -793,6 +889,26 @@ ideas = {
 						original_tag = PAR
 					}
 					has_completed_focus = GUAY_coup_detat
+				}
+				modifier = {
+					factor = 0
+					has_country_flag = recently_changed_conscription_law
+				}
+				modifier = {
+					factor = 0
+					has_idea = volunteer_only
+					date < 1937.4.1
+					factor = 0
+				}
+				modifier = {
+					add = 50000
+					OR = {
+						has_idea = extensive_conscription
+						has_idea = limited_conscription
+					}
+					tag = SOV
+					has_country_flag = pure_infantry
+					date > 1941.1.1
 				}
 
 			}
@@ -1002,7 +1118,23 @@ ideas = {
 
 				modifier = {
 					factor = 0
+					OR = {
+						has_idea = extensive_conscription
+						has_idea = limited_conscription
+						has_idea = volunteer_only
+					}
+				}
+
+				modifier = {
+					factor = 0
 					NOT = { has_idea = service_by_requirement }
+					NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = scraping_the_barrel }
+				}
+
+				modifier = {
+					factor = 0
+					has_country_flag = recently_changed_conscription_law
 				}
 
 			}
@@ -1209,7 +1341,23 @@ ideas = {
 
 				modifier = {
 					factor = 0
+					OR = {
+						has_idea = extensive_conscription
+						has_idea = limited_conscription
+						has_idea = volunteer_only
+						has_idea = service_by_requirement
+					}
+				}
+
+				modifier = {
+					factor = 0
 					NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = scraping_the_barrel }
+				}
+
+				modifier = {
+					factor = 0
+					has_country_flag = recently_changed_conscription_law
 				}
 
 			}
