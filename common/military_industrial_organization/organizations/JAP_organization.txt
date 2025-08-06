@@ -44,7 +44,10 @@ JAP_yokosuka_naval_arsenal_organization = {
 	include = generic_task_force_ship_organization
 	icon = GFX_idea_yokosuka_naval_arsenal
 	allowed = {	
-		tag = JAP
+		OR = {
+			tag = JAP
+			tag = ITA
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 }
