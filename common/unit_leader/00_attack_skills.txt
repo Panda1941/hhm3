@@ -235,7 +235,7 @@ leader_attack_skills = {
 		cost = 25600
 		type = field_marshal
 		modifier = {
-			offence = 0.011
+			offence = 0.11
 		}
 	}	
 	
