@@ -25,15 +25,16 @@ SIMULATED_ANNEXATIONS = {
     "ITA": ["ETH"],
 }
 
-simulate_no_asia = True
+simulate_no_asia = False
 NO_ASIA_TAGS = {
     "CHI", "MAN", "JAP", "RAJ", "PHI", "AST", "NZL", "MEX", "USA"
 }
 
 FACTIONS = {
     "Axis": {"GER", "ITA", "HUN", "ROM", "BUL", "SPR"},
-    "Allies": {"ENG", "FRA", "CAN", "SAF", "BRA"},
+    "Allies": {"ENG", "FRA", "CAN", "SAF", "BRA", "USA"},
     "Comintern": {"SOV"},
+    "Co-Prosperity" : {"JAP"},
 }
 
 # Process each state file
@@ -95,14 +96,13 @@ for tag, factories in sorted(country_factories.items()):
 faction_factories = defaultdict(lambda: defaultdict(int))
 
 for faction, members in FACTIONS.items():
-    for faction, members in FACTIONS.items():
-        for tag in members:
-            if tag in IGNORED_TAGS:
-                continue
-            if tag not in country_factories:
-                continue
-            for factory_type, count in country_factories[tag].items():
-                faction_factories[faction][factory_type] += count
+    for tag in members:
+        if tag in IGNORED_TAGS:
+            continue
+        if tag not in country_factories:
+            continue
+        for factory_type, count in country_factories[tag].items():
+            faction_factories[faction][factory_type] += count
 
 print("\n=== Faction Totals ===")
 for faction, factories in faction_factories.items():
