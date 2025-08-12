@@ -16,6 +16,7 @@ state={
 			5139 = {
 				land_facility = 1
 			}
+			arms_factory = 2
 		}
 
 	}
