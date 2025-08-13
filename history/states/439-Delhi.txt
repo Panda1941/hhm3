@@ -13,7 +13,8 @@ state={
  1936.1.1.13 = { owner = WST add_core_of = WST }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 4
+			industrial_complex = 3
+			arms_factory = 3
 			air_base = 4
 		}
 		add_core_of = RAJ

@@ -13,8 +13,8 @@ state={
 		owner = ENG
 		buildings = {
 			infrastructure = 4 #was: 8
-			arms_factory = 2
-			industrial_complex = 3
+			arms_factory = 6
+			industrial_complex = 1
 			air_base = 6
 		}
 		victory_points = {

@@ -25,7 +25,7 @@ SIMULATED_ANNEXATIONS = {
     "ITA": ["ETH"],
 }
 
-simulate_no_asia = True
+simulate_no_asia = False
 NO_ASIA_TAGS = {
     "CHI", "MAN", "JAP", "RAJ", "PHI", "AST", "NZL", "MEX", "USA"
 }
