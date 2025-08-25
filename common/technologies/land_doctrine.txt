@@ -15,11 +15,11 @@ technologies = {
 		}
 		
 		category_all_armor = {
-			breakthrough = 0.20
+			breakthrough = 0.15
 		}
 		
 		category_cavalry = {
-			breakthrough = 0.20
+			breakthrough = 0.15
 		}
 		
 		planning_speed = 0.5
@@ -350,11 +350,14 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_tanks = {
-			max_organisation = 9
+			max_organisation = 8
 			breakthrough = 0.20
 		}
 		category_all_armor = {
 			default_morale = 0.03
+		}
+		category_vehicle_infantry = {
+			max_organisation = 2
 		}
 		
 		enable_tactic = tactic_blitz
@@ -414,6 +417,9 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_tanks = {
+			max_organisation = 2
+		}
+		category_vehicle_infantry = {
 			max_organisation = 2
 		}
 
@@ -707,16 +713,16 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 6
-			breakthrough = 0.25
+			breakthrough = 0.2
 		}
 
 		category_all_armor = {
 			default_morale = 0.2
 		}
 		armored_car = {
-			max_organisation = 5
+			max_organisation = 6
 			default_morale = 0.2
-			breakthrough = 0.25
+			breakthrough = 0.2
 		}
 		
 		doctrine = yes	
@@ -762,9 +768,12 @@ technologies = {
 		xor={
 			firebrigades
 		}
-
 		
-		conscription = 0.02
+		conscription = 0.01
+
+		max_dig_in_factor = 0.1
+		dig_in_speed_factor = 0.33
+		army_infantry_defence_factor = 0.1
 		
 		path = {
 			leads_to_tech = nd_conscription 
@@ -816,7 +825,9 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.03
+		conscription = 0.02
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.05
 
 		path = {
 			leads_to_tech = werwolf_guerillas 
@@ -859,9 +870,10 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 100
-		#Increased Partisan effect on your land occupied by others
-		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
-		conscription = 0.04
+
+		conscription = 0.03
+		army_morale_factor = 0.1
+		army_org_regain = 0.1
 
 		
 		doctrine = yes	
@@ -2681,6 +2693,10 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 			breakthrough = 0.05
+		}
+		
+		category_all_armor = {
+			breakthrough = 0.1
 		}
 		
 		land_reinforce_rate = 0.02
