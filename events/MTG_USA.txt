@@ -4483,6 +4483,15 @@ country_event = {
 		name = mod_usa_epstein_event.1.a
 		custom_effect_tooltip = mod_usa_epstein_event.1.a.tt
 
+		country_event = mod_usa_epstein_event.2
+		ai_chance = { factor = 1 }
+	}
+
+	option = { # Continue
+		name = mod_usa_epstein_event.1.b
+		custom_effect_tooltip = mod_usa_epstein_event.1.b.tt
+
+		add_political_power = 5
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4500,13 +4509,20 @@ country_event = {
 	option = { # Accept
 		name = mod_usa_epstein_event.2.a
 		custom_effect_tooltip = mod_usa_epstein_event.2.a.tt
-
+		
+		set_country_flag = epstein_offer_accepted
 		ai_chance = { factor = 1 }
 	}
 	option = { # Decline
-		name = mod_usa_epstein_event.2.a
-		custom_effect_tooltip = mod_usa_epstein_event.2.a.tt
+		name = mod_usa_epstein_event.2.b
+		custom_effect_tooltip = mod_usa_epstein_event.2.b.tt
 
+		add_political_power = -10
+		add_stability = -0.03
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.03
+		}
 		ai_chance = { factor = 1 }
 	}
 }

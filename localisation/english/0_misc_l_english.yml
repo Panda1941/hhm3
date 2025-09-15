@@ -1018,3 +1018,17 @@
  mass_assault_overall_debuff_desc:0 "§YA DEBUFF TO ENSURE YOU ARE NOT HAVING FUN AS NOAIR SOVIETS :)§!"
  
  
+ # Epstein stuff
+ mod_usa_epstein_event.1.t:0 "A Mysterious Visitor"
+ mod_usa_epstein_event.1.d:0 "As you enter the Oval Office to begin the day's work, you notice a man seated casually on the sofa. His tailored suit and polished shoes make him stand out, but his presence here is entirely unexpected. A small leather briefcase rests at his side.\n\nYou move to call for the Secret Service, but the stranger calmly raises a hand, gesturing for you to sit. His expression carries a quiet confidence, as though he belongs here as much as you do."
+ mod_usa_epstein_event.1.a:0 "Who exactly are you?"
+ mod_usa_epstein_event.1.a.tt:0 "§gThis continues the event chain.§!"
+ mod_usa_epstein_event.1.b:0 "Guards! Remove this man immediately!"
+ mod_usa_epstein_event.1.b.tt:0 "§gThis ends the event chain.§!"
+
+ mod_usa_epstein_event.2.t:0 "The Proposal"
+ mod_usa_epstein_event.2.d:0 "The man introduces himself as §0Jefferson Blackwood§!, a financier with far-reaching connections in politics, industry, and the press. He speaks with a calm assurance, offering a bargain: in return for your cooperation and discretion, he can provide resources, stability, and influence to accelerate your vision for America's future.\n\nHis words are persuasive, but there is an undercurrent of something unspoken - a promise of power, and perhaps a threat should you refuse."
+ mod_usa_epstein_event.2.a:0 "Very well... we can make use of such allies."
+ mod_usa_epstein_event.2.a.tt:0 "§gThis will continue the event chain, unlocking missions and decisions.\n\nIt offers great rewards now, but may bring grave consequences later.§!"
+ mod_usa_epstein_event.2.b:0 "I will not be bought."
+ mod_usa_epstein_event.2.b.tt:0 "§gThis ends the event chain.§!"
