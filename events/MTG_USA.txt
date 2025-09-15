@@ -4460,3 +4460,53 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
+
+
+
+
+# Custom modded events for USA
+add_namespace = mod_usa_epstein_event
+
+
+# A wealthy businessman comes into the oval office
+country_event = {
+	id = mod_usa_epstein_event.1
+	title = mod_usa_epstein_event.1.t
+	desc = mod_usa_epstein_event.1.d
+
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = { # Continue
+		name = mod_usa_epstein_event.1.a
+		custom_effect_tooltip = mod_usa_epstein_event.1.a.tt
+
+		ai_chance = { factor = 1 }
+	}
+}
+
+# A wealthy businessman suggests friendship
+country_event = {
+	id = mod_usa_epstein_event.2
+	title = mod_usa_epstein_event.2.t
+	desc = mod_usa_epstein_event.2.d
+
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = mod_usa_epstein_event.2.a
+		custom_effect_tooltip = mod_usa_epstein_event.2.a.tt
+
+		ai_chance = { factor = 1 }
+	}
+	option = { # Decline
+		name = mod_usa_epstein_event.2.a
+		custom_effect_tooltip = mod_usa_epstein_event.2.a.tt
+
+		ai_chance = { factor = 1 }
+	}
+}

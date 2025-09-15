@@ -1,0 +1,23 @@
+MOD_usa_epstein_decisions = {
+	USA_epstein_appears = {
+		activation = {
+			original_tag = USA
+		}
+		available = {
+			always = no
+		}
+
+		icon = gfx_
+
+		is_good = no
+		days_mission_timeout = 50
+		
+		complete_effect = {
+			add_political_power = 5
+		}
+		
+		timeout_effect = {
+			country_event = mod_usa_epstein_event.1
+		}
+	}
+}
