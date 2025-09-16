@@ -4526,3 +4526,66 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
+
+# Epstein delivers media support
+country_event = {
+	id = mod_usa_epstein_event.3
+	title = mod_usa_epstein_event.3.t
+	desc = mod_usa_epstein_event.3.d
+
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = { # Okay
+		name = mod_usa_epstein_event.3.a
+		custom_effect_tooltip = mod_usa_epstein_event.3.a.tt
+		
+		set_country_flag = epstein_first_investment_complete
+		ai_chance = { factor = 1 }
+	}
+	option = { # We should probably stop
+		name = mod_usa_epstein_event.3.b
+		custom_effect_tooltip = mod_usa_epstein_event.3.b.tt
+
+		add_political_power = -33
+		add_stability = -0.04
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.05
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+# Epstein bribes senior government officials
+country_event = {
+	id = mod_usa_epstein_event.4
+	title = mod_usa_epstein_event.4.t
+	desc = mod_usa_epstein_event.4.d
+
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = { # Okay
+		name = mod_usa_epstein_event.4.a
+		custom_effect_tooltip = mod_usa_epstein_event.4.a.tt
+		
+		set_country_flag = epstein_second_investment_complete
+		ai_chance = { factor = 1 }
+	}
+	option = { # We should probably stop
+		name = mod_usa_epstein_event.4.b
+		custom_effect_tooltip = mod_usa_epstein_event.4.b.tt
+
+		add_political_power = -50
+		add_stability = -0.04
+		add_war_support = -0.02
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.06
+		}
+		ai_chance = { factor = 1 }
+	}
+}

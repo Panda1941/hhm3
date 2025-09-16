@@ -11,7 +11,7 @@ MOD_usa_epstein_decisions = {
 
 		fire_only_once = yes
 		is_good = yes
-		days_mission_timeout = 21
+		days_mission_timeout = 49
 		
 		timeout_effect = {
 			country_event = mod_usa_epstein_event.1
@@ -29,7 +29,7 @@ MOD_usa_epstein_decisions = {
 
 		fire_only_once = yes
 		is_good = yes
-		days_mission_timeout = 180
+		days_mission_timeout = 225
 		
 		timeout_effect = {
 			country_event = mod_usa_epstein_event.3
@@ -45,6 +45,35 @@ MOD_usa_epstein_decisions = {
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.02
+			}
+		}
+	}
+	USA_epstein_bribe_officials = {
+		activation = {
+			has_country_flag = epstein_first_investment_complete
+		}
+		available = {
+			always = no
+		}
+
+		icon = gfx_
+
+		fire_only_once = yes
+		is_good = yes
+		days_mission_timeout = 225
+		
+		timeout_effect = {
+			country_event = mod_usa_epstein_event.4
+
+			USA_congress_medium_support = yes
+
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.01
 			}
 		}
 	}
