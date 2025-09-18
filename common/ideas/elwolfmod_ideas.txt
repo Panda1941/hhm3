@@ -66,6 +66,55 @@ ideas = {
 				}
 			}
 		}
+		
+		MOD_epstein_corruption_1 = {
+			picture = ARG_political_corruption_modifier
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.08
+				production_speed_buildings_factor = -0.04
+				production_factory_max_efficiency_factor = -0.02
+				political_power_cost = 0.1
+			}
+		}
+		
+		MOD_epstein_corruption_2 = {
+			picture = ARG_political_corruption_modifier
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.012
+				production_speed_buildings_factor = -0.06
+				production_factory_max_efficiency_factor = -0.04
+				political_power_cost = 0.15
+			}
+		}
+		
+		MOD_epstein_corruption_3 = {
+			picture = ARG_political_corruption_modifier
+
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.016
+				production_speed_buildings_factor = -0.08
+				production_factory_max_efficiency_factor = -0.06
+				political_power_cost = 0.2
+			}
+		}
+
 
 
 

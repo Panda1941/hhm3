@@ -4571,6 +4571,8 @@ country_event = {
 	option = { # Okay
 		name = mod_usa_epstein_event.4.a
 		custom_effect_tooltip = mod_usa_epstein_event.4.a.tt
+
+		add_ideas = MOD_epstein_corruption_1
 		
 		set_country_flag = epstein_second_investment_complete
 		ai_chance = { factor = 1 }

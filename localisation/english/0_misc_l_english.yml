@@ -1019,6 +1019,16 @@
  
  
  # Epstein stuff
+ 
+ MOD_epstein_corruption_1:0 "Blackwood's Influence"
+ MOD_epstein_corruption_1_desc:0 "Jefferson Blackwood has begun to weave his network into the halls of government. Contracts are delayed, offices grow less efficient, and whispers of favoritism spread. The state still functions, but the first cracks have begun to show."
+
+ MOD_epstein_corruption_2:0 "Entrenched Corruption"
+ MOD_epstein_corruption_2_desc:0 "Blackwood's allies now sit comfortably across government and industry. Bribes and favors grease the machinery of state, while honest officials are sidelined. Efficiency falters, and political decisions carry a heavier cost."
+
+ MOD_epstein_corruption_3:0 "Systemic Rot"
+ MOD_epstein_corruption_3_desc:0 "The corruption has grown pervasive, touching nearly every institution. Blackwood's grip ensures loyalty, but at the expense of productivity and legitimacy. The system groans under the weight of graft, inefficiency, and fear."
+
  mod_usa_epstein_event.1.t:0 "A Mysterious Visitor"
  mod_usa_epstein_event.1.d:0 "As you enter the Oval Office to begin the day's work, you notice a man seated casually on the sofa. His tailored suit and polished shoes make him stand out, but his presence here is entirely unexpected. A small leather briefcase rests at his side.\n\nYou move to call for the Secret Service, but the stranger calmly raises a hand, gesturing for you to sit. His expression carries a quiet confidence, as though he belongs here as much as you do."
  mod_usa_epstein_event.1.a:0 "Who exactly are you?"
@@ -1032,3 +1042,17 @@
  mod_usa_epstein_event.2.a.tt:0 "§gThis will continue the event chain, unlocking missions and decisions.\n\nIt offers great rewards now, but may bring grave consequences later.§!"
  mod_usa_epstein_event.2.b:0 "I will not be bought."
  mod_usa_epstein_event.2.b.tt:0 "§gThis ends the event chain.§!"
+
+ mod_usa_epstein_event.3.t:0 "Media Empire at Your Service"
+ mod_usa_epstein_event.3.d:0 "Jefferson Blackwood delivers on his first promise. Overnight, newspapers and radio stations begin to echo a more favorable narrative of your administration. Poll numbers rise, critics are muted, and opposition voices find themselves drowned out by a chorus of support.\n\nBlackwood assures you this is just the beginning. With his network of publishers, editors, and advertisers, your public image is his to shape."
+ mod_usa_epstein_event.3.a:0 "Excellent, let the people hear what they must."
+ mod_usa_epstein_event.3.a.tt:0 "§gBlackwood's media support strengthens your political position.§!"
+ mod_usa_epstein_event.3.b:0 "This is going too far."
+ mod_usa_epstein_event.3.b.tt:0 "§gYou distance yourself from Blackwood's influence, but suffer political backlash.§!"
+
+ mod_usa_epstein_event.4.t:0 "Government Doors Open"
+ mod_usa_epstein_event.4.d:0 "Having proven the power of his media network, Blackwood makes good on another promise. Senior officials across Washington suddenly become more cooperative, their opposition blunted by well-timed gifts and favors. Laws move faster, contracts are signed without question, and the machinery of government bends ever so slightly in your favor.\n\nBut whispers spread - of corruption, of unseen hands steering policy. To continue down this road will mean deeper compromise."
+ mod_usa_epstein_event.4.a:0 "If it gets results, so be it."
+ mod_usa_epstein_event.4.a.tt:0 "§gBlackwood secures government cooperation through bribery.§!"
+ mod_usa_epstein_event.4.b:0 "This is dangerous - we must put an end to it."
+ mod_usa_epstein_event.4.b.tt:0 "§gYou reject the scheme, but pay a political price.§!"
